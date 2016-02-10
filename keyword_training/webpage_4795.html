@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" data-cast-api-enabled="true">
+  <head>
+    <!-- Build: 20150 origin/master 2016-01-12 03:39:51 (_jenkins) -->
+    <!-- ${swf} here to make intellij quiet down -->
+    <title>HBO GO. It's HBO. Anywhere.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="google" content="notranslate" />
+    <meta name="description" content="With HBO GO&reg;, enjoy instant and unlimited access to every episode of every season of the best HBO shows, movies, comedy, sports, and documentaries. HBO GO is free with your subscription through participating TV providers." />
+    <meta name="keywords" content="HBO GO, HBOGO, HBO, HBO Video, HBO Streaming Video, HBO Shows, HBO Series, HBO Original Programming, HBO Sports, HBO Boxing, HBO Documentaries, HBO Documentary Films, HBO Broadband, HBO on Broadband, HBO Internet, HBO Miniseries, HBO Comedy, True Blood, The Pacific, The Sopranos, Sex and the City, Big Love, Entourage, Band of Brothers, How to Make it In America, Curb Your Enthusiasm, In Treatment, Hung, Bored to Death, The Ricky Gervais Show, Real Time with Bill Maher, The Life and Times of Tim, The Life & Times of Tim, Funny or Die Presents, Late Night, Real Sex, Cathouse, Taxicab Confessions, Katie Morgan, Broadband Video">
+    <meta property="og:title" content="HBO GO&reg;. It's HBO. Anywhere.&reg;"/>
+    <meta property="og:image" content="http://www.hbogo.com/image/hbogo-facebook-image.jpg"/>
+    <meta property="og:site_name" content="HBO GO&reg;"/>
+    <meta name="google-site-verification" content="FP324lZ4TGp_UOyRTyDZFB0cbX_bhOTQwkNUeuCNB_U" />
+    <meta name="apple-itunes-app" content="app-id=429775439, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="application-name" content="It's HBO. Anywhere."/>
+    <meta name="msapplication-TileColor" content="#0f0f0f"/>
+    <meta name="msapplication-TileImage" content="/image/windows8hbogo.png"/>
+    <meta name="apple-media-service-subscription" content='{"expires":1209600,"type":"HBO"}'>
+
+    <style type="text/css" media="screen">
+      html{height:100%;overflow:auto;}
+      body{height:100%;margin:0;padding:0;text-align:center; color:White; font-family:Helvetica,Arial,sans-serif;background:#000 url("image/hbogo_bg.png") repeat-x;}
+    </style>
+
+    <script type="text/javascript">
+      var REDIRECTOR_ROOT = "https://redirector.api.hbo.com/play";
+      var PLAY_ROOT = "http://play.hbogo.com";
+
+      function calculateHadronRedirect(hash) {
+          var targetUrl;
+
+          if (hash) {
+              var urlObj = convertHashToUrlObject(hash);
+              switch(urlObj.section) {
+                  case "preview":
+                  case "home":
+                      targetUrl = getHomeRedirect(urlObj);
+                      break;
+                  case "movies":
+                      targetUrl = getMoviesRedirect(urlObj);
+                      break;
+                  case "latin":
+                  case "series":
+                      targetUrl = getSeriesRedirect(urlObj);
+                      break;
+                  case "comedy":
+                      targetUrl = getComedyRedirect(urlObj);
+                      break;
+                  case "sports":
+                      targetUrl = getSportsRedirect(urlObj);
+                      break;
+                  case "documentaries":
+                      targetUrl = getDocumentarieRedirect(urlObj);
+                      break;
+                  case "late night":
+                  case "late%20night":
+                      targetUrl = getLateNightRedirect(urlObj);
+                      break;
+              }
+          }
+
+          if (!targetUrl) {
+              targetUrl = PLAY_ROOT;
+          }
+
+          return targetUrl;
+      };
+
+      function convertHashToUrlObject(hash) {
+          hash = hash || '';
+          // hash is always in the format #section/action&queryparam=value?addparam=value?paramthree=value/
+
+          // strip away the leading hash and trailing slash
+          if (hash.indexOf('#') === 0) {
+              hash = hash.substring(1);
+          }
+          if (hash.lastIndexOf('/') === hash.length - 1) {
+              hash = hash.substring(0, hash.length - 1);
+          }
+
+          // split it into path and query
+          var parts = hash.split('&');
+          var pathParts = parts[0].split('/');
+
+          var obj = {
+              section: pathParts[0].toLowerCase(),
+              action: pathParts[1] // may be undefined, that's fine
+          };
+
+          if (parts[1]) {
+              // further split the query string
+              var segments = parts[1].split('?');
+              for (var i = 0; i< segments.length ; i++) {
+                  // each of these is just a key=value pair
+                  var kvp = segments[i].split('=');
+                  if (kvp.length === 2) {
+                      obj[kvp[0]] = kvp[1];
+                  }
+              }
+          }
+
+          return obj;
+      }
+
+      function getHomeRedirect(urlObj) {
+          // video or video info page
+          if (urlObj.action === 'video' && urlObj.assetID) {
+              return REDIRECTOR_ROOT + "/feature/" + urlObj.assetID;
+          }
+          // home
+          return PLAY_ROOT;
+      }
+
+      function getMoviesRedirect(urlObj) {
+          // video or video info page
+          if (urlObj.action === 'video' && urlObj.assetID) {
+              return REDIRECTOR_ROOT + "/feature/" + urlObj.assetID;
+          }
+
+          if (urlObj.action === 'browse') {
+              switch(urlObj.browseID) {
+                  case "justadd.INDB487":
+                      return PLAY_ROOT + "/movies/just_added";
+                  case "genre.ACT":
+                      return PLAY_ROOT + "/movies/action";
+                  case "genre.COM":
+                      return PLAY_ROOT + "/movies/comedy";
+                  case "genre.DRA":
+                      return PLAY_ROOT + "/movies/drama";
+                  case "genre.HSC":
+                      return PLAY_ROOT + "/movies/horror_scifi";
+                  case "genre.SUS":
+                      return PLAY_ROOT + "/movies/suspense";
+                  case "genre.ROM":
+                      return PLAY_ROOT + "/movies/romance";
+                  case "genre.FAM":
+                      return PLAY_ROOT + "/movies/family";
+                  case "genre.LAT":
+                      return PLAY_ROOT + "/movies/latino";
+                  case "packageService.packages":
+                      return PLAY_ROOT + "/collections";
+              }
+              // everything else will fall through to default exit
+          }
+
+          return PLAY_ROOT + "/movies";
+      }
+
+      function getSeriesRedirect(urlObj) {
+          // video or video info page
+          if (urlObj.action === 'video' && urlObj.assetID) {
+              return REDIRECTOR_ROOT + "/episode/" + urlObj.assetID;
+          }
+          if (urlObj.action === 'browse' && urlObj.assetID && urlObj.assetType === 'SERIES') {
+              // series landing page
+              return REDIRECTOR_ROOT + "/series/" + urlObj.assetID;
+          }
+          if (urlObj.action === 'browse' && urlObj.assetID && urlObj.assetType === 'SEASON') {
+              // season landing page
+              return REDIRECTOR_ROOT + "/season/" + urlObj.assetID;
+          }
+
+          if (urlObj.action === 'browse') {
+              switch(urlObj.browseID) {
+                  case "category.INDB468":
+                      return PLAY_ROOT + "/series/latino";
+                  case "category.INDB465":
+                      return PLAY_ROOT + "/series/family";
+              }
+              // everything else will fall through to default exit
+          }
+
+          if (urlObj.section === 'latin') {
+              return PLAY_ROOT + "/series/latino";
+          }
+
+          return PLAY_ROOT + "/series";
+      }
+
+      function getComedyRedirect(urlObj, targetRoot) {
+          // video or video info page
+          if (urlObj.action === 'video' && urlObj.assetID) {
+              return REDIRECTOR_ROOT + "/feature/" + urlObj.assetID;
+          }
+
+          if (urlObj.action === 'browse') {
+              switch(urlObj.browseID) {
+                  case "genre.COM":
+                      return PLAY_ROOT + "/comedy/movies";
+                  case "category.INDB469":
+                      return PLAY_ROOT + "/comedy/digital";
+              }
+              // everything else will fall through to default exit
+          }
+
+          return PLAY_ROOT + "/comedy";
+      }
+
+      function getSportsRedirect(urlObj, targetRoot) {
+          // video or video info page
+          if (urlObj.action === 'video' && urlObj.assetID) {
+              return REDIRECTOR_ROOT + "/feature/" + urlObj.assetID;
+          }
+
+          return PLAY_ROOT + "/sports";
+      }
+
+      function getDocumentarieRedirect(urlObj, targetRoot) {
+          // video or video info page
+          if (urlObj.action === 'video' && urlObj.assetID) {
+              return REDIRECTOR_ROOT + "/feature/" + urlObj.assetID;
+          }
+
+          return PLAY_ROOT + "/documentaries";
+      }
+
+      function getLateNightRedirect(urlObj, targetRoot) {
+          // video or video info page
+          if (urlObj.action === 'video' && urlObj.assetID) {
+              return REDIRECTOR_ROOT + "/feature/" + urlObj.assetID;
+          }
+
+          if (urlObj.action === 'browse') {
+              switch(urlObj.browseID) {
+                  case "category.INDB466":
+                      return PLAY_ROOT + "/late_night/specials";
+                  case "category.INDB469":
+                      return PLAY_ROOT + "/late_night/movies";
+              }
+              // everything else will fall through to default exit
+          }
+
+          return PLAY_ROOT + "/late_night";
+      }
+
+      function performHadronRedirect(){
+        var campaign = '';
+        var deeplink;
+        // go URLs are oddly structured, they have many questionmarks in the URL
+        var s = window.location.search.split("?");
+        if (s.length > 1) {
+          // components to look at
+          s.forEach(function(si) {
+            if (si.indexOf("camp=") === 0) {
+              // campaign component
+              campaign = si;
+            } else if (si.indexOf("deeplink/") === 0) {
+              // deeplink component
+              deeplink = si;
+            }
+          });
+        }
+
+        if (deeplink) {
+          try {
+            var data = deeplink.substring(9, deeplink.length-1);
+            data = window.atob(data);
+            data = JSON.parse(data);
+            // deeplink urns aren't quite the same as comet URNs, have to inspect them
+            var urn = data.goV2Id;
+            if (urn) {
+              var urnBase = urn.substring(0, urn.lastIndexOf(":"));
+              var urnId = urn.substring(urn.lastIndexOf(":") + 1);
+              switch(urnBase) {
+                case "urn:hbo:series":
+                  window.location.href = PLAY_ROOT + "/series/" + urn + "?" + campaign;
+                  return;
+                case "urn:hbo:season":
+                  window.location.href = PLAY_ROOT + "/series/" + urn + "?" + campaign;
+                  return;
+                case "urn:hbo:episode":
+                  window.location.href = PLAY_ROOT + "/episode/" + urn + "?" + campaign;
+                  return;
+                default:
+                  window.location.href = PLAY_ROOT + "/feature/urn:hbo:feature:" + urnId + "?" + campaign;
+                  return;
+              }
+            }
+          }catch(e) {
+            // just fall through to hash
+          }
+        }
+
+        // no deeplinking, just look at the hash
+        var hash = window.location.hash;
+        window.location.href = calculateHadronRedirect(hash) + "?" + campaign;
+      }
+
+      // perform the redirect
+      performHadronRedirect();
+
+    </script>
+
+    <link href="favicon.ico" rel="icon">
+  </head>
+
+  <body>
+    <noscript>
+      <p><a href="http://hbogo.com"><img src="http://hbogo.com/image/logo-hbogo.png" /></a></p>
+      <p>JavaScript must be enabled.</p>
+    </noscript>
+  </body>
+</html>

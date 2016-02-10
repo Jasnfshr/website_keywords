@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="no-js ie ie6" lang="en" xmlns:fb="https://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie ie7" lang="en" xmlns:fb="https://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie ie8" lang="en" xmlns:fb="https://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie ie9" lang="en" xmlns:fb="https://ogp.me/ns/fb#"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en" xmlns:fb="https://ogp.me/ns/fb#"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a3fd0fb779","applicationID":"3525729","transactionName":"IF1XERAMVFxTRBdDUA9RVggHTFBfW1NIVVIG","queueTime":0,"applicationTime":50,"agentToken":null,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgIDWFBACwYCUVZQDg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//cdn.optimizely.com/js/4041342279.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+  <script src="/assets/visit-50d91294365e1e52aa909924de921c04.js" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="vAwqsBPy4cLvj4vHmD67ujK43Url20JM7XYmNM93Bfo=" name="csrf-token" />
+  <meta name="google" value="notranslate">
+  <meta name="bitly-verification" content="c4d2eaeaa72c"/>
+  <meta name="description" content="Daily Burn is redefining fitness with online workout videos, supplements, nutrition &amp; coaching. Streaming at home &amp; on the go. Start your 100% free trial now.">
+  <meta name="author" content="Daily Burn Inc.">
+  <meta property="fb:admins" content="5811055,548315583,654431282" />
+  <meta property="fb:app_id" content="49657177161" />
+  <meta name="google" content="nositelinkssearchbox">
+  <title>Daily Burn | A Better Fit.</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link href="/assets/marketing/default_landing_2015/bootstrap-833f3dbf7b6712c55d031b221fc010a6.css" media="all" rel="stylesheet" type="text/css" />
+  <!-- Fonts.com -->
+  <link href="//fast.fonts.net/cssapi/d182dfed-8df5-4a5d-bda5-da76ccb9f355.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/print-127ee4fd8d192b0427ad1ff6d0aa89a0.css" media="print" rel="stylesheet" type="text/css" />
+
+    <link href="/assets/marketing/m24-3f3c30a17428d90dfbc6912137e3b21c.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+  <script src="/assets/modernizr-bf4a9f0a155ac019384491d3814c6192.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="/javascripts/selectivizr.js" type="text/javascript"></script>
+  
+</head>
+<body data-spy="scroll" data-target="#main-nav">
+    <script type="text/javascript">
+  // Has to run before the <!-- Google Tag Manager --> line
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'db.url': location.pathname + location.search + location.hash,
+    'db.pagetype': '{welcome-homepage_m24}',
+  });
+  </script>
+
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W33Z6P"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W33Z6P');</script>
+  <!-- End Google Tag Manager -->
+
+
+  
+<div id="page">
+  <header class="navbar navbar-default navbar-fixed-top" id="transparent-nav">
+  <div class="nav-contents">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Daily Burn</a>
+      </div>
+      <div class="collapse navbar-collapse" id="header-navbar-collapse">
+        <ul class="nav navbar-nav hidden-lg hidden-md hidden-xs">
+            <li><a href="#workouts">Workouts</a></li>
+            <li><a href="#success-stories">Success Stories</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#variety">Variety</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#affordability">Affordability</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="signIn hidden-xs hidden-sm"><a href="/users/sign_in">Sign In</a></li>
+          <li class="join"><a href="/sign_up" class="btn btn-blue">Join Now</a></li>
+          <li class="signIn hidden-lg hidden-md"><a href="/users/sign_in">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="navbar navbar-default navbar-fixed-top" id="main-nav">
+  <div class="nav-contents">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Daily Burn</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar-collapse">
+        <ul class="nav navbar-nav hidden-xs">
+          <!-- <li class="active"><a href="#intro">Intro (current)</a></li> -->
+            <li><a href="#workouts">Workouts</a></li>
+            <li><a href="#success-stories">Success Stories</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#variety">Variety</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#affordability">Affordability</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="join"><a href="/sign_up" class="btn">Join Now</a></li>
+          <li class="signIn hidden-lg hidden-md"><a href="/users/sign_in">Sign In</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </div>
+</nav>
+  <section id="intro">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        <div class="box">
+          <h2>Work Out at Home<br/>or On the Go</h2>
+          <p>Daily Burn has the whole package. Achieve your goals with our variety of workout videos, community support and other tools.</p>
+          <a href="/sign_up" class="btn btn-cta btn-lg">Try It Free for 30 Days!*</a>
+        </div>
+      </div>
+      <div class="col-sm-6 text-center">
+      <div class="box">
+  <a class="play-video-modal" data-toggle="modal" data-target="#videoModal" href="http://assets4.dailyburn.com/video/workout_interstitials/DB_TV_60_2/480p.mp4" data-width="850" data-height="478" data-km-key="Survey Landing Page Video" data-km-value="" rel="nofollow">
+    <img alt="M24_video-image" src="/assets/marketing/m24/m24_video-image.jpg" />
+    <div class="overlay">
+      <div class="overlay-content">
+        <div class="play-btn-box"><div class="play-btn"></div></div>
+        <div class="btn btn-orange-no-icon play-video-modal" data-toggle="modal" data-target="#videoModal">Watch to Learn More</div>  
+      </div>        
+    </div>
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="workouts" class="text-center">
+  <div class="container-fluid">
+    <header>
+      <h2>Don’t Limit Yourself</h2>
+      <p>With Daily Burn, you get access to ALL our workouts &mdash; there’s no charge for each separate program! And with variety like this, you’ll never get bored.</p>
+    </header>
+    <div class="carousel slide" id="programsCarousel">
+      <div class="carousel-inner">
+            <div class="active clearfix item program-black_fire" data-program="black_fire" data-index="0">
+              <div class="gfx banner program-black_fire">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets4.dailyburn.com/video/workout_interstitials/Z_OPEN_BOB/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Black Fire</span></h3>
+                <h4>Get to the next level with Black Fire featuring Bob Harper.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Bob Harper</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>2 months</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Intense results, Advanced</dd>
+                </dl>
+                <p>Designed by celebrity trainer Bob Harper, Black Fire burns deeper and hotter than anything else. Black Fire&#x27;s short, full-body exercises are scalable for athletes of all levels who want to tackle the next level of fitness.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-inferno" data-program="inferno" data-index="1">
+              <div class="gfx banner program-inferno">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets1.dailyburn.com/video/workout_interstitials/INFERNO_INT_213I/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Inferno</span></h3>
+                <h4>Intense workouts for intense results.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Anja Garcia</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>21 days, 30-40 minute workouts</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Intense results, advanced</dd>
+                </dl>
+                <p>INFERNO is a 21 day gut-wrenching challenge of grueling workouts. Each week culminates with an AMRAP workout (as many reps as possible). Users will be able to log results and attempt to best themselves in the following weeks.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-cardio_sculpt" data-program="cardio_sculpt" data-index="2">
+              <div class="gfx banner program-cardio_sculpt">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets4.dailyburn.com/video/workout_interstitials/CARDIOSCULPT_INT_228-I_Anja/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Cardio Sculpt</span></h3>
+                <h4>Lose weight &amp; get toned with fun &amp; easy workout videos.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Anja, Keaira LaShae and Judi</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>3 months, 6 workouts a week</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Weight loss, toning</dd>
+                </dl>
+                <p>Get lean legs, toned abs and a tight butt! Cardio Sculpt is DailyBurn&#x27;s total-body sculpting program that torches calories and shrinks stubborn areas. Cardio Sculpt has 12 unique workouts that are fun and challenging, designed by 5 expert trainers you&#x27;re going to love. Start this transformative program now!</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-ltf" data-program="ltf" data-index="3">
+              <div class="gfx banner program-ltf">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets4.dailyburn.com/video/workout_interstitials/LTF_4008I_SALES/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">LTF</span></h3>
+                <h4>Live to Fail: You have to fail to grow</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Ben Booker</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>90 days</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Intense results, Advanced</dd>
+                </dl>
+                <p>Whether you&#x27;re looking to lose weight or gain lean muscle, LTF is here to help you achieve your goal. This 90-day program will push your body to the limit with intense workouts that burn away fat and sculpt muscle. Failure will become your biggest motivator as you progress towards being in the best shape of your life.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-db15" data-program="db15" data-index="4">
+              <div class="gfx banner program-db15">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets1.dailyburn.com/video/workout_interstitials/DB15_INT_260-I_Nicola/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">DB15</span></h3>
+                <h4>Get fit in just 15 days, 15 workouts, 15 minutes each.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>7 of DailyBurn&#x27;s elite trainers</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>15 days, 15 minute workouts</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Weight loss, convenience</dd>
+                </dl>
+                <p>With everything from MMA to Yoga, you can&#x27;t get bored with DB15! DailyBurn transforms your body in just 15 minutes a day. DB15 is a targeted, 15-day program that is a great choice for any fitness level.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-true_beginner" data-program="true_beginner" data-index="5">
+              <div class="gfx banner program-true_beginner">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets3.dailyburn.com/video/workout_interstitials/TB_423E/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">True Beginner</span></h3>
+                <h4>Whether you&#x27;re starting out or starting over, this program&#x27;s for you.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Justin Rubin</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>8 Weeks</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Beginners, weight loss</dd>
+                </dl>
+                <p>Whether you are starting out or starting over True Beginner is the program for you. Jump-start your weight loss goals and ease back into fitness as we fire up your metabolism and work towards building strength, stamina, and stability over the next 4 weeks.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-inferno_hr" data-program="inferno_hr" data-index="6">
+              <div class="gfx banner program-inferno_hr">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets1.dailyburn.com/video/workout_interstitials/HR_415E/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Inferno HR</span></h3>
+                <h4>Inferno HR pushes you to the max!</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Anja Garcia</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>4 weeks</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Intense Results, Strength, Weight loss</dd>
+                </dl>
+                <p>Ready to take your Inferno workout to the next level? This 4 week program uses the latest in heart rate monitor technology to make your workouts more interactive, effective, and trackable. Hook up your heart rate monitor and get the personalized feedback that will lead to intense results!</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-tbt" data-program="tbt" data-index="7">
+              <div class="gfx banner program-tbt">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets3.dailyburn.com/video/workout_interstitials/TBT_INT_222I/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Tactical Bodyweight Training</span></h3>
+                <h4>Your body is your gym - no equipment required.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Cody Storey</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>28 days, 40 minute workouts</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Strength, mobility, weight loss</dd>
+                </dl>
+                <p>These workouts aren&#x27;t like anything you&#x27;ve done before, because expert trainer Cody Storey studied primal movements, and designed TBT to open up new ranges of motion so you can move more freely.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-move" data-program="move" data-index="8">
+              <div class="gfx banner program-move">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets1.dailyburn.com/video/workout_interstitials/MOV_INT_252-I_H264/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">MOVE!</span></h3>
+                <h4>All the moves you need to dance yourself into shape.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Keaira LaShae</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>30-47 minute workouts</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Weight loss, toning</dd>
+                </dl>
+                <p>DailyBurn MOVE! is a dance party led by singer and dancer Keaira LaShae. Some people hate to workout - but dancing with her is just fun! Keaira takes you around the world of dance in this fun and metabolism-boosting workout series. If you can MOVE! you can Dance!</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-core" data-program="core" data-index="9">
+              <div class="gfx banner program-core">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets3.dailyburn.com/video/workout_interstitials/CORE_380E/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Core</span></h3>
+                <h4>Start to define your abs in this 2 week program.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>3 DailyBurn Trainers</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>2 Weeks</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Gain Strength, Get Toned</dd>
+                </dl>
+                <p>Core is a 14 day program to get you started towards lean and sculpted abs.  Over the 2 weeks, you&#x27;ll work your abs, obliques, lower back, glutes, and hip flexors.  Working a wide variety of muscles will leave your core looking great.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-yoga_made_simple" data-program="yoga_made_simple" data-index="10">
+              <div class="gfx banner program-yoga_made_simple">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets1.dailyburn.com/video/workout_interstitials/YMS_4090_OVERVIEW/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Yoga Made Simple</span></h3>
+                <h4>Energize and relieve tension through a series of classic yoga movements.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Briohny Smyth</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>4 weeks</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Stay Fit, Increase Flexibility</dd>
+                </dl>
+                <p>Based on a sequence of classic yoga poses, Yoga Made Simple is approachable for people of all fitness levels. In this program, you&#x27;ll energize your body and relieve tension and stress through a series of gentle movements.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-yoga" data-program="yoga" data-index="11">
+              <div class="gfx banner program-yoga">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets1.dailyburn.com/video/workout_interstitials/YOGA_INT_246I/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Yoga</span></h3>
+                <h4>Yoga for a stronger &amp; balanced lifestyle.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Briohny Smyth</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>At your own pace</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Mobility, flexibility</dd>
+                </dl>
+                <p>A 30-day YogaFlow progression that will challenge and enlighten both novice and experienced Yogis.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-pilates_phase_one" data-program="pilates_phase_one" data-index="12">
+              <div class="gfx banner program-pilates_phase_one">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets2.dailyburn.com/video/workout_interstitials/PL1_4082_OVERVIEW/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Pilates Phase One</span></h3>
+                <h4>Learn the fundamentals of Pilates, fine-tune your form and strengthen your core.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Andrea Speir</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>3 weeks</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Gain strength, flexibility</dd>
+                </dl>
+                <p>Pilates Phase One welcomes people of all fitness levels. In this 16-day program users move through a series of small, targeted movements that focus on the body&#x27;s &quot;Powerhouse,&quot; the abdominals and center of the body. Each workout includes movements to strengthen your entire core from large, stabilizing muscles to deeper, intricate tiny ones.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-pilates_phase_two" data-program="pilates_phase_two" data-index="13">
+              <div class="gfx banner program-pilates_phase_two">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets3.dailyburn.com/video/workout_interstitials/PL2_4083_OVERVIEW/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Pilates Phase Two</span></h3>
+                <h4>Increase pace, intensity and resistance to achieve a long, toned look.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Andrea Speir</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>3 weeks</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Gain strength, flexibility</dd>
+                </dl>
+                <p>Pilates Phase Two takes you to the next level in your Pilates practice. Building on the fundamentals of Pilates Phase One, you&#x27;ll continue to build strength from your core by increasing your workout pace and controlling the flow of your movements.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-dbk" data-program="dbk" data-index="14">
+              <div class="gfx banner program-dbk">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets2.dailyburn.com/video/workout_interstitials/DBK_INT_202I/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">DBK</span></h3>
+                <h4>Master kettlebells for a complete workout.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Cody Storey</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>3 months, 15-50 min workouts</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Strength, toning</dd>
+                </dl>
+                <p>DBK&#x27;s ballistic conditioning techniques blow away anything you can do with a dumbbell. DBK is the first kettlebell program that teaches you how to master technique while transforming your body. Expert Cody Storey breaks away from outdated traditional workouts and utilizes a kettlebell to sculpt the body you want.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-total_cardio" data-program="total_cardio" data-index="15">
+              <div class="gfx banner program-total_cardio">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets4.dailyburn.com/video/workout_interstitials/TC_365E/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Total Cardio</span></h3>
+                <h4>Sweat and sizzle calories with fun yet challenging cardio workouts.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>3 DailyBurn Trainers</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>4 Weeks</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Weight loss, strength</dd>
+                </dl>
+                <p>Been craving movement in those limbs but the treadmill just isn&#x27;t doing it for you? With Total Cardio you can swap the hamster-wheel doldrums for a 28-day program that never gives you the chance to plateau.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-bb" data-program="bb" data-index="16">
+              <div class="gfx banner program-bb">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets4.dailyburn.com/video/workout_interstitials/BB_SALES_338I/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Beautiful Belly</span></h3>
+                <h4>A complete yoga practice for your pregnancy</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Briohny Smyth</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>3 trimesters, at your own pace</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Expecting mothers</dd>
+                </dl>
+                <p>Beautiful Belly was designed by internationally sought-after yogi Briohny Smyth, while she was an expecting mom - just like you. She designed Beautiful Belly Yoga so she could continue her practice while pregnant to help offset the demands being put on her body from pregnancy.</hp>
+              </div>
+            </div>
+            <div class=" clearfix item program-recover" data-program="recover" data-index="17">
+              <div class="gfx banner program-recover">
+              </div>
+              <a class="play-video-modal video" data-toggle="modal" data-target="#videoModal" href="http://assets2.dailyburn.com/video/workout_interstitials/REC_INT_267I/480p.mp4">Watch a Preview</a>
+
+              <div class="description">
+                <h3><span class="name">Recover</span></h3>
+                <h4>Rejuvenate your body through a series of mobility workouts.</h4>
+                <dl>
+                    <dt>LEAD TRAINER</dt>
+                    <dd>Cody, Bri and Lindsey</dd>
+                  <dt>SCHEDULE OVERVIEW</dt>
+                  <dd>1 Week, 5-30 min workouts</dd>
+                  <dt>BEST FOR</dt>
+                  <dd>Stretching, mobility, recovery</dd>
+                </dl>
+                <p>DailyBurn RECOVER is a luxurious week of full-body restoration and more valuable than Spa treatments. Yoga will open you up, Myofascial Release provides instant relief from tension, and Mobility restores movement. So reclaim your fitness and RECOVER at DailyBurn today!</hp>
+              </div>
+            </div>
+      </div>
+      <a data-slide="prev" href="#programsCarousel" class="carousel-control left">‹</a>
+      <a data-slide="next" href="#programsCarousel" class="carousel-control right">›</a>
+    </div>
+  </div>
+
+  <ul id="programs-list-sub">
+      <li data-program="black_fire">
+        <a href="#switch-program" data-index="0" class="active program">
+          <img alt="black_fire" src="/assets/marketing/m24/logo-programs-black_fire.png" srcset="/assets/marketing/m24/logo-programs-black_fire.png 1x, /assets/marketing/m24/logo-programs-black_fire-2x.png 2x" class="" />
+          <img alt="black_fire" src="/assets/marketing/m24/logo-programs-black_fire-active.png" srcset="/assets/marketing/m24/logo-programs-black_fire-active.png 1x, /assets/marketing/m24/logo-programs-black_fire-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="inferno">
+        <a href="#switch-program" data-index="1" class=" program">
+          <img alt="inferno" src="/assets/marketing/m24/logo-programs-inferno.png" srcset="/assets/marketing/m24/logo-programs-inferno.png 1x, /assets/marketing/m24/logo-programs-inferno-2x.png 2x" class="" />
+          <img alt="inferno" src="/assets/marketing/m24/logo-programs-inferno-active.png" srcset="/assets/marketing/m24/logo-programs-inferno-active.png 1x, /assets/marketing/m24/logo-programs-inferno-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="cardio_sculpt">
+        <a href="#switch-program" data-index="2" class=" program">
+          <img alt="cardio_sculpt" src="/assets/marketing/m24/logo-programs-cardio_sculpt.png" srcset="/assets/marketing/m24/logo-programs-cardio_sculpt.png 1x, /assets/marketing/m24/logo-programs-cardio_sculpt-2x.png 2x" class="" />
+          <img alt="cardio_sculpt" src="/assets/marketing/m24/logo-programs-cardio_sculpt-active.png" srcset="/assets/marketing/m24/logo-programs-cardio_sculpt-active.png 1x, /assets/marketing/m24/logo-programs-cardio_sculpt-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="ltf">
+        <a href="#switch-program" data-index="3" class=" program">
+          <img alt="ltf" src="/assets/marketing/m24/logo-programs-ltf.png" srcset="/assets/marketing/m24/logo-programs-ltf.png 1x, /assets/marketing/m24/logo-programs-ltf-2x.png 2x" class="" />
+          <img alt="ltf" src="/assets/marketing/m24/logo-programs-ltf-active.png" srcset="/assets/marketing/m24/logo-programs-ltf-active.png 1x, /assets/marketing/m24/logo-programs-ltf-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="db15">
+        <a href="#switch-program" data-index="4" class=" program">
+          <img alt="db15" src="/assets/marketing/m24/logo-programs-db15.png" srcset="/assets/marketing/m24/logo-programs-db15.png 1x, /assets/marketing/m24/logo-programs-db15-2x.png 2x" class="" />
+          <img alt="db15" src="/assets/marketing/m24/logo-programs-db15-active.png" srcset="/assets/marketing/m24/logo-programs-db15-active.png 1x, /assets/marketing/m24/logo-programs-db15-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="true_beginner">
+        <a href="#switch-program" data-index="5" class=" program">
+          <img alt="true_beginner" src="/assets/marketing/m24/logo-programs-true_beginner.png" srcset="/assets/marketing/m24/logo-programs-true_beginner.png 1x, /assets/marketing/m24/logo-programs-true_beginner-2x.png 2x" class="" />
+          <img alt="true_beginner" src="/assets/marketing/m24/logo-programs-true_beginner-active.png" srcset="/assets/marketing/m24/logo-programs-true_beginner-active.png 1x, /assets/marketing/m24/logo-programs-true_beginner-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="inferno_hr">
+        <a href="#switch-program" data-index="6" class=" program">
+          <img alt="inferno_hr" src="/assets/marketing/m24/logo-programs-inferno_hr.png" srcset="/assets/marketing/m24/logo-programs-inferno_hr.png 1x, /assets/marketing/m24/logo-programs-inferno_hr-2x.png 2x" class="" />
+          <img alt="inferno_hr" src="/assets/marketing/m24/logo-programs-inferno_hr-active.png" srcset="/assets/marketing/m24/logo-programs-inferno_hr-active.png 1x, /assets/marketing/m24/logo-programs-inferno_hr-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="tbt">
+        <a href="#switch-program" data-index="7" class=" program">
+          <img alt="tbt" src="/assets/marketing/m24/logo-programs-tbt.png" srcset="/assets/marketing/m24/logo-programs-tbt.png 1x, /assets/marketing/m24/logo-programs-tbt-2x.png 2x" class="" />
+          <img alt="tbt" src="/assets/marketing/m24/logo-programs-tbt-active.png" srcset="/assets/marketing/m24/logo-programs-tbt-active.png 1x, /assets/marketing/m24/logo-programs-tbt-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="move">
+        <a href="#switch-program" data-index="8" class=" program">
+          <img alt="move" src="/assets/marketing/m24/logo-programs-move.png" srcset="/assets/marketing/m24/logo-programs-move.png 1x, /assets/marketing/m24/logo-programs-move-2x.png 2x" class="" />
+          <img alt="move" src="/assets/marketing/m24/logo-programs-move-active.png" srcset="/assets/marketing/m24/logo-programs-move-active.png 1x, /assets/marketing/m24/logo-programs-move-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="core">
+        <a href="#switch-program" data-index="9" class=" program">
+          <img alt="core" src="/assets/marketing/m24/logo-programs-core.png" srcset="/assets/marketing/m24/logo-programs-core.png 1x, /assets/marketing/m24/logo-programs-core-2x.png 2x" class="" />
+          <img alt="core" src="/assets/marketing/m24/logo-programs-core-active.png" srcset="/assets/marketing/m24/logo-programs-core-active.png 1x, /assets/marketing/m24/logo-programs-core-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="yoga_made_simple">
+        <a href="#switch-program" data-index="10" class=" program">
+          <img alt="yoga_made_simple" src="/assets/marketing/m24/logo-programs-yoga_made_simple.png" srcset="/assets/marketing/m24/logo-programs-yoga_made_simple.png 1x, /assets/marketing/m24/logo-programs-yoga_made_simple-2x.png 2x" class="" />
+          <img alt="yoga_made_simple" src="/assets/marketing/m24/logo-programs-yoga_made_simple-active.png" srcset="/assets/marketing/m24/logo-programs-yoga_made_simple-active.png 1x, /assets/marketing/m24/logo-programs-yoga_made_simple-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="yoga">
+        <a href="#switch-program" data-index="11" class=" program">
+          <img alt="yoga" src="/assets/marketing/m24/logo-programs-yoga.png" srcset="/assets/marketing/m24/logo-programs-yoga.png 1x, /assets/marketing/m24/logo-programs-yoga-2x.png 2x" class="" />
+          <img alt="yoga" src="/assets/marketing/m24/logo-programs-yoga-active.png" srcset="/assets/marketing/m24/logo-programs-yoga-active.png 1x, /assets/marketing/m24/logo-programs-yoga-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="pilates_phase_one">
+        <a href="#switch-program" data-index="12" class=" program">
+          <img alt="pilates_phase_one" src="/assets/marketing/m24/logo-programs-pilates_phase_one.png" srcset="/assets/marketing/m24/logo-programs-pilates_phase_one.png 1x, /assets/marketing/m24/logo-programs-pilates_phase_one-2x.png 2x" class="" />
+          <img alt="pilates_phase_one" src="/assets/marketing/m24/logo-programs-pilates_phase_one-active.png" srcset="/assets/marketing/m24/logo-programs-pilates_phase_one-active.png 1x, /assets/marketing/m24/logo-programs-pilates_phase_one-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="pilates_phase_two">
+        <a href="#switch-program" data-index="13" class=" program">
+          <img alt="pilates_phase_two" src="/assets/marketing/m24/logo-programs-pilates_phase_two.png" srcset="/assets/marketing/m24/logo-programs-pilates_phase_two.png 1x, /assets/marketing/m24/logo-programs-pilates_phase_two-2x.png 2x" class="" />
+          <img alt="pilates_phase_two" src="/assets/marketing/m24/logo-programs-pilates_phase_two-active.png" srcset="/assets/marketing/m24/logo-programs-pilates_phase_two-active.png 1x, /assets/marketing/m24/logo-programs-pilates_phase_two-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="dbk">
+        <a href="#switch-program" data-index="14" class=" program">
+          <img alt="dbk" src="/assets/marketing/m24/logo-programs-dbk.png" srcset="/assets/marketing/m24/logo-programs-dbk.png 1x, /assets/marketing/m24/logo-programs-dbk-2x.png 2x" class="" />
+          <img alt="dbk" src="/assets/marketing/m24/logo-programs-dbk-active.png" srcset="/assets/marketing/m24/logo-programs-dbk-active.png 1x, /assets/marketing/m24/logo-programs-dbk-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="total_cardio">
+        <a href="#switch-program" data-index="15" class=" program">
+          <img alt="total_cardio" src="/assets/marketing/m24/logo-programs-total_cardio.png" srcset="/assets/marketing/m24/logo-programs-total_cardio.png 1x, /assets/marketing/m24/logo-programs-total_cardio-2x.png 2x" class="" />
+          <img alt="total_cardio" src="/assets/marketing/m24/logo-programs-total_cardio-active.png" srcset="/assets/marketing/m24/logo-programs-total_cardio-active.png 1x, /assets/marketing/m24/logo-programs-total_cardio-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="bb">
+        <a href="#switch-program" data-index="16" class=" program">
+          <img alt="bb" src="/assets/marketing/m24/logo-programs-bb.png" srcset="/assets/marketing/m24/logo-programs-bb.png 1x, /assets/marketing/m24/logo-programs-bb-2x.png 2x" class="" />
+          <img alt="bb" src="/assets/marketing/m24/logo-programs-bb-active.png" srcset="/assets/marketing/m24/logo-programs-bb-active.png 1x, /assets/marketing/m24/logo-programs-bb-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+      <li data-program="recover">
+        <a href="#switch-program" data-index="17" class=" program">
+          <img alt="recover" src="/assets/marketing/m24/logo-programs-recover.png" srcset="/assets/marketing/m24/logo-programs-recover.png 1x, /assets/marketing/m24/logo-programs-recover-2x.png 2x" class="" />
+          <img alt="recover" src="/assets/marketing/m24/logo-programs-recover-active.png" srcset="/assets/marketing/m24/logo-programs-recover-active.png 1x, /assets/marketing/m24/logo-programs-recover-active-2x.png 2x" class="active" />
+        </a>
+      </li>
+  </ul>
+  <a href="/sign_up" class="btn btn-cta btn-lg">Start My Free Trial</a>
+</section>
+  <section id="success-stories">
+  <div class="container-fluid">
+    <header class="text-center">
+      <h2>Real Stories, Real Results**</h2>
+    </header>
+    <div class="stories clearfix">
+      <div class="col-sm-5 col-md-6">
+        <div class="story">
+            <div class="sandra active">
+              <h3>Never Felt So Alive</h3>
+              <p>Sandra had never really worked out or dieted before.<br/>But thanks to Daily Burn’s personalized plans she was able to lose 16 pounds** in only 3 months.</p>
+            </div>
+            <div class="amanda">
+              <h3>A Daily Commitment</h3>
+              <p>Before Daily Burn, Amanda constantly made excuses because of her weight. In just three months, she lost 26 pounds** and gained more confidence!</p>
+            </div>
+            <div class="thomas">
+              <h3>The Real Me Is Here</h3>
+              <p>Thomas was used to skipping breakfast and eating fast food twice a day. With Daily Burn, Thomas kicked those habits and lost 18 pounds** using our effective and hardcore workouts.</p>
+            </div>
+            <div class="marcus">
+              <h3>I'm Enjoying Every Day</h3>
+              <p>A size XXL, Marcus knew he needed a better relationship with his body. Daily Burn helped him find the discipline and structure he needed to lose 59 pounds!**</p>
+            </div>
+            <div class="jose">
+              <h3>Take On The Challenge</h3>
+              <p>Inspired by a coworker, Jose wanted to get leaner and toned. By combining both Daily Burn's workout and nutrition plan, he was able to lose 18 pounds and see more muscle definition!**</p>
+            </div>
+          <h4>Start Your Success Story</h4>
+          <a href="/sign_up" class="btn btn-cta">30-Day Free Trial</a>
+        </div>
+        <div class="more-story">
+          <h5>More Success Stories</h5>
+          <ul>
+            <li class="amanda"><a data-testimonial="amanda">amanda</a></li>
+            <li class="thomas"><a data-testimonial="thomas">thomas</a></li>
+            <li class="marcus"><a data-testimonial="marcus">marcus</a></li>
+            <li class="sandra"><a data-testimonial="sandra"class="active">sandra</a></li>
+            <li class="jose"><a data-testimonial="jose">jose</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-7 col-md-6">
+        <div class="before-after">
+          <img src="/assets/marketing/gplp/testimonial-ba/testimonial-ba-sandra.jpg" alt="Before and After" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="nutrition">  
+  <div class="container-fluid">
+    <div class="row nutrition">
+      <div class="col-md-7 col-md-offset-5 col-sm-7 col-sm-offset-5 nutrition-content">
+        <h2>Work Out Hard, Fuel Smart</h2>
+        <p>We've created an optimal, easy-to-follow nutrition plan &mdash; complete with daily recipe examples and sample meal plans &mdash; to give you the energy to dominate your workout.</p>
+        <a href="/sign_up" class="btn btn-cta btn-lg">Join Now</a>
+      </div>
+    </div>
+</section>
+  <section id="accessibility">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-7 col-md-6 pull-right">
+        <header>
+          <h2>Say Goodbye to DVDs</h2>
+          <p>No matter where you are, you can get access to your Daily Burn workouts &mdash; all you need is an internet connection. You can watch your workouts on your computer, iPad, iPhone, Android, Roku, TV and more. It’s easy to get access at your house, at the gym, or on the road &mdash; you are never without your Daily Burn workouts.</p>
+        </header>
+        <div class="box clearfix col-md-12 col-sm-10">
+          <h3>SUPPORTED DEVICES</h3>
+          <ul class="clearfix">
+            <li class="col-md-4 col-sm-6">iPad</li>
+            <li class="col-md-4 col-sm-6">Android</li>
+            <li class="col-md-4 col-sm-6">Roku</li>
+            <li class="col-md-4 col-sm-6">iPhone</li>
+            <li class="col-md-4 col-sm-6">Computer (PC/Mac)</li>
+            <li class="col-md-4 col-sm-6">Apple TV</li>
+            <li class="col-md-4 col-sm-6">iPod</li>
+            <li class="col-md-4 col-sm-6">Television</li>
+            <li class="col-md-4 col-sm-6">Samsung Smart TV</li>
+            <li class="col-md-4 col-sm-6">Chromecast</li>
+            <li class="col-md-4 col-sm-6">Xbox 360</li>
+            <li class="col-md-4 col-sm-6">PS3 System</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="variety" class="text-center">
+  <div class="container-fluid">
+    <div class="row">
+      <header class="clearfix">
+        <h2>Unparalleled Variety</h2>
+        <p class="col-sm-8 col-sm-offset-2">From Dance Aerobics to Kettlebells and Yoga, you’ll get unparalleled variety. Daily Burn’s vast array of workouts means you’ll never get bored and will always have a new workout to try.</p>
+      </header>
+      <div class="videos">
+        <a href="http://assets3.dailyburn.com/video/previews/series200/DB15_COR_205/360p.mp4" class="item play-video-modal" data-toggle="modal" data-target="#videoModal">
+          <img src="/assets/marketing/m24/video-1.jpg" srcset="/assets/marketing/m24/video-1.jpg 1x, /assets/marketing/m24/video-1-2x.jpg 2x" alt="Video" />
+          <p><span><img src="/assets/marketing/m24/video-label-1.png" srcset="/assets/marketing/m24/video-label-1.png 1x, /assets/marketing/m24/video-label-1-2x.png 2x" alt="15" width="36" height="36"/> Core</span></p>
+        </a>
+        <a href="http://assets2.dailyburn.com/video/previews/series200/INF_INFm2_228/360p.mp4" class="item play-video-modal" data-toggle="modal" data-target="#videoModal">
+          <img src="/assets/marketing/m24/video-2.jpg" srcset="/assets/marketing/m24/video-2.jpg 1x, /assets/marketing/m24/video-2-2x.jpg 2x" alt="Video" />
+          <p><span><img src="/assets/marketing/m24/video-label-2.png" srcset="/assets/marketing/m24/video-label-2.png 1x, /assets/marketing/m24/video-label-2-2x.png 2x" alt="Inferno" width="80" height="24"/> Metcon 2</span></p>
+        </a>
+        <a href="http://assets4.dailyburn.com/video/previews/series200/DBK_DBK5_224/360p.mp4" class="item play-video-modal" data-toggle="modal" data-target="#videoModal">
+          <img src="/assets/marketing/m24/video-3.jpg" srcset="/assets/marketing/m24/video-3.jpg 1x, /assets/marketing/m24/video-3-2x.jpg 2x" alt="Video" />
+          <p><span><img src="/assets/marketing/m24/video-label-3.png" srcset="/assets/marketing/m24/video-label-3.png 1x, /assets/marketing/m24/video-label-3-2x.png 2x" alt="DBK" width="65" height="48" /> Kettlebells 5</span></p>
+        </a>
+        <a href="http://assets1.dailyburn.com/video/previews/series200/MOVE_MOVb_213/360p.mp4" class="item play-video-modal" data-toggle="modal" data-target="#videoModal">
+          <img src="/assets/marketing/m24/video-4.jpg" srcset="/assets/marketing/m24/video-4.jpg 1x, /assets/marketing/m24/video-4-2x.jpg 2x" alt="Video" />
+          <p><span><img src="/assets/marketing/m24/video-label-4.png" srcset="/assets/marketing/m24/video-label-4.png 1x, /assets/marketing/m24/video-label-4-2x.png 2x" alt="Move" width="69" height="27" /> Bollywood</span></p>
+        </a>
+        <a href="http://assets3.dailyburn.com/video/previews/series200/YOGA_YOG2_238/360p.mp4" class="item play-video-modal" data-toggle="modal" data-target="#videoModal">
+          <img src="/assets/marketing/m24/video-5.jpg" srcset="/assets/marketing/m24/video-5.jpg 1x, /assets/marketing/m24/video-5-2x.jpg 2x" alt="Video" />
+          <p><span><img src="/assets/marketing/m24/video-label-5.png" srcset="/assets/marketing/m24/video-label-5.png 1x, /assets/marketing/m24/video-label-5-2x.png 2x" alt="Yoga" width="76" height="33" /> Surya 2</span></p>
+        </a>
+      </div>
+      <a href="/sign_up" class="btn btn-cta btn-lg">Try It Free!</a>
+    </div>
+  </div>
+</section>
+  <section id="trainers">
+  <div class="container-fluid">
+    <div class="row trainers">
+      <div class="col-sm-7 col-md-6">
+        <header>
+          <h2>Trainers Working for You</h2>
+          <p>With unique philosophies and personalities, our team of professional expert trainers will keep you engaged and get you faster results while having fun. Here are some of our elite trainers.</p>
+        </header>
+        <div class="more-trainers">
+          <h5>MEET THE TRAINERS</h5>
+          <ul>
+              <li class="bob"><a data-trainers="bob" class="" >Bob Harper</a></li>
+              <li class="anja"><a data-trainers="anja" class="" >Anja Garcia</a></li>
+              <li class="ben"><a data-trainers="ben" class="" >Ben Booker</a></li>
+              <li class="andrea"><a data-trainers="andrea" class="" >Andrea Speir</a></li>
+              <li class="cody"><a data-trainers="cody" class="" >Cody Storey</a></li>
+              <li class="keaira"><a data-trainers="keaira" class="" >Keaira LaShae</a></li>
+              <li class="eitan"><a data-trainers="eitan" class="" >Eitan Kramer</a></li>
+              <li class="nicola"><a data-trainers="nicola" class="" >Nicola Harrington</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-5 col-md-6">
+        <div class="trainers-description clearfix">
+            <div class="bob">
+              <img src="/assets/marketing/m24/trainer-bob.png" srcset="/assets/marketing/m24/trainer-bob.png 1x, /assets/marketing/m24/trainer-bob.png 2x" alt="Bob Harper" />
+              <h3>Bob Harper</h3>
+              <p>With over 20 years of experience, Bob Harper is a health and fitness expert, television star, and three-time #1 New York Times best-selling author. Bob Harper is one of the most successful lifestyle experts in the world.</p>
+            </div>
+            <div class="anja">
+              <img src="/assets/marketing/m24/trainer-anja.png" srcset="/assets/marketing/m24/trainer-anja.png 1x, /assets/marketing/m24/trainer-anja.png 2x" alt="Anja Garcia" />
+              <h3>Anja Garcia</h3>
+              <p>Anja is serious about health and fitness. She is a former elite-level gymnast who specializes in sports drills and high-intensity interval training. If you&#x27;re looking to get fit, Anja&#x27;s workouts will turn up the heat.</p>
+            </div>
+            <div class="ben">
+              <img src="/assets/marketing/m24/trainer-ben.png" srcset="/assets/marketing/m24/trainer-ben.png 1x, /assets/marketing/m24/trainer-ben.png 2x" alt="Ben Booker" />
+              <h3>Ben Booker</h3>
+              <p>Ben is an award-winning bodybuilder, fitness model, and motivational speaker. After a serious car accident, he turned to bodybuilding to help turn his life around. Ben&#x27;s workouts and &quot;live to fail&quot; philosophy will push you to the absolute limit as you work to strengthen every part of your body.</p>
+            </div>
+            <div class="andrea">
+              <img src="/assets/marketing/m24/trainer-andrea.png" srcset="/assets/marketing/m24/trainer-andrea.png 1x, /assets/marketing/m24/trainer-andrea.png 2x" alt="Andrea Speir" />
+              <h3>Andrea Speir</h3>
+              <p>A well-recognized name in the Pilates community, Andrea Speir holds a 600-hour certification in the practice. Her knowledge of the physical body, injuries, and sports therapy combined with her background as a dancer give her the base to confidently shape each and every workout.</p>
+            </div>
+            <div class="cody">
+              <img src="/assets/marketing/m24/trainer-cody.png" srcset="/assets/marketing/m24/trainer-cody.png 1x, /assets/marketing/m24/trainer-cody.png 2x" alt="Cody Storey" />
+              <h3>Cody Storey</h3>
+              <p>Cody is a former professional snowboarder who believes that a higher level of fitness can be achieved by practicing freedom of movement within the body. Cody will help you achieve greater joint mobility and improve your range of motion. Cody is a kettlebell specialist and is certified in circular strength training.</p>
+            </div>
+            <div class="keaira">
+              <img src="/assets/marketing/m24/trainer-keaira.png" srcset="/assets/marketing/m24/trainer-keaira.png 1x, /assets/marketing/m24/trainer-keaira.png 2x" alt="Keaira LaShae" />
+              <h3>Keaira LaShae</h3>
+              <p>Keaira is a Tampa native who specializes in kickboxing. Keaira is a talented singer, songwriter, and dancer. She has performed alongside Usher and Marc Anthony, and most recently she appeared on Wild Out Wednesday on B.E.T. Keaira&#x27;s motivating personality will make you forget that you are working out as you move to the beat.</p>
+            </div>
+            <div class="eitan">
+              <img src="/assets/marketing/m24/trainer-eitan.png" srcset="/assets/marketing/m24/trainer-eitan.png 1x, /assets/marketing/m24/trainer-eitan.png 2x" alt="Eitan Kramer" />
+              <h3>Eitan Kramer</h3>
+              <p>Eitan became the youngest professional inline skater ever at age 15. Since then, he&#x27;s competed in the ESPN X-Games and developed a fitness philosophy based on play, called MORF. An expert in plyometrics and core work, Eitan&#x27;s workouts are designed to rev up the metabolism.</p>
+            </div>
+            <div class="nicola">
+              <img src="/assets/marketing/m24/trainer-nicola.png" srcset="/assets/marketing/m24/trainer-nicola.png 1x, /assets/marketing/m24/trainer-nicola.png 2x" alt="Nicola Harrington" />
+              <h3>Nicola Harrington</h3>
+              <p>Nicola hails from the UK and began her career as a professional dancer. Now a fitness model and trainer, Nicola&#x27;s focus is to help people to change their lifestyle for the better. She specializes in core and ab workouts and her exercises promise to leave you sore and help you on your way to great results.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="container-fluid"><hr></div>
+  <div class="clearfix" id="survey-testimonials">
+  <h2>What People are Saying About Daily Burn</h2>
+  <div class="row">
+    <div id="testimonialsCarousel" class="carousel slide col-xs-10 col-xs-offset-1 " >
+      <div class="carousel-inner">
+          <div class="item clearfix brook">
+            <div class="quote-container">
+              <div class="col-xs-8">
+                <p class="comment"> I just joined Daily Burn and I'm already hooked! This was so much fun. I can't wait to see what's coming up tomorrow.</p>
+                <p class="name">Brook</p>
+              </div>
+            </div>
+          </div>
+          <div class="item clearfix katharine z">
+            <div class="quote-container">
+              <div class="col-xs-8">
+                <p class="comment">I am noticeably stronger and I feel good, my mind is clearer and healthier, and because of my Daily Burn experience, I have found a routine that works, and a variety of options that I love.</p>
+                <p class="name">Katharine Z - Napa Valley, California</p>
+              </div>
+            </div>
+          </div>
+          <div class="item clearfix david b.">
+            <div class="quote-container">
+              <div class="col-xs-8">
+                <p class="comment">...Thanks to Daily Burn... I can pick a routine based on the mood I’m in or a specific area I want to train on. I am challenged every day to give it my all.</p>
+                <p class="name">David B. - Lafayette, California</p>
+              </div>
+            </div>
+          </div>
+          <div class="item clearfix sam h">
+            <div class="quote-container">
+              <div class="col-xs-8">
+                <p class="comment">The workouts continue to change and evolve, which I love. It is never boring and I look forward to the day's challenge.</p>
+                <p class="name">Sam H - Conway, Arkansas</p>
+              </div>
+            </div>
+          </div>
+          <div class="item clearfix kaitlyn l">
+            <div class="quote-container">
+              <div class="col-xs-8">
+                <p class="comment">The results are amazing!!! I can choose strength training, heart training, cardio, dancing... all kinds of options and I'm very very pleased and so is my husband!!!</p>
+                <p class="name">Kaitlyn L - Fitzgerald, Georgia</p>
+              </div>
+            </div>
+          </div>
+          <div class="item clearfix cindy">
+            <div class="quote-container">
+              <div class="col-xs-8">
+                <p class="comment">Enjoyed this so much. I love DB even more now that there are so many awesome workouts that include yoga now!</p>
+                <p class="name">Cindy</p>
+              </div>
+            </div>
+          </div>
+          <div class="item clearfix tamra">
+            <div class="quote-container">
+              <div class="col-xs-8">
+                <p class="comment">Wow...I've never done yoga before. This was the first yoga video that I've EVER watched! It's seriously my new favorite thing. LOVE LOVE LOVED it!</p>
+                <p class="name">Tamra</p>
+              </div>
+            </div>
+          </div>
+      </div><!--carousel-inner-->
+      <a data-slide="prev" href="#testimonialsCarousel" class="left carousel-control"><img src="/assets/marketing/testimonials_2015/arrow-left.svg" alt="arrow-left"></a>
+      <a data-slide="next" href="#testimonialsCarousel" class="right carousel-control"><img src="/assets/marketing/testimonials_2015/arrow-right.svg" alt="arrow-right"></a>
+    </div><!--myCarousel-->
+  </div><!--row-->
+</div><!--testimonials-->
+  <section id="affordability" class="text-center">
+  <div class="container-fluid">
+    <div class="row">
+      <header>
+          <h2>Don’t Break the Bank</h2>
+      </header>
+      <table class="col-md-10 col-md-offset-1 col-sm-11 col-centered">
+        <thead>
+          <tr>
+            <th class="col-sm-3">&nbsp;</th>
+            <th class="col-sm-4 logo"><span>Daily Burn</span></th>
+            <th class="col-sm-3">Typical Personal<br/>Trainer at a Gym</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-sm-3">Trainer Cost</td>
+            <td class="col-sm-4"><span>$12.95/month</span></td>
+            <td class="col-sm-3"><span>$400/month</span>at $50/hour, twice a week</td>
+          </tr>
+          <tr>
+            <td class="col-sm-3">Trainer Variety</td>
+            <td class="col-sm-4">Work out with any Daily Burn trainer, whenever you want</td>
+            <td class="col-sm-3">One trainer for your<br/> whole program</td>
+          </tr>
+          <tr>
+            <td class="col-sm-3">Trainer Availability</td>
+            <td class="col-sm-4">24/7 unlimited workouts</td>
+            <td class="col-sm-3">You work around your trainer’s schedule</td>
+          </tr>
+          <tr>
+            <td class="col-sm-3">Workout Accessibility</td>
+            <td class="col-sm-4">Anywhere there is internet, <br/>you take the trainer with you</td>
+            <td class="col-sm-3">You have to travel to the gym</td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+              <td class="col-sm-3"></td>
+              <td class="col-sm-4"></td>
+              <td class="col-sm-3"></td>
+            </tr>
+        </tfoot>
+      </table>
+      <a href="/sign_up" class="btn btn-cta btn-lg">Try It FREE for 30 Days!*</a>
+    </div>
+  </div>
+</section>
+
+  <footer class="custom-footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="logo"><a href="/"><img alt="Daily Burn" src="/assets/marketing/m30r/logo-nav-cf97fb76ff2e34438037582d35f8fbe9.png" /></a></span><br>
+        &copy; 2016 Daily Burn, Inc.<br>
+          All rights reserved. An IAC Company.
+      </div>
+      <div class="col-sm-4">
+        <ul>
+          <li><a href="mailto:biz@dailyburn.com">Business &amp; Partnership Inquiries</a></li>
+          <li><a href="mailto:press@dailyburn.com">Press Inquiries</a></li>
+          <li><a target="_blank" href="/terms">Terms of Service</a></li>
+          <li><a target="_blank" href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <ul>
+          <li><a target="_blank" href="http://dailyburn.com/life">Life by Daily Burn</a></li>
+          <li><a target="_blank" href="http://store.dailyburn.com/collections/supplements?utm_source=landing_page_footer&utm_medium=landing_page_footer&utm_campaign=landing_page_footer&utm_content=landing_page_footer">Daily Burn Nutritional Supplements</a></li>
+          <li><a target="_blank" href="http://store.dailyburn.com/collections/equipment?utm_source=landing_page_footer&utm_medium=landing_page_footer&utm_campaign=landing_page_footer&utm_content=landing_page_footer">Home Gym Equipment</a></li>
+          <li><a target="_blank" href="/support">Support</a></li>
+          <li><a target="_blank" href="/devices">Devices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="terms">
+    <div class="container-fluid">
+       <p>*Your Daily Burn membership, which starts with a 30-day free trial offer, will begin when you sign up. If you cancel your account anytime in the first 30 days after you sign up, you will not be charged. See <a href="/terms" target="_blank">Terms of Service</a> for more details.</p>
+       <p>**These users exercised daily and ate a reduced-calorie diet. Their weight loss is not typical. Daily Burn users who did 5 or more workouts weekly for 60 to 90 consecutive days reported an average weight loss of about 1 pound per week. Extreme weight loss can be harmful to your health. Talk to your doctor before beginning any exercise or weight-loss program.</p>
+       <p>All trademarks, products, and service names are the property of their respective owners.</p>
+    </div>
+  </div>
+</footer>
+</div>
+
+
+  <div id="videoModal" tabindex="-1" role="dialog" class="modal fade bootstrap3-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <h3 class="modal-header">
+          <span class="modal-title"></span>
+          <button class="clear pull-right close-button" data-dismiss="modal"><span>&times;</span></button>
+        </h3>
+        <div class="modal-body">
+        </div>
+        <div class="modal-caption">
+          <p class="caption"></p>
+          <div class="button"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="/assets/marketing/default_landing_2015-eb08bafb9fab08d533db19af3ef37751.js" type="text/javascript"></script>
+    <script src="/assets/marketing/m24/m24-5a3f6eb7bccf9ef106e0caad80c67a60.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">  
+
+<!--
+  _______      _____ _  _ ___ ___  ___   ___ ___   _   _    
+ |_   _\ \    / /_ _| \| | __/ __|/ _ \ / __|_ _| /_\ | |   
+   | |  \ \/\/ / | || .` | _|\__ \ (_) | (__ | | / _ \| |__ 
+   |_|   \_/\_/ |___|_|\_|___|___/\___/ \___|___/_/ \_\____|
+
+Build: 154c9e9Code Environment: prod
+AWS Environment: Twine-WWW-->
+
+<head>
+	<meta charset="utf-8" />	
+	<meta name="keywords" content="Social Media Hub, Social Media Aggregator, Social Media Wall, Hashtag Wall, Social Media Feed">
+	<meta name="HandheldFriendly" content="true"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>	
+	<link rel="author" href="https://plus.google.com/+TwineSocial/posts"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="google-site-verification" content="PoPff70i-x1awLfJW01LaxAyyzIwKEY6XHKSh-JMSzQ" />
+<meta name="description" content="Create, customize, and maintain social media hubs for websites, hashtag campaigns, and more. Aggregate posts from any major social media network." />
+<meta name="title" content="TwineSocial: Build Social Media Hubs for Brands and Agencies" />
+<meta name="language" content="en" />
+	<title>TwineSocial: Build Social Media Hubs for Brands and Agencies</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="//www-cdn.twinesocial.com/css-min/files/public%252Ffonts+public%252Fnormalize+public%252Fthe-tooltip+public%252Fflexslider+public%252Fshortcodes+public%252Fselect2+public%252Fselect2-bootstrap+public%252Fgrid+public%252Flayout+public%252Fmediaqueries+public%252Fbootstrap-3.1.1.min.css+public%252Fanimate.css+public%252Ffont-awesome.min.css+public%252Fouibounce.css+public%252Fsignup.css+public%252Fmedium.css+public%252Fprism.css/v/2.5/t/1454277178.css" />
+	<script type="text/javascript" src="//www-cdn.twinesocial.com/js-min/files/public%252Fjquery-1.8.1.min.js+public%252Fselect2.min.js+public%252Fjquery.sticky.js+public%252Fmql.js+public%252Fjquery.flexslider.js+public%252Fjquery.scrollTo.js+public%252Fjquery.nav.js+public%252Fjquery.placeholder.js+public%252Fcontact.js+public%252Fsettings.js+public%252Fshortcodes.js+public%252Fthe-tooltip.js+public%252Fselectivizr.js+public%252Fnwmatcher.js+public%252Fcenter.js+public%252Fbootstrap.min-3.1.1.js+public%252Fjquery.sticky-nav.js+public%252Fparallax.js+public%252Fjquery.lazy.js+public%252Fjquery.show-hide.js+public%252Fjquery.easing-1.3.js+public%252Fjquery.timeago.js+player%252FTwineJsSDK.js/v/2.5/t/1454277178.js"></script>
+</head>
+
+<body>
+	<div class="navTop sticky">
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">	
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<div class="signupHideMobile">
+				<button class="navbar-toggle small" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">    
+					<i class="fa fa-align-justify"></i>
+				</button>
+				<a class="navbar-brand" href="/">
+					<img alt="TwineSocial: Social Media Hubs for Brands" class="logo img-responsive" src="/img/logo-m.png" alt="Twine Social Logo">
+				</a>    			
+			</div>					
+		</div>
+		
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav pull-right signupHide">			
+			
+				<li class="">	
+					<a title="social media hub features" href="/features/index">features</a>
+				</li>
+
+				<li class="">	
+					<a title="social media platform api" href="/docs/index">developers</a>
+				</li>
+
+				<li class="">	
+					<a href="/gallery">gallery</a>
+				</li>
+
+				<li class="">	
+					<a href="/blog">blog</a>
+				</li>	
+				
+				<li class="">	
+					<a href="/pricing">pricing</a>
+				</li>	
+				
+				<li>
+											<a class="external" href="http://customer.twinesocial.com/">Login</a>
+									</li>
+																			
+									<li class="navCTA hidden-xs hidden-sm">
+						<button class="btn rounded color small StartTrial" onclick="StartTrial();ga('send', 'event', 'button', 'click', 'start my trial');_kmq.push(['record', 'Clicked Start Trial CTA', {'Where':'Top Nav'}]);">Start My Trial</button>
+					</li>
+					<li class="navDemo hidden-xs hidden-sm">
+						<button class="btn color small center-block DemoRequest" onclick="RequestDemo();ga('send', 'event', 'button', 'click', 'request demo');_kmq.push(['record', 'Clicked Demo Request CTA', {'Where':'Top Nav'}]);">Request Demo</button>
+					</li>
+
+					<li class="visible-xs hidden-sm">
+						<button class="btn rounded color small StartTrial" onclick="StartTrial();ga('send', 'event', 'button', 'click', 'start my trial');_kmq.push(['record', 'Clicked Start Trial CTA', {'Where':'Top Nav'}]);">Start Trial</button>
+					</li>
+					
+					<li class="visible-xs hidden-sm">
+						<button class="btn rounded color small DemoRequest" onclick="RequestDemo();ga('send', 'event', 'button', 'click', 'request demo');_kmq.push(['record', 'Clicked Demo Request CTA', {'Where':'Top Nav'}]);">Request Demo</button>
+					</li>
+
+				
+			</ul>
+			
+
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+
+</div>				
+<script type="text/javascript">    
+$( document ).ready(function() {
+    _kmq.push(['record', 'Viewed Home Page']);
+});
+    
+// load in actual twine example
+ (function(){
+	TwineJsSDK.renderContent({
+	  request: {
+		 campaign: "twinesocial",
+         collection: 85087,		 
+		 limit: 4
+	  },
+	options: {
+		target: "new-posts",
+		events: {
+			onRenderContent: function(item) {
+				// render our own HTML content
+				var created = new Date(item.created_at*1000);
+				return '<div class="col-md-3 col-sm-6"><a href="' + item.target_url +  '"><h3><strong>' + item.title + '</strong></h3></a><div><img class="img-thumbnail" src="' + item.image_url + '">' + item.description + '<p class="read-more"><a href="' + item.target_url + '">Read More...</a></p><footer>Posted <abbr class="timeago" title="' + created.toISOString() + '"></abbr></footer></div></div>';
+				
+			},
+			onComplete: function() {
+				// make the timestamps relative to this browser's timezone with jQuery timeago
+				$("abbr").timeago();
+				$("#new-posts").tooltip('enable');
+			}
+		}	
+	  }
+	});
+   })();
+</script>
+<div id="" class="container-fluid">
+	<div class="row bg_image">
+		<div id="header" class="">
+			<div class="centered-content">
+				<h1>Stunning, Custom Social Hubs for Your Brand</h1>
+				<h3 class="hidden-xs">With TwineSocial you can create stunning customized social media displays for websites, live events, and more. Then, manage your social content with our rich enterprise grade management tools.</h3>
+				<div class="CTA_buttons">
+					<button class="start_trial btn large" onclick="StartTrial();ga('send', 'event', 'button', 'click', 'start my trial');">Start My Trial</button>								
+					<button class="request_demo btn large" onclick="RequestDemo();ga('send', 'event', 'button', 'click', 'request demo');">Request My Consultation</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="body-wrapper">
+
+	<section class="gray icon-bar hidden-sm hidden-sm hidden-xs">
+		<div class="container">
+			<div id="icon-row" class="row center-block">							
+				<img alt="best facebook widget" class="social-icon" src="//static.twinesocial.com/website/facebook.png"/>
+				<img alt="best twitter widget" class="social-icon" src="//static.twinesocial.com/website/twitter.png"/>
+				<img alt="best google widget" class="social-icon" src="//static.twinesocial.com/website/googleplus.png"/>
+				<img alt="best youtube widget" class="social-icon" src="//static.twinesocial.com/website/youtube.png"/>
+				<img alt="best instagram widget" class="social-icon" src="//static.twinesocial.com/website/instagram.png"/>
+				<img alt="best flickr widget" class="social-icon" src="//static.twinesocial.com/website/flickr.png"/>
+				<img alt="best vine widget" class="social-icon" src="//static.twinesocial.com/website/vine.png"/>
+				<img alt="best vimeo widget" class="social-icon" src="//static.twinesocial.com/website/vimeo.png"/>
+				<img alt="best rss widget" class="social-icon" src="//static.twinesocial.com/website/rss.png"/>
+			</div>
+		</div>
+	</section>	
+	<section id="learnMore" class="summary-unit white">
+		<div class="container">			
+			<div class="row">
+				<div class="col-xs-12 center-block">
+					<h2>
+						Every Brand has a Social Story<br>
+						<small>We&#146;ll help you tell yours.</small>
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 center-block">
+					<div class="summary-point">				
+						<i class="fa fa-refresh fa-4x"></i>
+						<h3>Aggregate</h3>				
+						<p>						
+							Gather your entire brand story&mdash;any #hashtag, any @account, from every social network.		
+						</p>
+						
+					</div>
+					
+				</div>
+				
+				<div class="col-sm-4 center-block">
+					<div class="summary-point">				
+						<i class="fa fa-desktop fa-4x"></i>
+						<h3>Publish</h3>
+						<p>Display your content on websites or displays. Use our beautiful responsive layouts, or create your own with our API.</p>				
+					</div>					
+				</div>
+				
+				<div class="col-sm-4 center-block">
+					<div class="summary-point">				
+						<i class="fa fa-thumbs-up fa-4x"></i>
+						<h3>Engage & Measure</h3>				
+						<p>
+							Drive shares and browsing time with integrated cross-network sharing. Get deep insights with Advanced Analytics.																				
+						</p>
+					</div>						
+				</div>															
+			</div>			
+		</div>
+	</section>			
+
+	<section id="liveDemo" class="summary-unit gray">
+		<div class="container" data-toggle="tooltip">	
+			<div class="row">
+				<div class="tooltip-div">
+					<a href="#" class="tooltips">
+						<span>
+							<img class="callout" src="//static.twinesocial.com/website/callout.gif" alt="CSS Tooltip demo 1">
+							This content comes from a TwineSocial collection. Format & republish any social content anywhere.
+						</span>
+					</a>	
+				</div>
+				<div id="new-posts">
+			
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- start of content/signupCTA partial -->
+<section class="signupCTA dark-gray">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">																
+				<div class="info-block">				
+					<div class="col-md-7 col-sm-6">
+						<h4>Start Telling Your Own Social Story</h4>
+						<p>Free 30 day trial. No credit card required.</p>
+					</div>
+					<div class="col-md-5 col-sm-6 inlineCTA">		
+						<button class="btn color large rounded yellow-link StartTrial pull-right" style="" onclick="StartTrial();ga('send', 'event', 'button', 'click', 'start my trial');_kmq.push(['record', 'Clicked Start Trial CTA', {'Where':'Inline'}])">Start My Trial</button>											
+						<button class="btn color large rounded yellow-link RequestDemo pull-right" style="" onclick="RequestDemo();ga('send', 'event', 'button', 'click', 'request demo');_kmq.push(['record', 'Clicked Demo Request CTA', {'Where':'Inline'}]);">Request a Consultation</button>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</section>
+<!-- end of of content/signupCTA partial -->
+		
+	
+	<section id="" class="unit white">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="/features/index">					
+						<img class="not-bootstrap img-responsive" alt="Aggregage and Moderate Social Media on website" src="//static.twinesocial.com/website/aggregate-and-moderate-head.png">
+					</a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 feature-subhead">
+					<div class="center-block">
+						<h2 class="unit-headline"><span>More Clicks, More Shares,  More Engagement</span><br>It&#146;s (Even More) Fun to Share. </div>
+				</div>
+				<div class="col-xs-12 feature-copy center-block">
+					<p class="vertical-blurb center-block">
+						Engage even casual visitors in your brand’s story. And invite them to share that story at every turn.
+					</p>
+					
+					<p class="vertical-blurb center-block">
+						Visitors share content from all your networks right from your social media wall. Out with network fragmentation&mdash;and in with powerful network cross-pollination.					
+						<br>					
+					</p>
+					<a class="animate btn rounded" href="/features/index#engage">Tell Me More</a>					
+				</div>
+			</div>
+		</div>				
+	</section>
+	
+
+	<section class="gray icon-bar hidden-sm hidden-sm hidden-xs">
+		<div class="container">
+			<div id="icon-row" class="row center-block">							
+				<img alt="best facebook widget" class="social-icon" src="//static.twinesocial.com/website/facebook.png"/>
+				<img alt="best twitter widget" class="social-icon" src="//static.twinesocial.com/website/twitter.png"/>
+				<img alt="best google widget" class="social-icon" src="//static.twinesocial.com/website/googleplus.png"/>
+				<img alt="best youtube widget" class="social-icon" src="//static.twinesocial.com/website/youtube.png"/>
+				<img alt="best instagram widget" class="social-icon" src="//static.twinesocial.com/website/instagram.png"/>
+				<img alt="best flickr widget" class="social-icon" src="//static.twinesocial.com/website/flickr.png"/>
+				<img alt="best vine widget" class="social-icon" src="//static.twinesocial.com/website/vine.png"/>
+				<img alt="best vimeo widget" class="social-icon" src="//static.twinesocial.com/website/vimeo.png"/>
+				<img alt="best rss widget" class="social-icon" src="//static.twinesocial.com/website/rss.png"/>
+			</div>
+		</div>
+	</section>	
+	
+	
+	<section id="" class="unit gray" data-speed="6" data-type="background" style="z-index: 1000;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 center-block">
+					<h2 class="unit-headline"><span>Aggregation & Moderation</span><br>Show Everything You Want&mdash;Nothing You Don&#146;t</h2>				
+				</div>
+			</div>			
+			
+			<div class="row">
+				<div class="col-xs-12 center-block">
+					<p class="vertical-blurb center-block">
+						Control the display of content that represents your brand best. With powerful aggregation and four levels of moderation, you&#146;ll be displaying your entire story in no time flat.
+					</p>
+					<a class="btn rounded" href="/features/index#aggregate">Tell Me More</a>												
+				</div>						
+			</div>	
+		</div>	
+	</section>	
+	
+	<!-- start of content/signupCTA partial -->
+<section class="signupCTA dark-gray">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">																
+				<div class="info-block">				
+					<div class="col-md-7 col-sm-6">
+						<h4>Start Telling Your Own Social Story</h4>
+						<p>Free 30 day trial. No credit card required.</p>
+					</div>
+					<div class="col-md-5 col-sm-6 inlineCTA">		
+						<button class="btn color large rounded yellow-link StartTrial pull-right" style="" onclick="StartTrial();ga('send', 'event', 'button', 'click', 'start my trial');_kmq.push(['record', 'Clicked Start Trial CTA', {'Where':'Inline'}])">Start My Trial</button>											
+						<button class="btn color large rounded yellow-link RequestDemo pull-right" style="" onclick="RequestDemo();ga('send', 'event', 'button', 'click', 'request demo');_kmq.push(['record', 'Clicked Demo Request CTA', {'Where':'Inline'}]);">Request a Consultation</button>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</section>
+<!-- end of of content/signupCTA partial -->
+	
+	
+	<!-- Branding: Desktop Version -->
+	<section id="brand-unit" class="unit white hidden-sm hidden-xs">
+		<div class="container">
+			<div class="row feature-text">	
+				<div class="col-xs-4">
+				</div>
+				<div class="col-xs-8 feature-subhead pull-left" style="z-index: 100;padding-left: 40px;">
+					<div class="vertical-center">
+						<h2 class="unit-headline"><span>Incredible Customization</span><br>Your House. Your Rules.</h2>
+						<p>
+							It's your party&mdash;so you pick the dress code. Customize colors, backgrounds, borders&mdash;anything&mdash; to match your brand. Create experiences that are an organic, authentic part of your brand experience. 						
+						</p>						
+						<a class="btn rounded" href="/features/index#customize">Tell Me More</a>						
+					</div>
+				</div>
+			</div>
+		</div>					
+	</section>	
+	
+	<!-- Branding: Mobile Version -->
+	<section id="" class="unit white hidden-lg hidden-xl hidden-md">
+		<div class="container">
+			<div class="row feature-text">	
+				<div class="col-xs-12 feature-subhead center-block">
+					<div class="vertical-center">
+						<h2 class="unit-headline"><span>CSS & Brand Integration</span><br>Your House. Your Rules.</h2>
+						<p>
+							It&#146;s your party&mdash;so you pick the dress code. Customize colors, backgrounds, borders&mdash;anything&mdash; to match your brand. So it looks like an organic part of your brand experience. 						
+						</p>						
+						<a class="btn rounded" href="/features/index#customize">Tell Me More</a>						
+					</div>
+				</div>
+			</div>
+		</div>					
+	</section>				
+
+	<!-- Promotions: Desktop Version -->
+	<section id="promotion-unit" class="unit gray hidden-sm hidden-xs">
+		<div class="container">
+			<div class="row feature-text">
+				<div class="col-xs-6 feature-subhead pull-left">
+					<h2 class="unit-headline"><span>Inline Promotions</span><br>Talk to Your Fans Where They Are</h2>
+					<p>
+						Seamlessly sell or share anything inside your hub with Promotions.
+					</p>
+						
+					<p>						
+						Just choose your media: image, video or text. Tell TwineSocial to sprinkle throughout your stories, or featured at the top. Choose start and end date. And publish.
+					</p>
+				
+					<p>
+						Celebratory espresso: Optional.
+					</p>						
+					<a class="btn rounded" href="/features/index#promotion">Tell Me More</a>	
+				</div>
+	
+				<div class="col-xs-6 pull-left">					
+				</div>
+			</div>
+		</div>					
+	</section>
+	
+	<!-- start of content/signupCTA partial -->
+<section class="signupCTA dark-gray">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">																
+				<div class="info-block">				
+					<div class="col-md-7 col-sm-6">
+						<h4>Start Telling Your Own Social Story</h4>
+						<p>Free 30 day trial. No credit card required.</p>
+					</div>
+					<div class="col-md-5 col-sm-6 inlineCTA">		
+						<button class="btn color large rounded yellow-link StartTrial pull-right" style="" onclick="StartTrial();ga('send', 'event', 'button', 'click', 'start my trial');_kmq.push(['record', 'Clicked Start Trial CTA', {'Where':'Inline'}])">Start My Trial</button>											
+						<button class="btn color large rounded yellow-link RequestDemo pull-right" style="" onclick="RequestDemo();ga('send', 'event', 'button', 'click', 'request demo');_kmq.push(['record', 'Clicked Demo Request CTA', {'Where':'Inline'}]);">Request a Consultation</button>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</section>
+<!-- end of of content/signupCTA partial -->
+	
+	
+	<!-- Promotions: Mobile Version -->
+	<section id="" class="unit gray hidden-lg hidden-md">
+		<div class="container">
+			<div class="row feature-text">
+				<div class="col-xs-12 feature-subhead center-block">
+					<h2 class="unit-headline"><span>Inline Promotions</span><br>Talk to Your Fans Right Where They Are</h2>
+					<p>
+						Seamlessly sell or share anything inside your hub with Promotions tiles.
+					</p>
+						
+					<p>						
+						Just choose your media: Image, video or text. Tell Twine to sprinkle throughout your feed or feature at the top. Choose start and end date. And publish.
+					</p>
+				
+					<p>
+						Celebratory expresso: Optional.
+					</p>
+					<a class="btn rounded" href="/features/index#promotion">Tell Me More</a>	
+				</div>
+
+			</div>
+		</div>					
+	</section>			
+
+	<section class="unit white">
+		<div class="container">
+			<div class="row feature-text center-block">
+				<div class="col-xs-12 center-block">				
+					<h2 class="unit-headline"><span>Beautiful on Every Device.</span><br>From Phone to Jumbotron, One Platform Fits All.</h2>
+				</div>
+				<div class="col-xs-12 feature-subhead center-block">
+					<p class="vertical-blurb center-block">
+						Feature your social content on mobile, tablets, web properties, broadcast, and large-format displays. With TwineSocial, your content looks amazing no matter what device your customers use.
+					</p>
+					<a class="btn rounded" href="/features/index#responsive">Tell Me More
+					</a>					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="unit-top hidden-sm hidden-md hidden-xs">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 center-block">					
+					<div class="iphone-ipad-top"></div>
+				</div>
+			</div>
+		</div>					
+	</section>		
+	
+	<section class="gray unit-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 feature-subhead">
+					<div class="center-block">
+						<h2 class="unit-headline"><span>Meaningful Metrics</span><br>So Now You Know.</h2>					
+						<p class="vertical-blurb center-block">													
+							Track virtually everything happening, and gauge which content your audience enjoys most with TwineSocial&#146;s Platform Analytics. 
+							<br>
+						</p>			
+						<a class="btn rounded" href="/features/index#metrics">Tell Me More</a>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="padding-top: 40px;">
+				<div class="col-xs-12 center-block">
+					<a href="/features/index#metrics">					
+						<img alt="Social Media Hubs analytics" class="center-block img-responsive" src="//static.twinesocial.com/website/metrics-home.png"/>
+					</a>
+				</div>
+			</div>
+		</div>					
+	</section>			
+</div>
+<!-- start of content/_ctaFooter partial -->
+<section class="gray footerCTA">
+	<div class="container">	
+		<div class="row unit">
+			<div class="col-xs-12">																
+				<div class="row ctaFooter">				
+					<div class="col-sm-12 center-block">
+						<h4>Build a Social Media Hub on Us.</h4>
+						<p>Kick the tires for 30 days. No credit card required&mdash;just login and go.</p>
+					</div>
+				<div>
+				<div id="footerCTAs" class="row">
+					<div class="col-xs-12 center-block">
+						<button class="btn color large rounded yellow-link StartTrial" onclick="StartTrial();ga('send', 'event', 'button', 'click', 'start my trial');;_kmq.push(['record', 'Clicked Start Trial CTA', {'Where':'Footer'}])">Start My Trial</button>											
+						<button class="btn color large rounded yellow-link RequestDemo" onclick="RequestDemo();ga('send', 'event', 'button', 'click', 'request demo');_kmq.push(['record', 'Clicked Demo Request CTA', {'Where':'Footer'}]);">Or request a consultation</button>
+					</div>
+				</div>	
+			</div>		
+		</div>
+	</div>
+</section>
+<!-- end of content/_ctaFooter partial -->
+<script type="text/javascript">	
+	/* SLIDE ON CLICK */ 
+	$('#customer-carousel-nav li a').click(function() {
+	
+		// grab href, remove pound sign, convert to number
+		var item = Number($(this).attr('href').substring(1));
+
+		// slide to number -1 (account for zero indexing)
+		$('#customer-carousel-two').carousel(item - 1);
+
+		// remove current active class
+		$('#customer-carousel-nav .active').removeClass('active');
+
+		// add active class to just clicked on item
+		$(this).parent().addClass('active');
+
+		// don't follow the link
+		return false;
+	});
+
+	/* AUTOPLAY NAV HIGHLIGHT */	
+	$('#customer-carousel-two').carousel("pause");
+	fired = 0;
+	$( window ).scroll(function() {	
+		if(fired == 0){
+			if ($(window).scrollTop() > 1000) {
+//			if ($(window).scrollTop() > $('#liveDemo .tooltips').offset().top - 50) {
+				$('#liveDemo .tooltips').fadeIn(1000);
+				fired = 1;
+			}
+		}
+	});		
+
+	// bind 'slid' function
+	$('#customer-carousel-two').bind('slid', function() {
+
+		// remove active class
+		$('#customer-carousel-nav .nav-spacer.active').removeClass('active');
+
+		// get index of currently active item
+		var idx = $('#customer-carousel-two .item.active').index();
+
+		// select currently active item and add active class
+		$('#customer-carousel-nav li:eq(' + idx + ')').addClass('active');
+
+	});
+	
+	</script>
+	<!-- do not include if we don't want it -->
+		<section id="footer" class="dark-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-xs-6">
+				<p>
+					<strong><span class="yellow-text">
+						Features
+					</span></strong><br />
+					<a class="white-link" href="/features/index#engage">Engage</a><br />
+					<a class="white-link" href="/features/index#aggregate">Aggregate & Moderate</a><br />
+					<a class="white-link" href="/features/index#customize">Customize</a><br />
+					<a class="white-link" href="/features/index#promotion">Promote<br />
+					<a class="white-link" href="/features/index#responsive">Publish</a><br />
+					<a class="white-link" href="/features/index#metrics">Analyze</a><br />
+					<a class="white-text" href="/chromecast-social-wall">TwineSocial for Chromecast</a><br />
+					<a href="https://plus.google.com/+Twinesocial" rel="publisher"></a>
+					<br />
+				</p>
+			</div>
+
+			<div class="col-sm-3 col-xs-6">
+				<p>
+					<strong><span class="yellow-text">Let's Connect</span></strong><br />
+					<a class="white-link" href="https://twitter.com/twinesocial"><i class="fa fa-twitter"></i> Twitter</a><br />
+					<a class="white-link" href="https://www.facebook.com/TwineSocial"><i class="fa fa-facebook"></i> Facebook</a><br />
+					<a class="white-link" href="https://plus.google.com/+Twinesocial/posts"><i class="fa fa-google-plus"></i> Google Plus</a><br />
+					<br />
+					<strong><span class="yellow-text">Get Help</span></strong><br />
+					<a class="white-link" href="mailto:support@twinesocial.com">Email Us</a><br />
+					<a class="white-link" href="http://support.twinesocial.com/">Knowledge Base</a><br />
+					<a class="white-text" href="/docs/privacy">Privacy Policy</a><br /><br />
+				</p>
+			</div>
+								
+			<div class="col-sm-3 col-xs-6">			
+				<p>	
+					<strong><span class="yellow-text">Resources</span></strong><br />	
+					<a class="white-link" href="/social-media-aggregator">What Is a Social Media Aggregator?</a><br />
+					<a class="white-link" href="/social-media-hub">What Is a Social Media Hub?</a><br />				
+					<a class="white-link" href="/hashtag-marketing-campaign">Social Media Hubs for Hashtag Marketing Campaigns</a><br />									
+					<a class="white-link" href="/docs/index">Documentation</a><br />
+				</p>
+			</div>																							
+			
+			<div class="col-sm-3 col-xs-6">	
+				<p>
+					<strong><span class="yellow-text">See Us at Work</span></strong><br />				
+					<a class="white-link" href="/gallery">Gallery</a><br />
+				</p>				
+				<p>
+					<strong><span class="yellow-text">Work with Us</span></strong><br />									
+					<a class="white-link StartTrial" onclick="StartTrial();ga('send', 'event', 'button', 'click', 'start my trial');">Start Trial</a><br />										
+					<a class="white-link DemoRequest" onclick="RequestDemo();ga('send', 'event', 'button', 'click', 'request demo');">Request Demo</a><br />
+					<a class="white-link" href="/content/weeklyWebinar">Weekly Webinar</a><br />					
+				</p>
+			</div>		
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3" style="padding-bottom: 20px;">
+				<a href="/"><img alt="TwineSocial: Social Media Hubs for Brands" class="logo img-responsive" src="/img/logo-m.png" alt="TwineSocial Logo"></a>				
+			</div>
+			<div class="col-md-9">
+				<p class="text-right"><span class="yellow-text">Morristown, New Jersey <!--| 201-503-4374 |--> <a class="yellow-link" href="mailto:support@twinesocial.com">support@twinesocial.com</a></span>
+			</div>
+		</div>		
+	</div>
+</section>
+    
+		<div class="modal-overlay"></div>
+    <!-- KISSmetrics tracking snippet -->
+</body>
+
+<!-- start of content/demoModal partial -->
+
+<section class="wall">
+	<form id="signup" class="form-horizontal" method="post">
+
+	<div id="demo-signup" class="demo-modal dark-gray">		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="unit-headline center-block">
+						<span class="white-text">Learn How Twine Will Help Your Brand</span><br>
+						<small>Request a Complementary Demo of Our Enterprise Platform</small>
+					</h2>				
+				</div>
+			</div>	
+			<div class="row demo-blurb">
+				<div class="col-md-6 para">
+					<p class="hidden-xs">Welcome! Thanks for your interest in TwineSocial's Enterprise Plan.</p>					
+					<P class="hidden-xs">Thousands of brands and agencies all over the world use TwineSocial to create, customize, and maintain social media hubs for websites, hashtag campaigns, and more. </p>
+					<P class="hidden-sm hidden-xs">Just fill out the form, and a TwineSocial rep will reach out to you promptly.</p>
+					<P class="hidden-sm hidden-xs">Talk Soon<br>&mdash;Team Twine</p>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="form-group">
+							<label class="hidden-sm hidden-xs">First Name</label><br>
+							<input class="form-control" type="text" name="demo[fname]" placeholder="Your First Name"><br>
+						</div>
+						<div class="form-group">
+							<label class="hidden-sm hidden-xs">Last Name</label><br>
+							<input class="form-control" type="text" name="demo[lname]" placeholder="Your Last Name"><br>
+						</div>
+						<div class="form-group">
+							<label class="hidden-sm hidden-xs">Company or Agency</label><br>
+							<input class="form-control" type="text" name="demo[company]" placeholder="Your Brand or Agency"><br>
+						</div>
+						<div class="form-group">
+							<label class="hidden-sm hidden-xs">Phone Number</label><br>
+							<input class="form-control" type="tel" name="demo[phone]" placeholder="Your Phone Number"><br>
+						</div>					
+						<div class="form-group">
+							<label class="hidden-sm hidden-xs">Email Address</label><br>
+							<input class="form-control" type="text" name="demo[email]" placeholder="you@yourwebsite.com"><br>
+						</div> 
+						<div class="form-group">
+							<label class="hidden-sm hidden-xs">Here's how you can help me...</label><br>
+							<textarea rows="5" class="form-control" name="demo[message]" placeholder="Tell us how we can help you..."></textarea>
+						</div>
+						<a onclick="SubmitDemoForm();ga('send', 'event', 'button', 'click', 'submit demo');_kmq.push(['record', 'Submitted Demo Request']);" class="demo-cta btn rounded color SubmitDemo" ><i class="fa fa-send-o"></i>Send Message</a>
+
+						<div class="row alert alert-danger" style="display:none;">Problem!</div>
+						<div class="row alert alert-success" style="display:none;"></div>	
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<section id="logoBar" class="hidden-xs hidden-sm top-buffer">
+			<div class="container center-block">	
+				<div class="row logos">
+					<div class="col-xs-2 hidden-md hidden-lg hidden-sm hidden-xs">&nbsp;</div>
+					<div class="col-md-2 col-xs-3 center-block">			
+						<img src="//static.twinesocial.com/website/nike-logo.png" alt="Nike Logo"/>								
+					</div>
+
+					<div class="col-md-2 col-xs-3 center-block">			
+						<img src="//static.twinesocial.com/website/ubs-logo.png" alt="UBS Logo"/>			
+					</div>
+					
+					<div class="col-md-2 col-xs-3 center-block">			
+						<img src="//static.twinesocial.com/website/adidas-logo.png" alt="Adidas Logo"/>			
+					</div>
+					
+					<div class="col-md-2 col-xs-3 center-block">			
+						<img src="//static.twinesocial.com/website/sobeys-logo.png" alt="Sobeys Logo"/>			
+					</div>
+					<div class="col-md-2 hidden-md hidden-lg hidden-sm hidden-xs">&nbsp;</div>			
+				</div>
+			</div>
+		</section>
+		
+		<div><a class="closeX" id="closeX" onclick='CloseDemo()'>&#10006;</a>
+		</div>	
+	</div>
+	</form>	
+</section>
+<script>
+function RequestDemo() {
+	/* Finds distance to top and moves down modal accordingly */
+	var topDist = $(document).scrollTop();
+	$('#demo-signup').css('top', topDist+'px' );
+	
+	/* Opens modal and background. */
+	$("#demo-signup").delay(100).slideDown();
+	$(".modal-overlay").delay(100).fadeIn(0);
+}
+
+// this function fades out the demo
+function CloseDemo() {
+	/* Opens modal and background. */
+	$(".modal-overlay").slideUp();
+	$("#demo-signup").slideUp();
+}
+
+// this function serializes the form, posts it to the server, and evaluates the response
+function SubmitDemoForm() {
+	$('.SubmitDemo').html('<span class="fa fa-1x fa-circle-o-notch faa-spin animated"></span>&nbsp;&nbsp;Processing...');
+	
+	$.ajax({
+		url:  "/content/DemoSubmitAjax",
+		type: "POST",
+		data: jQuery("#signup").serialize(),
+		success: function(data) {
+			var jData = jQuery.parseJSON(data);
+           		if (!jData.success) {           						
+           			$('.SubmitDemo').html('<span class="fa fa-1x fa-warning"></span>&nbsp;&nbsp;Oops! Try Again');           		           		
+           			$('#demo-signup .alert-danger').text(jData.error);
+           			$('#demo-signup .alert-danger').slideDown();
+           		} else {
+           			$('.SubmitDemo').html('<span class="fa fa-1x fa-circle-o  faa-spin animated"></span>&nbsp;&nbsp;Request Sent!');        
+           		 	$('#demo-signup .alert-success').text("Thanks! Keep an eye on your email inbox. A TwineSocial rep will email you within an hour to coordinate times for your personal demo.");
+           		 	$('#demo-signup .alert-success').slideDown();
+           		 	setTimeout(function() {
+	           			CloseDemo();
+	           		}, 2500);           		
+	           	}
+           	}
+		}
+	);
+    return false; // avoid the actual submit of the form.
+	}
+
+</script>
+<!-- end of content/demoModal partial --><section class="wall">
+	<div id="trial-signup" class="demo-modal dark-gray">		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="unit-headline center-block">
+						<span class="white-text">Try Twine for Your Brand&mdash;30 Days Free<br>
+						<small>No Strings Attached. Sign in with Facebook or Twitter Now.</small>
+					</h2>				
+				</div>
+			</div>	
+			<div class="row demo-blurb">
+				<div class="col-md-6 hidden-xs">
+					<p>Sign in to get 30 days of unlimited access to TwineSocial&mdash;and support from our integration team.</p>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="row center-block">
+						<button onClick="location.href='/signup/new/Twitter?ref=';ga('send', 'event', 'button', 'click', 'twitter signup');_kmq.push(['record', 'Created New Account with Twitter']);" class="btn color twitter TwitterSignup"><i class="fa fa-twitter"></i> Sign in with Twitter</button>						
+						<button onClick="location.href='/signup/new/Facebook?ref=';ga('send', 'event', 'button', 'click', 'facebook signup');_kmq.push(['record', 'Created New Account with Twitter']);" class="btn color facebook FacebookSignup"><i class="fa fa-facebook"></i> Sign in with Facebook</button>				
+						<br><span class="gray-text signupTip"><strong>No credit card. Just sign in and go.</strong><span>
+					</div>
+				</div>
+			</div>						
+		</div>
+
+		<section id="logoBar" class="hidden-xs top-buffer">
+			<div class="container center-block">	
+				<div class="row logos">
+					<div class="col-xs-2 hidden-md hidden-lg hidden-sm hidden-xs">&nbsp;</div>
+					<div class="col-md-2 col-xs-3 center-block">			
+						<img src="//static.twinesocial.com/website/nike-logo.png" alt="Nike Logo"/>								
+					</div>
+
+					<div class="col-md-2 col-xs-3 center-block">			
+						<img src="//static.twinesocial.com/website/ubs-logo.png" alt="UBS Logo"/>			
+					</div>
+					
+					<div class="col-md-2 col-xs-3 center-block">			
+						<img src="//static.twinesocial.com/website/adidas-logo.png" alt="Adidas Logo"/>			
+					</div>
+					
+					<div class="col-md-2 col-xs-3 center-block">			
+						<img src="//static.twinesocial.com/website/sobeys-logo.png" alt="Sobeys Logo"/>			
+					</div>
+					<div class="col-md-2 hidden-md hidden-lg hidden-sm hidden-xs">&nbsp;</div>			
+				</div>
+			</div>
+		</section>			
+		<div><a class="closeX" id="closeX" onclick='CloseTrialModal()'>&#10006;</a>
+		</div>	
+	</div>
+</section>
+</form>
+
+<script>
+// this function makes the modal appear 
+function StartTrial() {
+	/* Finds distance to top and moves down modal accordingly */
+	var topDist = $(document).scrollTop();
+	$('#trial-signup').css('top', topDist+'px' );
+	
+	/* Opens modal and background. */
+	$("#trial-signup").fadeIn(350);
+	$(".modal-overlay").fadeIn(400);
+}
+
+// this function fades out the trial
+function CloseTrialModal() {
+    _kmq.push(['record', 'Aborted Trial Signup']);
+	$(".modal-overlay").slideUp();
+	$("#trial-signup").slideUp();
+}
+
+</script>
+<script src="//cdn.optimizely.com/js/573472453.js"></script>	
+
+<script type="text/javascript">
+	setTimeout(function(){var a=document.createElement("script");
+	var b=document.getElementsByTagName("script")[0];
+	a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/6186.js?"+Math.floor(new Date().getTime()/3600000);
+	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+<!-- Google Analytics Tracking Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42305215-1', 'auto');
+	ga('send', 'pageview');
+
+</script>
+
+<!-- Pingdom RUM monitoring -->
+<script>
+var _prum = [['id', '54e72609abe53dbf28e247fb'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+
+<!-- Google Code for Signup Conversion Page -->
+<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 967912596;
+	var google_conversion_language = "en";
+	var google_conversion_format = "3";
+	var google_conversion_color = "ffffff";
+	var google_conversion_label = "qvbXCLzvwwkQlNnEzQM";
+	var google_conversion_value = 1.000000;
+	var google_remarketing_only = false;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/967912596/?value=1.000000&amp;label=qvbXCLzvwwkQlNnEzQM&amp;guid=ON&amp;script=0"/>
+	</div>
+</noscript>
+
+<!-- KISSmetrics tracking snippet -->
+<script type="text/javascript">var _kmq = _kmq || [];
+var _kmk = _kmk || '0942d0d3cf2287f804754680f566ae6b42092b22';
+function _kms(u){
+  setTimeout(function(){
+    var d = document, f = d.getElementsByTagName('script')[0],
+    s = d.createElement('script');
+    s.type = 'text/javascript'; s.async = true; s.src = u;
+    f.parentNode.insertBefore(s, f);
+  }, 1);
+}
+_kms('//i.kissmetrics.com/i.js');
+_kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
+</script>
+
+<!-- Home page animation stuff -->
+<script>
+$(document).ready(function() {
+    $(".scroll-links a").click(function() {
+    	console.log ("Animate.");
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+        return false;
+    });
+});
+</script>
+</html>

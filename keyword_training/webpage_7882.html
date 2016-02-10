@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>I GOT GAMES - Global Free Online Games Portal</title>
+<meta name="description" content="Your portal to IGG's games." />
+<meta name="keywords" content="Top Mobile Games, Best Strategy game, Castle Clash, strategy, action, castle, clash, tower defense, CC, Clash of Lords 2, COL2, Texas HoldEm Poker Deluxe, Wings of Destiny, Dawn of Darkness, DOD, Heroes & Monsters, H&M, Mini Toss, Free mobile games, Poker, Deluxe, Texas, Holdem, Casino, Chips, All in, slot, slots, machine, machines, slot machines, card, coins, coin, gems, jackpot, scatter, Galaxy, Strategy game, Universe, High-end sci-fi graphics, Build space, Action-packed space combat, Boosts, odds, Slots Bonus Games, Free Daily Bonuses, Bingo Jackpots, VIP benefits, Brave Trials, TOP, Talesofpirates, GodsWar Online, GW, Mythwar, Myth war online, Voyage century Online, Voyage century, Free online games, Free online game, Free 3d MMORPG, Free MMORPG, Free game, Free games, multiplayer, games, gaming, free, Online, MMORPG, pc games, magic, spells, adventure, pet, 3D, voyage, exploration, pets, 2D, blood, blade, hero, combat, mmorpg, arpg, rpg, role-playing, pvp, mobile, game, classic arcade-style, clans, gang, mafia, gangster, gta, epic, clan, play, chopper, tank, guns, soldier, coc, defence, igg, tower, wargame, rts, fun, top, best, td, crime, godfather, mobster, don, casino, booze, liquor, tactics, Deck, Hero, Heroes, Deck Hero, Deck Heroes, Human, Humans, Fae, Faen, Neander, Neanders, Mortis, Mortii, Card, Strategy, Card Game, collectible card game, trading card game, Free, Best, Top, Android, Best android card game, Best card game, Top card game, Free card game, Clash of Clans, Boom Beach, Clash of Lords, Clash, Boom, Beach, Mafia, Gangster, Gang, Crime, Crime City, Street, Best Game, Boss, Tower Defense, Defense, Free to Play, RTS, Real Time, Galaxy Online 3, GO3, sci-fi, Commander, battle, planet, spaceship, Federation, dominate, conquer, Nova Force, Nova Force free to play, Nova Force download, Nova Force strategy, IGG Nova Force, endless mode, bullet hell, bullet curtain, bullet barrage, manic shooter, shoot' em all, space shooter, space sci-si, IGG casual game, 2015 new latest hottest, hottest space shooter game, easy to play casual game, coolest space game, NF, Lords, 2, azione, gioco, migliore, esercito, villaggio, guerra, Eroi, gilda, centro, strategia, creature, combattimento, conquista, app, risorse, costruire, impero, sovrano, signore, nemici, truppe, monster, dragon, RPG, advernture, evolve, pinball, strike, marble heroes, castello. pvp, fantasy, giochi, battaglia, divertente, space, fleet, scifi, star, wars, trek, commander, elite, alien, captain, guardian, Pew Pew Penguin, Pew Pew Penguin Free Game, Pew Pew Penguin Download, Pew Pew Penguin Guide, IGG Pew Pew Penguin, Arcade, Bullet Hell, IGG Mobile Game, IGG Game, 2015 Latest, Flight Game, Flight Shooter, Cutest Shooter, Casual Game, Recreation, Cute Game, Gane, fight, heroes, rush, tactical, king, war, brave, quest, guild, monsters, dragons, dungeon, Ücretsiz(Free), Asker Derdine Son(No more soldier training), Eşsiz Yetenekler(Unique skills), Türkçe(Turkish), En İyi Strateji(Best Strategy game), Strateji(Strategy), Savaş(Battle), Action, Gilde, schlacht, verbessere, konflikt, aktion, schloss, verteidigung, turm, Fähigkeiten, weltweit, mächtig, kostenlos, Level, ipad" />
+<link href="/themes/css/ver3.css?v=0729" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Monda" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	// MEMBER INFO BEGIN
+
+	$('#memberInfoSwitch').click(function() {
+		$(this).parent().toggleClass('expanded');
+		return false;
+	});
+
+	// LOCALE BEGIN
+	
+	var locale_layer = {
+		el: $('#countryPop'),
+		show: function() {
+			this.el.show();
+		},
+		hide: function() {
+			this.el.hide();
+		},
+		values: function(country, language) {
+			this.set_country(country);
+			this.set_language(language);
+		},
+		set_country: function(country) {
+			this.el.find('dl.country dd a.selected').removeClass('selected');
+			this.el.find('dl.country dd a[rel=' + country + ']').addClass('selected');
+		},
+		set_language: function(language) {
+			this.el.find('dl.language dd a.selected').removeClass('selected');
+			this.el.find('dl.language dd a[rel=' + language + ']').addClass('selected');
+		},
+		get_values: function() {
+			return {
+				country: this.el.find('dl.country dd a.selected').attr('rel'),
+				language: this.el.find('dl.language dd a.selected').attr('rel'),
+			};
+		},
+		get_signs: function() {
+			return {
+				flag: this.el.find('dl.country dd a.selected').children('img').attr('src'),
+				text: $.trim(this.el.find('dl.language dd a.selected').text())
+			};
+		}
+	};
+	
+	var locale = {
+		country: 'US',
+		language: 'en'
+	};
+	
+	locale_layer.values(locale.country, locale.language);
+	
+	var signs = locale_layer.get_signs();
+	var signs_container = $('div.countryPannel > a');
+	
+	if (signs.text) {
+		$('div.countryPannel > a').children('span').text(signs.text);
+	}
+	
+	if (signs.flag) {
+		signs_container.children('img').attr('src', signs.flag);
+	}
+	
+	$('#header div.countryPannel').click(function() {
+		locale_layer.show();
+		return false;
+	});
+	
+	$('#countryPop a.close').click(function() {
+		locale_layer.hide();
+		return false;
+	});
+	
+	$('#countryPop .btnConfirm a').click(function() {
+		var new_locale = locale_layer.get_values();
+	
+		if (!new_locale.country || !new_locale.language) {
+			return false;
+		}
+	
+		locale_layer.hide();
+		
+		var get_query_parameters = function() {
+		    var result = {};
+		    window.location.search.replace(/([^?&=]+)(=([^&]*))?/g, function(str, p1, p2, p3) {
+		        result[unescape(p1)] = unescape(p3);
+		        return str;
+		    });
+		    return result;
+		}
+		
+		var new_locale = locale_layer.get_values();
+		
+		if (new_locale.country != locale.country || new_locale.language != locale.language) {
+			var parameters = get_query_parameters();
+			
+			parameters.cr = new_locale.country;
+			parameters.ln = new_locale.language;
+			
+			var parts = [];
+			for (var key in parameters) {
+				parts.push(key + '=' + escape(parameters[key]));
+			}
+			
+			var url = window.location.pathname.replace(/^\/+/, '/');
+			if (parts.length > 0) {
+				url += '?' + parts.join('&');
+			}
+			
+			window.location = url;
+		}
+		return false;
+	});
+	
+	$('#countryPop dl.country dd a').click(function(event) {
+		locale_layer.set_country($(event.currentTarget).attr('rel'));
+		return false;
+	});
+	
+	$('#countryPop dl.language dd a').click(function(event) {
+		locale_layer.set_language($(event.currentTarget).attr('rel'));
+		return false;
+	});
+});
+</script>
+</head>
+<body class="index">
+<script type="text/javascript" src="//www.igg.com/iggglobal/header_hd.php?url=http%3A%2F%2Figg.com%2F%2Findex.php&hl=en"></script>
+<div id="header">
+	<h2 class="logo"><a href="/index.php"><img src="/themes/images/ver3/igg_logo.png" alt="I GOT GAMES" /></a></h2>
+	<div class="pannel">
+		<div id="cdtext" style="position:absolute; z-index:99; width:150px; display:none; background:#E7E7E4; color:#333; padding:3px; border:1px solid #999;"></div>
+		<div class="loginPannel">
+					<ul class="iggLogin">
+				<li class="btnLogin"><a href="javascript:showIggZone()">Login</a></li>
+				<li class="btnSignUp"><a href="http://www.igg.com/member/reg.php?url=http%3A%2F%2Figg.com%2F%2Findex.php">Register</a></li>
+				
+			</ul>
+			<ul class="openLogin">
+				<li class="or">OR</li>
+				<li class="iconFacebook"><a href="http://passport.igg.com/account/connect.php?provider=facebook&url=http%3A%2F%2Fwww.igg.com%2F">Facebook</a></li>
+				<li class="iconYahoo"><a href="http://passport.igg.com/account/connect.php?provider=yahoo&url=http%3A%2F%2Fwww.igg.com%2F">Yahoo</a></li>
+				<li class="iconGoogle"><a href="http://passport.igg.com/account/connect.php?provider=google&url=http%3A%2F%2Fwww.igg.com%2F">Google</a></li>
+				<li class="iconTwitter"><a href="http://passport.igg.com/account/connect.php?provider=twitter&url=http%3A%2F%2Fwww.igg.com%2F">Twitter</a></li>
+				<li class="iconMsn"><a href="http://passport.igg.com/account/connect.php?provider=msn&url=http%3A%2F%2Fwww.igg.com%2F">MSN</a></li>
+				<li class="iconLinkedin"><a href="http://passport.igg.com/account/connect.php?provider=linkedin&url=http%3A%2F%2Fwww.igg.com%2F">Linkedin</a></li>
+			</ul>
+				</div>
+				<div class="countryPannel" style=" display:none;">
+					</div>
+			</div>
+	<ul class="nav">
+		<li class="first"><a href="/index.php">Home</a></li>
+		<li><a href="/games/">Games</a></li>
+		<li><a href="/news/list.php">News</a></li>
+		<li><a href="http://service.igg.com">Support</a></li>
+		<li class="last"><a href="http://forum.igg.com/">Forums</a></li>
+	</ul>
+</div>
+<div id="countryPop" style="display:none;">
+	<div class="popLayer"></div>
+	<div class="countrySwitch">
+		<a href="#" class="close">Close</a>
+		<div class="countryContainer clearfix">
+			<dl class="country">
+				<dt>Country / Region</dt>
+							</dl>
+			<dl class="language">
+				<dt>Languge</dt>
+								<dd><a href="#" rel="en">English</a></dd>
+								<dd><a href="#" rel="es">Espaňol</a></dd>
+								<dd><a href="#" rel="zh-TW">繁體中文</a></dd>
+							</dl>
+			<div class="btnConfirm"><a href="#">Confirm</a></div>
+		</div>
+	</div>
+</div><div id="gameSlider">
+	<div class="sliderContent" style="height:590px; overflow:hidden;">
+		<ul class="clearfix">
+						<li style="float:left; background:url(http://img1.igg.com/999/placard/2015/12/10/366284420.jpg) center top no-repeat;">
+				<div class="sliderEntry">
+					<div class="sliderText">
+						<div class="shadow"> Brawl and rumble your way across the world in Castle Clash – the most addictive combat strategy game ever! Hire legions of powerful Heroes in your quest to become the world’s greatest Warlord.</div>
+						 Brawl and rumble your way across the world in Castle Clash – the most addictive combat strategy game ever! Hire legions of powerful Heroes in your quest to become the world’s greatest Warlord.
+					</div>
+					<div class="sliderBtn"><a href="https://play.google.com/store/apps/details?id=com.igg.castleclash">Play Free</a></div>
+				</div>
+			</li>
+						<li style="float:left; background:url(http://img1.igg.com/999/placard/2015/11/25/855964141.jpg) center top no-repeat;">
+				<div class="sliderEntry">
+					<div class="sliderText">
+						<div class="shadow">Bring you back to the epic battlefield of the Gods. Charge up your Heroes with the power of the elements and blast your enemies to smithereens!</div>
+						Bring you back to the epic battlefield of the Gods. Charge up your Heroes with the power of the elements and blast your enemies to smithereens!
+					</div>
+					<div class="sliderBtn"><a href="https://play.google.com/store/apps/details?id=com.igg.android.godsrush2_pub">Play Free</a></div>
+				</div>
+			</li>
+						<li style="float:left; background:url(http://img1.igg.com/999/placard/2015/12/22/319436205.jpg) center top no-repeat;">
+				<div class="sliderEntry">
+					<div class="sliderText">
+						<div class="shadow">Gather your forces and prepare for war in Clash of Lords 2! Bringing a fresh new spin to the world you know and love, experience true strategy mayhem unlike anything you've played before!</div>
+						Gather your forces and prepare for war in Clash of Lords 2! Bringing a fresh new spin to the world you know and love, experience true strategy mayhem unlike anything you've played before!
+					</div>
+					<div class="sliderBtn"><a href="https://play.google.com/store/apps/details?id=com.igg.clashoflords2">Play Free</a></div>
+				</div>
+			</li>
+						<li style="float:left; background:url(http://img1.igg.com/999/placard/2015/12/21/303437777.jpg) center top no-repeat;">
+				<div class="sliderEntry">
+					<div class="sliderText">
+						<div class="shadow">Staying in touch with friends, family, and all the people in your world has never been easier. Download LINK Messenger today to chat for free all over the world!</div>
+						Staying in touch with friends, family, and all the people in your world has never been easier. Download LINK Messenger today to chat for free all over the world!
+					</div>
+					<div class="sliderBtn"><a href="http://play.google.com/store/apps/details?id=com.igg.android.linkmessenger">Play Free</a></div>
+				</div>
+			</li>
+					</ul>
+	</div>
+	<div class="sliderFooter">
+		<div class="sliderCarousel">
+			<a href="#" class="prev">Prev</a>
+			<a href="#" class="next">Next</a>
+		</div>
+		<ul class="sliderNav">
+						<!-- base_id: 28, CC-Android EN -->
+			<li class="s1">
+				<a href="https://play.google.com/store/apps/details?id=com.igg.castleclash"class="current">
+					<img src="http://img1.igg.com/999/game/2015/12/10/277545887_min.jpg" alt="" />
+					<h3>Castle Clash</h3>
+					<p><span class="number">8,937,859</span> people play this</p>
+				</a>
+			</li>
+						<!-- base_id: 53, GR2-Android-EN -->
+			<li class="s2">
+				<a href="https://play.google.com/store/apps/details?id=com.igg.android.godsrush2_pub">
+					<img src="http://img1.igg.com/999/game/2015/11/25/225754902_min.png" alt="" />
+					<h3>Gods Rush 2</h3>
+					<p><span class="number">1</span> people play this</p>
+				</a>
+			</li>
+						<!-- base_id: 31, COL2-Android EN -->
+			<li class="s3">
+				<a href="https://play.google.com/store/apps/details?id=com.igg.clashoflords2">
+					<img src="http://img1.igg.com/999/game/2015/12/03/776762538_min.png" alt="" />
+					<h3>Clash of Lords 2</h3>
+					<p><span class="number">1</span> people play this</p>
+				</a>
+			</li>
+						<!-- base_id: 54, LINK Messenger -->
+			<li class="s4">
+				<a href="http://play.google.com/store/apps/details?id=com.igg.android.linkmessenger">
+					<img src="http://img1.igg.com/999/game/2015/12/21/439627199_min.jpg" alt="" />
+					<h3>LINK Messenger</h3>
+					<p><span class="number">1</span> people play this</p>
+				</a>
+			</li>
+					</ul>
+	</div>
+</div>
+<div id="home">
+	<div id="wrapper" class="clearfix">
+		<!--game list begin-->
+		<div class="homeGames">
+			<div class="homeGamesHead">
+				<h3 class="s3">Mobile Games</h3>
+				<a href="games/index.php?form=mobile" class="homeMore">More</a>
+			</div>
+			<div id="preview-mobile" class="homeGamesList clearfix">
+								<dl>
+					<!-- base_id: ,  -->
+					<dt><a href="https://play.google.com/store/apps/details?id=com.igg.castleclash" target="_blank"><img src="http://img1.igg.com/999/game/2015/12/10/277545887_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="https://play.google.com/store/apps/details?id=com.igg.castleclash" target="_blank">Castle Clash</a></dd>
+					<dd class="gameType">Arcade & Action</dd>
+					<dd class="gameBtn">
+												<a href="https://itunes.apple.com/app/id692669501" class="iconApple" target="_blank">iOS</a>
+												<a href="http://www.amazon.com/dp/B00GTCECVG/ref=cm_sw_su_dp" class="iconAmazon" target="_blank">Amazon</a>
+												<a href="https://play.google.com/store/apps/details?id=com.igg.castleclash" class="iconAndroid" target="_blank">Android</a>
+												<a href="http://www.windowsphone.com/s?appid=c841974b-a47c-4e3c-a800-047dbed1aea0" class="iconWindows" target="_blank">Windows Phone</a>
+											</dd>
+				</dl>
+								<dl>
+					<!-- base_id: 193, CC-Winphone EN -->
+					<dt><a href="https://play.google.com/store/apps/details?id=com.igg.clashoflords2" target="_blank"><img src="http://img1.igg.com/999/game/2015/12/03/776762538_min.png" width="58" /></a></dt>
+					<dd class="gameName"><a href="https://play.google.com/store/apps/details?id=com.igg.clashoflords2" target="_blank">Clash of Lords 2</a></dd>
+					<dd class="gameType">Strategy</dd>
+					<dd class="gameBtn">
+												<a href="http://www.amazon.com/dp/B00K4APIN0" class="iconAmazon" target="_blank">Amazon</a>
+												<a href="https://itunes.apple.com/app/id867427452" class="iconApple" target="_blank">iOS</a>
+												<a href="https://play.google.com/store/apps/details?id=com.igg.clashoflords2" class="iconAndroid" target="_blank">Android</a>
+												<a href="http://www.windowsphone.com/zh-cn/store/app/clash-of-lords-2/57c948d1-f417-4ad4-b784-3766d4205cdf" class="iconWindows" target="_blank">Windows Phone</a>
+											</dd>
+				</dl>
+								<dl>
+					<!-- base_id: 155, COL2-Winphone EN -->
+					<dt><a href="https://play.google.com/store/apps/details?id=com.igg.bzbee.deckheroes" target="_blank"><img src="http://img1.igg.com/999/game/2014/12/05/806532269_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="https://play.google.com/store/apps/details?id=com.igg.bzbee.deckheroes" target="_blank">Deck Heroes</a></dd>
+					<dd class="gameType">Card</dd>
+					<dd class="gameBtn">
+												<a href="https://itunes.apple.com/app/id950574221" class="iconApple" target="_blank">iOS</a>
+												<a href="http://www.amazon.com/dp/B00XXNKBBO" class="iconAmazon" target="_blank">Amazon</a>
+												<a href="https://play.google.com/store/apps/details?id=com.igg.bzbee.deckheroes" class="iconAndroid" target="_blank">Android</a>
+												<a href="http://www.windowsphone.com/zh-cn/store/app/deck-heroes-by-igg/6959f79f-4c39-4bed-93ab-613a9e0b1c0f" class="iconWindows" target="_blank">Windows Phone</a>
+											</dd>
+				</dl>
+								<dl>
+					<!-- base_id: 209, DH-WP-EN -->
+					<dt><a href="https://play.google.com/store/apps/details?id=com.igg.pokerdeluxe&feature" target="_blank"><img src="http://img1.igg.com/999/game/2013/01/06/692628136_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="https://play.google.com/store/apps/details?id=com.igg.pokerdeluxe&feature" target="_blank">Texas HoldEm Poker Deluxe</a></dd>
+					<dd class="gameType">casual</dd>
+					<dd class="gameBtn">
+												<a href="https://itunes.apple.com/us/app/texas-holdem-poker-deluxe/id486609032" class="iconApple" target="_blank">iPhone</a>
+												<a href="https://itunes.apple.com/us/app/texas-holdem-poker-deluxe/id455640808" class="iconApple" target="_blank">iPad</a>
+												<a href="https://play.google.com/store/apps/details?id=com.igg.pokerdeluxe&feature" class="iconAndroid" target="_blank">Android Phone</a>
+												<a href="http://www.amazon.com/dp/B00CTN0ALA/" class="iconAmazon" target="_blank">Amazon</a>
+												<a href="http://www.windowsphone.com/zh-cn/store/app/poker-deluxe/5a46df23-7429-4903-8162-a91669cd54d8" class="iconWindows" target="_blank">Windows Phone</a>
+											</dd>
+				</dl>
+								<dl>
+					<!-- base_id: 156, PD-Winphone EN -->
+					<dt><a href="https://play.google.com/store/apps/details?id=com.igg.bzbee.slotsdeluxe" target="_blank"><img src="http://img1.igg.com/999/game/2013/07/09/473567679_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="https://play.google.com/store/apps/details?id=com.igg.bzbee.slotsdeluxe" target="_blank">Slot Machines by IGG</a></dd>
+					<dd class="gameType">Casino</dd>
+					<dd class="gameBtn">
+												<a href="http://www.amazon.com/dp/B00OIWB0VO/" class="iconAmazon" target="_blank">Amazon</a>
+												<a href="https://itunes.apple.com/us/app/slots-deluxe-slot-machines/id618055597?ls=1&mt=8" class="iconApple" target="_blank">iOS</a>
+												<a href="https://itunes.apple.com/us/app/slot-machines-hd-by-igg/id707942427?mt=8" class="iconApple" target="_blank">iPad</a>
+												<a href="https://play.google.com/store/apps/details?id=com.igg.bzbee.slotsdeluxe" class="iconAndroid" target="_blank">Android</a>
+												<a href="http://www.windowsphone.com/zh-cn/store/app/slot-machines-by-igg/dee571b4-ec68-4691-8491-3c6acbbdf8c" class="iconWindows" target="_blank">Windows Phone</a>
+											</dd>
+				</dl>
+								<dl>
+					<!-- base_id: 165, SM-WP EN -->
+					<dt><a href="https://play.google.com/store/apps/details?id=com.igg.android.godsrush2_pub" target="_blank"><img src="http://img1.igg.com/999/game/2015/11/25/225754902_min.png" width="58" /></a></dt>
+					<dd class="gameName"><a href="https://play.google.com/store/apps/details?id=com.igg.android.godsrush2_pub" target="_blank">Gods Rush 2</a></dd>
+					<dd class="gameType">SRPG</dd>
+					<dd class="gameBtn">
+												<a href="https://play.google.com/store/apps/details?id=com.igg.android.godsrush2_pub" class="iconAndroid" target="_blank">Android</a>
+											</dd>
+				</dl>
+								<dl>
+					<!-- base_id: 210, GR2-Android-EN -->
+					<dt><a href="http://itunes.apple.com/app/id1051559419" target="_blank"><img src="http://img1.igg.com/999/game/2015/12/21/439627199_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="http://itunes.apple.com/app/id1051559419" target="_blank">LINK Messenger</a></dd>
+					<dd class="gameType">Communication</dd>
+					<dd class="gameBtn">
+												<a href="http://itunes.apple.com/app/id1051559419" class="iconApple" target="_blank">iOS</a>
+												<a href="http://play.google.com/store/apps/details?id=com.igg.android.linkmessenger" class="iconAndroid" target="_blank">Android</a>
+												<a href="http://play.google.com/store/apps/details?id=com.igg.android.linkmessenger" class="iconAndroid" target="_blank">Android</a>
+											</dd>
+				</dl>
+								<dl>
+					<!-- base_id: 211, LINK Messenger -->
+					<dt><a href="https://play.google.com/store/apps/details?id=com.igg.bravetrials " target="_blank"><img src="http://img1.igg.com/999/game/2014/08/26/901388963_min.png" width="58" /></a></dt>
+					<dd class="gameName"><a href="https://play.google.com/store/apps/details?id=com.igg.bravetrials " target="_blank">Brave Trials</a></dd>
+					<dd class="gameType">aRPG</dd>
+					<dd class="gameBtn">
+												<a href="https://itunes.apple.com/us/app/id865807074" class="iconApple" target="_blank">iOS</a>
+												<a href="https://play.google.com/store/apps/details?id=com.igg.bravetrials " class="iconAndroid" target="_blank">Android</a>
+											</dd>
+				</dl>
+							</div>
+			<div class="homeGamesHead">
+				<h3 class="s1">Browser Games</h3>
+				<a href="games/index.php?form=browser" class="homeMore">More</a>
+			</div>
+			<div id="preview-browser" class="homeGamesList clearfix">
+								<dl>
+					<!-- base_id: 20, PD-FBEN -->
+										<dt><a href="http://www.igg.com/game/pd/" target="_blank"><img src="http://img1.igg.com/999/game/2013/01/06/692628136_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="http://www.igg.com/game/pd/" target="_blank">Texas HoldEm Poker Deluxe</a></dd>
+										<dd class="gameType">casual&nbsp;<span class="gameArea"></span></dd>
+					<dd class="gameBtn"><a href="http://poker.igg.com/" target="_blank">Play Now!</a></dd>
+				</dl>
+								<dl>
+					<!-- base_id: 4, GO2-US -->
+										<dt><a href="http://www.igg.com/game/go2" target="_blank"><img src="http://img1.igg.com/999/game/2013/08/05/732545673_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="http://www.igg.com/game/go2" target="_blank">Galaxy Online 2</a></dd>
+										<dd class="gameType">sci-fi strategy&nbsp;<span class="gameArea"></span></dd>
+					<dd class="gameBtn"><a href="http://go2.igg.com" target="_blank">Play Now!</a></dd>
+				</dl>
+							</div>
+			<div class="homeGamesHead">
+				<h3 class="s2">PC Games</h3>
+				<a href="games/index.php?form=pc" class="homeMore">More</a>
+			</div>
+			<div id="preview-pc" class="homeGamesList clearfix">
+								<dl>
+					<!-- base_id: 57, TOP -->
+					<dt><a href="http://top2.igg.com/" target="_blank"><img src="http://img1.igg.com/999/game/2012/12/29/242438698_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="http://top2.igg.com/" target="_blank">Tales of Pirates II</a></dd>
+					<dd class="gameType">mmorpg&nbsp;<span class="gameArea"></span></dd>
+					<dd class="gameBtn"><a href="http://top2.igg.com/download/client.php" target="_blank">Download</a></dd>
+				</dl>
+								<dl>
+					<!-- base_id: 52, AO -->
+					<dt><a href="http://ao.igg.com/" target="_blank"><img src="http://img1.igg.com/999/game/2012/12/29/754107595_min.jpg" width="58" /></a></dt>
+					<dd class="gameName"><a href="http://ao.igg.com/" target="_blank">Angels Online</a></dd>
+					<dd class="gameType">mmorpg&nbsp;<span class="gameArea"></span></dd>
+					<dd class="gameBtn"><a href="http://ao.igg.com/download/download.php" target="_blank">Download</a></dd>
+				</dl>
+							</div>
+		</div>
+		<!--game list end-->
+		<!--home side begin-->
+		<div class="banner"><script type="text/javascript" src="http://abcd.igg.com/file/js/8/2.js"></script></div>
+		<div class="homeNews">
+			<div class="homeNewsHead">
+				<h3>News</h3>
+				<a href="/news/list.php" class="homeMore">More</a>
+			</div>
+						<div class="homeNewsItem expanded">
+				<a href="#" class="homeNewsTitle"><span class="date">Jan 15</span>Castle Clash Android-EN Version: Be An Alchemist</a>
+				<h3 class="homeNewsTitleFull"><span class="date">Jan 15</span><a href="/news/view.php?id=531">Castle Clash Android-EN Version: Be An Alchemist</a></h3>
+				<div class="homeNewsEntry">
+					<a href="/news/view.php?id=531"><img src="http://img1.igg.com/999/article/2016/01/15/599726193.jpg" width="120" height="80" /></a>
+					<p>Now it's easier than ever to win Pumpkin Duke when you take part in Be An Alchemist!</p>
+					<a href="/news/view.php?id=531" class="readMore">Read More</a>
+				</div>
+			</div>
+						<div class="homeNewsItem">
+				<a href="#" class="homeNewsTitle"><span class="date">Jan 7</span>Castle Clash Android-EN Version: Lucky Flippin’</a>
+				<h3 class="homeNewsTitleFull"><span class="date">Jan 7</span><a href="/news/view.php?id=530">Castle Clash Android-EN Version: Lucky Flippin’</a></h3>
+				<div class="homeNewsEntry">
+					<a href="/news/view.php?id=530"><img src="http://img1.igg.com/999/article/2016/01/07/187866598.jpg" width="120" height="80" /></a>
+					<p>We are releasing the long-awaited Arctica Card for 2 days only! This is a special event you don't want to miss!</p>
+					<a href="/news/view.php?id=530" class="readMore">Read More</a>
+				</div>
+			</div>
+						<div class="homeNewsItem">
+				<a href="#" class="homeNewsTitle"><span class="date">Dec 24</span>Castle Clash Android-EN Version: 40% Bonus on ALL orders this Christmas!</a>
+				<h3 class="homeNewsTitleFull"><span class="date">Dec 24</span><a href="/news/view.php?id=529">Castle Clash Android-EN Version: 40% Bonus on ALL orders this Christmas!</a></h3>
+				<div class="homeNewsEntry">
+					<a href="/news/view.php?id=529"><img src="http://img1.igg.com/999/article/2015/12/24/755585912.jpg" width="120" height="80" /></a>
+					<p>﻿﻿Christmas is here! Order ANY amount of Gems and get 40% more free! This promotion lasts for only two days, so don't miss it!</p>
+					<a href="/news/view.php?id=529" class="readMore">Read More</a>
+				</div>
+			</div>
+						<div class="homeNewsItem">
+				<a href="#" class="homeNewsTitle"><span class="date">Dec 22</span>Lords Mobile is Online!</a>
+				<h3 class="homeNewsTitleFull"><span class="date">Dec 22</span><a href="/news/view.php?id=527">Lords Mobile is Online!</a></h3>
+				<div class="homeNewsEntry">
+					<a href="/news/view.php?id=527"><img src="http://img1.igg.com/999/article/2015/12/22/385489857.png" width="120" height="80" /></a>
+					<p>Danger is knocking at the door and you’re the only one who can save the day! Combining RPG and SLG styles, Lords Mobile is now available for download from IGG. Team up with players from all over the world, build your unique defenses with traps and tricks,</p>
+					<a href="/news/view.php?id=527" class="readMore">Read More</a>
+				</div>
+			</div>
+						<div class="homeNewsItem">
+				<a href="#" class="homeNewsTitle"><span class="date">Dec 22</span>LINK Messenger Goes Live - Stay Connected to Loved Ones Anytime, Anywhere!</a>
+				<h3 class="homeNewsTitleFull"><span class="date">Dec 22</span><a href="/news/view.php?id=525">LINK Messenger Goes Live - Stay Connected to Loved Ones Anytime, Anywhere!</a></h3>
+				<div class="homeNewsEntry">
+					<a href="/news/view.php?id=525"><img src="http://img1.igg.com/999/article/2015/12/22/103207822.jpg" width="120" height="80" /></a>
+					<p>LINK Messenger, the best way to bring your friends and family closer together. Send a joke, goofy pictures, and silly stickers to put a smile on someone's face! Homesick or missing someone? Send them a video or voice message to reconnect today. So long as</p>
+					<a href="/news/view.php?id=525" class="readMore">Read More</a>
+				</div>
+			</div>
+					</div>
+		<!--home side end-->
+	</div>
+</div>
+<script type="text/javascript" src="/js/lib/jquery.switchable.min.js"></script>
+<script type="text/javascript">
+
+var slider;
+
+$(function() {
+	// SLIDER
+
+	slider = {
+		api: undefined,
+
+		resize_defer: undefined,
+		is_resizing: false,
+
+		container: $('#gameSlider > div.sliderContent'),
+		arrows: $('#gameSlider div.sliderCarousel > a'),
+		thumbs: $('#gameSlider ul.sliderNav a'),
+
+		enable: function(index) {
+			var thumbs = this.thumbs;
+			var arrows = this.arrows;
+
+			this.api = this.container.switchable({
+				triggers: false,
+				panels: 'li',
+				initIndex: index, // display the first panel
+				effect: 'scrollLeft', // taking effect when autoplay == true
+				easing: 'cubic-bezier(.455, .03, .515, .955)', // equal to 'easeInOutQuad'
+				loop: true, // not taking effect, because end2end == true
+				prev: arrows.eq(0),
+				next: arrows.eq(1),
+				autoplay: true,
+				onSwitch: function(event, index) {
+					thumbs.removeClass('current');
+					thumbs.eq(index).addClass('current');
+				},
+				interval: 5,
+				api: true // if set to true, Switchable returns API
+			})
+
+			var api = this.api;
+
+			this.thumbs.each(function(index, a) {
+				$(a).hover(function() {
+					api.pause();
+
+					var local_index = index;
+					api.switchTo(local_index);
+					api.play();
+					return false;
+				});
+			});
+		},
+
+		adjust: function() {
+			// adjust visual elements
+			var sight = document.body.clientWidth;
+			if (sight > 1920) {
+				sight = 1920;
+			}
+
+			this.container.find('ul > li').andSelf().css('width', sight);
+
+			var nearest_wrapper = this.container.children('ul');
+			nearest_wrapper.css('width', sight * 3);
+
+			// avoid black background
+			if (this.api && this.api.index != 0) {
+				nearest_wrapper.css('left', '-' + (sight * this.api.index).toString() + 'px');
+			}
+		},
+
+		onresize: function() {
+			// resize on second time, third time and ...
+			if (this.is_resizing === true) {
+				clearTimeout(this.resize_defer);
+			} else {
+				this.is_resizing = true;
+				this.api.pause();
+			}
+
+			this.resize_defer = setTimeout(function() {
+				window.slider.after_resize();
+			}, 300);
+
+			this.adjust();
+		},
+
+		after_resize: function() {
+			this.is_resizing = false;
+
+			// 资源清理
+			this.arrows.unbind('click');
+			this.thumbs.unbind('click');
+
+			this.enable(slider.api.index);
+		}
+	}
+
+	slider.adjust();
+	slider.enable(0);
+	
+	$(window).resize(function() {
+		slider.onresize();
+	});
+	
+	// NEWS
+	var news_items = $('#wrapper > div.homeNews > div.homeNewsItem');
+	news_items.children('a').click(function() {
+		news_items.removeClass('expanded');
+		$(this).parent().addClass('expanded');
+		return false;
+	});
+});
+
+</script>
+<div id="footer">
+	<div class="siteNav clearfix">
+		<dl class="s2">
+						<dt>Mobile Games</dt>
+						<dd><a href="https://play.google.com/store/apps/details?id=com.igg.android.im" target="_blank">LINK</a></dd>
+						<dd><a href="https://play.google.com/store/apps/details?id=com.igg.castleclash" target="_blank">Castle Clash</a></dd>
+						<dd><a href="https://play.google.com/store/apps/details?id=com.igg.clashoflords2" target="_blank">Clash of Lords 2</a></dd>
+						<dd><a href="https://play.google.com/store/apps/details?id=com.igg.bravetrials " target="_blank">Brave Trials</a></dd>
+						<dd><a href="https://play.google.com/store/apps/details?id=com.igg.pokerdeluxe&feature" target="_blank">Texas HoldEm Poker Deluxe</a></dd>
+						<dd><a href="https://play.google.com/store/apps/details?id=com.igg.android.godsrush_en" target="_blank">Gods Rush</a></dd>
+						<a style="color:#FF8500;" href="/games/?form=mobile">more >></a>
+		</dl>
+		<dl class="s1">
+			<dt>Browser Games</dt>
+						<dd><a href="http://www.igg.com/game/pd/" target="_blank">Texas HoldEm Poker Deluxe</a></dd>
+						<dd><a href="http://www.igg.com/game/go2" target="_blank">Galaxy Online 2</a></dd>
+						<dd><a href="http://www.igg.com/game/wod" target="_blank">Wings of Destiny</a></dd>
+						<dd><a href="http://www.igg.com/game/gw/" target="_blank">GodsWar Online</a></dd>
+						<dd><a href="http://www.igg.com/game/aot" target="_blank">Age of Titans</a></dd>
+						<dd><a href="http://www.igg.com/game/mo" target="_blank">Moonlight Online</a></dd>
+						<a style="color:#FF8500;" href="/games/?form=browser">more >></a>
+		</dl>
+		<dl class="s3">
+						<dt>PC Games</dt>
+						<dd><a href="http://top2.igg.com/" target="_blank">Tales of Pirates II</a></dd>
+						<dd><a href="http://ao.igg.com/" target="_blank">Angels Online</a></dd>
+						<dd><a href="http://wl.igg.com/" target="_blank">Wonderland Online</a></dd>
+						<dd><a href="http://vc.igg.com" target="_blank">Voyage Century</a></dd>
+						<dd><a href="http://gw.igg.com/main.php" target="_blank">GodsWar Online</a></dd>
+						<dd><a href="http://mo.igg.com/" target="_blank">Moonlight Online</a></dd>
+						<a style="color:#FF8500;" href="/games/?form=pc">more >></a>
+		</dl>
+		<dl class="s4">
+			<dt>Support</dt>
+			<dd><a href="/about/mobile_support.php" target="_blank">Mobile Support</a></dd>
+			<dd><a href="http://service.sns.us.igg.com" target="_blank">Browser Support</a></dd>
+			<dd><a href="http://service.igg.com/main.php" target="_blank">PC Support</a></dd>
+			<dd><a href="http://forum.igg.com/" target="_blank">Forums</a></dd>
+			<dd><a href="/member/agreement.php" target="_blank">Terms of Service</a></dd>
+			<dd><a href="/about/privacy_policy.php" target="_blank">Privacy Policy</a></dd>
+		</dl>
+		<dl class="s5">
+			<dt>Company</dt>
+			<dd><a href="http://investor.igg.com/about.php?lang=1" target="_blank">About IGG</a></dd>
+			<!-- <dd><a href="/about/about.php" target="_blank">About IGG</a></dd> -->
+			<dd><a href="/about/contact.php" target="_blank">Contact Us</a></dd>
+			<dd><a href="/about/press_assets.php" target="_blank">Press Assets</a></dd>
+					</dl>
+		<dl class="s6">
+			<dt>More</dt>
+			<dd><a href="http://investor.igg.com/" target="_blank">Investor Relations</a><br /><a href="http://investor.igg.com/?lang=3" target="_blank">（投資者關係）</a></dd>
+		</dl>
+	</div>
+	<p class="copyright">
+	Copyright &copy; 2006 - 2016 IGG Inc. All Rights Reserved.
+		</p>
+</div>
+<div data="LANG:en COUNTRY:US"></div>
+<div style="display:none;"><a href="https://plus.google.com/105929626251358003923" rel="publisher">Google+</a></div>
+<script type="text/javascript" src="http://www.igg.com/iggglobal/analytics.js"></script>
+</body>
+</html>

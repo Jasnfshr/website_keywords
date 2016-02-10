@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="alexaVerifyID" content="8q6DOiImy_SPuPZmvVIqzO6bhk0"/>
+    <script src="https://assets.adobedtm.com/c876840ac68fc41c08a580a3fb1869c51ca83380/satelliteLib-1400fd8585338a1bc83f4cdc4faf2d2ad1604233.js"></script>
+
+    <meta name="description" content="Network monitoring, server and application monitoring, network mapping, diagnostic tools nad reports - get it all in NetCrunch"/>
+<meta name="keywords" content="network management, real time monitoring, network monitoring, network discovery, network mapping, event log monitoring, windows monitoring, Linux monitoring, Mac OS X monitoring, syslog server, network maps, performance monitoring, diagnostic tool, file monitoring, reporting tool, SNMP, SNMP monitoring, SNMP trap, real time graphs, bandwidth monitoring, alert correlation, server monitoring"/>
+<meta http-equiv="revisit-after" content="7 days"/>
+
+<title>AdRem NetCrunch - Network Monitoring System</title>
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+    <link href="/css/styles-nov-2015.php" rel="stylesheet" type="text/css"/>
+
+    <link href="/Scripts/jquery.fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css"/><link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css"/><link href="/css/animate.min.css" rel="stylesheet" type="text/css"/><link href="/netcrunch/main/index-data-styles.css" rel="stylesheet" type="text/css"/>
+    <!--[if lt IE 7]>
+    <link href="/css/iefix.css" rel="stylesheet" type="text/css"/>
+    <link href="ie6fix.css" rel="stylesheet" type="text/css"/>    <![endif]-->
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script async type="text/javascript" src="/Scripts/scriptsIE.php"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/Scripts/scripts.php"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', "UA-2340584-1", 'auto');
+    ga('send', 'pageview');
+    window.__trackID = "UA-2340584-1";
+</script></head>
+<body id="main" class="html5 lang-en">
+
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1661424014133841',
+            cookie : true,
+            xfbml: true,
+            version: 'v2.5'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<!--[if lte IE 6]>
+<script src="/Scripts/ie6/localization/en_US.js"></script>
+<script src="/Scripts/ie6/warning.js"></script>
+<script>
+    window.onload = function () {
+        ie6Warning(function () {
+            var languageMap = {};
+            //specifies a JSON hash table for localization
+            if (window.IE6WarningLocalizations) {
+                languageMap = window.IE6WarningLocalizations;
+            }
+
+            return {
+                imgPath: "/Scripts/ie6/", //specifies the path to the icons of each browser
+                localizations: languageMap
+            };
+        });
+    };
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    currDir = "..";    function popupform(URL) {
+        day = new Date();
+        id = day.getTime();
+        eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=300,height=300');");
+    }
+    function dosearch() {
+        window.open("/search/index.php?search=" + document.searchForm.searchtext.value.replace(/ /g, '+'), "_top");
+    }
+    var lang = "lang-en";
+</script>
+
+
+
+<div id="menu-main">
+    <div class="navbar navbar-static-top" role="banner">
+
+        <div class="container">
+
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse"
+                    data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/"> <img alt="AdRem Software" src="/img/adrem-software-2014.png" width="88"
+                                                   height="41"> </a>
+
+            <nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="tm_1"><a href="/blog/">Blog</a></li><li id="tm_2"><a href="/demo/">Downloads</a></li><li id="tm_3"><a href="/orders/">Order</a></li><li id="tm_4"><a href="/support/">Support</a></li><li id="tm_5"><a href="/about/">About Us</a></li>
+                    <li class="dropdown" id="mnu-lang">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="lang-item">
+                            English&nbsp;<b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li><a ref="www.adremsoft.com" id="lang-en">English</a></li>
+                            <li><a ref="de.adremsoft.com" id="lang-de">Deutsch</a></li>
+                            <li><a ref="fr.adremsoft.com" id="lang-fr">Fran&ccedil;ais</a></li>
+                            <li><a ref="pl.adremsoft.com" id="lang-pl">Polski</a></li>
+                            <li><a ref="es.adremsoft.com" id="lang-es">Espa&ntilde;ol</a></li>
+                            <li><a ref="ms.adremsoft.com" id="lang-mx">Espa&ntilde;ol (Am&eacute;rica
+                                    Latina)</a></li>
+                            <li><a ref="it.adremsoft.com" id="lang-it">Italiano</a></li>
+                            <li><a ref="br.adremsoft.com" id="lang-br">Portugu&ecirc;s</a></li>
+                            <li><a ref="jp.adremsoft.com" id="lang-jp">&#26085;&#26412;&#35486;</a></li>
+                            <li><a ref="ru.adremsoft.com" id="lang-ru"> &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a>
+                            </li>
+                            <li><a ref="cn.adremsoft.com" id="lang-cn">&#20013;&#25991;</a></li>
+                        </ul>
+                    </li>
+
+                    <li id="new-search">
+                        <form name="searchForm" action="" onsubmit="dosearch(); return false;">
+    <input id="searchtext" name="search" class="form-control input-sm" placeholder="search"/>
+</form>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    (function () {
+        $('#mnu-lang ul li a').click(function (e) {
+            var ref = $(e.target).attr('ref');
+            window.location = location.protocol + "//" + ref + location.pathname;
+        })
+    })();
+</script>
+<div id="page-content">
+    <span id="c1"></span>
+<span id="c2"></span>
+<span id="c3"></span>
+<span id="c4"></span>
+<span id="c5"></span>
+<span id="c6"></span>
+
+
+<div class="banner">
+    <div class="container">
+        <div class="nav-buttons">
+            <ul>
+                <li><a href="/netcrunch/whatsnew/"><span class="tmpl" id="a-whatsnew">What's New in Version 9</span></a></li>
+                <li>/</li>
+                <li><a href="/netcrunch/monitoring/datasheet"><span class="tmpl" id="a-features">Product Datasheet</span></a></li>
+            </ul>
+        </div>
+
+        <div class="hdr">
+            <div>
+                <img src="main/img/nc-logo.png" width="70" height="70" alt="AdRem NetCrunch">
+
+                <div>
+                    <h1><span class="tmpl" id="h-netcrunch">NetCrunch</span></h1>
+
+                    <h2><span class="tmpl" id="h-subtitle">Monitoring and Visualization system for Networks, Applications and Devices</span></h2>
+                </div>
+            </div>
+
+            <div class="circles wow zoomIn">
+                <a id="c-react" href="#alerting" class="circle wow zoomIn"
+                   data-wow-delay="0s">
+                    <h3><span class="tmpl" id="h-react"><em>React</em> on alerts or set automatic actions</span></h3>
+                </a>
+
+                <a id="c-collect" href="#monitoring" class="circle wow zoomIn" data-wow-delay="0.75s">
+                    <h3><span class="tmpl" id="h-collect"><em>Collect</em> and analyze performance data</span></h3>
+                </a>
+
+
+                <a id="c-vis" href="#visualize" class="circle wow zoomIn" data-wow-delay="1.5s">
+                    <h3><span class="tmpl" id="h-vis"><em>Visualize</em> current status using dashboards, charts and maps</span></h3>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="latest">
+            <a href="/netcrunch/page/release-notes" title="See release notes...">
+                Latest Version: <span> 9.1</span> released on February 2, 2016</a>
+        </div>
+    </div>
+</div>
+
+<div class="story">
+    <div class="container">
+        <div class="row user-story wow fadeIn" data-wow-delay="1s">
+
+            <div id="ss-carousel" class="swipe full-width slide">
+                <div class="swipe-wrap">
+                    <div class="slide">
+                        <blockquote><span class="tmpl" id="ss-thermocross-quote">"We have found in NetCrunch a complete monitoring tool which is very effective in adapting to our IT needs. NetCrunch offers powerful native network mapping and configuration capabilities, both effective and granular. Its many Dashboards and Real-Time Alerting makes it an essential tool for IT monitoring."</span>
+                        </blockquote>
+                        <p>
+                            <span class="name"><span class="tmpl" id="ss-thermocross-name">Genséric Piegay</span></span>
+                            <span class="title"><span class="tmpl" id="ss-thermocross-title">IT Manager</span></span>
+                            <span class="company"><span class="tmpl" id="ss-thermocross-company">Groupe Thermcross</span>, France</span>
+                        </p>
+                    </div>
+
+                    <div class="slide">
+                        <blockquote><span class="tmpl" id="ss-hawaii-quote">“We were very surprised by the ease of setup and the depth of monitoring possible with NetCrunch.”</span>
+                        </blockquote>
+                        <p>
+                            <span class="name"><span class="tmpl" id="ss-hawaii-name">Brian Chee</span></span>
+                            <span class="title"><span class="tmpl" id="ss-hawaii-title"> </span></span>
+                            <span class="company"><span class="tmpl" id="ss-hawaii-company">University of Hawaii, USA</span></span>
+                        </p>
+                    </div>
+
+                    <div class="slide">
+                        <blockquote><span class="tmpl" id="ss-cellcom-quote">"The features that distinguish NetCrunch from other solutions are its agent-less capabilities and the powerful, customizable dashboard with real- time network views."</span>
+                        </blockquote>
+                        <p>
+                            <span class="name"><span class="tmpl" id="ss-cellcom-name">Amir Fishler</span></span>
+                            <span class="title"><span class="tmpl" id="ss-cellcom-title">System engineering team leader</span></span>
+                            <span class="company"><span class="tmpl" id="ss-cellcom-company">Cellcom LTD</span>, Israel</span>
+                        </p>
+                    </div>
+
+                    <div class="slide">
+                        <blockquote><span class="tmpl" id="ss-hiroshima-quote">"The looks of NetCrunch v7 Japanese has become so easy to follow and work with.  It may take bit time for me to get used to it as settings in v7 are changed. But the design of GUI is definitely more intuitive."</span>
+                        </blockquote>
+                        <p>
+                            <span class="name"><span class="tmpl" id="ss-hiroshima-name">Yasuhiko Nagahara</span></span>
+                            <span class="title"><span class="tmpl" id="ss-hiroshima-title">Manager</span></span>
+                            <span class="company"><span class="tmpl" id="ss-hiroshima-company">Information Center, Hiroshima University of Economics, Japan</span></span>
+                        </p>
+                    </div>
+
+                    <div class="slide">
+                        <blockquote><span class="tmpl" id="ss-landkreis-quote">"Thanks to the inheritance function and monitoring packs in NetCrunch, laborious configuration of every single node is the past now."</span>
+                        </blockquote>
+                        <p>
+                            <span class="name"><span class="tmpl" id="ss-landkreis-name">Wolfgang Seel</span></span>
+                            <span class="title"><span class="tmpl" id="ss-landkreis-title">Administrator</span></span>
+                            <span class="company"><span class="tmpl" id="ss-landkreis-company">Landkreis Neunkirchen</span>, Germany</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <ol id="ss-indicators" class="carousel-indicators">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+
+            <div class="left-arrow btn glyphicon glyphicon-chevron-left" style="font-size:25px; color: white"
+                 onclick="window.slider.prev();">
+            </div>
+            <div class="right-arrow btn glyphicon glyphicon-chevron-right" style="font-size:25px; color: white"
+                 onclick="window.slider.next();">
+            </div>
+
+            <a href="/netcrunch/ss/" class="btn btn-light more-stories"><span class="tmpl" id="a-more-stories">Read More User Stories </span></a>
+        </div>
+    </div>
+</div>
+
+<div class="monitoring" id="monitoring">
+    <div class="container">
+        <header class="sec-header">
+            <h2><span class="tmpl" id="h-monitoring">Monitoring</span></h2>
+        </header>
+        <h3><span class="tmpl" id="h-mon-lead">NetCrunch combines the monitoring of network infrastructure devices like: switches, routers and printers with the monitoring of servers, applications and virtualization hosts.</span></h3>
+        <ul class="flex-row">
+            <li>
+                <a href="monitoring/network-infrastructure">
+                    <span class="tmpl" id="md-mon-inf"><h3>Monitoring of Network Infrastructure</h3>
+
+<p>Monitor network services, switches, routers, bandwidth and traffic flow. Easily monitor up/down status, files, web, IP SLA  and more. View switch port mapping and layer 2 maps. Full SNMP support with a MIB compiler and 3500+ MIBs included.</p>
+</span>
+                </a>
+            </li>
+            <li>
+                <a href="monitoring/systems-and-applications">
+                    <span class="tmpl" id="md-mon-sys"><h3>Server, Application and Virtualization Monitoring</h3>
+
+<p>Monitor Windows, VMware ESXi, Linux, Mac OS X and BSD servers and workstations. Monitor virtual machines, files, folders, web pages. Run custom scripts or send data over HTTP using a simple API. Manage status, logs and systems performance.</p>
+</span>
+                </a>
+            </li>
+            <li>
+                <a href="monitoring/alerts-and-logs">
+                    <span class="tmpl" id="md-mon-alert"><h3>Alerting and Event Management</h3>
+
+<p>Receive alerts from SNMP traps or syslog messages, collect Windows Event Log and monitor text logs. Advanced alert correlation and conditional alerts. Alerts can trigger corrective actions including remote execution. Set various triggers on performance parameters.</p>
+</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="visualization" id="visualize">
+
+    <div class="container">
+        <header class="sec-header">
+            <h2><span class="tmpl" id="h-visualization">Live Visualization</span></h2>
+        </header>
+
+        <div class="ui">
+            <span class="tmpl" id="md-f-4"><h3>Flexible UI</h3>
+
+<p>While checking a node state you can also see its physical connections, and all views which include this node. In one click you can explore switch ports, VLANs, and connections.</p>
+
+<p>Alerts, Network Traffic, and Performance views - everything is linked, especially useful for troubleshooting network problems.</p>
+
+<p>You can do things efficiently. For instance, you can easily select multiple nodes and change their settings with only one click.</p>
+
+<p>NetCrunch comes with desktop, web and mobile consoles. The desktop console has been optimized for Windows 10 tablets.</p>
+
+<p>Finally, in NetCrunch you can find diagnostic tools for Windows: These include <a href="/wmitools/">WMI Tools</a>, IP Tools and an SNMP Viewer which allows you to easily explore or change data on supported SNMP devices (switches, printers, routers, etc.).</p>
+</span>
+        </div>
+
+        <ul class="tiles gallery">
+            <li>
+                <div class="img widgets" data-fancybox-href="main/img/views/widgets.png"
+                     title="Network Live Dashboard Map with Widgets"></div>
+
+                <span class="tmpl" id="md-v-1"><h3>Dashboard Maps</h3>
+
+<p>Transform your network maps into live dashboards using NetCrunch widgets, which allow you to display performance parameters and service status.</p>
+</span>
+            </li>
+            <li>
+                <div class="img segment-traffic" data-fancybox-href="main/img/views/segment-traffic.png"
+                     title="Map of Network Segment with Traffic"></div>
+
+                <span class="tmpl" id="md-v-2"><h3>Layer 2 Maps</h3>
+
+<p>NetCrunch automatically creates Layer 2 maps, routing maps and automatically manages and updates many predefined views like: locations, device types, servers, switches etc. All maps can show node status and can calculate summary status. So when something happens to a node, you will notice an appropriate color code and message next to the node icon.</p>
+</span>
+            </li>
+            <li>
+                <div class="img dashboard" data-fancybox-href="main/img/views/dashboard.png"
+                     title="Summary Status Dashboard"></div>
+                <span class="tmpl" id="md-v-3"><h3>Summary Dashboard</h3>
+
+<p>Get a comprehensive view into the status of a group of nodes (or entire network). You can see the status of various elements such as: Atlas Views (i.e. locations), Monitoring Packs (group of monitoring settings), network services and sensors.</p>
+</span>
+            </li>
+            <li>
+                <div class="img top-charts" data-fancybox-href="main/img/views/top-charts.png"
+                     title="Performance Top Charts"></div>
+
+                <span class="tmpl" id="md-v-4"><h3>Top Charts</h3>
+
+<p>These views show the top values for a group of nodes, and can filter nodes by importance. The top chart panel can be created for any performance parameters but there are some predefined panels like: Top Problem Nodes, Slow Responding Nodes, Network Traffic, and Most Loaded Nodes by disk read/write.</p>
+</span>
+            </li>
+            <li>
+                <div class="img netflow" data-fancybox-href="main/img/views/flows.png"
+                     title="Network Traffic Summary"></div>
+                <span class="tmpl" id="md-v-5"><h3>Flow Dashboard &amp; Analytics</h3>
+
+<p>NetCrunch contains a Flow Server for collecting traffic data from switches and routers. The dashboard shows current network traffic structure and allows for deeper traffic analysis including application and protocol analysis. Additionally, NetCrunch can collect performance trends on traffic data and you can create alerts on them.</p>
+</span>
+            </li>
+
+            <li>
+                <span class="new" title="New in version 9">v9</span>
+
+                <div class="img gc-dashboard" data-fancybox-href="main/img/views/gc-dashboard.jpg"
+                     title="GrafCrunch Dashboard"></div>
+
+                <span class="tmpl" id="md-v-6"><h3>GrafCrunch</h3>
+
+<p>The latest version of NetCrunch comes with a fork of the open source project Grafana. One of the top open source performance visualization projects, it greatly increases the possibilities of creating live performance dashboards and allows you to present data from various sources.</p>
+</span>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="alerts" id="alerting">
+    <div class="container">
+        <header class="sec-header">
+            <h2><span class="tmpl" id="h-alerting">Alerting</span></h2>
+        </header>
+        <ul class="gallery">
+            <li class="flexbox single">
+                <div class="img pending-alerts" data-fancybox-href="main/img/views/pending-alerts.png"
+                     title="Map of Network Segment with Traffic" style="border: 1px solid #cdcdcd"></div>
+                <div class="txt">
+                    <span class="tmpl" id="md-f-5"><h3>Pending Alerts View</h3>
+
+<p>When looking at a regular alert log, you only see a list of alerts as they happened over time. But this view does not give you the right information about which problems have been solved (closed) already, and which still need your attention.</p>
+
+<p>NetCrunch tracks when alerts begin and end so you can focus on pending alerts. All internal alerts triggered by NetCrunch are correlated by default. Any external alerts (from syslog, SNMP traps, Windows Event Log Events) can be correlated by adding closing conditions (events) to the defined alert.  Finally, you can add alerting actions (i.e. notifications) to be executed not only when the alert starts, but also when it ends (closes).</p>
+
+<p><a href="/adoc/viewer/view/NetCrunch/391493396771">Alert and Report Management</a></p>
+</span>
+                </div>
+            </li>
+            <li>
+                <img src="main/img/actions.png" width="252" height="81" alt="Corrective Actions"
+                     style="display:block;margin: 0 auto; margin-top:25px">
+
+                <div class="txt"><span class="tmpl" id="md-f-6"><h3>Extensive Alerting Actions</h3>
+
+<p>NetCrunch supports common notification types like SMS, desktop notification and email. It can also trigger external notifications using any script or program.</p>
+
+<p>It can remotely run scripts on all supported operating systems (Windows, Linux, Mac OS X, BSD), restart machines or services, and set SNMP variables. There are over 30 predefined actions ready to be used in alerting scripts.</p>
+
+<p>An alerting script simplifies the managing of alerts and allows you to define a custom alert escalation scheme (which action should be taken after a certain time or on alert close).</p>
+
+<p>NetCrunch simplifies the managing of alert actions using alerting scripts and user or group profiles. Instead of hardcoding emails for each alert, you can send notifications to user groups or single users. You can then manage user profiles that define which notifications should be sent and when. For instance, you can set a user to receive an SMS only on certain hours and days of the week.</p>
+
+<p><a href="/adoc/viewer/view/NetCrunch/391497722147">Alerting Actions</a></p>
+</span></div>
+            </li>
+            <li>
+                <span class="new" title="New in version 9">v9</span>
+                <img src="main/img/correlation.png" width="202" height="96" class="correlation"
+                     alt="Correlation Diagram">
+
+                <div class="txt">
+                    <span class="tmpl" id="md-a-1"><h3>Advanced Correlation</h3>
+
+<p>NetCrunch allows you to correlate events from multiple nodes so you can easily define alerts in situations where a pair of servers or interfaces are down.</p>
+
+<h3>Flexible Alerting Conditions</h3>
+
+<p>In NetCrunch you can add an additional condition for each monitored event. For example, the program can notify you if something didn't happen (like a backup) or if a state persists for more than a given time.</p>
+
+<h3>Syslog &amp; SNMP Traps</h3>
+
+<p>NetCrunch receives syslog messages and SNMP traps by default. The External Events Window shows the last 1000 received messages or traps. By clicking on a message, a user can easily create an alert for a selected message and assign an alerting script to it. NetCrunch also supports receiving SNMPv3 notifications and trap info messages.</p>
+</span>
+                </div>
+            </li>
+        </ul>
+        <a class="btn more" href="monitoring/alerts-and-logs" title="Read more about alerting and event management">Read
+            More</a>
+    </div>
+</div>
+
+<div class="analytics">
+    <div class="container">
+        <header class="sec-header">
+            <h2><span class="tmpl" id="h-analytics">Analytics &amp; Database</span></h2>
+        </header>
+        <ul>
+            <li>
+                <i>&nbsp;</i>
+                <span class="tmpl" id="md-d-1"><h3>Reports</h3>
+
+<p>NetCrunch includes many pre-defined reports. Reports are generated in PDF format. Reporting tasks can be run ad-hoc or scheduled (daily, weekly, monthly), and reports can be distributed automatically by email. Users can also create their own reports based on collected performance data.</p>
+</span>
+            </li>
+            <li>
+                <i>&nbsp;</i>
+
+                <span class="tmpl" id="md-d-2"><h3>Performance Trends Analyzer</h3>
+
+<p>The Trend Analyzer allows you to analyze and compare historic performance metrics collected by NetCrunch. You can compare different metrics or see value distributions by hours or days of the week.</p>
+</span>
+            </li>
+            <li>
+                <i>&nbsp;</i>
+
+                <span class="tmpl" id="md-d-3"><h3>Network Traffic Trends</h3>
+
+<p>NetCrunch contains a Flow Server which uses an analytical database for ad-hoc traffic analysis of up to 1hr. The program allows you to collect long term performance trends for given nodes or globally aggregated traffic data.</p>
+</span>
+            </li>
+
+            <li>
+                <i>&nbsp;</i>
+
+                <span class="tmpl" id="md-d-4"><h3>Event Database</h3>
+
+<p>NetCrunch stores all events in a built-in SQL database. No external database is required, which reduces the overall cost of installation and administration of NetCrunch. Each event generated or received by NetCrunch is stored in the event database. NetCrunch can also remotely collect events from Windows Event Log or monitor Text logs using the file sensor. The database can retain event data up to <strong>100GB</strong>, and is also accessible for reading by external programs through the ODBC driver.</p>
+</span>
+            </li>
+
+            <li>
+                <i>&nbsp;</i>
+
+                <span class="tmpl" id="md-d-5"><h3>Performance Data Database</h3>
+
+<p>NetCrunch uses a noSQL database for storing network performance data, which is compressed daily. This database is file based and can hold data as long as needed. Data can also be removed after a certain period (months, years). Data from this database is accessible for querying and exporting through a separate tool included in NetCrunch. Historic monitoring data can be exported to external databases (MS SQL, MySQL, Oracle, etc.). The data export tool can be scheduled to run automatically.</p>
+</span>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="program">
+    <div class="container">
+        <a href="/webinar" class="webi">
+            <em>
+                <span class="tmpl" id="a-learn-more">Want to learn more?</span>
+            </em>
+            <span class="tmpl" id="a-webinar">Join our weekly webinar</span>
+        </a>
+        <iframe style="margin: 60px auto; width: 853px; display: block" width="853" height="480"
+                src="https://www.youtube.com/embed/e5R0hliHHVk?rel=0" frameborder="0"></iframe>
+
+        <ul>
+            <li>
+                <span class="tmpl" id="md-f-10"><h3>Why NetCrunch?</h3>
+
+<p>AdRem Software has been developing software for networks since 1998. We started by providing successful tools for Novell networks, and after that we started developing our flagship network monitoring system which was first released in 2001.</p>
+
+<p>We release NetCrunch updates 4-5 times a year, adding new features in every minor release. <br>
+<a href="http://www.adremsoft.com/netcrunch/page/release-notes">See NetCrunch release notes</a></p>
+
+<p>We provide worldwide tech support by our in-house engineers. Support requests  are answered in less than 24 hours on business days. You can also access our <a href="http://www.adremsoft.com/kb">online knowledge base</a></p>
+
+<p>We offer free pre-sales tech support and provide installation assistance for you. <a href="/resellers/list.php">Our partners</a> offer consulting, on-site support and training.</p>
+</span>
+            </li>
+            <li>
+                <span class="tmpl" id="md-f-7"><h3>High Performance &amp; Security</h3>
+
+<p>NetCrunch is optimized for speed, and can easily monitor up to 3,000 nodes from a single machine. 
+A single instance of NetCrunch can track over <strong>600,000</strong> performance parameters!</p>
+
+<p>NetCrunch combines different technologies for the best results: A noSQL proprietary database for network performance metrics, an in-memory database for fast real-time status, and an embedded SQL database for storing alerts.</p>
+
+<p>To achieve the best results even when working remotely over slow links, NetCrunch uses advanced techniques like: false alert suppression and console protocol optimization.</p>
+
+<p>All program components are secured with industry standard cyphers. Web consoles can use SSL for connecting to NetCrunch. The Remote  Administration console uses encryption and compression for accessing the server remotely.</p>
+</span>
+            </li>
+
+            <li>
+                <span class="tmpl" id="md-f-8"><h3>Simple Licensing Model</h3>
+
+<p>NetCrunch is licensed per number of monitored network nodes, which is more logical than counting probes or sensors, and scales efficiently. A single node always counts as a single node, regardless of the number of sensors, services or applications being monitored on it. A 48-port switch or server running multiple applications counts as one node, period.</p>
+
+<p><a href="/netcrunch/page/licenses">Compare the NetCrunch licensing model to other models</a></p>
+</span>
+            </li>
+            <li>
+                <span class="tmpl" id="md-f-20"><h3>Self Monitoring</h3>
+
+<p>NetCrunch monitors itself. It monitors hundreds of software component parameters and warns you in case of slowdowns or problems. NetCrunch is designed to survive overload conditions which can happen in case of network device failure (generating thousands alerts per second).</p>
+</span>
+            </li>
+            <li>
+                <span class="tmpl" id="md-f-21"><h3>Extensibility &amp; Customization</h3>
+
+<p>The NetCrunch UI is flexible, can be used on multiple screens and supports window docking. NetCrunch includes a MIB compiler so it can be easily extended with new vendor supplied SNMP MIBs. NetCrunch works with scripts, can be easily fed with data and can execute custom scripts.</p>
+</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="partnerships">
+    <div class="wow zoomIn">
+        <a class="ic ic-cisco" href="https://marketplace.cisco.com/catalog/companies/adrem-software/products/adrem-netcrunch"
+           title="Open Cisco product catalog"
+           onclick="recordOutboundLink(this, 'Outbound Links', 'null');return false;"></a>
+
+        <i class="ic ic-microsoft"></i>
+        <a class="ic ic-vmware" href="/netcrunch/page/vmware-support-statement"
+           title="Click to read VMWare support statement"></a>
+    </div>
+</div>
+
+<div class="download">
+    <div class="container">
+        <a class="download-btn wow bounceIn" href="/demo/nc">
+            <h3>Download</h3>
+            <h4>Free 30 Day Trial</h4>
+        </a>
+
+        <div style="margin: 0 auto; margin-top: 30px; display: inherit; width: 95px" class="fb-like"
+             data-href="https://www.facebook.com/AdRemSoftware" data-layout="button" data-action="like"
+             data-show-faces="false" data-share="true"></div>
+    </div>
+</div>
+
+<div class="row press">
+    <h3><span class="tmpl" id="h-press">Featured on:</span></h3>
+
+    <div class="container">
+        <a href="http://www.eweek.com/small-business/adrem-software-launches-netcrunch-8-monitoring-platform.html"
+           title="AdRem Software Launches NetCrunch 8 Monitoring Platform"><i></i>eweek.com</a>
+        <a href="http://www.tomsitpro.com/articles/adrem-monitoring-netcrunch-open-monitor-agentless,1-1830.html"
+           title="Agentless Monitoring: AdRem's NetCrunch 8 Released"><i></i>tomsITPRO.com</a>
+        <a href="http://blogs.gartner.com/jonah-kowall/2014/05/09/monitoring-technology-pick-week-of-may-12th-2014-adrem-netcrunch/"
+           title="AdRem NetCrunch - by J. Kowall"><i></i>blog.gartner.com</a>
+        <a href="http://www.windowsecurity.com/blogs/chetcuti/news/adrem-software-unveils-netcrunch-8.html"
+           title="AdRem Software Unveils NetCrunch 8"><i></i>windowsecurity.com</a>
+    </div>
+</div>
+
+<div class="row awards">
+    <div class="container">
+        <div class="row wow fadeInDown">
+            <div class="col-sm-6">
+                <div class="col-xs-6 it-future"><i></i></div>
+                <div class="col-xs-6 win-gold"><i></i></div>
+            </div>
+            <div class="col-sm-6">
+                <div class="col-xs-6 win-readers">
+                    <a href="http://www.windowsnetworking.com/articles-tutorials/product-reviews/product-review-adrem-software-netcrunch-8.html">
+                        <i></i>
+                    </a>
+                </div>
+                <div class="col-xs-6 hot-prod"><i></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row links">
+    <div class="container">
+        <div class="col-sm-3"><a href="/resellers/list.php"><span class="tmpl" id="a-partners">Partners Directory</span></a></div>
+        <div class="col-sm-3"><a href="/customers"><span class="tmpl" id="a-customers">AdRem Customers</span></a></div>
+        <div class="col-sm-3"><a href="/adoc/view/NetCrunch/"><span class="tmpl" id="a-doc">Online Documentation</span></a></div>
+        <div class="col-sm-3"><a href="/orders"><span class="tmpl" id="a-licensing">Licensing &amp; Pricing</span></a></div>
+    </div>
+</div>
+
+<div class="row social">
+    <a class="facebook" href="http://www.facebook.com/AdRemSoftware" title="Visit us on facebook"></a>
+    <a class="twitter" href="http://twitter.com/adremsoftware" title="Follow on twitter"></a>
+    <a class="linked-in" href="http://www.linkedin.com/company/adrem-software" title="Check linked-in profile"></a>
+</div>
+
+<script src="/Scripts/wow.min.js" type="text/javascript"></script>
+<script src="/Scripts/swipe.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/Scripts/jquery.fancybox/jquery.fancybox.pack.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var bullets = $('#ss-indicators li'),
+                carusel = $('#ss-carousel'), startSlide = Math.floor(Math.random() * 5);
+        $("div.img").attr({'data-fancybox-group': 'group'})
+                .fancybox({
+                    nextEffect: 'fade',
+                    prevEffect: 'fade',
+                    helpers: {
+                        title: {
+                            type: 'outside'
+                        }
+                    }
+                });
+
+
+        window.slider = Swipe(carusel[0], {
+            startSlide: startSlide,
+            auto: false,
+            continuous: true,
+            callback: function (pos) {
+                bullets.each(function (i, b) {
+                    $(b).removeClass('active');
+                });
+                $(bullets[pos]).addClass('active');
+            }
+        });
+
+        window.adjustVisHeight = function () {
+            var list = $('.visualization ul.tiles li'), h = 320;
+
+            list.each(function (i, e) {
+                h += $(e).height() + 10;
+            });
+
+            $('.visualization ul.tiles').css({height: h / 3 + 'px'});
+        };
+
+        carusel.css({visibility: 'inherit'});
+        bullets.each(function (i, b) {
+            $(b).click(function () {
+                window.slider.slide(i, 200);
+            })
+        });
+
+        bullets.each(function (i, b) {
+            if (i == startSlide) {
+                $(b).addClass('active');
+            } else {
+                $(b).removeClass('active');
+            }
+        });
+
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1500);
+                    return false;
+                }
+            }
+        });
+
+//      FastClick.attach(document.body);
+    });
+
+    (function () {
+        var wow = new WOW(
+                {
+                    boxClass: 'wow',      // default
+                    animateClass: 'animated', // default
+                    offset: 0,        // default
+                    mobile: false,    // default
+                    live: true        // default
+                }
+        );
+        console.log('Wow init...', WOW);
+        wow.init();
+    })();
+</script>
+<script type="text/javascript">var pageData = "netcrunch/main/index-data";var pageLang = "";var iswork = "";</script></div>
+<div id="footer" class="container">
+    <div id="most-top-menu" class="menu-top">
+  <div id="menu-top-left">
+    <a href="/profile/">Login</a>  </div>
+</div>
+
+    <p class="copyright">&#0169; 2015 Copyright AdRem Software, all rights reserved</p>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1059257482;
+    var google_conversion_label = "2oncCMLWvgMQivmL-QM";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<div id="cookie-msg">
+    <iframe src="/cookie-warning-txt.html" style="max-height: 55px"></iframe>
+    <a class="msg-close" onclick="closeCookieWarning(event)">&times;</a>
+</div>
+
+<script async type="text/javascript" src="/Scripts/cookies.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.closeCookieWarning = function (ev) {
+            Cookies.set('cookieWarning1', '1', {expires: Infinity});
+            $('#cookie-msg').animate({
+                bottom: 0
+            }, 500, function () {
+                $('#cookie-msg').hide();
+            });
+            event.stopPropagation();
+            return false;
+        };
+
+        $('#cookie-msg').delay(500).animate({
+            bottom: 0
+        }, 500);
+    })
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""
+             src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1059257482/?value=0&amp;label=2oncCMLWvgMQivmL-QM&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+
+
+</div>
+<!-- *************** -->
+<!-- *************** -->
+
+<script type="text/javascript" language="javascript">
+    function TrackPageView(alink) {
+        ga('send', 'pageview', '/outgoing/' + alink)
+    }
+
+    function TrackScreen(alink) {
+        ga('send', 'pageview', '/screens/' + alink);
+        return alink;
+    }
+
+    function recordOutboundLink(link, category, action) {
+        try {
+            ga('send', 'event', category, action);
+            if (link.target === "_blank") {
+                window.open(link.href);
+            } else {
+                setTimeout('document.location = "' + link.href + '"', 100)
+            }
+        } catch (err) {
+        }
+    }
+
+    // this will automatically track all open-pdf links
+    function TrackDocAndOutboundLinks() {
+        var links = document.getElementsByTagName("a");
+        var s, aname;
+        var ss;
+
+        for (var i = 0; i < links.length; i++) {
+            a = links[i];
+            s = a.getAttribute('href');
+            if (s !== null) {
+                if (s.indexOf("open-pdf.php") >= 0) {
+                    ss = s.split("\=");
+                    a.setAttribute("onClick", "TrackPageView('" + ss[1] + "');");
+                } else if ((s.indexOf("http") === 0) && (s.indexOf(".adrem") === -1)) {
+                    aname = a.getAttribute('name');
+                    if (typeof aname == "undefined") {
+                        aname = s;
+                    }
+                    a.setAttribute("onClick", "recordOutboundLink(this, 'Outbound Links', '" + aname + "');return false;");
+                }
+            }
+        }
+    }
+
+    TrackDocAndOutboundLinks();
+</script>
+
+<script src="https://use.typekit.net/ivk7ojj.js"></script>
+<script>try {Typekit.load({async: true});}catch(e){}</script>
+
+<script type="text/javascript">
+    _atrk_opts = {atrk_acct: "Eav6k1a0CM00MR", domain: "adremsoft.com", dynamic: true};
+    (function () {
+        var as = document.createElement('script');
+        as.type = 'text/javascript';
+        as.async = true;
+        as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(as, s);
+    })();
+</script>
+
+
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=Eav6k1a0CM00MR" style="display:none"
+               height="1" width="1" alt=""/></noscript>
+<script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>

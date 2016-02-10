@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=4407ac63b04a974114891da19b333539"></script>
+<!DOCTYPE html>
+
+<!--                                                                                                 
+
+Observer Theme
+By Zack Sultan
+Released January 2013
+Revised April 16, 2014
+                
+-->
+
+<html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <title>The Pigeon Gazette</title>
+        <style>figure{margin:0}</style>
+<link rel="shortcut icon" href="http://38.media.tumblr.com/avatar_19e952af5d6a_128.png">
+        <link rel="alternate" type="application/rss+xml" href="http://thepigeongazette.tumblr.com/rss">
+        
+            <meta name="description" content="Nerds, birds, words. Slice of life comics by Jane. Tries to update Sun and Wed but nobody&#039;s perfect! **** Twitter: @PigeonComics ***** Store: Society6/JanePigeon ***** Support me at:..." />
+        
+        <link rel="shortcut icon" href="http://38.media.tumblr.com/avatar_19e952af5d6a_128.png">
+        <link rel="alternate" type="application/rss+xml" href="http://thepigeongazette.tumblr.com/rss">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no" />
+
+
+
+<!-- Options -->
+
+
+        <meta name="if:Show Navigation" content="1"/>
+        <meta name="if:Alternate Header Layout" content="0"/>
+        <meta name="if:Show Description" content="0"/>
+        <meta name="if:Show Archive Navigation Link" content="1"/>
+        <meta name="if:Wide Images" content="1"/>
+        <meta name="if:Photoset Layout" content="0"/>
+        <meta name="if:Show Post Tags" content="1"/>
+        <meta name="if:Show Post Notes" content="1"/>
+        <meta name="if:Show Copyright" content="0"/>
+        <meta name="if:Infinite Scroll" content="1"/>
+        
+        <meta name="Title font" content="Gibson">
+        <meta name="Title font weight" content="bold" title="Bold">
+        <meta name="Title font weight" content="normal" title="Normal">
+        <meta name="font:Body font" content="Calluna"/>
+        
+        <meta name="Background color" content="#fff">
+        <meta name="Title color" content="#444444">
+        <meta name="Link color" content="#5f79a4">
+        
+        <meta name="color:Body text" content="#333333"/>
+		<meta name="color:Secondary text" content="#888888"/>    
+        <meta name="image:Logo" content=""/>
+        <meta name="text:TypeKit ID" content=""/>
+        <meta name="text:Title Font" content=""/>
+        <meta name="text:Body Font" content=""/>
+        <meta name="text:Post Headline Font" content=""/>
+        <!--<meta name="text:Secondary Font" content=""/>-->
+        
+        <meta name='text:Disqus Shortname' content='' />
+        <meta name='text:Google Analytics' content='' />
+        
+<!-- Scripts -->
+
+    <script src="http://static.tumblr.com/4kpnlef/Pttmhz2ap/jquery-1.9.1.min.js"></script>
+    
+    
+    
+    
+    
+    <!-- Media resizing -->    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Make desktop tumblr video stretch to 100%
+            $('.tumblr_video_container').css({ 'width' : '100%', 'height' : '100%' });
+            // Resize tumblr video on mobile
+            $('.iphone-video a').css({ 'width' : '100%', 'height' : '200px' });
+		});        
+        
+        //Make Spotify the right size and responsive
+	    $(document).ready(function(){
+	        $('.mobile-spotify iframe').css('height', '80px');
+            $('.mobile-spotify iframe').css('width', '290px'); 
+            $('iframe[src*="embed.spotify.com"]').each( function() {
+                $(this).css('width',$(this).parent(1).css('width'));
+                $(this).css('height', '82');
+                $(this).attr('src',$(this).attr('src'));
+            });
+        });
+        $(window).resize(function() {
+            $('iframe[src*="embed.spotify.com"]').each( function() {
+                $(this).css('width',$(this).parent(1).css('width'));
+                $(this).css('height', '82');
+                $(this).attr('src',$(this).attr('src'));
+            });
+        });
+        
+        //disable safari active states
+        document.addEventListener("touchstart", function() {},false);
+        
+	</script>
+
+
+    
+
+<!-- Style Sheet -->
+        
+<style type="text/css">
+
+.regular p {
+	font-weight: bold;
+	color:aqua;
+}
+
+.regular .bottom-nav {
+	display: none;
+}
+
+::selection {
+    background: #56BC8A; /* Safari */
+	color: #333333;
+	}
+	
+::-moz-selection {
+	background: #56BC8A; /* Firefox */
+	color: #333333;
+}
+
+body {
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+    font-size:18px;
+	-webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+	
+p, li, blockquote {
+	line-height: 28px;
+	margin: 0;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.ir {
+	text-indent: -99999em;
+}
+
+.center {
+	text-align: center;
+}
+
+/* Global colors 
+********************************/
+
+body {
+	color: #333333;
+	background-color: #f5f5f5;
+}
+
+.blog-description {
+	color: #888888;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+#header h1 a {
+	color: #363636;
+	border-bottom: none;
+}
+
+a:hover {
+}
+
+a:active {
+	position: relative;
+	outline: none;
+	top: 1px;
+}
+
+
+.metadata a, #footer-links a, #footer p.promo a, .links a {
+	color: #888888;
+	border-bottom: none;
+}
+
+.metadata a:hover, #footer-links a:hover, #footer p.promo a:hover, .links a:hover, .more a:hover, a.mobile-player:hover {
+
+}
+
+.post {
+	border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.colophon p {
+	color: #888888;
+}
+
+
+/* Global fonts 
+********************************/
+
+body {
+	font-family:  'Gibson', sans-serif, georgia, serif;
+	font-weight: normal;
+}
+
+.title h1, .link-title h1, .chat-title h1, .q h1, .a h1, .album-info h2, #footer h2 {
+	font-family:  'Typewriter FS', serif, georgia, serif;
+	font-weight: normal;
+}
+
+.blog-title h1 {
+	font-family:  'Typewriter FS', serif, futura, helvetica, arial, sans-serif;
+	font-weight: normal;
+	font-size: 96px;
+	line-height: 1em;
+}
+
+.metadata a {
+	font-family:  , helvetica, arial, sans-serif;
+	font-weight: normal;
+}
+
+
+/* Page 
+********************************/
+
+
+#page {
+	border: 0px solid;
+	max-width: 900px;
+	padding-left:  50px;
+	padding-right: 50px;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+/* Header Centered
+********************************/
+
+#header {
+	margin-top: 20px;
+	margin-bottom: 80px;
+	display: block;
+	overflow: visible;
+}
+
+#header a {
+	text-decoration: none;
+}
+
+.blog-title {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.blog-title a {
+	border-bottom: none;
+}
+
+.blog-title img {
+	max-width: 100%;
+}
+
+.blog-description { 
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 20px;
+}
+
+.links {
+	margin-top: 0px;
+	text-align: center;
+	float: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.links ul {
+	margin-top: 10px;
+	padding: 0;
+	display: block;	
+	text-align: center;
+	float: none;
+}
+
+.links li {
+	display: inline;
+	margin-left: 10px;
+	text-transform: none;	
+}
+
+.links li:first-child {
+	margin-left: 0px;	
+}
+
+
+
+/* Post wrappers
+********************************/
+
+#content {
+	width: 100%;
+	overflow-x: hidden;
+	clear: both;
+}
+
+.post {
+	margin-bottom: 45px;
+	padding-bottom: 40px;
+	width: 100%;
+}
+
+.narrow {
+	max-width: 640px;
+	margin: auto;
+}
+
+
+/* Headings
+********************************/
+
+.title h1, .link-title h1, .chat-title h1 {
+	text-align: center;
+	margin: auto;
+	margin-bottom: 25px;
+	font-size: 42px;
+	line-height: 50px;
+}
+
+.link-title a {
+	text-decoration: none;
+	position: relative;
+	border: none;
+	color: #56BC8A;
+}
+
+span.link-arrow {
+	position: relative;
+	font-size: 20px;
+	bottom: 3px;
+}
+
+.quote-short {
+	font-size: 24px;
+	line-height: 36px;
+	margin-bottom: 25px;
+}
+
+.photo img, .album-art img, .videoWrapper {
+    max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	border-radius: 2px;
+}
+
+.photo img, .album-art img {
+	min-width: 640px;
+}
+
+.photoset-layout {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.tumblr_audio_player {
+	height: 250px;
+}
+
+.audio iframe {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;	
+}
+
+.videoWrapper iframe, .videoWrapper object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* Post body styles
+********************************/
+
+.caption p {
+	margin-bottom: 15px;
+}
+
+.caption h1 {
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.caption h2 {
+	font-weight: bold;
+	margin-bottom: 15px;
+	font-size: 24px;
+}
+
+.caption blockquote {
+	margin-bottom: 10px;
+	border-left: 3px solid rgba(136, 136, 136, 0.2);
+	margin-left: 5px;
+	padding-left: 15px;
+	line-height: 26px;
+}
+
+.caption pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	background-color: rgba(136, 136, 136, 0.2);
+	border-radius: 2px;
+	padding: 10px 15px 10px 15px;
+	font-size: 15px;
+	line-height: 24px;
+	margin: 15px 0 25px 0;
+}
+
+.caption ul, ol {
+	margin-top: 0;
+	margin-bottom: 25px;
+	padding-left: 40px;
+}
+
+.caption img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto 30px auto;
+    border-radius: 2px;
+}    
+
+.quote-short {
+	line-height: 40px;
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.quote-medium, .quote-long {
+	line-height: 32px;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+ul.chat {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.chat li {
+	border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.chat li:last-child {
+	border: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+span.odd, span.even  {
+	font-weight: bold;
+}
+
+.more a {
+	display: block;
+	width: 99%;
+	height: 30px;
+	border: 1px solid rgba(136, 136, 136, 0.3);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 2px;
+	padding-top: 10px;
+	margin-bottom: 30px;
+}
+
+
+.more a:active {
+    background: rgba(136, 136, 136, 0.08);
+    box-shadow: inset 0px 1px 4px rgba(136, 136, 136, 0.2);
+    top: 0px;
+} 
+
+.audio-module {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+a.mobile-player {
+	border: 1px solid rgba(136, 136, 136, 0.2);
+	background: rgba(136, 136, 136, 0.1);
+	width: 99%;
+	padding: 30px 0 30px 0;
+	margin-bottom: 25px;
+	border-radius: 2px;
+	display: none;
+}
+
+a.mobile-player:active {
+    top: 0px;
+    box-shadow: inset 0px 1px 4px rgba(136, 136, 136, 0.2);
+    background: rgba(136, 136, 136, 0.18);
+    border: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.play-triangle {
+	margin-left: 20px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 6.5px 0 6.5px 10px;
+	border-color: transparent transparent transparent rgba(136, 136, 136, 0.8);
+}
+
+.album-info {
+	display: block;
+	float: left;
+	width: 63%;
+}
+
+.player {
+	display: block;
+	background-color: #ffffff;
+	float: right;
+	padding-top: 5px;
+	padding-right: 2px;
+	border: 1px solid rgba(136, 136, 136, 0.3);
+}
+
+.desktop-spotify {
+	display: block;
+	
+}
+
+.mobile-spotify {
+	display: none;
+	width: 290px;
+	margin: auto;
+}
+
+.iphone-video object {
+    display: block;
+    margin: 0px auto 20px; 
+}
+
+.asker-block, .answer-text {
+	display: block;
+	overflow: auto;
+}
+
+p.question {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+p.album, p.question {
+	font-size: 24px;
+	line-height: 32px;
+}
+
+h1.qa-letter {
+	display: block;
+	float: left;
+	width: 45px;
+	position: relative;
+	bottom: 3px;
+	font-size: 30px;
+}
+
+.q {
+	margin-bottom: 20px; 
+}
+
+img.asker {
+	float:left;
+	margin-right: 8px;
+	border-radius: 2px; 
+	position: relative;
+	top: 2px;
+}
+
+p.asker {
+	font-style: italic;
+}
+
+p.question {
+	clear: both;
+}
+
+
+/* Metadata
+********************************/
+
+.metadata {
+	border: 0px solid gray;
+	overflow: auto;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+.metadata a {
+	text-decoration: none;
+}
+
+.date, .tags, .notes-count {
+	display: block;
+	float: left;
+	margin-right: 15px;
+}
+
+.tags a, .notes-count a, .date a {
+	margin-right: 5px;
+}
+
+.reblog-and-like {
+    display: block;
+    float: right;
+    margin-left: 10px;
+}
+
+
+/* Footer
+********************************/
+
+#footer {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#footer a {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+a.back-next {
+    margin: 0px 10px 0px 10px;    
+}
+
+#footer h2 {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+
+#footer-links ul {
+	margin-bottom: 0px;
+	padding: 0;
+	display: block;
+	text-align: center;
+}
+
+#footer-links li {
+	display: inline;
+	margin-left: 5px;
+	font-size: 14px;
+}
+
+#footer-links li:first-child {
+	margin-left: 0px;
+}
+
+#footer .colophon p {
+	font-size: 14px;
+	font-style: italic;
+}
+
+#footer p.promo {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+
+/* Notes and comments
+********************************/
+
+#permalink-content {
+	margin-top: 40px;
+}
+
+.avatar_frame {
+	position: relative;
+	top: 4px;
+	margin-right: 10px;
+}
+
+.comments {
+	margin-bottom: 35px;
+}
+
+.comments h3, .permalink-notes h3 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.permalink-notes ol {
+	padding-left: 0;
+}
+
+.permalink-notes li {
+	list-style: none;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px solid rgba(136, 136, 136, 0.3);
+	font-size: 13px; 
+}
+
+.permalink-notes blockquote {
+	margin: 5px 0px 5px 0px;
+	border-left: 3px solid rgba(136, 136, 136, 0.2);
+	margin-left: 20px;
+	padding-left: 15px;
+    line-height: 24px;
+}
+
+.notes a {
+	border-bottom: none;
+	text-decoration: underline;
+}
+
+
+.post iframe, .post object {
+max-width: 100%;
+}
+
+
+/* Browser size break-points
+********************************/
+
+
+@media screen and (max-width: 800px) {
+
+#header {
+	margin-top: 20px;
+	display: block;
+	overflow: visible;
+	padding-bottom: 0px;
+}
+
+.blog-title {
+	display: block;
+	text-align: center;
+	margin-top: 50px;
+	float: none;
+	width: 100%;
+    margin-bottom: 50px;
+}
+
+.blog-title h1 {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.blog-description {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.links {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	float: none;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.4);
+}
+
+.links ul {
+	margin-top: 10px;
+	padding: 0;
+	display: block;	
+	text-align: center;
+	float: none;
+}
+
+.links li {
+	display: inline;
+	margin-left: 16px;
+	font-size: 17px;
+	text-transform: none;	
+}
+
+
+.metadata {
+	font-size: 16px;
+	}
+
+.player {
+	display: none;
+}
+
+a.mobile-player {
+	display: block;
+}
+
+.album-info {
+	width: 100%
+}
+
+.title h1, .link-title h1, .chat-title h1 {
+text-align: center;
+font-size: 36px;
+line-height: 42px;
+}
+
+}
+
+@media screen and (max-width: 740px) {
+
+#page {
+	padding-left:  1em;
+	padding-right: 1em;	
+}
+
+#header {
+	margin-bottom: 50px;
+}
+
+/* WRANGLE TUMBLR VIDEO PLAYER */
+
+
+.iphone-video img {
+	width: 90%;
+}
+
+.iphone-video a {
+	margin-bottom: 20px;
+}
+
+/* IMAGES */
+
+.photo img, .album-art img {
+	min-width: 100%;
+}
+
+.link-title a {
+	line-height: 50px;
+}
+
+.desktop-spotify {
+	display: none;
+}
+
+.mobile-spotify {
+	display: block;
+}
+
+}
+
+
+    
+</style>
+
+<!-- End header -->
+    
+    <link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=thepigeongazette" />
+<link rel="alternate" href="ios-app://305343404/tumblr/x-callback-url/blog?blogName=thepigeongazette" />
+<script src="http://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=8b0553f75283ecbeb78be24f096f4c2c"></script>
+
+<link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3"><link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/typewriterfs/stylesheet.css?v=1">
+<meta name="keywords" content="thepigeongazette,sliceoflife,humor,funny,lol" />
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:title" content="The Pigeon Gazette" /><meta property="og:url" content="http://thepigeongazette.tumblr.com/?og=1" /><meta property="og:description" content="Nerds, birds, words. Slice of life comics by Jane. Tries to update Sun and Wed but nobody&#039;s perfect!..." /><meta property="og:type" content="tumblr-feed:tumblelog" /><meta property="og:image" content="http://38.media.tumblr.com/avatar_19e952af5d6a_128.png" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=thepigeongazette" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=thepigeongazette" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:site" content="tumblr" /><meta name="twitter:card" content="app" /><meta name="twitter:description" content="thepigeongazette" /><meta name="twitter:title" content="thepigeongazette" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=thepigeongazette&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=thepigeongazette&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=thepigeongazette&amp;referrer=twitter-cards" />
+
+<!-- GOOGLE CAROUSEL --><script type="application/ld+json">{"@type":"ItemList","url":"http:\/\/thepigeongazette.tumblr.com","itemListElement":[{"@type":"ListItem","position":1,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/138612827504\/annabelle-get-the-scarekawaii"},{"@type":"ListItem","position":2,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/138415042379\/sound-of-tea-being-made"},{"@type":"ListItem","position":3,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/137957084737\/nm"},{"@type":"ListItem","position":4,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/137692559368\/officer-brady-is-getting-tired-of-this-sht"},{"@type":"ListItem","position":5,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/137226694619\/true-story-and-he-was-fine-by-the-way-i-wanted-to"},{"@type":"ListItem","position":6,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/137023890674\/i-guess-you-could-sayhes-gone-bad-directed-by"},{"@type":"ListItem","position":7,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/136753367758\/httpswwwyoutubecomwatchv-adipoe2leps-billz"},{"@type":"ListItem","position":8,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/136393415117\/true-story-i-dont-bear-the-event-any-ill-will"},{"@type":"ListItem","position":9,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/136048573420\/time-at-home-means-comics-about-the-fam-and-also"},{"@type":"ListItem","position":10,"url":"http:\/\/thepigeongazette.tumblr.com\/post\/135578612156\/a-guest-comic-that-needs-no-introduction-but"}],"@context":"http:\/\/schema.org"}</script>
+<link rel="canonical" href="http://thepigeongazette.tumblr.com" />
+
+</head>
+       
+	<body>
+		
+		<div id="page">
+		
+			<div id="header">
+                
+                
+				<div class="links">
+					<ul>
+						<li><a href="/">Home</a></li>
+                        
+                         
+    					<li><a href="/ask">Questions. Comments. ...Cuestions?</a></li>
+						
+                        
+                        
+                        <li><a href="/archive">Archive</a></li>
+                        
+					</ul>
+				</div>
+				
+                
+                
+                
+				<div class="blog-title">
+                
+                    
+                    
+                    
+                    <h1><a href="/">The Pigeon Gazette</a></h1>
+                    
+					
+                    
+					<p class="blog-description">Nerds, birds, words. Slice of life comics by Jane. Tries to update Sun and Wed but nobody's perfect! **** Twitter: @PigeonComics ***** Store: Society6/JanePigeon ***** Support me at: Patreon.com/PigeoneerJane</p>
+                    
+				</div>
+				
+				
+			
+			</div> <!-- header end -->
+			
+			<div id="content">
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://41.media.tumblr.com/9233c1e97d7468179909bbe52901b6b5/tumblr_o1z40mBbjL1tfju21o2_1280.png" alt="Annabelle get the scarekawaii!" />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/86c5c33a841a4a369694bfb121bce12a/tumblr_o1z40mBbjL1tfju21o3_1280.png" alt="Annabelle get the scarekawaii!" />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/a8b9c9222618cba27035968f10950fd0/tumblr_o1z40mBbjL1tfju21o4_1280.png" alt="Annabelle get the scarekawaii!" />
+                        
+                         
+                        
+						<img src="http://36.media.tumblr.com/fd56fdce06607168750907eff42408e4/tumblr_o1z40mBbjL1tfju21o1_1280.png" alt="Annabelle get the scarekawaii!" />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p>Annabelle get the scarekawaii!<br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/138612827504/annabelle-get-the-scarekawaii">Feb. 3 2016</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/why-they-always-standing-on-everything">#why they always standing on everything</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/and-always-with-the-crying">#and always with the crying</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/and-sakura-shit-everywhere">#and sakura shit everywhere</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/thepigeongazette">#thepigeongazette</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/sliceoflife">#sliceoflife</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/webcomic">#webcomic</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/anime">#anime</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/manga">#manga</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/lol">#lol</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/funny">#funny</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/humor">#humor</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/138612827504/annabelle-get-the-scarekawaii">12,568 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="138612827504" id="like_button_138612827504"><iframe id="like_iframe_138612827504" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=138612827504&amp;rk=ZaI3hx8H&amp;root_id=138612827504" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_138612827504"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/138612827504/ZaI3hx8H" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+                <!-- TEXT POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post text">
+				
+					<div class="narrow">
+					    
+                        
+						<div class="title">
+							<h1>*sound of tea being made*</h1>						
+						</div>
+                        
+						
+						<div class="caption">
+						
+						<p>Made drunk comic. Comic no good. No comic posty today.<br></p>
+						
+						</div> <!-- End caption -->
+					    
+                         
+					
+						<div class="metadata">
+						    
+                            
+        					<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/138415042379/sound-of-tea-being-made">Jan. 31 2016</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/hello-darkness-my-old-friend">#hello darkness my old friend</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/138415042379/sound-of-tea-being-made">634 notes</a>
+							</div>
+                            
+                            
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- text end -->
+				
+				</div> <!-- post end -->
+                
+				
+				
+                
+                
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://40.media.tumblr.com/b2d76d945ec1b8c977a67953e5fa4818/tumblr_o1g1utgypb1tfju21o2_1280.png" alt="Nm" />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/654ade04956ff1e227140f771b440680/tumblr_o1g1utgypb1tfju21o3_1280.png" alt="Nm" />
+                        
+                         
+                        
+						<img src="http://36.media.tumblr.com/a17f6bb4cfa15d21e40a987950b5cc39/tumblr_o1g1utgypb1tfju21o1_1280.png" alt="Nm" />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p>Nm<br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/137957084737/nm">Jan. 24 2016</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/pretty-sure-I%27d-be-a-slacking-pos-regardless-of-which-century">#pretty sure I&#039;d be a slacking pos regardless of which century</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/thepigeongazette">#thepigeongazette</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/sliceoflife">#sliceoflife</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/webcomic">#webcomic</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/humor">#humor</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/lol">#lol</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/funny">#funny</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/internet">#internet</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/procrastinating">#procrastinating</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/137957084737/nm">41,731 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="137957084737" id="like_button_137957084737"><iframe id="like_iframe_137957084737" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=137957084737&amp;rk=OlEpy5Ks&amp;root_id=137957084737" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_137957084737"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/137957084737/OlEpy5Ks" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://40.media.tumblr.com/8ba9ebb4853ad11ce4592cb6d0c8dbeb/tumblr_o18sr0Kuxw1tfju21o1_1280.png" alt="Officer Brady is getting tired of this sh*t. " />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/61382446ca8a93d7700bb983591a576b/tumblr_o18sr0Kuxw1tfju21o2_1280.png" alt="Officer Brady is getting tired of this sh*t. " />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/c2a6f43f302859106b8acf02f67b966e/tumblr_o18sr0Kuxw1tfju21o3_1280.png" alt="Officer Brady is getting tired of this sh*t. " />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/bede879a617c22d9e9e68bb3c5165d48/tumblr_o18sr0Kuxw1tfju21o4_1280.png" alt="Officer Brady is getting tired of this sh*t. " />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/b7ed86fd62ed5b17dda223d14bdcd403/tumblr_o18sr0Kuxw1tfju21o5_1280.png" alt="Officer Brady is getting tired of this sh*t. " />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/ca087a0f92152ce741aed9a816a35d7d/tumblr_o18sr0Kuxw1tfju21o6_1280.png" alt="Officer Brady is getting tired of this sh*t. " />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p>Officer Brady is getting tired of this sh*t. <br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/137692559368/officer-brady-is-getting-tired-of-this-sht">Jan. 20 2016</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/is-that-fireman-single">#is that fireman single</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/maybe-I-should-try-yoga">#maybe I should try yoga</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/or-backpack-across-europe">#or backpack across europe</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/thepigeongazette">#thepigeongazette</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/sliceoflife">#sliceoflife</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/webcomic">#webcomic</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/comic">#comic</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/lol">#lol</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/humor">#humor</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/funny">#funny</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/137692559368/officer-brady-is-getting-tired-of-this-sht">50,653 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="137692559368" id="like_button_137692559368"><iframe id="like_iframe_137692559368" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=137692559368&amp;rk=SK6Lu6j9&amp;root_id=137692559368" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_137692559368"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/137692559368/SK6Lu6j9" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://41.media.tumblr.com/c8e9b94059c89f436887e3e74b4eaeaf/tumblr_o0w396pzFg1tfju21o1_1280.png" alt="true story and he was fine by the way. I wanted to challenge myself to 
+make a &amp;lsquo;longer&amp;rsquo; comic, and kept thinking back to this little bit of 
+excitement. Looking back, even I don&amp;rsquo;t know why I was so fixated on it 
+being a cat. I didn&amp;rsquo;t even include half of my thinking - but it all 
+really just wanted it to be a cat. (maybe I was scared it was a (dangerous) person and was in denial o.O " />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/33177329c7dbd87b113960af5b078798/tumblr_o0w396pzFg1tfju21o2_1280.png" alt="true story and he was fine by the way. I wanted to challenge myself to 
+make a &amp;lsquo;longer&amp;rsquo; comic, and kept thinking back to this little bit of 
+excitement. Looking back, even I don&amp;rsquo;t know why I was so fixated on it 
+being a cat. I didn&amp;rsquo;t even include half of my thinking - but it all 
+really just wanted it to be a cat. (maybe I was scared it was a (dangerous) person and was in denial o.O " />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/f89cedb13cc5c25f03148adb4cf50fef/tumblr_o0w396pzFg1tfju21o3_1280.png" alt="true story and he was fine by the way. I wanted to challenge myself to 
+make a &amp;lsquo;longer&amp;rsquo; comic, and kept thinking back to this little bit of 
+excitement. Looking back, even I don&amp;rsquo;t know why I was so fixated on it 
+being a cat. I didn&amp;rsquo;t even include half of my thinking - but it all 
+really just wanted it to be a cat. (maybe I was scared it was a (dangerous) person and was in denial o.O " />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/c0f8f49d796bd6973aa80ec768ea4ae9/tumblr_o0w396pzFg1tfju21o4_1280.png" alt="true story and he was fine by the way. I wanted to challenge myself to 
+make a &amp;lsquo;longer&amp;rsquo; comic, and kept thinking back to this little bit of 
+excitement. Looking back, even I don&amp;rsquo;t know why I was so fixated on it 
+being a cat. I didn&amp;rsquo;t even include half of my thinking - but it all 
+really just wanted it to be a cat. (maybe I was scared it was a (dangerous) person and was in denial o.O " />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/264c73a93709c7ce899b25152aebe1a7/tumblr_o0w396pzFg1tfju21o5_1280.png" alt="true story and he was fine by the way. I wanted to challenge myself to 
+make a &amp;lsquo;longer&amp;rsquo; comic, and kept thinking back to this little bit of 
+excitement. Looking back, even I don&amp;rsquo;t know why I was so fixated on it 
+being a cat. I didn&amp;rsquo;t even include half of my thinking - but it all 
+really just wanted it to be a cat. (maybe I was scared it was a (dangerous) person and was in denial o.O " />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p>true story and he was fine by the way. I wanted to challenge myself to 
+make a &lsquo;longer&rsquo; comic, and kept thinking back to this little bit of 
+excitement. Looking back, even I don&rsquo;t know why I was so fixated on it 
+being a cat. I didn&rsquo;t even include half of my thinking - but it all 
+really just wanted it to be a cat. (maybe I was scared it was a (dangerous) person and was in denial o.O <br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/137226694619/true-story-and-he-was-fine-by-the-way-i-wanted-to">Jan. 13 2016</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/137226694619/true-story-and-he-was-fine-by-the-way-i-wanted-to">2,872 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="137226694619" id="like_button_137226694619"><iframe id="like_iframe_137226694619" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=137226694619&amp;rk=2KWOS2Li&amp;root_id=137226694619" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_137226694619"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/137226694619/2KWOS2Li" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://41.media.tumblr.com/066e0772f555a7c078cb3bcbefddaed9/tumblr_o0qjq0uTKH1tfju21o1_1280.png" alt="I guess you could say&amp;hellip;.he&rsquo;s gone bad. DIRECTED BY DICK WOLF DUN-DUN. " />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/ed69842d667bb5389736f581dbe111dc/tumblr_o0qjq0uTKH1tfju21o2_1280.png" alt="I guess you could say&amp;hellip;.he&rsquo;s gone bad. DIRECTED BY DICK WOLF DUN-DUN. " />
+                        
+                         
+                        
+						<img src="http://36.media.tumblr.com/be6d79a8f05a56765c5368e966c5e12d/tumblr_o0qjq0uTKH1tfju21o3_1280.png" alt="I guess you could say&amp;hellip;.he&rsquo;s gone bad. DIRECTED BY DICK WOLF DUN-DUN. " />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p>I guess you could say&hellip;.he&rsquo;s gone bad. DIRECTED BY DICK WOLF DUN-DUN. <br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/137023890674/i-guess-you-could-sayhes-gone-bad-directed-by">Jan. 10 2016</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/got-milk">#got milk</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/calm-down-angry-cop">#calm down angry cop</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/listen-to-wise-cop">#listen to wise cop</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/gotta-git-that-sweet-sweet-calcium">#gotta git that sweet sweet calcium</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/slice-of-life">#slice of life</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/law-and-order">#law and order</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/webcomics">#webcomics</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/thepigeongazette">#thepigeongazette</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/humor">#humor</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/funny">#funny</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/lol">#lol</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/137023890674/i-guess-you-could-sayhes-gone-bad-directed-by">7,408 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="137023890674" id="like_button_137023890674"><iframe id="like_iframe_137023890674" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=137023890674&amp;rk=dovWjn2J&amp;root_id=137023890674" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_137023890674"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/137023890674/dovWjn2J" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://40.media.tumblr.com/d8171c1ba275342d302256a67e0e1446/tumblr_o0ioxkPbWp1tfju21o1_1280.png" alt="https://www.youtube.com/watch?v=AdIpoE2LEpsBILLZ ARE EXPENSIVE OKAY" />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/9caab0ba26470b6c8654492c66812a23/tumblr_o0ioxkPbWp1tfju21o2_1280.png" alt="https://www.youtube.com/watch?v=AdIpoE2LEpsBILLZ ARE EXPENSIVE OKAY" />
+                        
+                         
+                        
+						<img src="http://40.media.tumblr.com/155ad4eb7dd6afb47aa0fdefb1bbe196/tumblr_o0ioxkPbWp1tfju21o3_1280.png" alt="https://www.youtube.com/watch?v=AdIpoE2LEpsBILLZ ARE EXPENSIVE OKAY" />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/956618875846198c613f30c4565850b0/tumblr_o0ioxkPbWp1tfju21o4_1280.png" alt="https://www.youtube.com/watch?v=AdIpoE2LEpsBILLZ ARE EXPENSIVE OKAY" />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p><a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DAdIpoE2LEps&amp;t=YjJjYjg3MDA3ZTUwZGIzYTJjZjhlZWJjM2I5MWMxZTgwYmZmMWY1MyxOQzBKT3VrRA%3D%3D">https://www.youtube.com/watch?v=AdIpoE2LEps</a></p><p>BILLZ ARE EXPENSIVE OKAY<br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/136753367758/httpswwwyoutubecomwatchv-adipoe2leps-billz">Jan. 6 2016</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/good...good...let-the-cold-flow-through-you">#good...good...let the cold flow through you</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/thedarkside">#thedarkside</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/darth-jane-wut-wut">#darth jane wut wut</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/136753367758/httpswwwyoutubecomwatchv-adipoe2leps-billz">25,330 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="136753367758" id="like_button_136753367758"><iframe id="like_iframe_136753367758" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=136753367758&amp;rk=NC0JOukD&amp;root_id=136753367758" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_136753367758"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/136753367758/NC0JOukD" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://40.media.tumblr.com/46045272cd53f5dff441953108aea3e0/tumblr_o094tl4JSB1tfju21o1_1280.png" alt="True story. I don&amp;rsquo;t bear the event any ill-will (though it did sting to 
+be (indirectly) called strange and bizarre&amp;hellip; ;_;), because the reality 
+is that there are many situations such as work where we can&amp;rsquo;t show our 
+full natures - that&amp;rsquo;s just the way it is. It does mean however, that we 
+should cherish the environments and people who embrace and encourage our
+ authentic, complete selves. 
+The Pigeon Gazette is now a year old, and for one year I&amp;rsquo;ve had a rare 
+and special place to share a side of me that doesn&amp;rsquo;t get out too often. 
+It&amp;rsquo;s been so thrilling. It&amp;rsquo;s been so relieving. And it would not have 
+been possible if not for you wonderful, positive readers. Goodness 
+gracious you have been unbelievable in welcoming and supporting TPG. Thank 
+you so much. 
+Please have a wonderful new year!Onwards to more TPG and *gasp* maybe OTHER comics :O!?" />
+                        
+                         
+                        
+						<img src="http://36.media.tumblr.com/ad9d82290ed81af5ea784bb11d2dfc4b/tumblr_o094tl4JSB1tfju21o2_1280.png" alt="True story. I don&amp;rsquo;t bear the event any ill-will (though it did sting to 
+be (indirectly) called strange and bizarre&amp;hellip; ;_;), because the reality 
+is that there are many situations such as work where we can&amp;rsquo;t show our 
+full natures - that&amp;rsquo;s just the way it is. It does mean however, that we 
+should cherish the environments and people who embrace and encourage our
+ authentic, complete selves. 
+The Pigeon Gazette is now a year old, and for one year I&amp;rsquo;ve had a rare 
+and special place to share a side of me that doesn&amp;rsquo;t get out too often. 
+It&amp;rsquo;s been so thrilling. It&amp;rsquo;s been so relieving. And it would not have 
+been possible if not for you wonderful, positive readers. Goodness 
+gracious you have been unbelievable in welcoming and supporting TPG. Thank 
+you so much. 
+Please have a wonderful new year!Onwards to more TPG and *gasp* maybe OTHER comics :O!?" />
+                        
+                         
+                        
+						<img src="http://36.media.tumblr.com/c2d2ae87f8e68380eddad5b866132634/tumblr_o094tl4JSB1tfju21o3_1280.png" alt="True story. I don&amp;rsquo;t bear the event any ill-will (though it did sting to 
+be (indirectly) called strange and bizarre&amp;hellip; ;_;), because the reality 
+is that there are many situations such as work where we can&amp;rsquo;t show our 
+full natures - that&amp;rsquo;s just the way it is. It does mean however, that we 
+should cherish the environments and people who embrace and encourage our
+ authentic, complete selves. 
+The Pigeon Gazette is now a year old, and for one year I&amp;rsquo;ve had a rare 
+and special place to share a side of me that doesn&amp;rsquo;t get out too often. 
+It&amp;rsquo;s been so thrilling. It&amp;rsquo;s been so relieving. And it would not have 
+been possible if not for you wonderful, positive readers. Goodness 
+gracious you have been unbelievable in welcoming and supporting TPG. Thank 
+you so much. 
+Please have a wonderful new year!Onwards to more TPG and *gasp* maybe OTHER comics :O!?" />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/f05c754efd70a837bf92cd05ff1b17af/tumblr_o094tl4JSB1tfju21o4_1280.png" alt="True story. I don&amp;rsquo;t bear the event any ill-will (though it did sting to 
+be (indirectly) called strange and bizarre&amp;hellip; ;_;), because the reality 
+is that there are many situations such as work where we can&amp;rsquo;t show our 
+full natures - that&amp;rsquo;s just the way it is. It does mean however, that we 
+should cherish the environments and people who embrace and encourage our
+ authentic, complete selves. 
+The Pigeon Gazette is now a year old, and for one year I&amp;rsquo;ve had a rare 
+and special place to share a side of me that doesn&amp;rsquo;t get out too often. 
+It&amp;rsquo;s been so thrilling. It&amp;rsquo;s been so relieving. And it would not have 
+been possible if not for you wonderful, positive readers. Goodness 
+gracious you have been unbelievable in welcoming and supporting TPG. Thank 
+you so much. 
+Please have a wonderful new year!Onwards to more TPG and *gasp* maybe OTHER comics :O!?" />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p>True story. I don&rsquo;t bear the event any ill-will (though it did sting to 
+be (indirectly) called strange and bizarre&hellip; ;_;), because the reality 
+is that there are many situations such as work where we can&rsquo;t show our 
+full natures - that&rsquo;s just the way it is. It does mean however, that we 
+should cherish the environments and people who embrace and encourage our
+ authentic, complete selves. <br><br>
+The Pigeon Gazette is now a year old, and for one year I&rsquo;ve had a rare 
+and special place to share a side of me that doesn&rsquo;t get out too often. 
+It&rsquo;s been so thrilling. It&rsquo;s been so relieving. And it would not have 
+been possible if not for you wonderful, positive readers. Goodness 
+gracious you have been unbelievable in welcoming and supporting TPG. Thank 
+you so much. <br><br>
+Please have a wonderful new year!</p><p>Onwards to more TPG and *gasp* maybe OTHER comics :O!?<br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/136393415117/true-story-i-dont-bear-the-event-any-ill-will">Jan. 1 2016</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/happy-new-year">#happy new year</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/2016">#2016</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/thepigeongazette">#thepigeongazette</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/sliceoflife">#sliceoflife</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/specialplace">#specialplace</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/136393415117/true-story-i-dont-bear-the-event-any-ill-will">4,435 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="136393415117" id="like_button_136393415117"><iframe id="like_iframe_136393415117" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=136393415117&amp;rk=lrBPMcxi&amp;root_id=136393415117" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_136393415117"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/136393415117/lrBPMcxi" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://41.media.tumblr.com/73ce2de9b8682cd1c59df5c884bf42b0/tumblr_o00eaoVKJs1tfju21o1_1280.png" alt="Time at home means comics about the fam and also not enough time to color pt 2 coming up!" />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/55b822dd9f5aacf4ddd4f949c2fa8af8/tumblr_o00eaoVKJs1tfju21o2_1280.png" alt="Time at home means comics about the fam and also not enough time to color pt 2 coming up!" />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/d938b9da68c63396a35e4731d15c54e3/tumblr_o00eaoVKJs1tfju21o3_1280.png" alt="Time at home means comics about the fam and also not enough time to color pt 2 coming up!" />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p>Time at home means comics about the fam and also not enough time to color <br></p><p><br>pt 2 coming up!<br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/136048573420/time-at-home-means-comics-about-the-fam-and-also">Dec. 27 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/fam">#fam</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/happy-holidays-2015">#happy holidays 2015</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/thepigeongazette">#thepigeongazette</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/sliceoflife">#sliceoflife</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/136048573420/time-at-home-means-comics-about-the-fam-and-also">6,110 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="136048573420" id="like_button_136048573420"><iframe id="like_iframe_136048573420" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=136048573420&amp;rk=j44rekDX&amp;root_id=136048573420" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_136048573420"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/136048573420/j44rekDX" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+			
+				
+                
+				
+				
+                
+                
+                 
+    			<!-- PHOTOSET POST 
+				///////////////////////////////////////////////////////-->
+				
+				<div class="post photo">
+				
+					
+					<div class="wide">  		
+                         
+                        
+						<img src="http://40.media.tumblr.com/420b1ed80034c1cf0e6a791773a715a0/tumblr_nzn9pgpkwB1tfju21o1_1280.png" alt="A guest comic that needs no introduction but here&rsquo;s his site anyways if y&rsquo;all haven&rsquo;t read his hilarious comic!: www.owlturd.com Checkit!:( And that&rsquo;s just a bad angle " />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/f9b39d98c5feeb446db7efeae0babbbf/tumblr_nzn9pgpkwB1tfju21o2_1280.png" alt="A guest comic that needs no introduction but here&rsquo;s his site anyways if y&rsquo;all haven&rsquo;t read his hilarious comic!: www.owlturd.com Checkit!:( And that&rsquo;s just a bad angle " />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/09015c7d214ab5c7b3629b4e45407bb2/tumblr_nzn9pgpkwB1tfju21o3_1280.png" alt="A guest comic that needs no introduction but here&rsquo;s his site anyways if y&rsquo;all haven&rsquo;t read his hilarious comic!: www.owlturd.com Checkit!:( And that&rsquo;s just a bad angle " />
+                        
+                         
+                        
+						<img src="http://41.media.tumblr.com/b9af7903472b7a29e095427993337dd9/tumblr_nzn9pgpkwB1tfju21o4_1280.png" alt="A guest comic that needs no introduction but here&rsquo;s his site anyways if y&rsquo;all haven&rsquo;t read his hilarious comic!: www.owlturd.com Checkit!:( And that&rsquo;s just a bad angle " />
+                        
+                                 
+					</div>
+					
+					
+					
+					
+					<div class="narrow">
+				        
+                        
+						<div class="caption">
+						    <p>A guest comic that needs no introduction but here&rsquo;s his site anyways if y&rsquo;all haven&rsquo;t read his hilarious comic!: <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.owlturd.com&amp;t=MjcwMmUwNzUyZWRmZGU3NWI3Njc2MzQwODU1M2VmNmQ2ZDBlMWY1ZSx0amVHcVA3Vw%3D%3D">www.owlturd.com</a> Checkit!</p><p>:( And that&rsquo;s just a bad angle <br></p>
+						</div>
+                        
+						
+						<div class="metadata">
+						
+							
+    						<div class="date">
+								<a href="http://thepigeongazette.tumblr.com/post/135578612156/a-guest-comic-that-needs-no-introduction-but">Dec. 20 2015</a>
+							</div>
+                            
+							
+                            
+                            
+                             
+							 
+                            <div class="tags">
+                                
+								<a href="http://thepigeongazette.tumblr.com/tagged/thepigeongazette">#thepigeongazette</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/sliceoflife">#sliceoflife</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/webcomic">#webcomic</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/owlturdcomix">#owlturdcomix</a>
+							    
+								<a href="http://thepigeongazette.tumblr.com/tagged/owlturd">#owlturd</a>
+							     
+							</div>
+                             
+						    
+                            
+                            
+                            
+                            <div class="notes-count">
+								<a href="http://thepigeongazette.tumblr.com/post/135578612156/a-guest-comic-that-needs-no-introduction-but">59,972 notes</a>
+							</div>
+                            
+                            
+                            
+                            <div class="reblog-and-like">
+                                <div class="like_button" data-post-id="135578612156" id="like_button_135578612156"><iframe id="like_iframe_135578612156" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=thepigeongazette&amp;post_id=135578612156&amp;rk=tjeGqP7W&amp;root_id=135578612156" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_135578612156"></iframe></div>
+                            </div>
+                            <div class="reblog-and-like">
+                                <a href="https://www.tumblr.com/reblog/135578612156/tjeGqP7W" class="reblog_button"style="display: block;width:20px;height:20px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a>
+                            </div>
+						
+						</div> <!-- metadata end -->
+				
+					</div> <!-- narrow end -->
+					
+				</div> <!-- post end -->
+				
+                
+                
+                
+				
+                
+                
+				
+				
+				
+                
+                
+                
+				
+				 
+                
+                
+		
+		         
+				
+                
+                
+				
+                
+            
+                
+            
+
+			</div> <!-- content end -->
+			
+			<div id="footer">
+			    
+                
+                
+				
+                <h2>
+                
+                
+                
+                <a class="back-next" href="/page/2">Next</a>
+                
+                </h2>
+                
+                
+                
+                
+				<div id="footer-links">
+					
+						<ul>
+							<li><a href="/">Home</a></li>
+                            
+                             
+    					    <li><a href="/ask">Questions. Comments. ...Cuestions?</a></li>
+						    
+                            
+                            <li><a href="/archive">Archive</a></li>
+					</ul>
+				</div>
+				
+				<div class="colophon">
+					
+                    
+
+					<p class="promo"><a href="http://zacksultan.com">Observer theme by Zack Sultan</a></p>
+					
+				</div>
+			
+			</div><!-- content end -->
+		
+		</div> <!-- page end -->
+
+<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+        var addthis_enabled = false;
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    postATMessage();
+                    postRapidMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    postATMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "https://secure.assets.tumblr.com/analytics.html?f63f62d9d04a996a8fcb505da4e74841#" +
+                              "http://thepigeongazette.tumblr.com";
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/?route=%2F'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+        function postATMessage() {
+            if (addthis_enabled && analytics_iframe_loaded) {
+                analytics_frame.contentWindow.postMessage('enable_addthis', analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postRapidMessage() {
+                            if (analytics_iframe_loaded) {
+                    var is_ajax = '';
+                    var route = '/';
+                    var tumblelog_id = '192785497';
+                    var yahoo_space_id = '1197719229';
+                    var rapid_client_only = '1';
+                    var apv = '1';
+                    var rapid_ex = '';
+
+                    analytics_frame.contentWindow.postMessage(
+                        [
+                            'tick_rapid', is_ajax, route, user_logged_in, tumblelog_id,
+                            yahoo_space_id, rapid_client_only, apv, rapid_ex
+                        ].join(';'),
+                        analytics_frame.src.split('/analytics.html')[0]
+                    );
+                }
+                    }
+    })();
+</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1454610957&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvdGhlcGlnZW9uZ2F6ZXR0ZS50dW1ibHIuY29tXC8iLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvIn0=&U=LMILDBCNLN&K=fa0a48f7af7050a106177ec2ad49bb27cef6e53910995e8fba0768c49d14923b&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1454610957&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvdGhlcGlnZW9uZ2F6ZXR0ZS50dW1ibHIuY29tXC8iLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvIiwibm9zY3JpcHQiOjF9&U=LMILDBCNLN&K=e6bcf9429637b4767a0b89d76114aa4dd07b67bdc5c404690a4278a20743712e&R="></noscript><script >
+        (function (w,d) {
+            'use strict';
+            var l = function(el, type, listener, useCapture) {
+                el.addEventListener ?
+                el.addEventListener(type, listener, !!useCapture) :
+                el.attachEvent && el.attachEvent('on' + type, listener, !!useCapture);
+            };
+            var a = function () {
+                                if (d.getElementById('tumblr-cdx')) {
+                    return;
+                }
+                var s = d.createElement('script');
+                var el = d.getElementsByTagName('script')[0];
+                s.async = true;
+                s.src = 'http://assets.tumblr.com/assets/scripts/vendor/cedexis/cedexis.radar.js?_v=7450eec657e34e1e41dac4e1af96a170';
+                s.type = 'text/javascript';
+                s.id = 'tumblr-cdx';
+                d.body.appendChild(s);
+            };
+            l(w,'load',a);
+        }(window, document));
+</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1454610957&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3RoZXBpZ2VvbmdhemV0dGUudHVtYmxyLmNvbVwvIiwicmVxdHlwZSI6MCwicm91dGUiOiJcLyIsInBvc3RzIjpbeyJwb3N0aWQiOiIxMzg2MTI4Mjc1MDQiLCJibG9naWQiOiIxOTI3ODU0OTciLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEzODQxNTA0MjM3OSIsImJsb2dpZCI6IjE5Mjc4NTQ5NyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTM3OTU3MDg0NzM3IiwiYmxvZ2lkIjoiMTkyNzg1NDk3Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMzc2OTI1NTkzNjgiLCJibG9naWQiOiIxOTI3ODU0OTciLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEzNzIyNjY5NDYxOSIsImJsb2dpZCI6IjE5Mjc4NTQ5NyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTM3MDIzODkwNjc0IiwiYmxvZ2lkIjoiMTkyNzg1NDk3Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMzY3NTMzNjc3NTgiLCJibG9naWQiOiIxOTI3ODU0OTciLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEzNjM5MzQxNTExNyIsImJsb2dpZCI6IjE5Mjc4NTQ5NyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTM2MDQ4NTczNDIwIiwiYmxvZ2lkIjoiMTkyNzg1NDk3Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMzU1Nzg2MTIxNTYiLCJibG9naWQiOiIxOTI3ODU0OTciLCJzb3VyY2UiOjMzfV19&U=LMEILPBHHN&K=405e6737fcf113d8370f662d6093f403a172ff0a762b4cea196b139283c9801e&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1454610957&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3RoZXBpZ2VvbmdhemV0dGUudHVtYmxyLmNvbVwvIiwicmVxdHlwZSI6MCwicm91dGUiOiJcLyIsInBvc3RzIjpbeyJwb3N0aWQiOiIxMzg2MTI4Mjc1MDQiLCJibG9naWQiOiIxOTI3ODU0OTciLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEzODQxNTA0MjM3OSIsImJsb2dpZCI6IjE5Mjc4NTQ5NyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTM3OTU3MDg0NzM3IiwiYmxvZ2lkIjoiMTkyNzg1NDk3Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMzc2OTI1NTkzNjgiLCJibG9naWQiOiIxOTI3ODU0OTciLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEzNzIyNjY5NDYxOSIsImJsb2dpZCI6IjE5Mjc4NTQ5NyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTM3MDIzODkwNjc0IiwiYmxvZ2lkIjoiMTkyNzg1NDk3Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMzY3NTMzNjc3NTgiLCJibG9naWQiOiIxOTI3ODU0OTciLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEzNjM5MzQxNTExNyIsImJsb2dpZCI6IjE5Mjc4NTQ5NyIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTM2MDQ4NTczNDIwIiwiYmxvZ2lkIjoiMTkyNzg1NDk3Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMzU1Nzg2MTIxNTYiLCJibG9naWQiOiIxOTI3ODU0OTciLCJzb3VyY2UiOjMzfV0sIm5vc2NyaXB0IjoxfQ==&U=LMEILPBHHN&K=dbe71bffa3206ef71c632445fca3c1c99791690eb61f3617fbb0595b065da652&R="></noscript>
+<noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;TumblelogIframe&quot;:{&quot;tumblelogBundleSrc&quot;:&quot;http:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.js?_v=956589e4da421268a58997c66b0acce9&quot;,&quot;tumblelogName&quot;:&quot;thepigeongazette&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;tumblelogTitle&quot;:&quot;The Pigeon Gazette&quot;,&quot;tumblelogAvatar&quot;:&quot;http:\/\/38.media.tumblr.com\/avatar_19e952af5d6a_40.png&quot;,&quot;tumblelogHost&quot;:&quot;http:\/\/thepigeongazette.tumblr.com&quot;,&quot;brag&quot;:true,&quot;currentPage&quot;:&quot;1&quot;,&quot;postId&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/thepigeongazette.tumblr.com\/&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showFanMailButton&quot;:false,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;http:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=282357db21d8a5883cc1c780ace4cb5f&quot;,&quot;appInstallUrl&quot;:&quot;https:\/\/go.onelink.me\/893408789?pid=tumblr_blog_network\u0026c=tumblr_blog_network\u0026af_sub3=blog_name&quot;}},&quot;Flags&quot;:{&quot;doods&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwiYXJjaGl2ZS1wbHVzIjp0cnVlLCJzZWN1cmVfZm9ybV9rZXkiOnRydWUsInNlY3VyZV9mb3JtX2tleV9mdWxseV9vbiI6dHJ1ZSwidHVtYmxlbG9nX3BvcG92ZXIiOnRydWUsImNhbm9uaWNhbF91cmxfd3JpdGVzIjp0cnVlLCJlbmFibGVfY2FwdHVyZV9qcyI6dHJ1ZSwicHJpbWFfcG9zdF9mb3JtcyI6dHJ1ZSwibG9ja2VkX3JlYmxvZ191aSI6dHJ1ZSwibG9ja2VkX3JlYmxvZ191aV9wYXJzZV90ZXN0Ijp0cnVlLCJ0YWJsZXRfYmFubmVyX2FjdGl2ZSI6dHJ1ZSwibW9iaWxlX2Jhbm5lcl9hY3RpdmUiOnRydWUsImxvZ19zZWFyY2hfYm94Ijp0cnVlLCJ1c2VyX21lbnRpb25zIjp0cnVlLCJodG1sNV9hdWRpb19wbGF5ZXIiOnRydWUsInBvcG92ZXJfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJpbmRhc2hfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJwb3B0aWNhX3R1bWJsZWxvZ19wb3BvdmVycyI6dHJ1ZSwidHVtYmxyX3R2Ijp0cnVlLCJkZXByZWNhdGVfZmVhdHVyZWRfdGFncyI6dHJ1ZSwicmVibG9nX3VpX3JlZnJlc2giOnRydWUsInRhYl9zd2l0Y2hlciI6dHJ1ZSwiZmFzdF9jb21wb3NlIjp0cnVlLCJkYXNoYm9hcmRfcmVmcmVzaCI6dHJ1ZSwiZGFzaGJvYXJkX2ljb25fcmV2b2x1dGlvbiI6dHJ1ZSwibW9iaWxlX3dlYl9waG90b3NldHMiOnRydWUsIm1vYmlsZV93ZWJfZ2F0ZSI6dHJ1ZSwibW9iaWxlX3dlYl9wYWdlX3RpdGxlcyI6dHJ1ZSwibW9iaWxlX3dlYl9zZWFyY2giOnRydWUsIm1vYmlsZV93ZWJfc2VhcmNoX2ZpbHRlciI6dHJ1ZSwibW9iaWxlX3dlYl9hYnVzZV9mb3JtIjp0cnVlLCJkb250X2Nhc3RfanNfZm9sbG93cyI6dHJ1ZSwiYWRzX25ld192ZW5kb3JfYnV0dG9ucyI6dHJ1ZSwiYmxvY2tfZmVhdHVyZSI6dHJ1ZSwicmVhY3RpdmF0aW9uX2Zsb3ciOnRydWUsImd1bHBqc19hZG1pbiI6dHJ1ZSwiZW5hYmxlX2pzX2VwaGVtZXJhbF9sb2ciOnRydWUsImxvZ19sYWR5Ijp0cnVlLCJjc2xvZ2dlcl9qcyI6dHJ1ZSwiZGlzY292ZXJ5X2h1Yl9hY2Nlc3MiOnRydWUsImhlYWRlcl9hY2NvdW50X21lbnUiOnRydWUsImVuYWJsZV9wcmltYV9zaGFyZV9wb3BvdmVyIjp0cnVlLCJlbmFibGVfc2hhcmVfZW1iZWRfY29kZSI6dHJ1ZSwicGludGVyZXN0X3NoYXJpbmciOnRydWUsInJlZGRpdF9zaGFyaW5nIjp0cnVlLCJsaWdodGhvdXNlX2luc3RydW1lbnRhdGlvbiI6dHJ1ZSwicG9zdF9pdF9mb3J3YXJkIjp0cnVlLCJwZWVwcl9zZWFyY2hfYW5kX2ZpbHRlciI6dHJ1ZSwiaW50ZXJuc19wYWdlIjp0cnVlLCJmb2xsb3dlZF9zZWFyY2hlc19iaWdfd2ViIjp0cnVlLCJkaXNhYmxlX3B1YmxpY19yZXBsaWVzIjp0cnVlLCJkaXNhYmxlX3lhaG9vX2JfY29va2llIjp0cnVlLCJwcmltYV90dW1ibGVsb2dfYnVuZGxlIjp0cnVlfQ==&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1454610957000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;http:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/secure.assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;http:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;http:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;http:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;},&quot;Translations&quot;:[]}"></noscript>
+<script src="http://assets.tumblr.com/client/prod/standalone/tumblelog/index.js?_v=956589e4da421268a58997c66b0acce9"></script>
+
+</body>
+
+</html>

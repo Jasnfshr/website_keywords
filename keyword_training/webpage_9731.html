@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Social Maximizer-Index.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Social Bookmarking Service - Submitting to Social Bookmark &amp; Social News Sites.</title>
+ <meta name="keywords" content="social bookmarking, manual bookmarking, social bookmarking service, social media promotion, social media marketing" />
+ <meta name="description" content="Professional Social Bookmarking Service. We manually bookmark your site with hundreds of high quality social media sites. The promotional effort should help you benefit from an increase in Traffic, Visibility & Branding." />
+<meta name="google-site-verification" content="-zgtUR_0u6rAQJ7mASifnXg8kyrPDL1jAREPBVuScCU" />
+ <link rel="canonical" href="http://www.socialmaximizer.com"/>
+<!-- InstanceEndEditable -->
+<script type="text/javascript" src="scripts/testvali.js"></script>
+<!--<link rel="stylesheet" type="text/css" href="css/chr-style.css">-->
+<link rel="stylesheet" type="text/css" href="new-home.css" />
+<!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+<link rel="stylesheet" href="images/menu/style-index.css" type="text/css" media="screen" />
+<!--START MOOSLIDE-->
+<!-- The main style sheet -->
+  	<link rel="stylesheet" href="mooslide/style.css" type="text/css" media="screen" />
+
+	<!-- START MooSlide -->
+	<!-- The CSS -->
+  	<link rel="stylesheet" href="mooslide/mooslide.css" type="text/css" media="screen" />
+    <!-- Mootools - the core -->
+	<script type="text/javascript" src="mooslide/js/mootools12.js"></script>
+	<script type="text/javascript" src="scripts/tabs.js"></script>
+    <!-- MooSlide (show/hide login form) -->
+	<script type="text/javascript" src="mooslide/js/mooSlide2-moo12.js"></script>
+	<script language="javascript" type="text/ecmascript">
+	window.addEvent('domready',function(){
+		var myLogin = new mooSlide2({ slideSpeed: 1500, fadeSpeed: 500,  toggler:'login', content:'loginPanel', close: false, effects:Fx.Transitions.Bounce.easeOut , from:'top'});
+		//optional: AutoStart the slider on page load:
+		//MyLogin.run();
+		
+				
+		
+	    $('close').addEvent('click', function(e){
+			e = new Event(e);
+			myLogin.clearit();
+			e.stop();
+		});
+	});
+	
+	function ch(tab)
+	{
+		if(document.getElementById(tab))
+		{
+			document.getElementById(tab).className="current";
+			document.getElementById(tab+'div').style.display='';
+			var num = tab.split('t');
+			//alert(num[1]);
+			for(var i=1; i<6; i++)
+			{
+				if(document.getElementById('t'+i) && i!=num[1])
+				{
+					document.getElementById('t'+i).className='';
+					document.getElementById('t'+i+'div').style.display='none';
+				}
+			}
+		}
+		
+	}
+	</script>
+<!--END MOOSLIDE--><!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.style2 {font-weight: bold}
+.style3 {
+	color: #006600;
+	font-weight: bold;
+}
+.style4 {color: #006600}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<script>
+
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		  document.getElementById('uname_msg').innerHTML ="";
+		   document.getElementById('email_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Invalid Email ID</p>";
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		  document.getElementById('uname_msg').innerHTML ="";
+		   document.getElementById('email_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Invalid Email ID</p>";
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		   document.getElementById('uname_msg').innerHTML ="";
+		   document.getElementById('email_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Invalid Email ID</p>";
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		  document.getElementById('uname_msg').innerHTML ="";
+		   document.getElementById('email_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Invalid Email ID</p>";
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+document.getElementById('uname_msg').innerHTML ="";
+		   document.getElementById('email_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Invalid Email ID</p>";
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    document.getElementById('uname_msg').innerHTML ="";
+		   document.getElementById('email_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Invalid Email ID</p>";
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		   document.getElementById('uname_msg').innerHTML ="";
+		   document.getElementById('email_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Invalid Email ID</p>";
+		    return false
+		 }
+
+ 		 return true					
+	}
+
+function ValidateForm(){
+
+	var emailID=document.pwd_form.lost_email;
+	
+	if ((emailID.value==null)||(emailID.value=="")){
+		document.getElementById('uname_msg').innerHTML ="";
+		document.getElementById('email_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Please Enter your Email ID</p>";
+		emailID.focus()
+		return false
+	}
+	if (echeck(emailID.value)==false){
+		emailID.value=""
+		emailID.focus()
+		return false
+	}
+	return true
+ }
+
+
+function send_uname()
+{
+
+var sUrl="forgot-password.php";
+var username = document.getElementById('lost_username');
+
+document.getElementById('uname_msg').innerHTML = "<em style='color:black;font-size:11px;'><img src=\"http://www.socialmaximizer.com/images/ajax-loader.gif\" width=\"16\" height=\"16\">Processing...please wait</em>";
+	
+	if ((username.value==null)||(username.value=="")){
+		//alert("Please Enter your Username");
+		document.getElementById('uname_msg').innerHTML ="";
+		document.getElementById('uname_msg').innerHTML = "<p class=\"Note\" style=\"color:brown\">Please Enter your Username</p>";
+		username.focus();
+		return false;
+	}
+	
+
+http = getHTTPObject();
+
+  http.open("POST", sUrl, true);
+  params = "username="+username.value;
+  http.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  http.onreadystatechange = update_uname;
+  http.send(params);
+
+}
+function update_uname()
+{
+	if (http.readyState ==4) 
+  	{
+		var response = http.responseText;
+		document.getElementById('uname_msg').innerHTML ="";
+		document.getElementById('uname_msg').innerHTML = response;
+		
+	}
+
+
+
+
+}
+function send_email()
+{
+
+var sUrl="forgot-password.php";
+var email = document.getElementById('lost_email').value;
+
+document.getElementById('email_msg').innerHTML = "<em style='color:black;font-size:11px;'><img src=\"http://www.socialmaximizer.com/images/ajax-loader.gif\" width=\"16\" height=\"16\">Processing...please wait</em>";
+
+
+var ret = ValidateForm();
+
+
+if(ret)
+{
+	http = getHTTPObject();	
+	 http.open("POST", sUrl, true);
+	  params = "email="+email;
+	  http.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	  http.onreadystatechange = update_email;
+	  http.send(params);
+}
+
+}
+function update_email()
+{
+	if (http.readyState ==4) 
+  	{
+		var response = http.responseText;
+		document.getElementById('uname_msg').innerHTML ="";
+		document.getElementById('email_msg').innerHTML = response;
+		
+	}
+
+
+
+
+}
+
+</script>
+<div id="loginPanel" class="mooSlide">
+		<div id="top">
+        	<div class="top_left"></div>
+        	<div class="top_right"></div>
+			<div class="loginClose"><a href="#" id="close">&nbsp;</a></div>
+		</div>
+
+		<div class="wrapper">
+			<div class="content">
+				<div class="left">
+                <form action="#" method="post" name="login_form" id="login_form" onSubmit="return validate(this);">
+                <input type="hidden" name="MM_insert" id="MM_insert" value="login" size="29" class="textbox" />
+                
+					<h1 class="padlock">Client Login </h1>
+					<table width="100%" style="border:0px" cellpadding="2px" cellspacing="0">
+					<tr>
+					<td>
+					Username: <br>
+					<input type="text" name="username" id="username" value="" size="29" class="textbox" />
+					<input type ='hidden' id='username-required-usernamemsg' name='username-required-usernamemsg' class=''  /><div class = 'rules' id='usernamemsg' name='error-div' style='display:none;'  ></div>                    </td>
+					</tr>
+					<tr>
+					<td>
+					Password:<br>
+					<input type="password" name="pwd" id="pwd" size="29" class="textbox" />
+                    <input type ='hidden' id='pwd-required-pwdmsg' name='pwd-required-pwdmsg' class=''  /><div class = 'rules' id='pwdmsg' name='error-div' style='display:none;'  ></div>	            	<!--<input class="rememberme" name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> &nbsp;Remember me | -->
+					</td>
+					</tr>                
+					</table>
+                    
+					<small><!--<a href="http://www.directorymaximizer.com/forgot-pwd.php">Lost your password?</a></small><br />-->
+                    <a href="#" onclick="document.getElementById('forgot_password').style.display=''">Lost your password?</a></small><br /><br />
+                                        
+             
+                    
+					<input type="submit" name="submit_form" id="submit_form" value="" class="button_login" />
+                    <span id="login_formajax-process" name="login_formajax-process"></span>
+					<input  type="hidden" name="gotype" id="gotype" value="php"  style="border:none" />
+				</form>     
+                <br />
+                
+
+                       <div id="forgot_password" style="display:none;">
+                       
+				 <form action="#" method="post" name="pwd_form" id="pwd_form">
+                
+					<table width="100%">
+					<tr>
+					<td>
+					Enter E-mail Address: 
+   <input type="text"
+name="lost_email" id="lost_email" value="" class="textbox"/>
+   
+
+ <input type="button" name="button" id="button" value="" class="button_submit" onclick="send_email();" />
+  <span id="email_msg"></span>
+					<input type ='hidden' id='lost_email-required-lost_emailmsg' name='lost_email-required-lost_emailmsg' class=''  /><div class = 'rules' id='lost_emailmsg' name='error-div' style='display:none;'  ></div>                    </td>
+					</tr>
+                    <tr><td style="color:#FF0000">(OR)</td></tr>
+					<tr>
+					<td>
+					Enter Username: 
+   <input type="text"
+name="lost_username" id="lost_username" value="" class="textbox"/>
+ 
+ <input type="button" name="button" id="button" value="" class="button_submit" onclick="send_uname();" />
+ 
+ 
+ <span id="uname_msg"></span>
+ <input type ='hidden' id='lost_username-required-lost_usernamemsg' name='lost_username-required-lost_usernamemsg' class=''  /><div class = 'rules' id='lost_usernamemsg' name='error-div' style='display:none;'  ></div> <br />
+<br />
+<small> <a href='#' onclick="document.getElementById('forgot_password').style.display='none'">Hide This</a></small>
+					</td>
+					</tr>
+					</table>
+					</form>
+                    </div>                   
+                    
+</div>                
+         <div class="sep"></div>
+         
+         
+         
+         
+        
+
+				<form class="right" name="form_reg" id="form_reg" method="POST" onSubmit="if(document.getElementById('u_msg')) document.getElementById('u_msg').style.display='none'; if(document.getElementById('e_msg')) document.getElementById('e_msg').style.display='none'; return validate(this);">
+					<h1>New User Sign up </h1>
+									<table width="100%" style="border:0px" cellpadding="2px" cellspacing="0">
+              
+                <tr>
+                  <td  >First Name: 
+                    <br>
+                    <input name="fname" type="text" id="fname"   value="" size="29" class="textbox" />
+                    <br>
+                  <input type ='hidden' id='fname-required-fname_msg' name='fname-required-fname_msg' class=''  /><div class = 'rules' id='fname_msg' name='error-div' style='display:none;'  ></div></td>
+                  </tr>
+                <tr>
+                  <td  >Last Name: 
+                    <br>
+                    <input name="lname" type="text" id="lname"   value="" size="29" class="textbox" />
+                    <br>
+                  <input type ='hidden' id='lname-required-lname_msg' name='lname-required-lname_msg' class=''  /><div class = 'rules' id='lname_msg' name='error-div' style='display:none;'  ></div></td>
+                  </tr>
+                <tr>
+                  <td  >Email:
+                    <br>
+                    <input name="ml" type="text"  id="ml"  value="" size="29" class="textbox" autocomplete="off"/><input name="e_mail" type="text"  id="e_mail"   size="29" class="textbox spl" autocomplete="off"  />
+                    <br>                    
+                    <input type ='hidden' id='ml-required-email_check-mlmsg' name='ml-required-email_check-mlmsg' class=''  /><div class = 'rules' id='mlmsg' name='error-div' style='display:none;'  ></div></td>
+                  </tr>
+                <tr>
+                  <td >Choose a username:<br> 
+                    <input name="uname" type="text"  id="uname" value="" size="29" class="textbox" />
+                    <br>
+                  <input type ='hidden' id='uname-required-valid_characters-unamemsg' name='uname-required-valid_characters-unamemsg' class=''  /><div class = 'rules' id='unamemsg' name='error-div' style='display:none;'  ></div></td>
+                  </tr>
+  <td >Choose a password: 
+      <br>
+      <input type="password" name="password"  id="password" value="" size="29" class="textbox" />
+      <br>
+    <input type ='hidden' id='password-required-length_4_16-passwordmsg' name='password-required-length_4_16-passwordmsg' class=''  /><div class = 'rules' id='passwordmsg' name='error-div' style='display:none;'  ></div> </td>
+      </tr>
+  <tr>
+    <td  >Retype Password:<br> 
+      <input type="password" name="repassword"   id="repassword"  value="" size="29" class="textbox" />
+      <br>
+      <input type ='hidden' id='repassword-required-compare_password_repassword-repasswordmsg' name='repassword-required-compare_password_repassword-repasswordmsg' class=''  /><div class = 'rules' id='repasswordmsg' name='error-div' style='display:none;'  ></div> </td>
+    </tr>
+  </table>	
+			
+		<input type="submit" name="submit_register" id="submit_register" value="" class="button_register" />
+        <span id="form_regajax-process" name="form_regajax-process"></span>
+					 <input name="hidden1" type="hidden" value="form1"  style="border:none" />
+      <input  type="hidden" name="gotype" id="gotype" value="php"  style="border:none" />
+     <input  type="hidden" name="referring_url" id="referring_url" value="" />
+      <input  type="hidden" name="tracking_id" id="tracking_id" value="" />
+      <input  type="hidden" name="keywords" id="keywords" value="" style="border:none"/>
+      <input type="hidden" name="MM_insert" value="form_reg" style="border:none">
+       <input type="hidden" name="panel_show" value="panel_show" style="border:none">
+				</form>
+                                                                   
+				<br class="endOfSection" />
+			</div>
+		</div>
+
+		<div id="bottom">
+        	<div class="bottom_left"></div>
+        	<div class="bottom_right"></div>
+		</div>
+        
+	</div> <!-- / Login panel -->
+
+<table width="800" border="0" cellspacing="0" cellpadding="2" align="center">
+  <tr >
+    <td colspan="2"><div style="float:left;margin-bottom:3px;"><a href="http://www.socialmaximizer.com" id="" ><img  alt="Welcome to Social Maximizer" src="http://www.socialmaximizer.com/images/red-template-2009/SM-Logo.gif"   style="padding-top:5px;" border="0" /></a></div> <div id="loginSection"><a href="#" id="login" ><img src="images/red-template-2009/orange-green-login-signup.gif" width="250" height="23" style="padding-top:5px;" border="0" /></a></div>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><div class="green">
+	<div id="slatenav">
+	<ul>
+	<li><a href="http://www.socialmaximizer.com/" title="Home">Home</a></li>
+	<li><a href="http://www.socialmaximizer.com/" title="Social Bookmarking">Social Bookmarking</a></li>
+      <li><a href="http://www.socialmaximizer.com/content-writing-service.php" title="Content Writing">Content Writing</a></li>
+	<li><a href="http://blog.socialmaximizer.com" title="Blog">Blog</a></li>
+<!--	<li><a href="http://blog.socialmaximizer.com/other-services/" title="Other Services">Other Services</a></li>-->
+	<li><a href="http://blog.socialmaximizer.com/faq/" title="FAQ">FAQ</a></li>     
+	<li><a href="http://www.socialmaximizer.com/contact.php" title="Contact Us">Contact</a></li>    
+	<li><a href="http://www.socialmaximizer.com/affiliate-program.php" title="Affiliate">Affiliates</a></li>
+    <!--<li><a href="http://www.socialmaximizer.com/logout.php" title="css menus">Log Out</a></li>-->
+	</ul>
+	</div>
+	</div>	</td>
+  </tr>
+  <tr>
+  <td colspan="2"><div id="headerimage"></div></td>
+  </tr>
+  <tr><td>    </td></tr>
+  <tr>
+  <td width="600px" valign="top"><!-- InstanceBeginEditable name="main" -->
+  
+ <div class="headertext1"></div>
+  <div id="header">
+     <ul>
+		<li id="t1" class="current" ><a href="#self" onclick="ch('t1');" >Benefits &amp; Features</a></li>
+
+		
+	
+		<li id="t2" > <a href="#self" onclick="ch('t2');">How it Works  </a></li>
+	
+		<li id="t3" ><a href="#self" onclick="ch('t3');" >List of  Bookmark Sites </a></li>
+		
+		
+
+</ul>
+</div>
+<div id="t1div" style="display:''" class="tabcontent">
+  <table border="0" cellspacing="0" cellpadding="5" >
+    <tr>
+      <td colspan="2" valign="top"  ><span class="style3">Benefits of Social Bookmarking</span></td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+      <td  valign="top" ><strong>Increased Traffic</strong> - As more and more people read your bookmarked blog post/ web article and vote for it, the more popular it becomes &amp; the traffic to your site increases.</td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+      <td ><strong>Increased Visibility &amp; Branding</strong> - Submitting to Social Bookmarking Sites  puts your blog/website out there in front of millions of people, increasing your visibility ten notches and getting you more branding.</td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+      <td ><strong>Get more Links</strong> -  Each of these Popular Social Bookmarking Sites see tremendous volumes of traffic on a daily basis, if your blog/website has good content on it, chances are that several of these users will link to your content, thus getting you relevant links which will ultimately lead to an increase in your Rankings in the Search Engines.</td>
+    </tr>
+</table>
+  <br />
+  <table  border="0" cellspacing="0" cellpadding="5" >
+    <tr>
+      <td colspan="2" style="color:#990000; font-weight:bold; "><span class="style4">Some of the Exciting Features</span> </td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+      <td  valign="top" ><strong>Save your Precious Time</strong> - Social Bookmarking  can really be a time-consuming process with you being required to create an account in each site before submitting your page to them manually. We have made things easy for you, just sign up, enter the page you wish to submit and we do the rest for you, saving you plenty of time in the process.</td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+      <td ><strong>Flexible ordering  options:</strong><br />
+        &nbsp;&nbsp; - Submit to the entire list <br />
+        &nbsp;&nbsp; - Submit to a specific number of sites <br />
+        &nbsp;&nbsp; - Submit to your saved favourites<br />
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+     <td> <strong>Simple 1  minute process, </strong>all you need to do after signing up is login to your account and enter the url of the  webpage you wish to submit, our system then automatically fetches the required  data from the said page (or you could enter the information yourself) and you  just need to choose your submission options and make a payment. It&rsquo;s that  simple!</td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+      <td ><strong>Live  Reports</strong> to help you track what exactly is being done. The report includes the  links to the exact page on the site where you can find your listing.</td>
+    </tr>
+	<tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+      <td ><strong>Place orders from as little as $5</strong></td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding-top:9px;" ><img src="images/green-bullet-image.gif" width="7" height="7" /></td>
+      <td ><strong>Tremendous  value for money, at 19 cents a submission</strong> combined with our rewards  program, we not only are the cheapest in the business, we also offer you  tremendous value for your money.</td>
+    </tr>
+  </table>
+  <br />
+  </div>
+
+<div id="t2div" style="display:none" class="tabcontent">
+
+<!--<img src="images/red-template-2009/how-it-works.jpg" />-->
+ <table border="0" align="center" cellpadding="5" cellspacing="0" >
+    <tr>
+      <td colspan="2" valign="top"><img src="images/red-template-2009/how-it-works.jpg" alt="How Social Bookmarking Works?" /></td>
+    </tr>
+    </table>
+
+</div>
+<!--<link rel="stylesheet" href="onlineDetector/css/dhtmlwindow.css" type="text/css" />
+<script type="text/javascript" src="onlineDetector/JScript/dhtmlwindow.js"></script>-->
+
+<div id="t3div" style="display:none" class="tabcontent">
+ <p>Given below is the list of social bookmarking sites that we submit to. This list is regularly updated. At present, there are 114 sites on this list. </p>
+		   
+		    <p align="right"> <strong>1 </strong><a href='/index.php?pageNum_directory_list=1'>2</a> <a href='/index.php?pageNum_directory_list=2'>3</a> </p>
+		    <table border="0" cellpadding="3" cellspacing="3" width="550px;">
+              <tr>
+                <td height="35" bgcolor="#FEF3E0"><strong>Url </strong></td>
+                <td width="25%" bgcolor="#FEF3E0"><strong>PageRank (PR) </strong></td>
+              </tr>
+                              <tr>
+                  <td><!--<a href="http://bibsonomy.org" target="_blank">-->http://bibsonomy.org<!--</a>--></td>
+                  <td><img src="images/pr/pr7.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://www.diigo.com" target="_blank">-->http://www.diigo.com<!--</a>--></td>
+                  <td><img src="images/pr/pr7.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://10fastfeet.info" target="_blank">-->http://10fastfeet.info<!--</a>--></td>
+                  <td><img src="images/pr/pr4.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://1look4.com/" target="_blank">-->http://1look4.com/<!--</a>--></td>
+                  <td><img src="images/pr/pr1.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://99bookmark.com" target="_blank">-->http://99bookmark.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://addusastory.com" target="_blank">-->http://addusastory.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://afreebookmark.com" target="_blank">-->http://afreebookmark.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://analyzebookmarks.com/" target="_blank">-->http://analyzebookmarks.com/<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://articlehat.com" target="_blank">-->http://articlehat.com<!--</a>--></td>
+                  <td><img src="images/pr/pr2.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://backlinkhome.com" target="_blank">-->http://backlinkhome.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://bestfreebookmark.com" target="_blank">-->http://bestfreebookmark.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://bookmark2seo.com" target="_blank">-->http://bookmark2seo.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://bookmark4seo.com" target="_blank">-->http://bookmark4seo.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://bookmarkbay.com" target="_blank">-->http://bookmarkbay.com<!--</a>--></td>
+                  <td><img src="images/pr/pr1.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://bookmarkbook.org/" target="_blank">-->http://bookmarkbook.org/<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://bookmarkdoc.com" target="_blank">-->http://bookmarkdoc.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://bookmarkhq.com" target="_blank">-->http://bookmarkhq.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://bookmarkingbase.com/" target="_blank">-->http://bookmarkingbase.com/<!--</a>--></td>
+                  <td><img src="images/pr/pr1.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://buysmartprice.com/" target="_blank">-->http://buysmartprice.com/<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://dictaf.net" target="_blank">-->http://dictaf.net<!--</a>--></td>
+                  <td><img src="images/pr/pr4.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://drupalined.com" target="_blank">-->http://drupalined.com<!--</a>--></td>
+                  <td><img src="images/pr/pr5.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://eugendorf.net" target="_blank">-->http://eugendorf.net<!--</a>--></td>
+                  <td><img src="images/pr/pr3.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmak.com" target="_blank">-->http://freebookmak.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarkdigg.asia" target="_blank">-->http://freebookmarkdigg.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarkdrop.asia" target="_blank">-->http://freebookmarkdrop.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarklive.asia" target="_blank">-->http://freebookmarklive.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarkme.asia" target="_blank">-->http://freebookmarkme.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarkown.asia" target="_blank">-->http://freebookmarkown.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarkquick.asia" target="_blank">-->http://freebookmarkquick.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarksal.asia" target="_blank">-->http://freebookmarksal.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarksilver.asia" target="_blank">-->http://freebookmarksilver.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarktez.asia" target="_blank">-->http://freebookmarktez.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freebookmarkvisit.asia" target="_blank">-->http://freebookmarkvisit.asia<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://freesubmition.com" target="_blank">-->http://freesubmition.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://gardicanin.net" target="_blank">-->http://gardicanin.net<!--</a>--></td>
+                  <td><img src="images/pr/pr4.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://gen-eff.net" target="_blank">-->http://gen-eff.net<!--</a>--></td>
+                  <td><img src="images/pr/pr4.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://ihaan.org" target="_blank">-->http://ihaan.org<!--</a>--></td>
+                  <td><img src="images/pr/pr5.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://independencescience.co" target="_blank">-->http://independencescience.co<!--</a>--></td>
+                  <td><img src="images/pr/pr6.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://instabookmark.com" target="_blank">-->http://instabookmark.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://iranregistry.info" target="_blank">-->http://iranregistry.info<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://justpep.com/" target="_blank">-->http://justpep.com/<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkadviser.com" target="_blank">-->http://kbookmarkadviser.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkalerts.com" target="_blank">-->http://kbookmarkalerts.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkapp.com" target="_blank">-->http://kbookmarkapp.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkbox.com" target="_blank">-->http://kbookmarkbox.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkdesign.com" target="_blank">-->http://kbookmarkdesign.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkface.com" target="_blank">-->http://kbookmarkface.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkfree.com" target="_blank">-->http://kbookmarkfree.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkgo.com" target="_blank">-->http://kbookmarkgo.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                                <tr>
+                  <td><!--<a href="http://kbookmarkinglook.com" target="_blank">-->http://kbookmarkinglook.com<!--</a>--></td>
+                  <td><img src="images/pr/pr0.jpeg"></td>
+                </tr>
+                            </table>
+      <p align="right"> <strong>1 </strong><a href='/index.php?pageNum_directory_list=1'>2</a> <a href='/index.php?pageNum_directory_list=2'>3</a> </p>
+		    <div align="right">
+		      <!-- AddThis Bookmark Button BEGIN -->
+              <a href="http://www.addthis.com/bookmark.php" onClick="addthis_url   = location.href; addthis_title = document.title; return addthis_click(this);" target="_blank"><img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16" border="0" alt="AddThis Social Bookmark Button" /></a> 
+		      <script type="text/javascript">var addthis_pub = 'maximizer';</script>
+		      <script type="text/javascript" src="http://s9.addthis.com/js/widget.php?v=10"></script>  
+              <!-- AddThis Bookmark Button END -->
+    
+</div>
+
+</div>
+<!-- InstanceEndEditable --></td>
+  <td valign="top">    
+    <style type="text/css">
+<!--
+.style2 {color: #006600}
+-->
+</style>
+<a name="signup"></a>	
+<div id="redside-top"></div>
+<div id="redside">
+
+    
+
+      <div align="center" style="padding-bottom:5px;"><img src="images/red-template-2009/sign-up-now-green.gif" width="121" height="23"  />      </div>
+     <div id="loginPanel" >
+	  <div class="wrapper">
+		<div class="content">
+                                
+                     <form name="form_signup"  action="#self" id="form_signup" method="POST" onSubmit="if(document.getElementById('u_msg')) document.getElementById('u_msg').style.display='none'; if(document.getElementById('e_msg')) document.getElementById('e_msg').style.display='none'; return validate(this);">         
+            <table width="180px" style="border:0px" cellpadding="2px" cellspacing="0">
+            <tr>
+                  <td  >First Name: 
+                    <br>
+                    <input name="first_name" type="text" id="first_name" value="" size="23" class="textbox" />
+                    <br>
+                  <input type ='hidden' id='first_name-required-first_name_msg' name='first_name-required-first_name_msg' class=''  /><div class = 'rules' id='first_name_msg' name='error-div' style='display:none;'  ></div></td>
+              </tr>
+                <tr>
+                  <td  >Last Name: 
+                    <br>
+                    <input name="last_name" type="text" id="last_name"   value="" size="23" class="textbox" />
+                    <br>
+                  <input type ='hidden' id='last_name-required-last_name_msg' name='last_name-required-last_name_msg' class=''  /><div class = 'rules' id='last_name_msg' name='error-div' style='display:none;'  ></div></td>
+              </tr>
+                <tr>
+                  <td  >Email:
+                    <br>
+                    <input name="ml" type="text"  id="ml"  value="" size="23" class="textbox" autocomplete="off" /><input name="email" type="text"  id="email"  value="" size="23" class="textbox spl" autocomplete="off"  />
+                    <br>                    
+                    <input type ='hidden' id='ml-required-email_check-mlmsg' name='ml-required-email_check-mlmsg' class=''  /><div class = 'rules' id='mlmsg' name='error-div' style='display:none;'  ></div></td>
+              </tr>
+                <tr>
+                  <td >Choose a username:<br> 
+                    <input name="username" type="text"  id="username" value="" size="23" class="textbox" />
+                    <br>
+                  <input type ='hidden' id='username-required-valid_characters-usermsg' name='username-required-valid_characters-usermsg' class=''  /><div class = 'rules' id='usermsg' name='error-div' style='display:none;'  ></div></td>
+              </tr>
+  <td >Choose a password: 
+      <br>
+      <input type="password" name="pword"  id="pword" value="" size="23" class="textbox" />
+      <br>
+    <input type ='hidden' id='pword-required-length_4_16-pwordmsg' name='pword-required-length_4_16-pwordmsg' class=''  /><div class = 'rules' id='pwordmsg' name='error-div' style='display:none;'  ></div> </td>
+      </tr>
+  <tr>
+    <td  >Retype Password:<br> 
+      <input type="password" name="repwd"   id="repwd"  value="" size="23" class="textbox" />
+      <br>
+      <input type ='hidden' id='repwd-required-compare_pword_repwd-repwdmsg' name='repwd-required-compare_pword_repwd-repwdmsg' class=''  /><div class = 'rules' id='repwdmsg' name='error-div' style='display:none;'  ></div> </td>
+    </tr>
+    <tr>
+<!--    <td><input name="terms" type="checkbox" id="terms" onClick="" value="terms & Conditions" />I agree Tearms & Condions
+      <input type ='hidden' id='terms-required-terms-termsmsg' name='terms-required-terms-termsmsg' class=''  /><div class = 'rules' id='termsmsg' name='error-div' style='display:none;'  ></div> </td>-->
+    </tr>
+  </table>	
+			
+	<input  type="submit" name="submit_signup" id="submit_signup" value="" class="registerbutton" />
+	<span id="form_signupajax-process" name="form_signupajax-process"></span>
+	 <input name="hidden1" type="hidden" value="form1"  style="border:none" />
+      <input  type="hidden" name="gotype" id="gotype" value="php"  style="border:none" />
+      <input  type="hidden" name="referring_url" id="referring_url" value=""style="border:none" />
+      <input  type="hidden" name="keywords" id="keywords" value="" style="border:none"/>
+      <input type="hidden" name="MM_insert" value="form_signup" style="border:none">
+      <input type="hidden" name="processing" id="processing" value="form_process" style="border:none">
+      
+				</form>
+                
+                
+         <form action="#" method="post" name="login_form1" id="login_form1" onSubmit="return validate(this);">
+                <input type="hidden" name="MM_insert" id="MM_insert" value="login1" class="textbox" />
+                
+		   <strong><br />
+		   <span class="style2" style="padding:5px;">Client Login</span> </strong>	<br />
+<br />
+
+
+					<table  style="border:0px" cellpadding="2px" cellspacing="0">
+					<tr>
+					<td>
+					Username: <br>
+					<input type="text" name="username1" id="username1" value="" class="textbox" />
+					<input type ='hidden' id='username1-required-username1msg' name='username1-required-username1msg' class=''  /><div class = 'rules' id='username1msg' name='error-div' style='display:none;'  ></div>                    </td>
+					</tr>
+					<tr>
+					<td>
+					Password:<br>
+					<input type="password" name="pwd1" id="pwd1" class="textbox" />
+                    <input type ='hidden' id='pwd1-required-pwd1msg' name='pwd1-required-pwd1msg' class=''  /><div class = 'rules' id='pwd1msg' name='error-div' style='display:none;'  ></div>	            	<!--<input class="rememberme" name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> &nbsp;Remember me | -->
+					</td>
+					</tr>                
+					</table>
+					<input  type="submit" name="submit_form1" id="submit_form1" value="" class="loginbutton" />
+                    <span id="login_form1ajax-process" name="login_form1ajax-process"></span>
+					<input  type="hidden" name="gotype" id="gotype" value="php"  style="border:none" />
+		  </form>                 
+<br />
+        </div>
+	   </div>
+    </div>
+</div><div id="redside-bottom"></div>
+</td>
+  </tr>  
+</table>   
+<table width="780px;" align="center">
+<tr valign="top">
+ <hr color="#049846" style="width:785px;;" />
+  <td  style="color:#666666;font-size:12px;"> 
+      <p align="center"> <a style="color:#666666;font-size:12px;" href="http://www.directorymaximizer.com">Directory Submission Service </a>&nbsp;&nbsp; <a style="color:#666666;font-size:12px;" href="http://www.directorymaximizer.com/seo-friendly-directories.php"> List of free SEO Friendly Directories </a>&nbsp;&nbsp; </p>
+     <p align="center"><a style="color:#666666;" href="http://www.linksmaximizer.com">Link Building Tool</a> &nbsp;&nbsp; <!--<a style="color:#666666;" href="w3c/privacy.html">Privacy Policy</a>&nbsp;&nbsp;--> <a style="color:#666666;font-size:12px;" href="http://www.socialmaximizer.com">Social Bookmarking Service</a> </p>
+
+    <p align="center">&copy;2006-2016 <a href="http://www.maximizer.mx" target="_blank" style="color:#666666;font-size:12px;">Maximizer E-Services Pvt. Ltd.</a>, all rights reserved</p>
+  </td>
+ </tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-103435-10");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+ 
+</body>
+<!-- InstanceEnd --></html>

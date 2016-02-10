@@ -1,0 +1,609 @@
+
+	
+
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			
+					  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+                      <meta name='description' content='Grimbets is an analytical center of sports forecast designed for helping players in the bookmaker office and betting exchanges to make money on the basis of services for different sports.'/>
+                      <meta name='keywords' content='grimbets , sport forecasts, statistics , analytics , bets , berfair, bookmakers, football bets'/>
+					  <meta name='author' content='@VS-play Engine'>
+					  <meta name='copyright' content='Powered by @VS-play Engine (http://vs-play.ru)'>
+                  
+			<title>Grimbets</title>
+			 <link href='/public/css/libs/jquery-ui.min.css?v=1.0.6.10' rel='stylesheet' type='text/css'/>
+ <link href='/public/css/libs/jquery-ui-timepicker-addon.min.css?v=1.0.6.10' rel='stylesheet' type='text/css'/>
+ <link href='http://yandex.st/bootstrap/3.0.3/css/bootstrap.min.css?v=1.0.6.10' rel='stylesheet' type='text/css'/>
+ <link href='/public/css/libs/jquery.fancybox.css?v=1.0.6.10' rel='stylesheet' type='text/css'/>
+ <link href='/public/css/system.css?v=1.0.6.10' rel='stylesheet' type='text/css'/>
+ <link href='/layout/fishbets/public/css/style.css?v=1.0.6.10' rel='stylesheet' type='text/css'/>
+ <link href='/layout/fishbets/templates/news/style.css?v=1.0.6.10' rel='stylesheet' type='text/css'/>
+ <link href='/extensions/nivo_slider/public/css/bootstrap.css?v=1.0.6.10' rel='stylesheet' type='text/css'/>
+
+            
+			<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='http://yandex.st/jquery/cookie/1.0/jquery.cookie.min.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='http://yandex.st/bootstrap/3.0.3/js/bootstrap.min.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='http://yandex.st/jquery/fancybox/2.1.4/jquery.fancybox.min.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='/public/js/libs/jquery-ui-timepicker-addon.min.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='/public/js/libs/jquery-date-format.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='/public/js/dictionary/dictionary.EN.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='/public/js/server.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='/public/js/script.js?v=1.0.6.10'></script>
+<script type='text/javascript' src='/layout/fishbets/public/js/script.js?v=1.0.6.10'></script>
+
+			
+
+			
+			
+			
+			
+			
+            
+            
+			
+			
+			<!--
+			System
+            League
+			-->
+			
+
+			
+			
+            
+            
+			<!--{$_Path->css}libs/bootstrap-responsive.min.css-->
+            
+			
+			
+			<link href='/public/images/favicon/favicon.ico' rel='shortcut icon' type='image/x-icon'/>
+
+		</head>
+		<body>
+			
+<script type='text/javascript'>
+	// if open in iframe
+	//if( window != top){
+        //top.location.replace(redirect_to);
+    //}
+
+	Server.root = "/";
+	Ajax.loader = "<img src='/public/images/loaders/loader1.gif'/>";
+	Ajax.url = Server.root + "ajax/";
+	Ajax.urlAdmin = Server.root + "ajax/admin/";
+    Server.DateFormats = {
+       Date     : "mm/dd/yy",
+	   DateTime : "mm/dd/yy hh:ii",
+       Time     : "hh:ii"
+    };
+
+    $(document).ready(function(){Win.Alert({id : 'transferErrors'});});
+    $(document).ready(function(){Win.Alert({id : 'transferAnswers'});});
+</script>
+
+
+<div id='WinObjectPopup'>
+	<div id='windowTop'>
+		<div id='windowTopContent'></div>
+		<span id='windowMin'></span>
+		<span id='windowMax' ></span>
+		<span id='windowClose'></span>
+	</div>
+	<div id='windowBottom'>
+		<div id='windowBottomContent'></div>
+	</div>
+	<div id='windowContent'></div>
+</div>
+<div id='WinSendErrorMessage' style="display: none;">
+    <fieldset class="winModalWrapper" id="errorWindowSender" style="width: 500px">
+        <legend>
+            Bug Report        </legend>
+    
+        <h4 style="padding-left: 40px">
+            Description        </h4>
+        <div style="margin: 10px 0; text-align: center;">
+            <textarea rows="6" style=" width: 95%; margin: 0 auto"></textarea>
+        </div>
+        <button class="btn btn-primary" style="display: block; margin: 0 40px 0 auto">Send</button>
+    </fieldset>
+</div>
+
+
+			
+	
+
+	
+    
+
+    <!-- Bootstrap Modal Win -->
+    
+    <div class="modal" id="bootModalWin" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">×</button>
+                    <h3>Header</h3>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <!--
+                    <a href="#" class="btn">Close</a>
+                    <a href="#" class="btn btn-primary">Save changes</a>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="main-wrapper">
+		<header>
+			<menu>
+				<div id='user_menu_place'>
+    <a href="/" id="main-link">
+            </a>
+                                        <span class="set_language" lang="ru">
+                    <img style="position: absolute; cursor: pointer" src="/public/images/langs/ru.png" title="Русский" alt="Русский" align="top"/>
+                    <a style=" margin-left: 20px;" href='http://grimbets.ru/'>Русский</a>
+                </span>
+                                                <span class="set_language" lang="ru">
+                    <img style="position: absolute; cursor: pointer" src="/public/images/langs/ru.png" title="Русский" alt="Русский" align="top"/>
+                    <a style=" margin-left: 20px;" href='http://ru.grimbets.com/'>Русский</a>
+                </span>
+                                
+
+<span class='user_menu_buttons'>
+            <a href="javascript: void(0)" onclick="openAuthWin()">
+                LogIn            </a>
+        <a href='/account/registration'>
+            Sign Up        </a>
+        <select class= 'timezone-control' onChange= 'Server.setTimeZone($("option:selected",this).text())' ><option value='-12'>-12</option><option value='-11'>-11</option><option value='-10'>-10</option><option value='-9'>-09</option><option value='-8'>-08</option><option value='-7'>-07</option><option value='-6'>-06</option><option value='-5'>-05</option><option value='-4'>-04</option><option value='-3'>-03</option><option value='-2'>-02</option><option value='-1'>-01</option><option value='0'>+00</option><option value='1'>+01</option><option value='2'>+02</option><option value='3' selected>+03</option><option value='4'>+04</option><option value='5'>+05</option><option value='6'>+06</option><option value='7'>+07</option><option value='8'>+08</option><option value='9'>+09</option><option value='10'>+10</option><option value='11'>+11</option><option value='12'>+12</option></select></span>       
+
+<script type="text/javascript">
+    $("#a_log_out").click(function(){
+            $.post('/ajax/', {log_out : true}, function(){
+                reloadPage();
+            });
+    });
+
+    function openAuthWin() {
+        var modalWin = $("#bootModalWin");
+        modalWin.find(".modal-body p").load('/light/auth_template/?popup', function(){
+            modalWin.find(".modal-header h3").text("LogIn");
+            modalWin.find("#remember_pass_button").unbind( "click" ).click(function(){
+                var content = modalWin.find("#rememberPass").clone(true);
+
+                modalWin.one('hidden.bs.modal', function(){
+                    modalWin.find(".modal-body p").empty().append(content.show());
+                    modalWin.find(".modal-header h3").text("Forgot your password");
+                    setTimeout( function(){modalWin.modal('toggle')}, 500);
+                });
+                modalWin.modal('toggle');
+
+            });
+            modalWin.modal();
+        });
+    }
+    </script>
+
+</div>
+
+			</menu>
+			<!--<nav>-->
+				
+<link href='/public/components/menu/bootstrap/css/menu.css' rel='stylesheet' type='text/css'><nav class='navbar navbar-default navbar-static' role='navigation'><div class='collapse navbar-collapse bs-js-navbar-collapse'><ul class='nav navbar-nav'>
+<li class='sport sport-football'><a href='/game/football' role='button' class='dropdown-toggle' >Football</a></li>
+<li class='sport sport-tennis'><a href='/game/tennis' role='button' class='dropdown-toggle' >Tennis</a></li>
+<li class='sport sport-basketball'><a href='/game/basketball' role='button' class='dropdown-toggle' >Basketball</a></li>
+<li class='sport sport-volleyball'><a href='/game/volleyball' role='button' class='dropdown-toggle' >Volleyball</a></li>
+<li class='sport sport-hockey border-right'><a href='/game/ice_hockey' role='button' class='dropdown-toggle' >Hockey</a></li>
+<li class='sport services margin-left'><a href='/service' role='button' class='dropdown-toggle' >Services</a></li>
+<li class='sport news'><a href='/news' role='button' class='dropdown-toggle' >News</a></li>
+<li class='sport articles'><a href='/#' role='button' class='dropdown-toggle' >Articles</a><ul class='dropdown-menu' role='menu'>
+<li role='presentation' class=''><a role='menuitem' href='/article/service_selection/'>How to choose the service</a></li>
+<li role='presentation' class=''><a role='menuitem' href='/article/service_series'>Service Series is a tool to win</a></li>
+<li role='presentation' class=''><a role='menuitem' href='/article/online_strategy'>Online strategy: Will there be another goal in the match?</a></li>
+<li role='presentation' class=''><a role='menuitem' href='/article/system_lima'>System LIMA</a></li>
+<li role='presentation' class=''><a role='menuitem' href='/article/radar_results'>Result to Service Radar</a></li>
+<li role='presentation' class=''><a role='menuitem' href='/article/SOLNECHNIE_TOTALS'>Solar totals</a></li></ul></li></ul></div></nav><script type='text/javascript' src='/public/components/menu/bootstrap/js/menu.js' rel='stylesheet' type='text/css'></script>
+			<!--</nav>-->
+		</header>
+		
+        <section id="main-content">
+            
+            <div style="display: inline-block; float: left; width: 525px;">
+                <div>              
+                    
+<link href='/public/components/menu/promo/menu.css' rel='stylesheet' type='text/css'><div class='main_promo_block'><ul>
+<li class='promo-header'><a href='/#'>With Grimbets.com you can:</a></li>
+<li class='dollar'><a href='/service/Radar'>To get to know how much and where people do their bets</a></li>
+<li class='basket'><a href='/service/Bettor'>To buy or to sell reliable forecasts </a></li>
+<li class='computer'><a href='/game/football'>To see video translation and match reviews</a></li>
+<li class='zoom'><a href='/service/Liver'>To watch online for any sporting event</a></li>
+<li class='stat'><a href='/service/Analytic'>To make analitics at the background of the vast statistics base</a></li>
+<li class='pencil'><a href='/service/Forecast'>To look forecasts made by the best formules and systems</a></li>
+<li class='settings'><a href='/service/Merlin'>To make analyse on leu base of the lines bookmakers</a></li>
+<li class='men'><a href='/service/Kapper'>To use bets of the leadinges cappers</a></li>
+<li class='arrows'><a href='/service/Scalper'>To review all rate changes from bookmakers</a></li>
+<li class='promo-footer'><a href='/service'>and much, much more ...</a></li></ul></div>
+                </div> 
+                <div style=" margin-top: 40px">
+                                <div class='news_table'>
+            <div class='text blue_news'>
+                <h2>
+                    <a href='/news/36'>Sale</a>
+                </h2>
+                <div class="date">01:41 PM 12.23.2015                </div>
+                <div class="stars"></div>
+                <div class="entry">     
+                    <div class="entry-img">
+                        <a href='/news/36'>
+                            <img src= '/public/uploads/logo/ptFTYJpyHc.png' border= '0' />                        </a>
+                    </div>
+                    
+                    <p>
+                        <span>New Year&#039;s sales of Grimbets!<br />
+From December 31, 2015 to January 10, 2016, we are announcing a great discounts on all of our services from 5 to 30 percent depending on the length of subscription!<br />
+Acquires the excellent  earning tools for the entire 2016!</span>
+                    </p>
+                   <a style="float: right;" href="/news/36">
+                        read more...                    </a>
+                </div>
+
+            <div class="info">
+            <div>
+                <!--
+                <span class="ptags">
+                    Tags:
+                    <a rel="tag" href="#">VS-Play</a>
+                </span>
+                    Section:
+                    <a rel="category tag" title="" href="#">Основные новости</a>
+                    |
+                -->
+                    views: 352                    |
+                    comments: 0            </div>
+            </div>
+            </div>
+        </div>
+                <div class='news_table'>
+            <div class='text blue_news'>
+                <h2>
+                    <a href='/news/35'>Pakage Football FREE</a>
+                </h2>
+                <div class="date">08:21 PM 04.24.2015                </div>
+                <div class="stars"></div>
+                <div class="entry">     
+                    <div class="entry-img">
+                        <a href='/news/35'>
+                            <img src= '/public/uploads/logo/SeIcC3XhAY.jpg' border= '0' width= '120px' />                        </a>
+                    </div>
+                    
+                    <p>
+                        <span></span>
+                    </p>
+                   <a style="float: right;" href="/news/35">
+                        read more...                    </a>
+                </div>
+
+            <div class="info">
+            <div>
+                <!--
+                <span class="ptags">
+                    Tags:
+                    <a rel="tag" href="#">VS-Play</a>
+                </span>
+                    Section:
+                    <a rel="category tag" title="" href="#">Основные новости</a>
+                    |
+                -->
+                    views: 2207                    |
+                    comments: 0            </div>
+            </div>
+            </div>
+        </div>
+                <div class='news_table'>
+            <div class='text blue_news'>
+                <h2>
+                    <a href='/news/34'>Line Up from Match</a>
+                </h2>
+                <div class="date">11:16 AM 04.17.2015                </div>
+                <div class="stars"></div>
+                <div class="entry">     
+                    <div class="entry-img">
+                        <a href='/news/34'>
+                            <img src= '/public/uploads/logo/r4x1i3Pm52.png' border= '0' width= '120px' />                        </a>
+                    </div>
+                    
+                    <p>
+                        <span>Added lineups for football matches.<br />
+Now, if the shape of the team, you see an arrow, pointing at her - You would think a team on the game, including the bench.</span>
+                    </p>
+                   <a style="float: right;" href="/news/34">
+                        read more...                    </a>
+                </div>
+
+            <div class="info">
+            <div>
+                <!--
+                <span class="ptags">
+                    Tags:
+                    <a rel="tag" href="#">VS-Play</a>
+                </span>
+                    Section:
+                    <a rel="category tag" title="" href="#">Основные новости</a>
+                    |
+                -->
+                    views: 2053                    |
+                    comments: 0            </div>
+            </div>
+            </div>
+        </div>
+                <div class='news_table'>
+            <div class='text blue_news'>
+                <h2>
+                    <a href='/news/33'>We Vkontakte</a>
+                </h2>
+                <div class="date">04:07 PM 04.10.2015                </div>
+                <div class="stars"></div>
+                <div class="entry">     
+                    <div class="entry-img">
+                        <a href='/news/33'>
+                            <img src= '/public/uploads/logo/mfH68ctruO.png' border= '0' width= '120px' />                        </a>
+                    </div>
+                    
+                    <p>
+                        <span><a target="_blank" href="https://vk.com/club91743688">https://vk.com/club91743688</a><br />
+GO!!!</span>
+                    </p>
+                   <a style="float: right;" href="/news/33">
+                        read more...                    </a>
+                </div>
+
+            <div class="info">
+            <div>
+                <!--
+                <span class="ptags">
+                    Tags:
+                    <a rel="tag" href="#">VS-Play</a>
+                </span>
+                    Section:
+                    <a rel="category tag" title="" href="#">Основные новости</a>
+                    |
+                -->
+                    views: 2546                    |
+                    comments: 0            </div>
+            </div>
+            </div>
+        </div>
+                <div class='news_table'>
+            <div class='text blue_news'>
+                <h2>
+                    <a href='/news/32'>New service Statik</a>
+                </h2>
+                <div class="date">09:18 AM 04.10.2015                </div>
+                <div class="stars"></div>
+                <div class="entry">     
+                    <div class="entry-img">
+                        <a href='/news/32'>
+                            <img src= '/public/uploads/logo/iDUllFDoKj.png' border= '0' />                        </a>
+                    </div>
+                    
+                    <p>
+                        <span>Happy to announce that on the website there is a new free service deep Analytics Statik. Now You will be able to know very intimate details of each match! To learn futball how often you score or miss team in the 1st half, which totals often play in teams and much more, tennis players often play as a tie-break and win it, how often you win and what sets and much much more....</span>
+                    </p>
+                   <a style="float: right;" href="/news/32">
+                        read more...                    </a>
+                </div>
+
+            <div class="info">
+            <div>
+                <!--
+                <span class="ptags">
+                    Tags:
+                    <a rel="tag" href="#">VS-Play</a>
+                </span>
+                    Section:
+                    <a rel="category tag" title="" href="#">Основные новости</a>
+                    |
+                -->
+                    views: 2591                    |
+                    comments: 0            </div>
+            </div>
+            </div>
+        </div>
+    
+                </div>
+            </div>
+            <div style="width: 465px; display: inline-block; float: right; text-align: right;">
+                <div>
+                    
+         <div id="carousel-example-generic" class="carousel slide" 
+              data-ride="carousel"
+              data-pause="hover"
+              data-interval='4000'              >
+            <!-- Indicators -->
+            <ol class="carousel-indicators"> 
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="3" ></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="4" ></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="5" ></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="6" ></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="7" ></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="8" ></li>
+                            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                    
+                                    <div class="item active">
+                        <img src='/public/uploads/images/ECZsEgXj1S.png' alt='Grimbets' title='Grimbets'/>
+                        <div class="carousel-caption">
+                            GRIMBETS is an analytical center of sports forecast designed for helping players in the bookmaker office and betting exchanges to make money on the basis of services for different sports.                        </div>
+                    </div>
+                                    <div class="item ">
+                        <img src='/public/uploads/images/LZP8Z58j3y.png'  />
+                        <div class="carousel-caption">
+                            GRIMBETS includes more than 15 different services based on the best modified and improved systems and strategies for sports forecast.                        </div>
+                    </div>
+                                    <div class="item ">
+                        <img src='/public/uploads/images/t5KGGDpSLD.png'  />
+                        <div class="carousel-caption">
+                            GRIMBETS includes only the most popular sports such as football, tennis, basketball, hockey, volleyball and horse racing.                        </div>
+                    </div>
+                                    <div class="item ">
+                        <img src='/public/uploads/images/n2uh6yA35r.png'  />
+                        <div class="carousel-caption">
+                            GRIMBETS monitors changes of the line, funds distribution and team’s form in the match. It compares the line, season, team series and statistics. It analyses and forecasts the total, outcome and other different types of bets                        </div>
+                    </div>
+                                    <div class="item ">
+                        <img src='/public/uploads/images/pjyGNVPifK.png'  />
+                        <div class="carousel-caption">
+                            GRIMBETS collects the online information about world events in the sport, displays complete statistics and forecasts according to what happens during the sporting event.                        </div>
+                    </div>
+                                    <div class="item ">
+                        <img src='/public/uploads/images/TLhm41ZxI2.png'  />
+                        <div class="carousel-caption">
+                            GRIMBETS is equipped with a very easy navigation, recognized as the most effective by many players. This navigation makes it possible to remove or mark events of interest in the sport world, obtain information in the most convenient and operational form to carry out a quality analysis for making a decision when choosing a bet.                        </div>
+                    </div>
+                                    <div class="item ">
+                        <img src='/public/uploads/images/1bIoVD1ugn.png'  />
+                        <div class="carousel-caption">
+                            Individual forecasting systems, different helps and effective methods for their implementation are built into GRIMBETS. It will be easy for you to find description, help and method of application for each value, selection criteria, button and every element.                        </div>
+                    </div>
+                                    <div class="item ">
+                        <img src='/public/uploads/images/gFl0zDRX0J.png'  />
+                        <div class="carousel-caption">
+                            GRIMBETS is equipped with Bot services for Betfair exchange, adjusted individually for player’s needs. With the help of these services a player can completely or partially give account to robot, which will analyze and place bets in the system chosen by the player.                        </div>
+                    </div>
+                                    <div class="item ">
+                        <img src='/public/uploads/images/jTbu5n9rRU.png'  />
+                        <div class="carousel-caption">
+                            Each service in GRIMBETS has a statistical archive, which allows you to check the data for each event in the past to see and understand how the service works and how you can use it more effectively                        </div>
+                    </div>
+                            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+              <span></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+              <span></span>
+            </a>
+          </div>
+
+		
+                </div>    
+                <div style="margin-top: 40px">
+                    <div>
+    <object width= '465' height= '280' ><param name= 'movie' value= 'http://www.youtube.com/v/oZWR81GvovE?hl=ru_RU&amp;version=3' /><param name= 'allowscriptaccess' value= 'always' /><param name= 'allowfullscreen' value= 'true' /><param name= 'wmode' value= 'transparent' /><embed src= 'http://www.youtube.com/v/oZWR81GvovE?hl=ru_RU&amp;version=3' type= 'application/x-shockwave-flash' allowfullscreen= 'true' allowscriptaccess= 'always' wmode= 'transparent' width= '465' height= '280' /></object>    
+</div>
+<div style="margin-top: 40px">
+    <object width= '465' height= '252' ><param name= 'movie' value= 'http://www.youtube.com/v/YHLzWS1OEFI?hl=ru_RU&amp;version=3' /><param name= 'allowscriptaccess' value= 'always' /><param name= 'allowfullscreen' value= 'true' /><param name= 'wmode' value= 'transparent' /><embed src= 'http://www.youtube.com/v/YHLzWS1OEFI?hl=ru_RU&amp;version=3' type= 'application/x-shockwave-flash' allowfullscreen= 'true' allowscriptaccess= 'always' wmode= 'transparent' width= '465' height= '252' /></object></div>
+
+
+                </div> 
+            </div>
+            <div style="clear: both"></div>
+	
+
+        </section>
+
+        <footer>
+            <div>
+    <div style=" position: absolute">
+        <a href="javascript:void(0)" onclick="Server.openErrorWindow()"  style="margin-right: 20px;">
+            <b>Bug Report</b> (Ctrl + Enter)
+        </a>
+    </div>
+    <span>
+        &copy; 2014 <a href="/">Grimbets</a>
+    </span>
+    <div style="float: right; position: relative">
+        <a href="http://metrika.yandex.ru/stat/?id=23733001&amp;from=informer" 
+           target="_blank" rel="nofollow" style="top: -5px;position: absolute;right: 660px;">
+            <img src="//bs.yandex.ru/informer/23733001/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                style="border:0;" alt="Яндекс.Метрика" 
+                title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" 
+                onclick="try{Ya.Metrika.informer({i:this,id:23733001,lang:'ru'});return false}catch(e){}"/>
+        </a>
+        <a href="http://passport.webmoney.ru/asp/certview.asp?wmid=304644041357" target="_blank"
+                style="top: -5px;position: absolute;right: 260px;" style="border:0;" >
+            <img src="http://www.megastock.ru/doc/Logo/v_blue_on_white_ru.png" border="0">
+        </a> 
+        <a href="http://www.megastock.ru/" title="WebMoney" target="_blank"
+                style="top: -5px;position: absolute;right: 160px;" style="border:0;">
+            <img src="http://www.megastock.ru/doc/Logo/acc_blue_on_white_ru.png" alt="WebMoney " title="Мы принимаем WebMoney" border="0" />
+        </a>
+        <a style="position: absolute;right: 0; top: -8px;" href="mailto:support@grimbets.com">support@grimbets.com</a>
+        <a style="position: absolute;right: 0; top: 11px; font-size: 12px;" href="mailto:a101081@yandex.ru">a101081@yandex.ru</a>
+        
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-46676073-1']);
+    _gaq.push(['_setDomainName', 'grimbets.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setCustomVar',
+          1,                   // This custom var is set to slot #1.  Required parameter.
+          'DomainName',           // The top-level name for your online content categories.  Required parameter.
+          'grimbets.com'  // Sets the value of "Section" to "Life & Style" for this particular aricle.  Required parameter.
+       ]);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+
+	(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+			try {
+				w.yaCounter23733001 = new Ya.Metrika({id:23733001,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true,
+						trackHash:true});
+			} catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+</script>
+<!--
+<noscript><div><img src="//mc.yandex.ru/watch/23733001" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+-->
+<!-- /Yandex.Metrika counter -->
+
+        </footer>
+	</section>
+
+
+		</body>
+
+	</html>
+
+
+
+

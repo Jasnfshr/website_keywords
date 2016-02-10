@@ -1,0 +1,217 @@
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robin Yerian | Marketing and Media. Services: Marketing, Photography, Web Design, Operational Budgeting, and Forecasting.</title>
+
+<meta name="description" content="Robin Yerian's career pursuits, interests, & hobbies include: marketing strategies, social media / online marketing, photoshop / digital darkroom / retouching, digital photography, web design, forecasting and budgeting, travel, home and garden, movies and TV.  Her student portfolio displays responsive web designs, photography, and illustrations. Robin attended the School of Media Arts in Santa Barbara, California and is pursuing a Bachelor of Science in Marketing at California State University at Northridge">
+
+<meta name="keywords" content="Southern, California, USA, marketing, strategies, brand awareness, market resarch, metrics, online, photography, photographer, portfolio, digital, forecasting, budgeting, ideas, performance metrics, production, social media, results, managerial, accounting, campaign, web design, responsive, website, weddings, portraits, lifestyle, image, beauty, nature, landscapes, bridal, self-portrait, portraits, engagement, natural light, photo story, story-telling, travel, beach, ocean, animals, retouching, services, multimedia, career, work, student, Adobe, creative, Peachtree, Goldmmine, Quickbooks, Microsoft, Excel, Word, PowerPoint">
+
+<link href="fluidScripts/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/fluidLayout.css" rel="stylesheet" type="text/css">
+<link href="css/formatting.css" rel="stylesheet" type="text/css">
+<link href="assets/styles.css" rel="stylesheet" type="text/css">  
+<link rel="stylesheet" type="text/css" href="assets/jquery.css" media="screen">
+
+<script src="assets/ga.js" async type="text/javascript"></script>
+<script type="text/javascript" src="assets/jquery.js"></script>
+<script type="text/javascript" src="assets/jquery_002.js"></script>
+<script type="text/javascript" src="assets/jquery_003.js"></script>
+<script type="text/javascript" src="assets/supersized.js"></script>
+<script type="text/javascript" src="assets/console.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$.fn.supersized.options = {
+			startwidth: 1049,  
+			startheight: 768,
+			vertical_center: 0,
+			slideshow: 0,
+			navigation: 0,
+			transition: 0,
+			pause_hover: 0,
+			slide_interval: 6000
+		};
+		
+		$('#supersize').supersized();
+	});
+	
+	function noSpam(vName,vDomain){
+		location.href = ("mailto:" + vName + "@" + vDomain);
+	};
+
+</script>
+
+<script type="text/javascript">
+		
+			var scrollTimer;
+			var scrollDivisions = 24;
+			var scrollSpeed = 2;
+			var panAmount = 0;
+			var imagesDisplayed = false;
+			var imgMinOpacity = 1;
+			
+			$(document).ready(function(){
+				$(".main_heading").bind("click", HeadingClick);
+				$(".heading_content").mouseover(startScroll);
+				$(".heading_content").mousemove(scrollImages);
+				$(".heading_content").mouseout(stopScroll);
+				
+				$(".heading_content img").mouseover(RollOver_Image);
+				
+				$('a[rel=258_images]').fancybox();$('a[rel=260_images]').fancybox();$('a[rel=206_images]').fancybox();$('a[rel=92_images]').fancybox();$('a[rel=209_images]').fancybox();
+				
+				//$("a[rel=travel_images]").fancybox();
+			});
+			
+			function RollOver_Image(event) {
+				$(".heading_content img:not(this)").stop(true, false).fadeTo(250, imgMinOpacity);
+				$(this).stop(true, true).fadeTo(250, 0.5);
+			}
+			
+			function panVisibleBox() {
+				if (imagesDisplayed) {
+					var Container = $(".image_holder:visible").position();
+					var stopperPos = $(".image_holder:visible .stopper").position();
+					var accumWidth;
+					var maxLeft;
+					var newLeft = parseInt($(".image_holder:visible").css("margin-left")) - panAmount;
+					
+					if (newLeft > 0) {
+						newLeft = 0;
+					} else if (stopperPos.left - Container.left <= $(".image_holder:visible").parent().width() && panAmount > 0) {
+						newLeft = parseInt($(".image_holder:visible").css("margin-left"));
+					}
+					
+					$(".image_holder:visible").css({ "margin-left": newLeft + "px" });
+				}
+			}
+			
+			function HeadingClick(event) {
+				event.preventDefault();
+				$(".main_heading").removeClass("heading_on");
+				$(this).addClass("heading_on");
+				$(".heading_content:not(this)").slideUp(250);
+				$("." + $(this).attr("id") + ":hidden img").hide();
+				$("." + $(this).attr("id") + ":hidden").slideDown(250, fadeinImages);
+				Cufon.refresh();
+			}
+			
+			function fadeinImages() {
+				$(".image_holder:visible img:hidden:first").stop(true, true).fadeTo(500, imgMinOpacity);
+				if ($(".image_holder:visible img:hidden:first").length > 0) {
+					setTimeout(fadeinImages, 100);
+				} else {
+					imagesDisplayed = true;
+				}
+			}
+			
+			function startScroll() {
+				scrollTimer = setInterval(panVisibleBox, 25);
+			}
+			
+			function scrollImages(event) {
+				var Container = $(this).position();
+				var MouseX = event.pageX - Container.left;
+				var MouseY = event.pageY - Container.top;
+				var divisionWidth = $(this).parent().width() / scrollDivisions;
+				panAmount = (Math.round((MouseX / divisionWidth)) - (scrollDivisions / 2)) * scrollSpeed;
+			}
+			
+			function stopScroll() {
+				clearInterval(scrollTimer);
+				$(".image_holder:visible img").stop(true, false).fadeTo(250, imgMinOpacity);
+			}
+			
+</script>
+        
+<script src="fluidScripts/respond.min.js"></script>
+</head>
+
+<body class="portfolio">
+
+<div style="width: 1920px; height: 1405.68px; display: block;" id="supersize">  
+            <img src="images/body_1980x1620_lg.png" alt="photograph of Robin Yerian, self-portrait, long shutter speed, 1 exposure indicates movement" class="activeslide" style="width: 1920px; height: 1405.68px;">
+</div>
+   
+<div id="page">
+
+<div id="header"><a href="http://www.robinyerian.com/index.html" title="logo links to home page for robinyerian.com"><img src="images/logo-green-new.png" alt="logo for robin yerian marketing & media	" longdesc="images/logo_robin_yerian.png"></a><a href="http://www.ppa.com" target="_blank">
+<img src="http://www.ppa.com/files/images/logos/memberlogo/ppa_logo_small.png"
+ alt="Member, Professional Photographers of America" 
+width="60" height="20" hspace="5" vspace="5" border="0" 
+title="Member, Professional Photographers of America" /></a>
+        <div id="nav">
+          <a href="http://www.robinyerian.com/index.html" title="home page" id="nav_index">Home |</a>
+          <a href="http://www.robinyerian.com/bio.html" title="bio page regarding background and more information about Robin Yerian" id="nav_bio">Bio |</a>
+          <a href="http://www.robinyerian.com/resume.html" title="resume page briefly summarizes jobs, projects, and internships" id="nav_resume">Resume |</a>
+          <a href="http://www.robinyerian.com/portfolio.html" title="portfolio page for web designs and photography largely in Santa Barbara, California" id="nav_portfolio1">Portfolio |</a>
+          <a href="http://www.robinyerian.com/blog/" title="blog page for news and announcements from Robin Yerian of robinyerian.com" id="nav_blog">blog |</a>
+            <a href="http://www.robinyerian.com/contact.html" title="Contact form for email" id="nav_contact">Contact |</a></div>
+
+<div class="clear"></div>
+</div>
+
+
+<div id="article"> 
+
+<div style="display: block;" id="content">
+  <h1>Hello! Welcome to my site...</h1>
+  <br>
+  <br>
+  <h2>I'm Robin. Here's what I do:</h2>
+  <br>
+  
+<ul>
+
+<li>Marketing</li>
+	   
+<p>Creative online marketing, brand strategies, market research, content creation, metrics, and analysis services. To learn a little about me see my <a href="http://www.robinyerian.com/bio.html" title="bio page"><u>BIO</u> </a>.</p>
+	</ul>
+
+<ul>
+<li>Multimedia</li>
+
+<p>Digital photography, photo editing, illustration, and web design services. View samples of my coursework in my <a href="http://www.robinyerian.com/portfolio.html" title="portfolio page"><u>PORTFOLIO</u> <img src="images/splotch_small.png" alt="paint splotch"></a>.</p>
+</ul>
+
+<ul>
+<li>Systems and  Operations</li> 
+    
+<p>Operational budgeting, forecasting,  performance metrics,  projects, systems, and managerial accounting services. What good are &quot;likes&quot; if you cannot manage your business growth?</p>
+	</ul>  
+
+ <br>     
+<h3 id="home_footnote"><a href="http://www.robinyerian.com/bio.html" title="skills brief outline in accounting, website design, and photography">View SKILLS</a>.&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.robinyerian.com/contact.html" title="contact form for email">CONTACT me via e-mail</a>.</h3>
+</div>      
+       
+<div class="clear"></div>
+<div class="footer" id="footer">
+  <p>Photography by robin Yerian, All Rights Reserved.</p>
+</div>
+</div> 
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41317495-1', 'robinyerian.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
+
+

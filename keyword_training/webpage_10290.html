@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en"  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#
+                  article: http://ogp.me/ns/article#">
+<head>
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Embedded Computing Design</title>
+	<link rel="alternate" type="application/rss+xml" title="Embedded Computing Design" href="http://m.opensystemsmedia.com/opensystemsmedia/ecd" />
+	<link rel="publisher" href="https://plus.google.com/110227408898276919088" />
+	<link rel="icon" href="http://cloud1.opensystemsmedia.com/wp-content/themes/osm/images/favicon.ico.gzip" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://cloud1.opensystemsmedia.com/wp-content/themes/osm/images/favicon.ico.gzip" type="image/x-icon" />
+	<meta name="description" content="Embedded Computing Design is the go-to destination for information regarding embedded design and development. We cultivate the largest global community of embedded designers, and reach that audience using various channels, including blogs, design articles, videos, news, and product information. Coverage comes in the form of digital (web sites, webinars and online events, interactive magazines, newsletters, online education, apps, and traditional social media), print magazines, and live events (trade shows and conferences).">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+	<link rel="next" href="http://embedded-computing.com/page/2/" ><link rel='stylesheet' id='wp-pagenavi-css'  href='/wp-content/plugins/wp-pagenavi/pagenavi-css.css' type='text/css' media='all' />    <meta property="og:image" content="http://i.opensystemsmedia.com/?f=jpg&q=85&w=900&src=http%3A%2F%2Ftech.opensystemsmedia.com%2Fwp-content%2Fthemes%2Ftechchannel%2Fimages%2Ftcfacebook4-embedded-computing-design.png"/>
+       <meta property="og:site_name" content="Embedded Computing Design"/>
+    <meta property="fb:admins" content="6911118,100001943427940"/>
+        	<meta property="fb:app_id" content="171541852888001"/>
+    	       <meta property="og:description" content="Embedded Computing Design is the go-to destination for information regarding embedded design and development. We cultivate the largest global community of embedded designers, and reach that audience using various channels, including blogs, design articles, videos, news, and product information. Coverage comes in the form of digital (web sites, webinars and online events, interactive magazines, newsletters, online education, apps, and traditional social media), print magazines, and live events (trade shows and conferences)."/>
+	<meta property="og:title" content="Embedded Computing Design"/>
+	<meta property="og:url" content="http://embedded-computing.com/"/>
+	
+		
+	<link rel="canonical" href="http://embedded-computing.com/" />
+	<link rel="stylesheet/less" type="text/css" href="http://embedded-computing.com/wp-content/themes/refresh/less/ECD.less?1.0.7">
+	<script type="text/javascript">
+		var facebook_app_id = "171541852888001";
+		var Topic = false;
+		var addthis_config =
+		{
+		   ui_click: true,
+		   data_track_textcopy:true,
+		   data_track_clickback:false,
+		   data_ga_property: 'UA-91807-34',
+		   data_ga_social : true
+		   		}
+	</script>
+	<!--<script type="text/javascript">less = { env: 'production' };</script>-->
+	<link rel='stylesheet' id='reset-css'  href='http://embedded-computing.com/wp-content/themes/refresh/css/reset.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='http://embedded-computing.com/wp-content/themes/refresh/css/fontawesome.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-css'  href='http://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C400italic%2C700italic%7COxygen%3A400%2C700%2C300&#038;subset=cyrillic-ext%2Ccyrillic%2Clatin-ext%2Clatin&#038;ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://embedded-computing.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js?ver=1.8.1'></script>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js?ver=1.3.3'></script>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js?ver=2.1.08'></script>
+<script type='text/javascript' src='http://embedded-computing.com/wp-content/themes/refresh/js/dotdotdot.min.js?ver=3.4.2'></script>
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type='text/javascript'>
+	$.ajaxSetup ({
+	    // Disable caching of AJAX responses
+	    cache: true
+	});
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') +
+		'//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+	</script>
+
+	<script type="text/javascript">
+	if(typeof subsearch !== 'function') {
+		function subsearch(box){
+			window.location.href='http://embedded-computing.com/search/#'+$(box).prop('value');
+			if(location.pathname === '/search/') { window.location.reload(); }
+		}
+	}
+	</script>
+
+	<script type="text/javascript">
+	var _ads = new Array();
+	googletag.cmd.push(function() {
+    	_ads.push(googletag.defineSlot('/1007027/Medium_Rectangle', [300, 250], 'div-gpt-ad-1320948880618-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/Leaderboard', [728, 90], 'div-gpt-ad-1319730952581-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/Wide_Skyscraper', [160, 600], 'div-gpt-ad-1342804909615-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/half_page', [300, 600], 'div-gpt-ad-1328031648097-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/Interstitial_init', [1, 1], 'div-gpt-ad-1332184629197-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/Peel_jquery', [2, 2], 'div-gpt-ad-1332196512882-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/Medium_Rectangle_2', [300, 250], 'div-gpt-ad-1342540726547-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/Footer_JS_1', [3, 3], 'div-gpt-ad-1343754747321-0').addService(googletag.pubads()));
+    	//_ads.push(googletag.defineSlot('/1007027/Square_Button', [125, 125], 'div-gpt-ad-1346774474408-0').addService(googletag.pubads()));
+    	//_ads.push(googletag.defineSlot('/1007027/Square_Button_2', [125, 125], 'div-gpt-ad-1346774502103-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/Square_Button_3', [125, 125], 'div-gpt-ad-1346774532986-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/Square_Button_4', [125, 125], 'div-gpt-ad-1346774561716-0').addService(googletag.pubads()));
+    	//_ads.push(googletag.defineSlot('/1007027/Leaderboard_2', [728, 90], 'div-gpt-ad-1378313671446-0').addService(googletag.pubads()));
+    	_ads.push(googletag.defineSlot('/1007027/medium_rectangle_3', [300, 250], 'div-gpt-ad-1421164958161-0').addService(googletag.pubads()));
+    	googletag.pubads().setTargeting("Magazine", "ECD");
+
+    	
+    });
+	</script>
+
+	
+	<script type="text/javascript">
+	googletag.cmd.push(function() {
+    	//googletag.pubads().enableSingleRequest();
+    	googletag.enableServices();
+    });
+
+    function osm_channel_inferred() {
+    	initialize_follow_button();
+    }
+	</script>
+
+	<script type="text/javascript">
+	
+		var local_dispatches = {};
+		var _DISPATCH = {};
+		
+		jQuery.Dispatch = function( id ) {
+		    var callbacks,
+		        method,
+		        dispatch = id && local_dispatches[ id ];
+		 
+		    if ( !dispatch ) {
+		        callbacks = jQuery.Callbacks();
+		        dispatch = {
+		            publish: callbacks.fire,
+		            subscribe: callbacks.add,
+		            unsubscribe: callbacks.remove
+		        };
+		        if ( id ) {
+		            local_dispatches[ id ] = dispatch;
+		        }
+		    }
+		    return dispatch;
+		};
+	
+		$(document).ready(function() {
+		
+			_DISPATCH.connect_js_loaded = { 
+				deferred_dispatch: $.Deferred(),
+				dispatch: $.Dispatch( "connect_js_loaded" )
+			};
+			
+			_DISPATCH.connect_js_loaded.deferred_dispatch.done( _DISPATCH.connect_js_loaded.dispatch.publish );
+		
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-91807-34', 'auto', {'allowLinker': true} );
+			ga('send', 'pageview', 
+				{  
+					'hitCallback': function() { 
+						$.getScript('/connect.php?action=js2', function() { 
+							_DISPATCH.connect_js_loaded.deferred_dispatch.resolve( 'connect_js_loaded' ); 
+						});
+					}
+				} 
+			);
+		});
+		
+			
+	    googletag.cmd.push(function() {
+		googletag.pubads().setTargeting("Keywords", 	["homepage"]);
+	});
+   		
+	</script>
+
+	<meta property="article:tag" content="" />
+		
+
+    
+</head>
+
+<body class="ECD">
+	
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T37QQZ"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-T37QQZ');</script>
+	<!-- End Google Tag Manager -->
+	
+		<div id="top-bar">
+		<div class="container">
+			
+			<div class="leaderboard">
+	<div id="div-gpt-ad-1319730952581-0">
+		<script type="text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1319730952581-0'); });
+		</script>
+	</div>
+</div><!-- .leaderboard -->
+			<div class="mag-promo">
+				
+				<img src="http://cloud1.opensystemsmedia.com/Ai-osm_logo_tiny_light_white.gif" class="tiny-logo" style="float: right;margin: -7px 0px -11px 0px;" />
+				
+				<ul>
+					<li class="subscribe"><a href="http://opensystemsmedia.com/subscriptions">Free Subscription</a></li>
+					<li><a class="latest-issue" href="http://issuu.com/opensystemsmedia/docs/ecd_december_2015_issuu/index.html">See the Current Issue</a></li>
+										<li><a class="archived-issues" href="/emag/list/">Archived Issues</a></li>
+									</ul>
+				<div class="mag-covers">
+					<img src="http://i.opensystemsmedia.com/?fltr[]=over|images/glint3.png|0|0|100&fltr[3]=usm|50|3|0.3&q=95&w=59&h=80&src=http%3A%2F%2Fimac.opensystemsmedia.com%2Ffmi%2Fxml%2Fcnt%2FScreen%2520Shot%25202016-01-01%2520at%25201.32.32%2520AM.png%3F-db%3Demag%26-lay%3Demag%26-recid%3D492%26-field%3Dcover%281%29" alt="Embedded Computing Design" height="80" width="59" />
+					<img src="http://i.opensystemsmedia.com/?fltr[]=over|images/glint3.png|0|0|100&fltr[3]=usm|50|3|0.3&q=95&w=59&h=80&src=http%3A%2F%2Fimac.opensystemsmedia.com%2Ffmi%2Fxml%2Fcnt%2FECD_November_2015-1.jpg%3F-db%3Demag%26-lay%3Demag%26-recid%3D483%26-field%3Dcover%281%29" alt="Embedded Computing Design" alt="" />
+					<img src="http://i.opensystemsmedia.com/?fltr[]=over|images/glint3.png|0|0|100&fltr[3]=usm|50|3|0.3&q=95&w=59&h=80&src=http%3A%2F%2Fimac.opensystemsmedia.com%2Ffmi%2Fxml%2Fcnt%2FECD_September_2015-1-1-cover.png%3F-db%3Demag%26-lay%3Demag%26-recid%3D472%26-field%3Dcover%281%29" alt="Embedded Computing Design" alt="" />
+				</div><!-- .mag-covers -->
+				<div id="square-button-ads">
+					<div id="div-gpt-ad-1346774532986-0" class="wrapper even">
+					</div>
+					
+										<div class="wrapper odd">
+							<table align="center" style="background:url(http://pagead2.googlesyndication.com/pagead/imgad?id=CICAgIDQh8j2fBABGAEoATII9MimxhXSX4BAt6K7jwU);font-family:Arial, Helvetica, sans-serif;font-size:10px;" width="125" height="125" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center" valign="bottom">
+					    	<p style="margin:0 0 2px;line-height:10px;"><a style="color:#fff;text-decoration:none;" href="http://www.directindustry.com" target="_blank">Industrial Trade Show</a></p>
+							 <p style="margin:0 0 5px;line-height:12px;"><a style="color:#fff;text-decoration:none;" href="http://embedded-computing.com/direct-industry.html" target="_blank">Software Applications</a></p>
+					    </td></tr><tr><td align="right" valign="bottom" height="32">
+						    <a href="http://embedded-computing.com/direct-industry.html" target="_blank"><img src="http://pagead2.googlesyndication.com/pagead/imgad?id=CICAgIDQh8jXkgEQARgBKAEyCPUdbsVA3EQrQLeiu48F" width="125" height="32" border="0" alt="DirectIndustry - The Online Industrial Exhibition" /></a>
+					    </td></tr></tbody></table>	
+					</div>
+										
+				</div>
+			</div><!-- .mag-promo -->
+		</div><!-- .container -->
+	</div><!-- #top-bar -->
+		
+	<header class="main">
+		
+		<a href="http://embedded-computing.com" class="logo"><img src="http://embedded-computing.com/wp-content/themes/refresh/images/logo-ECD.png" alt="Embedded Computing Design" height="60" /></a>		
+		<nav class="pre-nav">
+			<form onsubmit="subsearch('#searchBox');return false;" class="search">
+								<input class="text" onclick="if(this.value==='Search articles, news, and products...'){this.value='';}" type="text" id="searchBox" value="Search articles, news, and products..." speech x-webkit-speech />
+				<button type="submit"><i class="icon-search"></i></button>
+			</form>
+			<nav class="content-types"><ul><li id="menu-item-19151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19151 articles"><a href="/articles/">Articles</a></li>
+<li id="menu-item-19152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19152 white-papers"><a href="/white-papers/">White Papers</a></li>
+<li id="menu-item-19155" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19155 products"><a href="/products/">Products</a></li>
+<li id="menu-item-19153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19153 news"><a href="/news/">News</a></li>
+<li id="menu-item-19154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19154 blogs"><a href="/blog/">Blogs</a></li>
+<li id="menu-item-23413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23413 5-minute-interviews"><a href="/topics/five-minutes-with/">5-Minute Interviews</a></li>
+<li class="visible-desktop submit-news-link"><b><a href="http://submit.opensystemsmedia.com/">Submit News and Products</a></b></li></ul></nav>		</nav>
+
+		<!-- AddThis Button END -->
+		<div class="follow">
+			<div class="addthis_toolbox addthis_32x32_style addthis_default_style" addthis:url="http://embedded-computing.com">
+				<ul>
+					<li class="facebook"><a class="addthis_button_facebook_follow" addthis:userid="Embedded.Computing.Design"><i class="icon-facebook-sign icon-large"></i></a></li>
+										<li class="twitter"><a class="addthis_button_twitter_follow" addthis:userid="embedded_comp"><i class="icon-twitter-sign icon-large"></i></a></li>
+										<li class="linkedin"><a class="addthis_button_linkedin_follow" addthis:url="http://embedded-computing.com/linkedin"><i class="icon-linkedin-sign icon-large"></i></a></li>
+					<li class="googleplus"><a class="addthis_button_google_follow" addthis:userid="110227408898276919088"><i class="icon-google-plus-sign icon-large"></i></a></li>
+					<li class="rss"><a class="addthis_button_rss_follow" addthis:url="http://m.opensystemsmedia.com/opensystemsmedia/ecd"><i class="icon-rss icon-large"></i></a></li>
+				</ul>
+			</div>
+		</div><!-- .follow -->
+
+		<nav class="main">
+					
+			<ul class="topics"><li class="home"><a href="http://embedded-computing.com"><i class="icon-home icon-large"></i></a></li><li id="menu-item-19140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19140 automotive"><a href="http://embedded-computing.com/topics/automotive/">Automotive</a></li>
+<li id="menu-item-20258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20258 diy"><a href="/topics/diy/">DIY</a></li>
+<li id="menu-item-19198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19198 industrial"><a href="http://embedded-computing.com/topics/industrial/">Industrial</a>
+<ul class="sub-menu">
+	<li id="menu-item-20514" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20514 industrial-hardware"><a href="/topics/industrial-hardware/">Industrial Hardware</a></li>
+	<li id="menu-item-22936" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22936 industrial-software"><a href="/topics/industrial-software/">Industrial Software</a></li>
+	<li id="menu-item-20260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20260 industrial-networking"><a href="/topics/industrial-networking/">Industrial Networking</a></li>
+	<li id="menu-item-20262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20262 sensors-and-control"><a href="/topics/sensors-and-control/">Sensors and Control</a></li>
+	<li id="menu-item-20259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20259 human-interface"><a href="/topics/human-interface/">Human Interface</a></li>
+	<li id="menu-item-20263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20263 test---measurement"><a href="/topics/test-and-measurement/">Test &#038; Measurement</a></li>
+	<li id="menu-item-19141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19141 smart-energy"><a href="http://embedded-computing.com/topics/smart-energy/">Smart Energy</a></li>
+</ul>
+</li>
+<li id="menu-item-20264" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20264 iot"><a href="http://iotdesign.embedded-computing.com">IoT</a></li>
+<li id="menu-item-19163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19163 dev-tools-and-os"><a href="/topics/dev-tools-and-os/">Dev Tools and OS</a>
+<ul class="sub-menu">
+	<li id="menu-item-19194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19194 rtos"><a href="/topics/rtos/">RTOS</a></li>
+	<li id="menu-item-19195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19195 virtualization"><a href="/topics/virtualization/">Virtualization</a></li>
+</ul>
+</li>
+<li id="menu-item-19148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19148 hardware"><a href="http://embedded-computing.com/topics/hardware/">Hardware</a>
+<ul class="sub-menu">
+	<li id="menu-item-20272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20272 boards"><a href="/topics/boards/">Boards</a></li>
+	<li id="menu-item-20273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20273 sensors"><a href="/topics/sensors/">Sensors</a></li>
+	<li id="menu-item-20275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20275 systems"><a href="/topics/systems/">Systems</a></li>
+</ul>
+</li>
+<li id="menu-item-19143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19143 processing"><a href="/topics/processing/">Processing</a>
+<ul class="sub-menu">
+	<li id="menu-item-19145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19145 dsp"><a href="/topics/dsp/">DSP</a></li>
+	<li id="menu-item-22665" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22665 ip"><a href="/topics/ip/">IP</a></li>
+	<li id="menu-item-19146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19146 microcontroller"><a href="/topics/microcontroller/">Microcontroller</a></li>
+	<li id="menu-item-20270" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20270 programmable-logic"><a href="/topics/programmable-logic/">Programmable Logic</a></li>
+	<li id="menu-item-20271" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20271 soc"><a href="/topics/soc/">SoC</a></li>
+</ul>
+</li>
+<li id="menu-item-26920" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26920 reference-designs"><a title="rss" href="http://embedded-computing.com/designs/ti-reference/">Reference Designs</a></li>
+<li id="menu-item-24630" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24630 focused-newsletters"><a title="rss" href="#">Focused Newsletters</a>
+<ul class="sub-menu">
+	<li id="menu-item-24632" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24632 embedded-daily"><a href="/e-letter/">Embedded Daily</a></li>
+	<li id="menu-item-24631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24631 iot-design-weekly"><a href="http://url.opensystemsmedia.com/iotdesign">IoT Design Weekly</a></li>
+	<li id="menu-item-26914" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26914 arm-e-newsletter"><a href="http://url.opensystemsmedia.com/arm">ARM E-newsletter</a></li>
+	<li id="menu-item-25437" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25437 embedded-europe-e-newsletter"><a href="http://url.opensystemsmedia.com/europe-newsletter-list">Embedded Europe E-newsletter</a></li>
+	<li id="menu-item-25260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25260 industrial-e-letter"><a href="http://industrial.embedded-computing.com/eletter/">Industrial E-Letter</a></li>
+	<li id="menu-item-24649" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24649 automotive-embedded-systems"><a href="http://url.opensystemsmedia.com/auto-newsletter">Automotive Embedded Systems</a></li>
+	<li id="menu-item-24634" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24634 monthly-e-letter"><a href="/eletter/">Monthly E-Letter</a></li>
+</ul>
+</li>
+<li id="menu-item-21728" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21728 ---more"><a title="trending" href="#">&#8230;More</a>
+<ul class="sub-menu">
+	<li id="menu-item-21729" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21729 trending-today--this-week--month"><a title="trending" href="/trending/#trending.week">Trending Today, this Week, Month</a></li>
+	<li id="menu-item-27137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27137 list-of-authors"><a title="trending" href="/authors-list/">List of Authors</a></li>
+	<li id="menu-item-21730" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21730 rss"><a title="rss" href="http://m.opensystemsmedia.com/opensystemsmedia/ecd">RSS</a></li>
+	<li id="menu-item-20513" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20513 networking"><a href="/topics/networking/">Networking</a>
+	<ul class="sub-menu">
+		<li id="menu-item-22937" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22937 cloud"><a href="/topics/cloud/">Cloud</a></li>
+	</ul>
+</li>
+	<li id="menu-item-20274" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20274 storage"><a href="/topics/storage/">Storage</a></li>
+	<li id="menu-item-25781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25781 security"><a href="/topics/security">Security</a></li>
+	<li id="menu-item-20268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20268 medical"><a href="/topics/medical/">Medical</a></li>
+	<li id="menu-item-22935" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22935 military"><a href="http://mil-embedded.com">Military</a></li>
+</ul>
+</li>
+</ul>
+			<ul class="issue">
+				<li><a href="javascript:void(0)"><i class="icon-reorder"></i></a></li>
+				<li><a href="http://opensystemsmedia.com/events/e-cast/schedule">Webcasts</a></li>
+				<li><a href="http://embedded-computing.com/eletter/">E-Letter</a></li>
+			</ul>
+		</nav>
+	</header><!-- .main -->
+
+	<section class="main">
+		
+		<div id="stream-column">
+		
+		
+			<div class="square" id='div-gpt-ad-1320948880618-0'>
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1320948880618-0'); });
+	</script>
+</div><!-- .square  -->					<div class="half-page" id='div-gpt-ad-1328031648097-0'>
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1328031648097-0'); });
+	</script>
+</div><!-- .half-page  -->			<div class="square" id='div-gpt-ad-1342540726547-0'>
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342540726547-0'); });
+	</script>
+</div><!-- .square  -->				
+		
+				<style type="text/css">
+		.homepage-ecasts {margin-top: 22px; margin-bottom: 22px; border: 1px solid #ededed; border-radius: 3px; padding: 14px; }
+		.homepage-ecasts time { font-size: xx-small; }
+		.homepage-ecasts a { display: block; font-size: 14px; font-weight: bold; }
+		.homepage-ecasts p { font-size: small; }
+		.homepage-ecasts li.noimage.news { margin-bottom: 15px; }
+		.homepage-ecasts h5 { margin-top: 20px; }
+		</style>
+		<div class="homepage-ecasts">
+					<ul>
+								<li class="noimage news">
+					
+					<label><img src="http://cloud1.opensystemsmedia.com/E-cast_tiny.png" align="left" style="padding-right: 5px;"></label>
+					<time>8 hours away</time>
+					<a href="http://ecast.opensystemsmedia.com/614">E-cast: Ensuring Trust in IoT Edge Devices</a>
+					<p style="display: block;"> With each end node added to the Internet of Things, vulnerability to cyber attack increases exponentially. Securing edge devices is no easy task, however, as resource constraints, cost, and the diverse nature of IoT systems inhibit the effectiveness o...</p>
+				</li>
+								<li class="noimage news">
+					
+					<label><img src="http://cloud1.opensystemsmedia.com/E-cast_tiny.png" align="left" style="padding-right: 5px;"></label>
+					<time>1 week away</time>
+					<a href="http://ecast.opensystemsmedia.com/621">E-cast: Developing Complex Embedded Systems with Tiny Plug-and-Play Compute Platforms: Key Design Considerations</a>
+					<p style="display: block;"> Many of today's computationally intensive embedded use cases are also some of the most SWaP (Size, Weight, and Power) constrained designs, particularly in high-end edge-of-the network IoE devices. Inforce Computing(r) enables these designs by bringing...</p>
+				</li>
+								<li class="noimage news">
+					
+					<label><img src="http://cloud1.opensystemsmedia.com/E-cast_tiny.png" align="left" style="padding-right: 5px;"></label>
+					<time>2 weeks away</time>
+					<a href="http://ecast.opensystemsmedia.com/620">E-cast: Secrets of Autonomous Car Design</a>
+					<p style="display: block;"> An autonomous car is a highly complex, distributed, dynamic system. It must coordinate many component software modules continuously, make real-time local decisions based on system-wide constraints, and approximate global state. Builders of vehicle aut...</p>
+				</li>
+								<li class="noimage news">
+					
+					<label><img src="http://cloud1.opensystemsmedia.com/E-cast_tiny.png" align="left" style="padding-right: 5px;"></label>
+					<time>3 weeks away</time>
+					<a href="http://ecast.opensystemsmedia.com/619">E-cast: Development & Monetization of Compelling IoT Applications</a>
+					<p style="display: block;"> The Internet of Things is changing the way people live, learn, work, and play. Efficient architecture and deployment models are critical to the successful adoption of IoT applications. Often human factors for non-technical users must be considered. Io...</p>
+				</li>
+								<li class="noimage news">
+					
+					<label><img src="http://cloud1.opensystemsmedia.com/E-cast_tiny.png" align="left" style="padding-right: 5px;"></label>
+					<time>5 weeks away</time>
+					<a href="http://ecast.opensystemsmedia.com/615">E-cast: Real-world Implementation on the Industrial Internet</a>
+					<p style="display: block;"> The Industrial Internet is transforming the way we think about the marriage of business processes and technology, but many technical challenges must be met before realizing the full potential of Industry 4.0. What networking technologies are best suit...</p>
+				</li>
+								<li class="result home noimage"><h5><a href="http://ecast.opensystemsmedia.com/">All Upcoming E-casts</a></h5></li>
+				<li class="result home noimage"><h5><a href="http://opensystemsmedia.com/events/e-cast/archive">Rewatch Recently-Aired E-casts</a></h5></li>
+			</ul>
+				</div>
+				
+		</div><!-- #stream-column -->
+		
+
+
+
+		<div id="home-sections">
+			<div class="home-section"><h4><a href="http://embedded-computing.com/blog/">Blogs</a></h4><ul><li><a href="http://embedded-computing.com/guest-blogs/theres-still-a-gap-in-the-smart-home-app/">There&#8217;s still a gap in the Smart Home app</a></li><li><a href="http://embedded-computing.com/27145-five-minutes-with-martin-hagerdal-ericsson/">Five Minutes With&#8230; Martin H&#228;gerdal, Ericsson</a></li><li><a href="http://embedded-computing.com/26908-linux-not-for-license-dodgers/">Linux: Not for license dodgers</a></li><li><a href="http://embedded-computing.com/guest-blogs/synthos-and-task-oriented-programming/">SynthOS and task-oriented programming</a></li><li><a href="http://embedded-computing.com/guest-blogs/understand-what-an-overlayfs-is-and-how-it-works/">Understand what an OverlayFS is and how it works</a></li><li><a href="http://embedded-computing.com/guest-blogs/prevent-defects-in-automotive-software-with-three-static-analysis-rule-types/">Prevent defects in automotive software with three static analysis rule types</a></li><li><a href="http://iotdesign.embedded-computing.com/guest-blogs/a-journey-outside-silicon-valley/">A journey outside Silicon Valley</a></li><li><a href="http://embedded-computing.com/guest-blogs/rapid-product-design-streamlines-fda-approval-for-wearable-biosensors/">Rapid product design streamlines FDA approval for wearable biosensors</a></li><li><a href="http://embedded-computing.com/guest-blogs/3d-in-automotive-hmis-lets-discuss-at-embedded-world-2016/">3D in automotive HMIs? Let&#8217;s discuss at embedded world 2016.</a></li><li><a href="http://iotdesign.embedded-computing.com/articles/how-virtualization-modern-silicon-and-open-source-are-conspiring-to-secure-the-internet-of-things/">How virtualization, modern silicon, and open source are conspiring to secure the Internet of Things</a></li><li><a href="http://iotdesign.embedded-computing.com/2666-raspberry-pi-iot-prototyping-remote-management-on-the-fly/">Raspberry Pi IoT prototyping, remote management on the fly</a></li></ul></div><!-- .home-section -->
+<div class="home-section"><h4><a href="http://embedded-computing.com/magazine/design-articles/">Design Articles</a></h4><ul><li><a href="http://embedded-computing.com/articles/charging-and-gas-gauging-for-mobile-devices/">Charging and gas gauging for mobile devices</a></li><li><a href="http://embedded-computing.com/articles/tear-down-misfit-shine-2-fitness-tracker/">Tear Down: Misfit Shine 2 Fitness tracker</a></li><li><a href="http://embedded-computing.com/articles/what-i-want-to-see-at-embedded-world-2016/">What I want to see at Embedded World 2016</a></li><li><a href="http://industrial.embedded-computing.com/articles/how-to-preserve-signal-chain-integrity-when-interfacing-microcontrollers-with-dacs/">How to preserve signal-chain integrity when interfacing microcontrollers with DACs</a></li><li><a href="http://embedded-computing.com/articles/evaluating-bluetooth-low-energy-what-iot-developers-need-to-know-about-getting-connected/">Evaluating Bluetooth Smart &#8211; What IoT developers need to know about getting connected</a></li><li><a href="http://iotdesign.embedded-computing.com/articles/connected-cars-and-automotive-software-at-the-intersection-of-safe-and-secure/">Connected cars and automotive software: At the intersection of safe and secure</a></li><li><a href="http://www.embedded-computing.com/articles/id/?6848">An Application Specific Operating System for the Kinoma Create</a></li><li><a href="http://industrial.embedded-computing.com/articles/how-system-operating-conditions-affect-cmos-op-amp-open-loop-gain-and-output-impedance/">How system operating conditions affect CMOS op amp open-loop gain and output impedance</a></li><li><a href="http://iotdesign.embedded-computing.com/articles/industrial-iot-survey-biggest-challenges-facing-oems-and-engineers/">Industrial IoT survey: Biggest challenges facing OEMs and engineers</a></li><li><a href="http://embedded-computing.com/articles/teaching-engineering-from-scratch-through-the-first-robotics-challenge/">Teaching engineering from scratch through the FIRST Robotics Competition </a></li><li><a href="http://embedded-computing.com/articles/educating-the-auto-with-deep-learning-for-active-safety-systems/">Educating the auto with deep learning for active safety systems</a></li></ul></div><!-- .home-section -->
+<div class="home-section"><h4><a href="http://embedded-computing.com/videos/">Videos</a></h4><ul><li class="image" style="background-color: white; background-image:url(http://i.opensystemsmedia.com/?f=jpg&h=280&q=80&aoe=1&src=https%3A%2F%2Fi3.ytimg.com%2Fvi%2FnoB4HicKE2k%2Fhqdefault.jpg)"><a href="http://www.youtube.com/watch?v=noB4HicKE2k">Five Minutes With… Martin Hägerdal, Ericsson</a></li><li><a href="http://www.youtube.com/watch?v=xvKYXU94Tok">Five Minutes With&#8230; John Molyneux, COO, Blue Pearl Software</a></li><li><a href="http://www.youtube.com/watch?v=AsE9wW7LOVU">Five Minutes With&#8230;Bruce Powel Douglass, IBM's IoT Chief Evangelist</a></li><li><a href="http://www.youtube.com/watch?v=f4svLR9dFUg">QNX Platform for ADAS shows V2X-based emergency stop at CES 2016</a></li><li><a href="http://www.youtube.com/watch?v=yRvwBmpAPpI">CES 2016: Renesas R-Car active safety demo</a></li></ul></div><!-- .home-section -->
+<div class="home-section"><h4><a href="http://embedded-computing.com/editors-choice">Products</a></h4><ul><li class="image" style="background-color: white; background-image:url(http://i.opensystemsmedia.com/?f=jpg&h=280&q=80&aoe=1&src=http%3A%2F%2Fnew-products.opensystemsmedia.com%2Fphotos%2F327141584991750623.jpg)"><a href="http://embedded-computing.com/products/EditorsChoice/?s1=New_RSC_&amp;s1val=327141584991750623">Easy integration of device data into M2M applications</a></li><li><a href="http://embedded-computing.com/products/EditorsChoice/?s1=New_RSC_&amp;s1val=327141427991697133">3D image sensor chips bringing virtual reality to smartphones</a></li><li><a href="http://embedded-computing.com/products/EditorsChoice/?s1=New_RSC_&amp;s1val=321707775861697877">3-axis accelerometer boasts industry&#8217;s smallest, most power efficient design</a></li><li><a href="http://embedded-computing.com/products/EditorsChoice/?s1=New_RSC_&amp;s1val=321707428861404759">Highly integrated SoC with features for IoT applications</a></li><li><a href="http://embedded-computing.com/products/EditorsChoice/?s1=New_RSC_&amp;s1val=321706870861374796">Rugged design SSD with full-disk 256-bit AES encryption</a></li></ul></div><!-- .home-section -->
+<div class="home-section"><h4><a href="http://embedded-computing.com/news/">News</a></h4><ul><li><a href="http://www.embedded-computing.com/news/db/?49826">myDevices Launches Cayenne, the World's First Drag-and-Drop IoT Project Builder</a></li><li><a href="http://ecast.opensystemsmedia.com/618">E-cast: Avoiding the developer blues when integrating Bluetooth into your embedded system</a></li><li><a href="http://www.embedded-computing.com/news/db/?49819">GrammaTech at embedded world 2016: Hall 4, booth 658 - Automated Code Analysis Tool CodeSonar(r) v4.2 and special Embedded, M2M and IoT Services</a></li><li><a href="http://www.mil-embedded.com/news/db/?49824">NEW GORE(r) ACOUSTIC VENT GAW333: BRILLIANT AUDIO. EXCEPTIONAL WATER PROTECTION. INCREDIBLY SMALL SIZE.</a></li><li><a href="http://www.mil-embedded.com/news/db/?49805">GORE(r) HIGH FLEX CABLES DELIVER EXCELLENT SIGNAL TRANSMISSION WITH SUPERIOR FLEX LIFE PERFORMANCE FOR SEMICONDUCTOR EQUIPMENT APPLICATIONS</a></li></ul></div><!-- .home-section -->
+<div class="home-section"><h4><a href="http://embedded-computing.com/white-papers/">White Papers</a></h4><ul><li class="image" style="background-color: white; background-image:url(http://i.opensystemsmedia.com/?f=jpg&h=280&q=80&aoe=1&src=http%3A%2F%2Fattachments.opensystemsmedia.com%2FECD6850%2Ffigures%2F2)"><a href="http://www.embedded-computing.com/articles/id/?6850">White Paper: Next Generation Bill of Materials Management: Beyond BOM 101</a></li><li><a href="http://www.embedded-computing.com/articles/id/?6849">Faster, Better, and Cheaper Alternatives to FPGA-based Accelerators</a></li><li><a href="http://www.embedded-computing.com/articles/id/?6836">Automation Industry: Industry 4.0 Challenges and Solutions for Storage Devices</a></li><li><a href="http://www.embedded-computing.com/articles/id/?6820">Managing Windows 10 IoT Devices</a></li><li><a href="http://www.embedded-computing.com/articles/id/?6821">Windows 10 IoT Security</a></li></ul></div><!-- .home-section -->			
+						
+		</div><!-- #home-sections -->
+
+
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			// Slider options
+			function slider_settings(carousel){
+				jQuery('.slider-next').bind('click', function() {
+					carousel.next();
+					return false;
+				});
+
+				jQuery('.slider-prev').bind('click', function() {
+					carousel.prev();
+					return false;
+				});
+			};
+
+			jQuery('.slider').jcarousel({
+				auto: 10,
+				scroll: 1,
+				wrap: 'circular',
+				initCallback: slider_settings,
+				buttonNextHTML: null,
+				buttonPrevHTML: null
+			});
+
+			jQuery('div.featured').hover(function(){
+				jQuery('div.slider-controls').fadeToggle(150);
+			});
+
+			// Shortens long titles and excerpts by height set for each in less
+			jQuery('.slider h2 a, .smallimage h2, .result p').dotdotdot();
+
+			// News #skinny-column is same height as slider and featured article
+			var featuredHeight = jQuery('div.featured').height();
+			jQuery('#skinny-column.results').height(featuredHeight - 16);
+
+			// Alignment for home sections
+			jQuery('#home-sections').masonry({
+				itemSelector: '.home-section'
+			});
+		});
+		</script>
+
+	</section><!-- .main -->
+<div class="footer_leaderboard" style="clear: both; margin: 12px auto; border-top: 1px solid #cecece; padding: 1px;">
+	<div class="container">
+		<div class="ad">
+			<!-- medium_rectangle_3 -->
+			<div id='div-gpt-ad-1421164958161-0' style='width:300px; height:250px; margin-top: 12px;'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1421164958161-0'); });
+			</script>
+			</div>
+		</div><!-- .ad -->
+	</div>
+</div>
+	<footer>
+		<div class="container">
+			<a href="" class="title">Embedded Computing Design</a>
+
+			<!-- AddThis Button END -->
+			<div class="follow">
+				<div class="addthis_toolbox addthis_32x32_style addthis_default_style" addthis:url="http://embedded-computing.com">
+					<ul>
+						<li class="facebook"><a class="addthis_button_facebook_follow" addthis:userid="Embedded.Computing.Design"><i class="icon-facebook-sign icon-large"></i></a></li>
+												<li class="twitter"><a class="addthis_button_twitter_follow" addthis:userid="embedded_comp"><i class="icon-twitter-sign icon-large"></i></a></li>
+																		<li class="linkedin"><a class="addthis_button_linkedin_follow" addthis:url="https://www.linkedin.com/in/embeddedcomputing"><i class="icon-linkedin-sign icon-large"></i></a></li>
+																		<li class="googleplus"><a class="addthis_button_google_follow" addthis:userid="110227408898276919088"><i class="icon-google-plus-sign icon-large"></i></a></li>
+												<li class="rss"><a class="addthis_button_rss_follow" addthis:url="http://m.opensystemsmedia.com/opensystemsmedia/ecd"><i class="icon-rss icon-large"></i></a></li>
+						<li class="youtube"><a class="addthis_button_youtube_follow" addthis:url="https://www.youtube.com/channel/UCMaskSJiCICHOkGB-vR7_xw"><i class="icon-youtube-sign icon-large"></i></a></li>
+					</ul>
+				</div>
+			</div><!-- .follow -->
+
+			<nav class="main">
+				<ul class="topics"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19151 articles"><a href="/articles/">Articles</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19152 white-papers"><a href="/white-papers/">White Papers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19155 products"><a href="/products/">Products</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19153 news"><a href="/news/">News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19154 blogs"><a href="/blog/">Blogs</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23413 5-minute-interviews"><a href="/topics/five-minutes-with/">5-Minute Interviews</a></li>
+</ul>			</nav>
+
+						<div class="app_store">
+				<a href="https://itunes.apple.com/us/app/embedded-computing-design/id496598980?ls=1&mt=8">
+					<img src="http://i.opensystemsmedia.com/?f=gif&bg=F2F3F4&h=40&src=http://osmphp.s3.amazonaws.com/Available_on_the_App_Store_%28black%29.png" border="0" style="margin: 12px 0px;" />
+				</a>
+			</div>
+			
+			
+			
+			
+			<p class="copyright">&copy; MMXVI Embedded Computing Design <br /> An <a href="http://opensystemsmedia.com" target="_blank">OpenSystems Media</a> publication.</p>
+
+			<nav>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a class="archived-issues" href="/emag/">Archived Issues</a></li>
+										<li><a href="http://opensystemsmedia.com/company">About</a></li>
+										<li><a href="http://opensystemsmedia.com/media-kits">Advertise</a></li>
+					<li><b><a href="http://submit.opensystemsmedia.com/">Submit News and Products</a></b></li>
+										<li><a href="/privacy-policy/">Privacy Policy</a></li>
+															<li><a href="http://opensystemsmedia.com/company/directory">Contact</a></li>
+									</ul>
+			</nav>
+			
+						<p class="refresh">Last updated: <a href="http://445b87df-2b97-4263-bc48-bfc63002f354.scalr.ws/post/scalr/varnish/purge_host_token.php?host=embedded-computing.com&token=%5E%2F%24" target="_blank">Thu, 04 Feb 2016 03:17:54 +0000</a></p>
+		</div><!-- .container -->
+	</footer>
+
+<script type='text/javascript' src='http://cloud2.opensystemsmedia.com/share/JS/easydate.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://embedded-computing.com/wp-content/themes/refresh/js/navigation.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://embedded-computing.com/wp-content/themes/refresh/js/jcarousel.min.js?ver=3.4.2'></script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+_qevents.push({
+qacct:"p-65tksMXFN9wIU"
+});
+</script>
+
+<noscript>
+	<div style="display:none;">
+		<img src="//pixel.quantserve.com/pixel/p-65tksMXFN9wIU.gif" border="0" height="1" width="1" alt="Quantcast"/>
+	</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+<div id="fb-root"></div>
+
+<style type="text/css">
+/*
+Default style for WP-PageNavi plugin
+
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+
+.wp-pagenavi {
+	clear: both;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	text-decoration: none;
+	border: 1px solid #BFBFBF;
+	padding: 3px 5px;
+	margin: 2px;
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	border-color: #000;
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold;
+}
+</style>
+
+<!-- Peel_jquery -->
+<div id='div-gpt-ad-1332196512882-0' style='width:2px; height:2px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1332196512882-0'); });
+</script>
+</div>
+<!-- Footer_JS_1 -->
+<div id='div-gpt-ad-1343754747321-0' style='width:3px; height:3px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1343754747321-0'); });
+</script>
+</div>
+<!-- Interstitial_init -->
+<div id='div-gpt-ad-1332184629197-0' style='width:1px; height:1px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1332184629197-0'); });
+</script>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,3008 @@
+    <!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml" class="safari safari-9 webkit context-cannes">
+    <head>
+         
+    <script>
+        if (window.location.href.indexOf('testYoko35943') > -1) {
+            debugger;
+        }
+        
+        if (document.cookie.indexOf('xn_id_yokofoodie') > -1) {
+            window.location.reload(true);
+        }
+        window.onpageshow = function(event) {
+            
+            if (document.cookie.indexOf('xn_id_yokofoodie') > -1) {
+                window.location.reload(true);
+            }
+        };
+    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-title" content="Mode">
+<meta property="og:site_name" content="Mode">
+<meta name="twitter:site" content="@modestories">
+<meta name="fb:page_id" content="974469255910010">
+<meta name="fb:app_id" content="496838953775027">
+<meta property="fb:app_id" content="496838953775027">
+
+<script>
+window.onerror = function (e) {
+    if (window.console) {
+        console.debug(e);
+    }
+    return true;
+};
+</script>
+
+<script type="text/javascript">
+window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:22,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:9,2:8,3:6,4:10,5:3,6:23,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:9,2:8,3:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],6:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:23,2:24,ee:"QJf3ax",gos:"7eSDFh"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:24,2:23,ee:"QJf3ax"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:24,2:23,ee:"QJf3ax"}],9:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:24,2:23,ee:"QJf3ax"}],10:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:6,2:24,ee:"QJf3ax"}],11:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:12,3:10,4:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],12:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],13:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:22,2:23,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:22,2:13,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],22:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],23:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],24:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:23,ee:"QJf3ax"}]},{},["G9z0Bl",4,11,5]);
+;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"86663af057",applicationID:"11175741",sa:1,agent:"js-agent.newrelic.com/nr-632.min.js"}
+</script>
+
+
+<style>
+@font-face {
+    font-family: mode-icons;
+    src: url(http://www.mode.com/assets/font/icon.ttf?1454448763);
+}
+</style>
+	<link type="text/css" rel="stylesheet" href="http://www.mode.com/assets/css/core.css?1&1454462463" />
+	<link type="text/css" rel="stylesheet" href="http://www.mode.com/assets/css/newsfeed.css?1&1454462466" />
+
+
+<link rel="icon" type="image/ico" href="http://www.mode.com/assets/img/mode/favicon.ico?1454448764">
+<link rel="apple-touch-icon-precomposed" type="image/png" href="http://www.mode.com/assets/img/mode/apple-touch-icon.png?v=%24%7Bcachebuster%7D&amp;1454448763">
+
+<style>.tel { display: none !important; }</style>
+<script type="text/javascript">
+    TypekitConfig = {
+        kitId: 'tdh7uvg'
+    };
+    (function() {
+        var tk = document.createElement('script');
+        tk.src = '//use.typekit.com/' + TypekitConfig.kitId + '.js';
+        tk.type = 'text/javascript';
+        tk.async = 'true';
+        tk.onload = tk.onreadystatechange = function() {
+            var rs = this.readyState;
+            if (rs && rs != 'complete' && rs != 'loaded') return;
+            try { Typekit.load(TypekitConfig); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(tk, s);
+    })();
+</script>
+
+	<script type="text/javascript" src="//preferences.truste.com/webservices/js?1&type=glammedia&amp;domain=glam.com"></script>
+
+<script>
+
+function isset(val) { return (typeof val !== 'undefined' && val !== null); }
+function rawurlencode(str) {
+  str = (str + '').toString();
+  return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27')
+    .replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+}
+
+if (window.location.hash.substr(0, 3) === '#!/'
+        && window.location.hash.substr(0, 4) !== '#!//') {
+    window.location.href = window.location.hash.substr(2);
+}
+
+window.yoko = {};
+window.yoko.screen = {"minWide":"1190","maxWide":"1345","minMedium":"800","maxMedium":"955","minSmall":"644","maxSmall":"799","maxNarrow":"643"};
+window.yoko.connect = {"socialAuth":{"facebook":{"authUrl":"http:\/\/www.mode.com\/auth\/facebook?target=http%3A%2F%2Fwww.mode.com%2F%3Fsignup%3Dtrue","onclick":"window.open(this.href, '_blank', 'width=626,height=436,location=no,menubar=no,resizable=yes,scrollbars=yes,toolbar=no,status=no'); return false;","text":"social.signup.facebook","winTarget":"_blank"},"twitter":{"authUrl":"http:\/\/www.mode.com\/auth\/twitter?target=http%253A%252F%252Fwww.mode.com%252F%253Fsignup%253Dtrue","onclick":"window.open(this.href, '_blank', 'width=626,height=436,location=no,menubar=no,resizable=yes,scrollbars=yes,toolbar=no,status=no'); return false;","text":"social.signup.twitter","winTarget":"_blank"}},"footerUrls":{"privacy":"http:\/\/corp.mode.com\/privacy\/","tos":"http:\/\/corp.mode.com\/terms-of-service\/"}};
+    window.yoko.action = 'Home';
+</script>
+
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/deps/deps.js?1&1454462478"></script>
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/index.js?1&1454462257"></script>
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/catalogs/en_US.js?1&1454462255"></script>
+
+
+    <script>
+                window.yoko.jsViews = ["views\/adapt","views\/pinterest","views\/disableLogin","views\/navigation\/signedOut","views\/track","views\/onboarding\/index","views\/home\/news"];
+    </script>
+
+            	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/views/adapt.js?1&1454462351"></script>
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/views/pinterest.js?1&1454462271"></script>
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/views/disableLogin.js?1&1454462330"></script>
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/views/navigation/signedOut.js?1&1454462316"></script>
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/views/track.js?1&1454462325"></script>
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/views/onboarding/index.js?1&1454462376"></script>
+	<script type="text/javascript" src="http://www.mode.com/assets/js/minified/views/home/news.js?1&1454462337"></script>
+
+            
+
+
+    
+   <title>Mode</title>
+<meta name="description" content="Get the best stories on Mode, where people browse, share, and curate stories that inform and inspire.">
+<meta name="twitter:title" content="Mode">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="">
+<meta name="og:title" content="Mode">
+<meta name="og:description" content="Get the best stories on&nbsp;Mode, where people browse, share, and curate stories that inform and inspire.">
+<meta name="og:type" content="">
+    <meta name="twitter:image" content="http://www.mode.com/assets/img/mode/apple-touch-icon.png?v=%24%7Bcachebuster%7D&1454448763">
+    <link rel="image_src" href="http://www.mode.com/assets/img/mode/apple-touch-icon.png?v=%24%7Bcachebuster%7D&1454448763">
+    <meta property="og:url" content="http://www.mode.com/">
+    <meta name="twitter:url" content="http://www.mode.com/">
+        <meta property="og:image" content="http://www.mode.com/assets/img/mode/apple-touch-icon.png?v=%24%7Bcachebuster%7D&1454448763">
+    <meta property="og:image:width" content="144">
+    <meta property="og:image:height" content="144">
+
+
+
+<script>
+    window.GlamShow = window.GlamCreateSlot = window.GlamTrack
+    = window.GlamGetContent = window.GlamCreateIframeSlot
+    = window.GlamSetPageData = window.GlamShowSlotsAsync
+    = function () {};
+    window.GlamShow.stub = true;
+    window.GlamIsAvailable = function () { return false; };
+</script>
+            <script type="text/javascript" src="http://www35.glam.com/gad/glamadapt_jsapi.act?afid=1726481576"></script>
+            <script>
+    window.yoko.slots = {"waterfall":{"fband":{"offset":1,"container":"divAsync","name":"waterfall_fband","size":"756x250,320x300","adType":"adapt"}},"rightrail":{"mrec":{"container":"iframeAsync","name":"rightrail_mrec","size":"300x250","adType":"adapt"},"hpage":{"container":"iframeAsync","name":"rightrail_hpage","size":"300x250,300x600","adType":"adapt"}}};
+    window.yoko.affiliateId = "1726481576";
+    var screenWidth = y$(window).width();
+        window.yoko.viewport = 'desktop';
+    if (screenWidth <= window.yoko.screen.maxNarrow) {
+        window.yoko.viewport = 'mobile';
+    } else if (screenWidth <= window.yoko.screen.maxMedium) {
+        window.yoko.viewport = 'tablet';
+    }
+    for (var pageLoc in window.yoko.slots) {
+        for (var adType in window.yoko.slots[pageLoc]) {
+            // Check if there is more than one size available.
+            if (y$.isPlainObject(window.yoko.slots[pageLoc][adType].size)) {
+                window.yoko.slots[pageLoc][adType].size = window.yoko.slots[pageLoc][adType].size[window.yoko.viewport];
+            }
+            if (window.yoko.slots[pageLoc][adType].container === 'divAsync') {
+                GlamCreateAsyncSlot(window.yoko.affiliateId, window.yoko.slots[pageLoc][adType].size, window.yoko.slots[pageLoc][adType].name);
+            } else {
+                GlamCreateIframeSlot(window.yoko.affiliateId, window.yoko.slots[pageLoc][adType].size, window.yoko.slots[pageLoc][adType].name);
+            }
+        }
+    }
+
+        GlamSetPageData("mch=gl,br,tn,fd,bl");
+            GlamSetPageUrl("http://www.mode.com/");
+        </script>
+    
+
+<script>
+    window.yoko.appContext = {"context":"cannes"};
+    window.yoko.user = null;
+    window.yoko.auth = {"signIn":"http:\/\/www.mode.com\/auth\/signIn?target=http%3A%2F%2Fwww.mode.com%2F&ref=%2F","signUp":"http:\/\/www.mode.com\/auth\/signUp?target=http%3A%2F%2Fwww.mode.com%2F&ref=%2F","signUpWithNoTarget":"http:\/\/www.mode.com\/auth\/signUp?ref=%2F"};
+    window.yoko.canShare = true;
+    window.yoko.content = null;
+window.yoko.categories = {"map":{"animals":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"arts":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"auto":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"beauty":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"books":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"crafts":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"family":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"fashion":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"business":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"food":["Event","Interview","News","Opinion","Person","Place","Product","Recipe","Review","Roundup","Social","Story"],"health":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"home":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"humor":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"movies":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"music":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"science":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"people":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"sports":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"tech":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"],"travel":["Event","Howto","Interview","News","Opinion","Person","Place","Product","Review","Roundup","Social","Story"]},"mkeys":{"Event":"contentType.event","Howto":"contentType.howto","Interview":"contentType.interview","News":"contentType.news","Opinion":"contentType.opinion","Person":"contentType.person","Place":"contentType.place","Product":"contentType.product","Recipe":"contentType.recipe","Restaurant":"contentType.restaurant","Review":"contentType.review","Roundup":"contentType.roundup","Social":"contentType.social","Story":"contentType.story","animals":"category.name.animals","arts":"category.name.arts","auto":"category.name.automotive","beauty":"category.name.beauty","books":"category.name.books","crafts":"category.name.crafts","family":"category.name.family","fashion":"category.name.fashion","business":"category.name.business","food":"category.name.food","health":"category.name.health","home":"category.name.homeGarden","humor":"category.name.humor","movies":"category.name.movies","music":"category.name.music","people":"category.name.people","science":"category.name.science","sports":"category.name.sports","tech":"category.name.tech","travel":"category.name.travel","modevideo":"category.name.modeVideo","custom":{"music":{"Product":"contentType.song"},"movies":{"Product":"contentType.show"}}}};
+window.yoko.affiliateId = '1726481576';
+window.yoko.trusteBannerUrl = '//consent.truste.com/notice?domain=modemediacorp.com&amp;c=teconsent&amp;text=true&amp;js=bb&amp;noticeType=bb';
+window.yoko.currentLanguage = 'en-US';
+</script>
+
+
+
+<script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    
+    var appleDevices = {
+        '320x480': 'iPhone 2G/3G/3GS/4/4si', // Potriat.
+        '480x320': 'iPhone 2G/3G/3GS/4/4s', // Landscape.
+        '320x568': 'iPhone 5/5c/5s', // Potrait.
+        '568x320': 'iPhone 5/5c/5s',
+        '375x667': 'iPhone 6', // Potrait.
+        '667x375': 'iPhone 6', // Landscape.
+        '414x736': 'iPhone 6 Plus', // Potrait.
+        '736x414': 'iPhone 6 Plus', // Landscape.
+        '768x1024': 'iPad 2/3/Air/Mini', // Potrait.
+        '1024x768': 'iPad 2/3/Air/Mini' // Landscape.
+
+    };
+    function getAppleDevice() {
+        
+        var device = /iPad|iPhone/.test(navigator.userAgent) && !window.MSStream;
+        if (device) {
+            var model = appleDevices[window.screen.width + 'x' + window.screen.height];
+            if (model) {
+                return model;
+            }
+        }
+        return false;
+    }
+    ga('create', 'UA-2024191-74', {"cookieDomain":"www.mode.com"});
+        
+    ga('set', 'dimension1', 'signedOut');
+    ga('set', 'dimension2', 'signedOut');
+                var appleDevice = getAppleDevice();
+    if (appleDevice) {
+        ga('set', 'dimension8', appleDevice);
+    }
+    // Needed to convert currentLanguage to lower case as per original request.
+    ga('set', 'dimension5', window.yoko.currentLanguage.toLowerCase());
+    ga('set', 'dimension9', 'US');
+        ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+</script>
+
+
+<script>
+    (function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+      _fbq.push(['addPixelId', '666784406759363']);
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript>
+    <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=666784406759363&amp;ev=PixelInitialized" />
+</noscript>
+
+    </head>
+    <body class="home signedOut">
+                            <div id="consent_blackbar"></div>
+                                        <header class="l-header nav nav-sticky sticky-anchor">
+    <div class="nav-top">
+        <div class="l-hdr-left">
+            <ul id="nav-hamburger" class="nav-links nav-hamburger">
+    <li class="l-has-dlg-dropdown nav-menu">
+        <i class="icon icn-hamburger l-dlg-open"></i>
+        <ul class="l-dialog l-dlg-dropdown l-dlg-collections menu mnu-discover webkit-scroll-container">
+            <li>
+                <ul class="mnu-scrollable-content">
+                    <li class="mnu-channel-cta">
+                        <ul class="channel-menu">
+                                                    <li class="channel-item-bg-img" data-content-title="Glam" style="background-image:url('http://api.ning.com/files/ddTCHyz3Hmz8IHMRu8LrU5vaJTRrEGq2QsURzImVAV69VV6WPMC*L-n73X9xZmc59FVKp8IY-D4vvFwz8K4ARk1M9xq6geCP/glam-700x180.jpg'); box-shadow: 0px 313px rgba(255, 51, 153, .4) inset;">
+                                <a class="channel-link" href="http://www.mode.com/glam">
+                                    <div>
+                                        <div class="channel-item-title" style="background-image: url('http://api.ning.com/files/Dyivh8oZtEwURoNBuoSbQLI7f2jOxGk15zYF7Pai3IYK4Q4CiWR06DYO63Nwh2zoGhtpc6dwAuw98cF-6rp8B6ekQN6aPvKY/glam.svg');"></div>
+                                        <div class="channel-description">
+                                                                                    <p>Fashion your most stylish self.</p>
+                                                                                </div>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li class="channel-item-bg-img" data-content-title="Brash" style="background-image:url('http://api.ning.com/files/ddTCHyz3HmzxHylmG8MDkdI5p3APc5QNOF78PDVqCcu9qk97dTHiVLPMoZI12Xr3nO7l6IzNmi3gIFIafvdWDHAlQYSwVjlO/brash-700x180.jpg'); box-shadow: 0px 313px rgba(64, 59, 98, .4) inset;">
+                                <a class="channel-link" href="http://www.mode.com/brash">
+                                    <div>
+                                        <div class="channel-item-title" style="background-image: url('http://api.ning.com/files/Dyivh8oZtEzPfIPu2Oyg2-Dtf0U4gZtPYu6lu-X0XBSSLdG0PZ0Wwu5q-ofXBHUAN3j1wEXrE*CHV96FnRv5YqgDAghdcyJz/brash.svg');"></div>
+                                        <div class="channel-description">
+                                                                                    <p>Culture, tips &amp; hacks for every man.</p>
+                                                                                </div>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li class="channel-item-bg-img" data-content-title="Tend" style="background-image:url('http://api.ning.com/files/ddTCHyz3Hmy3lqx4jNHQ0psqvRrnQipRS4dgMMkN8zbfo*49LXRzRQmRH1d-7WdqQgKiVWFORfBPOtiV9T*yx2mxiPZkt380/tend-700x180.jpg'); box-shadow: 0px 313px rgba(36, 177, 207, .4) inset;">
+                                <a class="channel-link" href="http://www.mode.com/tend">
+                                    <div>
+                                        <div class="channel-item-title" style="background-image: url('http://api.ning.com/files/Dyivh8oZtEyO4t-eon2wGQ85En-LbbUE9avmKLfE2nTph4-fSiUL4M2IPezYURtn-c5c4I2TPUNXRL7-9zxufiqrD9DIBe2O/tend.svg');"></div>
+                                        <div class="channel-description">
+                                                                                    <p>Modern motherhood. Redefined.</p>
+                                                                                </div>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li class="channel-item-bg-img" data-content-title="Foodie" style="background-image:url('http://api.ning.com/files/ddTCHyz3HmxnazsZUFmytac5G77ivgWBGVQ8V7tEtpoYdNaOLPlc01AgVcItp*vNkeLcCwDVEIEfgCfTKmCMcewApcTlxPD3/foodie-700x180.jpg'); box-shadow: 0px 313px rgba(237, 101, 53, .4) inset;">
+                                <a class="channel-link" href="http://www.mode.com/foodie">
+                                    <div>
+                                        <div class="channel-item-title" style="background-image: url('http://api.ning.com/files/Dyivh8oZtEz*u0U5XQrfyPr486xOpvD4oEA45lIPmW15ZWbXY1FJrk4awh1nQZr9mX9NCrW2xx1amfPFcUefpGAvGY-ZHIgy/foodie.svg');"></div>
+                                        <div class="channel-description">
+                                                                                    <p>Discover something delicious.</p>
+                                                                                </div>
+                                    </div>
+                                </a>
+                            </li>
+                                                    <li class="channel-item-bg-img" data-content-title="Bliss" style="background-image:url('http://api.ning.com/files/ddTCHyz3Hmzn3NN*w4Xu3Ust9XZe4tW-zZJHoTTbf4Pp134UJucAH62CmAgIQxD4OnBcLGQbP2KBF2wCEA-joz8FsbEW9dd7/bliss-700x180.jpg'); box-shadow: 0px 313px rgba(65, 118, 48, .4) inset;">
+                                <a class="channel-link" href="http://www.mode.com/bliss">
+                                    <div>
+                                        <div class="channel-item-title" style="background-image: url('http://api.ning.com/files/Dyivh8oZtEwEILCtf9mFlzWu5o75kHO8KsmliRSavNMCRtX-3BOH4gOzCX6vKXq42XUBUjWqxKMiu42McXu8JjQxdAN1MG0T/bliss.svg');"></div>
+                                        <div class="channel-description">
+                                                                                    <p>Shape a mindful, balanced life.</p>
+                                                                                </div>
+                                    </div>
+                                </a>
+                            </li>
+                                                </ul>
+                    </li>
+                    <li class="mnu-prom-video-cta">
+                        <a class="mnu-video-link" href="/mode-video" data-content-title="Mode Video">
+                            <span class="mnu-video-head"></span>
+                            <span class="mnu-video-desc">The best videos, curated for you.</span>
+                            <div class="mnu-prom-thumbnail-cta">
+                                <div class="mnu-prom-video" style="background-image:url('http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/32/5b/0a5f6258-6c70-49a8-bcae-5351b6f75b32.jpg');">
+                                    <i class="icon icn-video-play mnu-prom-video-play"></i>
+                                    <div class="mnu-prom-video-grad">
+                                        <span class="mnu-prom-video-title">Cheer On the Broncos With This Sexy Super Bowl Look</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mnu-categories-cta">
+                        <div class="mnu-category-head mnu-mobile-row">CATEGORIES</div>
+                        <ul class="categories-menu">
+                                                            <li>
+                                    <a href="http://www.mode.com/animals" data-content-title="Animals" class="category-item">
+                                        Animals
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/arts" data-content-title="Arts & Culture" class="category-item">
+                                        Arts & Culture
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/automotive" data-content-title="Automotive" class="category-item">
+                                        Automotive
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/beauty-hair" data-content-title="Beauty" class="category-item">
+                                        Beauty
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/books" data-content-title="Books" class="category-item">
+                                        Books
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/diy-crafts" data-content-title="Crafts" class="category-item">
+                                        Crafts
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/family-parenting" data-content-title="Family" class="category-item">
+                                        Family
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/fashion-style" data-content-title="Fashion" class="category-item">
+                                        Fashion
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/finance-business" data-content-title="Finance & Business" class="category-item">
+                                        Finance & Business
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/food-drink" data-content-title="Food & Drink" class="category-item">
+                                        Food & Drink
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/health-wellness" data-content-title="Health & Wellness" class="category-item">
+                                        Health & Wellness
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/home-garden" data-content-title="Home & Garden" class="category-item">
+                                        Home & Garden
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/humor" data-content-title="Humor" class="category-item">
+                                        Humor
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/movies-tv" data-content-title="Movies & TV" class="category-item">
+                                        Movies & TV
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/music-radio" data-content-title="Music" class="category-item">
+                                        Music
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/nature-science" data-content-title="Nature & Science" class="category-item">
+                                        Nature & Science
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/people-society" data-content-title="People & Society" class="category-item">
+                                        People & Society
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/sports" data-content-title="Sports" class="category-item">
+                                        Sports
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/tech-gadgets" data-content-title="Tech & Gadgets" class="category-item">
+                                        Tech & Gadgets
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="http://www.mode.com/travel-destinations" data-content-title="Travel" class="category-item">
+                                        Travel
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </li>
+                    
+                                        <li class="mnu-bottom-cta">
+                        <ul class="mnu-about-us">
+
+                                                        <li>
+                                <a href="http://www.mode.com/about" target="_blank">
+                                    About Us
+                                                                    </a>
+                            </li>
+                                                        <li>
+                                <a href="https://modemedia.zendesk.com/hc/en-us" target="_blank">
+                                    Help
+                                                                    </a>
+                            </li>
+                            
+                                                                                                                                                                                               <li>
+                                    <a href="javascript:void(0);" class="mnu-country-language" data-languages="[{&quot;language&quot;:&quot;de&quot;,&quot;languageVariant&quot;:&quot;DE&quot;,&quot;languageWithVariant&quot;:&quot;de-DE&quot;,&quot;displayName&quot;:&quot;Deutsch&quot;,&quot;selected&quot;:false},{&quot;language&quot;:&quot;en&quot;,&quot;languageVariant&quot;:&quot;US&quot;,&quot;languageWithVariant&quot;:&quot;en-US&quot;,&quot;displayName&quot;:&quot;English&quot;,&quot;selected&quot;:true}]" data-regions="[{&quot;region&quot;:&quot;CA&quot;,&quot;displayName&quot;:&quot;Canada&quot;,&quot;flagImage&quot;:&quot;http:\/\/api.ning.com\/files\/-oaic7y9RVTpLwG-iy76v-g14xx3dQ2c0NYdIb28kTE9fYB3eK9Dty1IndZox9-d0T-agTugt-lz*OjpW0*Oz1Lin-J2bMRn\/canada_flag_3x.png&quot;,&quot;selected&quot;:false},{&quot;region&quot;:&quot;DE&quot;,&quot;displayName&quot;:&quot;Germany&quot;,&quot;flagImage&quot;:&quot;http:\/\/api.ning.com\/files\/FzBIK0EevxCi5iIeo9NufM-ucYNnVsM4sG-zXUllYKICRgJMOEFjuB3clrTsu64NctD33OmPhQCYJ13w7uvg9xyAAxquuRUT\/germany_flag_3x.png&quot;,&quot;selected&quot;:false},{&quot;region&quot;:&quot;UK&quot;,&quot;displayName&quot;:&quot;United Kingdom&quot;,&quot;flagImage&quot;:&quot;http:\/\/api.ning.com\/files\/FzBIK0EevxANVkdNxb9q6H7iXGXHN0EuDG34u72JYNz9Dz6nGuSx28kWBGFV4EKFlvsOebkw9O-jG5bDTOUXyGNZz8utWWSn\/UK_flag_3x.png&quot;,&quot;selected&quot;:false},{&quot;region&quot;:&quot;US&quot;,&quot;displayName&quot;:&quot;United States&quot;,&quot;flagImage&quot;:&quot;http:\/\/api2.ning.com\/files\/-oaic7y9RVSqgY2z6M9g4zyb7DdneESNP59Lh0MvZ4gdF3bDW9cToBCp1BgK2yoQekVt35LEGyy1qQVS-WuYdcSAMzvIVMQk\/US_flag_3x.png&quot;,&quot;selected&quot;:true}]" data-i18n-ui-language=1>
+                                        <span class="mnu-region-flag" style="background-image:url('http://api2.ning.com/files/-oaic7y9RVSqgY2z6M9g4zyb7DdneESNP59Lh0MvZ4gdF3bDW9cToBCp1BgK2yoQekVt35LEGyy1qQVS-WuYdcSAMzvIVMQk/US_flag_3x.png');"></span>
+                                        <span class="mnu-region-link">Country & Language</span>
+                                    </a>
+                                </li>
+                                                                                    <li>
+                                <a                                          href="http://corp.mode.com/contact-us/"
+                                        target="_blank"                                    >
+                                    Advertise With Us
+                                    
+                                </a>
+                            </li>
+                                                        <li>
+                                <a                                          href="http://corp.mode.com/"
+                                        target="_blank"                                    >
+                                    Our Company
+                                    
+                                </a>
+                            </li>
+                                                        <li class="ad-choices-link">
+                                <a                                          href="javascript:view();"
+                                                                            >
+                                    Ad Choices
+                                                                        <i class="icon icn-ad-choices"></i>
+                                    
+                                </a>
+                            </li>
+                                                        <li class="truste-prefs-link">
+                                <a                                          onclick="truste.eu &amp;&amp; truste.eu.clickListener()"
+                                    >
+                                    Cookie Preferences
+                                    
+                                </a>
+                            </li>
+                                                        <li>
+                                <a                                          href="http://corp.mode.com/privacy/"
+                                        target="_blank"                                    >
+                                    Privacy Policy
+                                    
+                                </a>
+                            </li>
+                                                        <li>
+                                <a                                          href="http://corp.mode.com/terms-of-service/"
+                                        target="_blank"                                    >
+                                    Terms of Service
+                                    
+                                </a>
+                            </li>
+                                                        <li>
+                                <a                                          href="http://corp.mode.com/copyright/"
+                                        target="_blank"                                    >
+                                    Copyright Policy
+                                    
+                                </a>
+                            </li>
+                                                                                    <li class="mnu-social-links">
+                                <a  href="https://twitter.com/modestories"
+                                        target="_blank">
+                                    
+                                                                        <i class="icon icn-twitter"></i>
+                                                                    </a>
+                            </li>
+                                                        <li class="mnu-social-links">
+                                <a  href="https://www.facebook.com/modestories"
+                                        target="_blank">
+                                    
+                                                                        <i class="icon icn-facebook"></i>
+                                                                    </a>
+                            </li>
+                                                        <li class="mnu-social-links">
+                                <a  href="https://www.pinterest.com/modestories/"
+                                        target="_blank">
+                                    
+                                                                        <i class="icon icn-pinterest"></i>
+                                                                    </a>
+                            </li>
+                                                        <li class="mnu-social-links">
+                                <a  href="https://www.instagram.com/modestories/"
+                                        target="_blank">
+                                    
+                                                                        <i class="icon icn-instagram"></i>
+                                                                    </a>
+                            </li>
+                                                        <li class="mnu-social-links">
+                                <a  href="https://www.youtube.com/channel/UCrKE6lsllHfJgcUexz3BBhA"
+                                        target="_blank">
+                                    
+                                                                        <i class="icon icn-youtube"></i>
+                                                                    </a>
+                            </li>
+                                                    </ul>
+                    </li>
+                    <li class="mnu-mobile-bottom-cta">
+                        <ul class="mnu-mobile-about-us mnu-accordion">
+                            <li class="mnu-accordion-head mnu-mobile-row">About</li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row">
+                                <a                                          href="http://www.mode.com/about"
+                                        target="_blank"                                    >
+                                About Us
+                                                                </a>
+                            </li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row">
+                                <a                                          href="https://modemedia.zendesk.com/hc/en-us"
+                                        target="_blank"                                    >
+                                Help
+                                                                </a>
+                            </li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row">
+                                <a                                          href="http://corp.mode.com/contact-us/"
+                                        target="_blank"                                    >
+                                Advertise With Us
+                                                                </a>
+                            </li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row">
+                                <a                                          href="http://corp.mode.com/"
+                                        target="_blank"                                    >
+                                Our Company
+                                                                </a>
+                            </li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row ad-choices-link">
+                                <a                                          href="javascript:view();"
+                                                                            >
+                                Ad Choices
+                                                                <i class="icon icn-ad-choices"></i>
+                                                                </a>
+                            </li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row truste-prefs-link">
+                                <a                                          onclick="truste.eu &amp;&amp; truste.eu.clickListener()"
+                                    >
+                                Cookie Preferences
+                                                                </a>
+                            </li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row">
+                                <a                                          href="http://corp.mode.com/privacy/"
+                                        target="_blank"                                    >
+                                Privacy Policy
+                                                                </a>
+                            </li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row">
+                                <a                                          href="http://corp.mode.com/terms-of-service/"
+                                        target="_blank"                                    >
+                                Terms of Service
+                                                                </a>
+                            </li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row">
+                                <a                                          href="http://corp.mode.com/copyright/"
+                                        target="_blank"                                    >
+                                Copyright Policy
+                                                                </a>
+                            </li>
+                                                         <li class="mnu-accordion-item mnu-mobile-row mnu-mobile-social-icons">
+                                                            <a                                          href="https://twitter.com/modestories"
+                                        target="_blank"                                    >
+                                
+                                                                <i class="icon icn-twitter"></i>
+                                                                </a>
+                                                            <a                                          href="https://www.facebook.com/modestories"
+                                        target="_blank"                                    >
+                                
+                                                                <i class="icon icn-facebook"></i>
+                                                                </a>
+                                                            <a                                          href="https://www.pinterest.com/modestories/"
+                                        target="_blank"                                    >
+                                
+                                                                <i class="icon icn-pinterest"></i>
+                                                                </a>
+                                                            <a                                          href="https://www.instagram.com/modestories/"
+                                        target="_blank"                                    >
+                                
+                                                                <i class="icon icn-instagram"></i>
+                                                                </a>
+                                                            <a                                          href="https://www.youtube.com/channel/UCrKE6lsllHfJgcUexz3BBhA"
+                                        target="_blank"                                    >
+                                
+                                                                <i class="icon icn-youtube"></i>
+                                                                </a>
+                                                        </li>
+                            <li class="mnu-accordion-bottom"></li>
+                        </ul>
+                        <ul class="mnu-mobile-region mnu-accordion">
+                                                                                                                                                                                                                                                                                <li class="mnu-accordion-head mnu-mobile-row">
+                                    <span>COUNTRY</span>
+                                    <span href="javascript:void(0);" class="mnu-region-cta">
+                                        <span class="mnu-region-flag" style="background-image:url('http://api2.ning.com/files/-oaic7y9RVSqgY2z6M9g4zyb7DdneESNP59Lh0MvZ4gdF3bDW9cToBCp1BgK2yoQekVt35LEGyy1qQVS-WuYdcSAMzvIVMQk/US_flag_3x.png');"></span>
+                                        <span class="mnu-region-link mnu-selected-region">United States</span>
+                                    </span>
+                                </li>
+                                                                                                                        <li class="mnu-accordion-item mnu-mobile-row mnu-mobile-change-region" data-region=CA data-flag=http://api.ning.com/files/-oaic7y9RVTpLwG-iy76v-g14xx3dQ2c0NYdIb28kTE9fYB3eK9Dty1IndZox9-d0T-agTugt-lz*OjpW0*Oz1Lin-J2bMRn/canada_flag_3x.png>
+                                    <span href="javascript:void(0);" class="">
+                                        <span class="mnu-region-flag" style="background-image:url('http://api.ning.com/files/-oaic7y9RVTpLwG-iy76v-g14xx3dQ2c0NYdIb28kTE9fYB3eK9Dty1IndZox9-d0T-agTugt-lz*OjpW0*Oz1Lin-J2bMRn/canada_flag_3x.png');"></span>
+                                        <span class="mnu-region-link">Canada</span>
+                                    </span>
+                                </li>
+                                                            <li class="mnu-accordion-item mnu-mobile-row mnu-mobile-change-region" data-region=DE data-flag=http://api.ning.com/files/FzBIK0EevxCi5iIeo9NufM-ucYNnVsM4sG-zXUllYKICRgJMOEFjuB3clrTsu64NctD33OmPhQCYJ13w7uvg9xyAAxquuRUT/germany_flag_3x.png>
+                                    <span href="javascript:void(0);" class="">
+                                        <span class="mnu-region-flag" style="background-image:url('http://api.ning.com/files/FzBIK0EevxCi5iIeo9NufM-ucYNnVsM4sG-zXUllYKICRgJMOEFjuB3clrTsu64NctD33OmPhQCYJ13w7uvg9xyAAxquuRUT/germany_flag_3x.png');"></span>
+                                        <span class="mnu-region-link">Germany</span>
+                                    </span>
+                                </li>
+                                                            <li class="mnu-accordion-item mnu-mobile-row mnu-mobile-change-region" data-region=UK data-flag=http://api.ning.com/files/FzBIK0EevxANVkdNxb9q6H7iXGXHN0EuDG34u72JYNz9Dz6nGuSx28kWBGFV4EKFlvsOebkw9O-jG5bDTOUXyGNZz8utWWSn/UK_flag_3x.png>
+                                    <span href="javascript:void(0);" class="">
+                                        <span class="mnu-region-flag" style="background-image:url('http://api.ning.com/files/FzBIK0EevxANVkdNxb9q6H7iXGXHN0EuDG34u72JYNz9Dz6nGuSx28kWBGFV4EKFlvsOebkw9O-jG5bDTOUXyGNZz8utWWSn/UK_flag_3x.png');"></span>
+                                        <span class="mnu-region-link">United Kingdom</span>
+                                    </span>
+                                </li>
+                                                            <li class="mnu-accordion-item mnu-mobile-row mnu-mobile-change-region" data-region=US data-flag=http://api2.ning.com/files/-oaic7y9RVSqgY2z6M9g4zyb7DdneESNP59Lh0MvZ4gdF3bDW9cToBCp1BgK2yoQekVt35LEGyy1qQVS-WuYdcSAMzvIVMQk/US_flag_3x.png>
+                                    <span href="javascript:void(0);" class="">
+                                        <span class="mnu-region-flag" style="background-image:url('http://api2.ning.com/files/-oaic7y9RVSqgY2z6M9g4zyb7DdneESNP59Lh0MvZ4gdF3bDW9cToBCp1BgK2yoQekVt35LEGyy1qQVS-WuYdcSAMzvIVMQk/US_flag_3x.png');"></span>
+                                        <span class="mnu-region-link">United States</span>
+                                    </span>
+                                </li>
+                                                        <li class="mnu-accordion-bottom"></li>
+                        </ul>
+                                                <ul class="mnu-mobile-language mnu-accordion">
+                            <li class="mnu-accordion-head mnu-mobile-row">LANGUAGE</li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row mnu-mobile-change-language" data-language-with-variant=de-DE>Deutsch</li>
+                                                        <li class="mnu-accordion-item mnu-mobile-row mnu-mobile-change-language" data-language-with-variant=en-US>English</li>
+                                                        <li class="mnu-accordion-bottom"></li>
+                        </ul>
+                                            </li>
+                    <li>
+                        <span class="mnu-close-btn">
+                            <i class="icon icn-close-l"></i>
+                        </span>
+                    </li>
+                <ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+        </div>
+        <a class="nav-logo cannes-logo" href="http://www.mode.com/" title="Mode">
+            <svg preserveAspectRatio="xMinYMin" height="100%" width="100%" viewBox="0 0 95 22">
+                <path d="m 89.601008,12.956137 -7.2,0 0,4.6 12.6,0 0,3.7 -16.8,0 0,-19.4000002 16.2,0 0,3.7 -12,0 0,3.8 7.2,0 0,3.6000002 z m -36.6,8.3 0,-19.4000002 9.1,0 c 3.6,0 5.9,1 7.6,2.8 1.7,1.8 2.6,4.2 2.6,6.9000002 0,2.8 -1,5.4 -2.8,7.2 -1.7,1.6 -3.8,2.6 -7.4,2.6 l -9.1,0 z m 9,-3.6 c 2.2,0 3.2,-0.5 4.2,-1.4 1.1,-1.1 1.8,-2.7 1.8,-4.6 0,-1.8000002 -0.6,-3.4000002 -1.6,-4.5000002 -1,-1 -2,-1.5 -4.3,-1.5 l -4.7,0 0,12.1000002 4.6,0 z m -25.1,-16.4000002 c 6.1,0 11.1,4.6 11.1,10.3000002 0,5.8 -4.9,10.3 -11.1,10.3 -6.2,0 -11,-4.6 -11,-10.3 0,-5.7000002 4.8,-10.3000002 11,-10.3000002 z m 0,17.0000002 c 3.7,0 6.6,-3 6.6,-6.7 0,-3.6000002 -2.9,-6.6000002 -6.6,-6.6000002 -3.7,0 -6.5,3 -6.5,6.6000002 0,3.6 2.8,6.7 6.5,6.7 z m -20.3,3 0,-11.2 -0.1,0 -5.5,9 -1.2,0 -5.4,-9.1000002 -0.1,0 0,11.3000002 -4.1,0 0,-19.4000002 4.1,0 6.4,10.6000002 0.1,0 6.3,-10.6000002 4,0 0,19.4000002 -4.5,0 z" />
+            </svg>
+        </a>
+        <div class="l-hdr-right">
+                    <ul class="nav-auth nav-links">
+                <li>
+                    <span title="Sign Up / Log In">Sign Up /<br> Log In</span>
+                </li>
+            </ul>
+                </div>
+        <div class="l-hdr-right search">
+            <div class="nav-search-collapsible">
+                <div class="nav-search menu">
+    <form id="nav_search" action="http://www.mode.com/search">
+        <input type="text" class="inp-search" name="q" placeholder="search" value="">
+                <i class="nav-clear-button icon icn-clear"></i>
+        <span class="nav-cancel-button">Cancel</span>
+        <button type="submit" class="btn-primary nav-search-button">search</button>
+    </form>
+</div>
+
+                <ul class="nav-btn-search">
+                    <li class="icon icn-search"></li>
+                    <li class="nav-btn-val">search</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+                            <section class="l-content l-cnt-prologue banner banner-cap banner-expand signup" style="">
+                <div class="l-cnt-body">
+                    <div class="l-row">
+    <div class="l-box l-box-bleed signup-img email-flow">
+        <div class="email-signin-invalid">
+            <span>Please double-check your email address and password, then try again.</span>
+        </div>
+        <div class="l-box-module">
+            <div class="connect seven">
+                <h1>The best stories. Curated daily. Share. Collect. Make it yours.</h1>
+                <ul class="social-connect">
+        <li>
+       <a class="btn-social btn-soc-facebook " href="http://www.mode.com/auth/facebook?target=http%3A%2F%2Fwww.mode.com%2F%3Fsignup%3Dtrue" target="_blank"        onclick="window.open(this.href, &#039;_blank&#039;, &#039;width=626,height=436,location=no,menubar=no,resizable=yes,scrollbars=yes,toolbar=no,status=no&#039;); return false;">Sign up with Facebook</a>
+    </li>
+        <li>
+       <a class="btn-social btn-soc-twitter " href="http://www.mode.com/auth/twitter?target=http%253A%252F%252Fwww.mode.com%252F%253Fsignup%253Dtrue" target="_blank"        onclick="window.open(this.href, &#039;_blank&#039;, &#039;width=626,height=436,location=no,menubar=no,resizable=yes,scrollbars=yes,toolbar=no,status=no&#039;); return false;">Sign up with Twitter</a>
+    </li>
+    </ul>
+
+                <div class="signup-with-email">
+    <a href="#" class="show_email_signup" {CLASS}>Sign up with email</a>
+    |
+    <a href="#" class="launch-email-signin" {CLASS}>Log in</a>
+</div>
+
+<div class="email-signup email_signup_form">
+    <div class="ems-box">
+        <div class="ems-field ems-fld-long">
+            <input type="text" name="fullName" value="" placeholder="Name*" />
+            <i class="icon ems-input-success"></i>
+            <i class="icon ems-input-error ems_input_error"></i>
+            <div class="ems-input-failed-msg"></div>
+        </div>
+        <div class="ems-field ems-fld-long">
+            <input type="email" name="emailAddress" value="" placeholder="Email*" />
+            <i class="icon ems-input-success"></i>
+            <i class="icon ems-input-error ems_input_error"></i>
+            <div class="ems-input-failed-msg"></div>
+        </div>
+        <div class="ems-field ems-fld-long">
+            <input type="password" name="password" value="" placeholder="Password*" />
+            <i class="icon ems-input-success"></i>
+            <i class="icon ems-input-error ems_input_error"></i>
+            <div class="ems-input-failed-msg"></div>
+        </div>
+        <div class="ems-field ems-fld-medium ems-dob-opt">
+            <input type="text" name="birthYear" value="" maxlength="4" placeholder="Birth year (e.g., 1984)" />
+            <i class="icon ems-input-success"></i>
+            <i class="icon ems-input-error ems_input_error"></i>
+            <div class="ems-input-failed-msg"></div>
+        </div>
+        <div class="ems-field ems-fld-short ems_sex_opt" data-sex-val="m">
+            <div class="ems-radio-label">
+                M
+            </div>
+        </div>
+        <div class="ems-field ems-fld-short ems_sex_opt" data-sex-val="f">
+            <div class="ems-radio-label">
+                F
+            </div>
+        </div>
+        <input type="hidden" name="sex" value="" />
+        <button name="submit" class="submit ">SIGN UP</button>
+    </div>
+    <div class="ems-has-account">
+        Already have an account? <a href="#" class="show_email_signin" {CLASS}>Log in</a>
+    </div>
+</div>
+
+                <form class="email-signin-form">
+    <div class="email-signin email_signin_form">
+        <div class="ems-box">
+            <div class="ems-field ems-fld-long">
+                <input type="email" name="emailAddress" value="" placeholder="Email*" />
+            </div>
+            <div class="ems-field ems-fld-long">
+                <input type="password" name="password" value="" placeholder="Password*" />
+            </div>
+            <button name="submit" class="submit ">LOG IN</button>
+        </div>
+        <div class="ems-forgot-psw">
+            <a href="#" class="ems-forgot-psw ems_forgot_psw">Forgot password?</a>
+        </div>
+    </div>
+    <div class="l-dlg-privacy">
+        Don't worry, we will never post to Facebook or Twitter without your permission.
+        <span></span>
+        By creating an account, you agree to Mode's <a href='http://corp.mode.com/terms-of-service/' target='_blank'>Terms of Service</a> and <a href='http://corp.mode.com/privacy/' target='_blank'>Privacy Policy</a>.
+    </div>
+    <div class="email-signin email_signin_form">
+        <div class="ems-has-account">
+            Don't have an account? <a href="#" class="show_email_signup">Sign up</a>
+        </div>
+    </div>
+</form>
+
+                <div class="email-forgot-psw email_forgot_psw">
+    <div class="ems-box">
+        <div class="ems-field ems-fld-long">
+            <input type="email" name="email" value="" placeholder="you@example.com*" />
+            <i class="icon ems-input-success"></i>
+            <i class="icon ems-input-error ems_input_error"></i>
+            <div class="ems-input-failed-msg"></div>
+        </div>
+        <button name="submit" class="submit ">CONTINUE</button>
+    </div>
+    <div class="ems-forgot-psw">
+        <a href="#" class="show_email_signin" {CLASS}>Back to login</a>
+    </div>
+</div>
+<div class="email-psw-reset-sent email_psw_reset_sent">
+    <h2>We sent you a link to change your password.</h2>
+    <div class="ems-box">
+        <button name="submit" class="submit show_email_signin">LOG IN</button>
+    </div>
+    <div class="ems-forgot-psw">
+        <a href="#" class="ems_forgot_psw" {CLASS}>Didn't get it?</a>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </section>
+                <section class="l-content home">
+            <div class="l-cnt-body">
+                <div class="l-row l-row-balanced">
+    <div class="l-boxes l-box-right four feeds right-rail ada-right-rail" data-channel-id="">
+                                
+                                                                                                <ul class="l-row feed people-to-follow people_to_follow" data-channel="">
+            <li class="ptf-header">
+                top curators
+            </li>
+                                                            <li class="ptf-person-to-follow image img-cover ptf_person_to_follow"
+    style="background-image: url(http://api2.ning.com/files/p0ZiZvXgHQja0lPnHiuWkczwRB45JUByYmqIIh8VH8ONRo9jkmvWJxNMIFzadjxQnSIeJkHFDZ9TMy*6d79NwvAPvkO0KGvT/Office~_for_the_Backyard_011.jpg?width=500&amp;crop=1%3A1);"
+    data-id="6571683:Yuser:19288">
+    <div class="ptf-person-info">
+        <div class="ptf-author">
+            <a class="avatar avt-medium ptf-avatar" href="http://www.mode.com/profiles/best-friends-for-frosting/19288">
+                <img class="avt-image" src="http://api2.ning.com/files/ojiQSUpck5QFLUNdHdPRHIXh13IH6pa31grFEwf5oO90GzrFx1Sz5lLl17NdbuYm0nQUlbLMcZ4gRMFYuKbrzvPHEvmnMS5S/BFFFLOGO.jpg?width=100&amp;crop=1%3A1" />
+            </a>
+        </div>
+        <div class="ptf-name">
+            <a href="http://www.mode.com/profiles/best-friends-for-frosting/19288">Best Friends For Frosting</a>
+        </div>
+                <div class="ptf-story-title">Your daily inspiration guide for stylish and creative…</div>
+                <button class="button btn-action btn-follow ptf-btn-follow ptf_btn_follow"
+    title="Follow"
+    data-action="follow"
+    data-follower-id=""
+    data-followee-id=""
+    data-ga-label="People Cards">
+    <i class="icon icn-follow"></i>
+</button>
+
+    </div>
+</li>
+
+                                                            <li class="ptf-person-to-follow image img-cover ptf_person_to_follow"
+    style="background-image: url(http://api2.ning.com/files/nBD8FQWarq*1dWu5*jG1bdCySxZEfyEvtiMQR9XCmMEtydN-rzrE567i*ZDf3ZjidKFv3fAGV8nsy2pNhsLgOcmfo3HMYLJ8/07274178.interactive.a.jpg?width=500&amp;crop=1%3A1);"
+    data-id="6571683:Yuser:2097801">
+    <div class="ptf-person-info">
+        <div class="ptf-author">
+            <a class="avatar avt-medium ptf-avatar" href="http://www.mode.com/profiles/crissy-page/2097801">
+                <img class="avt-image" src="http://api2.ning.com/files/nBD8FQWarq9shNWkRQ7uwXA7aVbWCrDP0PIciFA68bhSyvtvVL0mkcVKWF9XedV3CH3IagoR48MWkmJCsvvW-z8fgP4dunsJ/crissy.jpg?width=100&amp;crop=1%3A1" />
+            </a>
+        </div>
+        <div class="ptf-name">
+            <a href="http://www.mode.com/profiles/crissy-page/2097801">Crissy Page</a>
+        </div>
+                <div class="ptf-story-title">Lifestyle &amp; family blogger; founder and CEO of…</div>
+                <button class="button btn-action btn-follow ptf-btn-follow ptf_btn_follow"
+    title="Follow"
+    data-action="follow"
+    data-follower-id=""
+    data-followee-id=""
+    data-ga-label="People Cards">
+    <i class="icon icn-follow"></i>
+</button>
+
+    </div>
+</li>
+
+                                                            <li class="ptf-person-to-follow image img-cover ptf_person_to_follow"
+    style="background-image: url(http://api.ning.com/files/eM6kNE1cbFy2te2bonDx0OnICLAWuOCKZzRFy9fd*FRLsBA8o81QGqoYQrr*5iXq80Z7iEIVSN7nytsgaJpQd86MaD76jYPk/oreocookiebars_685x1024.jpg?width=500&amp;crop=1%3A1);"
+    data-id="6571683:Yuser:2790546">
+    <div class="ptf-person-info">
+        <div class="ptf-author">
+            <a class="avatar avt-medium ptf-avatar" href="http://www.mode.com/profiles/amelia-old/2790546">
+                <img class="avt-image" src="http://api.ning.com/files/Ytz*1w0-YzDmLh2FYbRjvMKGdBMsPLk-dyq*xxHfaoM5hkmi8gGPOZzWaXQM0r3GdPMLHfrgRsi1nVoYiy-bGsG2ZDINJhLr/109851_92020978276812308_n_1.jpg?width=100&amp;crop=1%3A1" />
+            </a>
+        </div>
+        <div class="ptf-name">
+            <a href="http://www.mode.com/profiles/amelia-old/2790546">Amelia Old</a>
+        </div>
+                <div class="ptf-story-title">Digital Influencer, Connector, &amp; Owner of Pretty in the…</div>
+                <button class="button btn-action btn-follow ptf-btn-follow ptf_btn_follow"
+    title="Follow"
+    data-action="follow"
+    data-follower-id=""
+    data-followee-id=""
+    data-ga-label="People Cards">
+    <i class="icon icn-follow"></i>
+</button>
+
+    </div>
+</li>
+
+                    </ul>
+    
+            <div class="l-row l-row-centered">
+            <div class="rrail-mrec rrail-ad ada-slot" id="rightrail_mrec_container"></div>
+
+        </div>
+    <div class="l-row feed trending-content">
+            <div class='fd-title'>Trending Stories</div>
+        <ul class="fd-trending-content-list">
+                                        <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/healthy-kids-breakfasts-to-eat-on-the-way-to-school/11987824">
+        <div class="content-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOJfIyPjE5PMLl2fmW0zg5JzaH*-MA9BB-crJA8YT1x-1zeKsNZXblNu5uw0zMgo9ZPb3KIcjf-C7/Best_Banana_Bread.jpg?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    1
+                </div>
+            </div>
+        </div>
+        <div class="content-title">Healthy Kids' Bre&shy;akfas&shy;ts to Eat on the Way to School</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/why-you-might-want-to-give-that-fad-diet-a-chance/11982364">
+        <div class="content-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOK*1Q0vg0iG20sNemnXESKTso0TlIrvVBLiGHMAukRwk5aqX2SFCj8lQxNghRbFIJ*N8rjHj71wg/foodforyourbloodtype.jpeg?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    2
+                </div>
+            </div>
+        </div>
+        <div class="content-title">Why You Might Want to Give That Fad Diet a Chance</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/monsters-unleashed-dealing-with-tween-puberty/11990622">
+        <div class="content-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOBdt7zbHSh7I9QDFXvPW6gOAh9bH3DqVsZHT2e*LpiuHEunbjKdFgNgEtDy78X4tZ3wOOCaJDSck/group_of_kids.jpg?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    3
+                </div>
+            </div>
+        </div>
+        <div class="content-title">Monsters Unleashed: Dealing With Tween Puberty</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/behind-daisy-ridleys-red-carpet-style/11959693">
+        <div class="content-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOE0mafVj2J8S9BgkiDOe7z1IDxy0I6p6XQqA3PLTGe8LgHu*jTEQH8ddj1*C97MJvulReeyLXJL2/daisy_~y_red_carpet_style_01.jpg?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    4
+                </div>
+            </div>
+        </div>
+        <div class="content-title">Behind Daisy Ridley's Red Carpet Style</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/forget-the-flowers-10-gifts-she-wants-this-valentines-day/11949876">
+        <div class="content-image" style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/d7/28/w:200/0b910abc-0f47-41da-b7bd-cb945d4d28d7.jpg);">
+            <div class="item-number">
+                <div class="r-skew">
+                    5
+                </div>
+            </div>
+        </div>
+        <div class="content-title">Forget the Flowers! 10 Gifts She Wants This Valentine's Day</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/the-best-dressed-stars-at-the-2016-critics-choice-awards/11972008">
+        <div class="content-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOERwHmQqQHqjD035sqhlfIuGApIeLYoH45lAP26MDrMhaABwl3rEAl6asiXAjaCdw49Nv2ROjnRx/Screen~t_2016_01_18_00.47.18.png?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    6
+                </div>
+            </div>
+        </div>
+        <div class="content-title">The Best-Dressed Stars at the 2016 Critics' Choice Awards</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/behind-the-sheet-whats-the-hype-with-sheet-masks/11991943">
+        <div class="content-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOIN6SBtQIC6IkbYaUNmzLLrhuR3TnMNcFm9*VUDsPZ0-*aLn7w9V8swx3cCqtmTwCsnrj-cuWT2g/MTMwNDU0MDI2OTUyMTI1MDU5.png?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    7
+                </div>
+            </div>
+        </div>
+        <div class="content-title">Behind the Sheet: What's the Hype With Sheet Masks?</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/no-reservations-needed-valentines-date-ideas/11992156">
+        <div class="content-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mONXmZv9*sjS0JCD1VcPRTCyvR5VXa2xq2zTBRN834hBYPo*htVWLS9nGHUT3yybc5qO1jITBOzNJ/cropped_background_01.jpg?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    8
+                </div>
+            </div>
+        </div>
+        <div class="content-title">No Res&shy;ervat&shy;ions Needed: Valentine's Date Ideas</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/right-now-the-biggest-star-in-hollywood-is-a-little-kid/11972502">
+        <div class="content-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mODNvsWDMy5oCAxQrK3dwwPfEk*-Sp4IrCGb7PBIzfLhXaoxfr7OxO-sus5CINC0BGUPDVd*8fjvL/Screen~6_01_19_at_2.10.10_PM.png?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    9
+                </div>
+            </div>
+        </div>
+        <div class="content-title">Right Now, the Biggest Star in Hollywood...Is a Little Kid</div>
+    </a>
+</li>
+
+                                <li class="fd-trending-content">
+    <a class="fd-trending-link" href="http://www.mode.com/stories/healthy-or-hoax-would-you-eat-charcoal/11950453">
+        <div class="content-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOPEH6joXnCeyOwQqp8c6CkZ-GA-W8cOBp3AZg8GR-n6J9U6llMfsdlRT*dDoiZy9HJZDiyf5v8vo/charcal.jpg?width=200);">
+            <div class="item-number">
+                <div class="r-skew">
+                    10
+                </div>
+            </div>
+        </div>
+        <div class="content-title">Healthy or Hoax: Would You Eat Charcoal?</div>
+    </a>
+</li>
+
+            </ul>
+</div>
+    <div class="l-row l-row-centered sticky">
+        <div class="rrail-hpage rrail-ad ada-slot" id="rightrail_hpage_container"></div>
+
+    </div>
+
+        </div>
+    <div class="l-boxes pull-four news">
+        <ul class="l-waterfall l-row discover-list "
+        data-url="/api/v1/newsfeed/home"        data-time="2016-02-03T17:52:07.000Z"
+    data-lastid="6571683:ActivityEvent:12075135"
+    data-type="rollup"
+    data-filter="following"
+        data-total-size=""
+    data-exclude-members="">
+            <li class="band l-waterfall-box l-wfl-sizer"></li>
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:12005665" data-collection-title="Why You Should Visit Atlanta&#039;s Ponce City Market" data-activity-id="6571683:ActivityEvent:12077168">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(237, 101, 53, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/foodie">Foodie</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLSRxDdWrRwRrxGZZkSxqM*Q*Jrhz*GaPEsvGIswAinYysq5HOPT-cIG-mH63kkbx6dhxteE4KDM/ponce.jpg?width=810&height=250&crop=810%3A250);">
+        <a href="http://www.mode.com/stories/why-you-should-visit-atlantas-ponce-city-market/12005665?story=6579409%2Ffoodie" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/why-you-should-visit-atlantas-ponce-city-market/12005665?story=6579409%2Ffoodie" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/jehan-powell/3172532">
+                    <img class="avt-image" src="http://api.ning.com/files/m9wY6nHswW695lKvf0uEAVy5TnD22DIqHJft-V7OYdQCZccYFXaJ5EBb0SF6pnmM4zVmiRyXGJTutLIzVyZcSVNsTfzuRB4K/picture?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/jehan-powell/3172532">Jehan Powell</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/why-you-should-visit-atlantas-ponce-city-market/12005665?story=6579409%2Ffoodie">
+                    <span>Why You Should Visit Atlanta&#039;s Ponce City Market</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:12005665" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/why-you-should-visit-atlantas-ponce-city-market/12005665?story=6579409%2Ffoodie"
+                    data-content-title="Why You Should Visit Atlanta&#039;s Ponce City Market"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLSRxDdWrRwRrxGZZkSxqM*Q*Jrhz*GaPEsvGIswAinYysq5HOPT-cIG-mH63kkbx6dhxteE4KDM/ponce.jpg"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/why-you-should-visit-atlantas-ponce-city-market/12005665?story=6579409%2Ffoodie"
+                    data-content-title="Why You Should Visit Atlanta&#039;s Ponce City Market"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLSRxDdWrRwRrxGZZkSxqM*Q*Jrhz*GaPEsvGIswAinYysq5HOPT-cIG-mH63kkbx6dhxteE4KDM/ponce.jpg"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/why-you-should-visit-atlantas-ponce-city-market/12005665?story=6579409%2Ffoodie"
+                    data-content-title="Why You Should Visit Atlanta&#039;s Ponce City Market"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLSRxDdWrRwRrxGZZkSxqM*Q*Jrhz*GaPEsvGIswAinYysq5HOPT-cIG-mH63kkbx6dhxteE4KDM/ponce.jpg"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/foodie-editor/889656"
+                    data-content-author-id="6571683:Yuser:889656"
+                    data-content-author-title="Foodie Editor"
+                    data-content-id="6571683:Collection:12005665"
+                    data-content-title="Why You Should Visit Atlanta&#039;s Ponce City Market"
+                    data-content-url="http://www.mode.com/stories/why-you-should-visit-atlantas-ponce-city-market/12005665?story=6579409%2Ffoodie">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:12005665"
+                    data-content-type="Collection"
+                    data-content-title="Why You Should Visit Atlanta&#039;s Ponce City Market"
+                    data-content-url="http://www.mode.com/stories/why-you-should-visit-atlantas-ponce-city-market/12005665?story=6579409%2Ffoodie">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">9.9</span><span class="unit">K</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">38</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:01238132"
+            data-content-title="Simply Seoul">
+            <a href="http://www.mode.com/food-drink/places/simply-seoul/01238132?story=12005665%2Fwhy-you-should-visit-atlantas-ponce-city-market">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLlNSuLctYPVgXjE*u4b3jcRCs4Em3qQP-ttFQWjNG2LkuOMsYHpIcWQHPtV2kwIzlJBxrEvstT2/tenants71_780x780.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Ponce City Market has a wide variety of food…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01238131"
+            data-content-title="Spiller Park Coffee">
+            <a href="http://www.mode.com/food-drink/places/spiller-park-coffee/01238131?story=12005665%2Fwhy-you-should-visit-atlantas-ponce-city-market">
+                <div class="bnd-item-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLlNSuLctYPVgXjE*u4b3jeNHWF-F5fAVA8cqyBzJAgZdWn9563*NYC*DbjJZU6w*DJB*hBu2IfF/pcm31_780x780.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">If you&#039;re a morning person, then head to…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent">
+    <div class="waterfall_fband ada-slot" id="waterfall_fband_container"></div>
+
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:12045016" data-collection-title="10 of the Best Millennial Etsy Shop Owners" data-activity-id="6571683:ActivityEvent:12077054">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(65, 118, 48, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/bliss">Bliss</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/32/bf/w:810/h:250/zc:1/cf462fdd-171e-4025-a192-ff558746bf32.jpg);">
+        <a href="http://www.mode.com/stories/10-of-the-best-millennial-etsy-shop-owners/12045016?story=6579412%2Fbliss" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/10-of-the-best-millennial-etsy-shop-owners/12045016?story=6579412%2Fbliss" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/kari-herrera-chicagoings/7805377">
+                    <img class="avt-image" src="http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOIwpMio9zgcCLEuTiCT3iulh1eMrNqON0RhfNg9JJ2bmjYa7Y72d7qSD81HVVCOJBphjEu70D9QO/final__ty_equations_1_of_1_3.jpg?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/kari-herrera-chicagoings/7805377">Kari Herrera | Chicagoings</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/10-of-the-best-millennial-etsy-shop-owners/12045016?story=6579412%2Fbliss">
+                    <span>10 of the Best Millennial Etsy Shop Owners</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:12045016" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/10-of-the-best-millennial-etsy-shop-owners/12045016?story=6579412%2Fbliss"
+                    data-content-title="10 of the Best Millennial Etsy Shop Owners"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/32/bf/cf462fdd-171e-4025-a192-ff558746bf32.jpg"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/10-of-the-best-millennial-etsy-shop-owners/12045016?story=6579412%2Fbliss"
+                    data-content-title="10 of the Best Millennial Etsy Shop Owners"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/32/bf/cf462fdd-171e-4025-a192-ff558746bf32.jpg"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/10-of-the-best-millennial-etsy-shop-owners/12045016?story=6579412%2Fbliss"
+                    data-content-title="10 of the Best Millennial Etsy Shop Owners"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/32/bf/cf462fdd-171e-4025-a192-ff558746bf32.jpg"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/bliss-editor/910987"
+                    data-content-author-id="6571683:Yuser:910987"
+                    data-content-author-title="Bliss Editor"
+                    data-content-id="6571683:Collection:12045016"
+                    data-content-title="10 of the Best Millennial Etsy Shop Owners"
+                    data-content-url="http://www.mode.com/stories/10-of-the-best-millennial-etsy-shop-owners/12045016?story=6579412%2Fbliss">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:12045016"
+                    data-content-type="Collection"
+                    data-content-title="10 of the Best Millennial Etsy Shop Owners"
+                    data-content-url="http://www.mode.com/stories/10-of-the-best-millennial-etsy-shop-owners/12045016?story=6579412%2Fbliss">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">70</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">12</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:01241180"
+            data-content-title="Assiette à Tarte/ Tarte Plate">
+            <a href="http://www.mode.com/home-garden/roundups/assiette-%C3%A0-tarte-tarte-plate/01241180?story=12045016%2F10-of-the-best-millennial-etsy-shop-owners">
+                <div class="bnd-item-image" style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/87/a7/zc:1/084951f6-6907-489f-94e4-2a9232e2a787.jpg?size=132);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Shop owner Edith pays homage to her Quebec…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01241178"
+            data-content-title="Bracelet Trio Arandelas Gold Brass Bangle…">
+            <a href="http://www.mode.com/fashion-style/roundups/bracelet-trio-arandelas-gold-brass-bangle-cuff-pack-set-eco-frien/01241178?story=12045016%2F10-of-the-best-millennial-etsy-shop-owners">
+                <div class="bnd-item-image" style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/6f/ca/zc:1/2c47fb8b-af08-4d05-b860-a2662001ca6f.jpg?size=132);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Hammered metals and subtle variations on…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:12042462" data-collection-title="How Social Media Can Completely Destroy Your Life" data-activity-id="6571683:ActivityEvent:12076915">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(64, 59, 98, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/brash">Brash</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/74/4d/w:810/h:250/zc:1/ec6d89af-58e3-425b-ae38-ec547c094d74.jpg);">
+        <a href="http://www.mode.com/stories/7-easy-ways-social-media-can-completely-destroy-your-life/12042462?story=6579411%2Fbrash" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/7-easy-ways-social-media-can-completely-destroy-your-life/12042462?story=6579411%2Fbrash" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/tech-consumer/8728126">
+                    <img class="avt-image" src="http://api.ning.com/files/NpAlVAvTs3Px2r-I9OqyZK3S3p13acddN4BskjB2gAFz-ZETxKwdm-*2XVfFtT54qcuXiBn0b-yY5F*dVp3H8TFtplzlrROF/q9AHQUX9.jpg?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/tech-consumer/8728126">Tech Consumer</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/7-easy-ways-social-media-can-completely-destroy-your-life/12042462?story=6579411%2Fbrash">
+                    <span>How Social Media Can Completely Destroy Your Life</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:12042462" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/7-easy-ways-social-media-can-completely-destroy-your-life/12042462?story=6579411%2Fbrash"
+                    data-content-title="How Social Media Can Completely Destroy Your Life"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/74/4d/ec6d89af-58e3-425b-ae38-ec547c094d74.jpg"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/7-easy-ways-social-media-can-completely-destroy-your-life/12042462?story=6579411%2Fbrash"
+                    data-content-title="How Social Media Can Completely Destroy Your Life"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/74/4d/ec6d89af-58e3-425b-ae38-ec547c094d74.jpg"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/7-easy-ways-social-media-can-completely-destroy-your-life/12042462?story=6579411%2Fbrash"
+                    data-content-title="How Social Media Can Completely Destroy Your Life"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/74/4d/ec6d89af-58e3-425b-ae38-ec547c094d74.jpg"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/brash-editor/2107413"
+                    data-content-author-id="6571683:Yuser:2107413"
+                    data-content-author-title="Brash Editor"
+                    data-content-id="6571683:Collection:12042462"
+                    data-content-title="How Social Media Can Completely Destroy Your Life"
+                    data-content-url="http://www.mode.com/stories/7-easy-ways-social-media-can-completely-destroy-your-life/12042462?story=6579411%2Fbrash">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:12042462"
+                    data-content-type="Collection"
+                    data-content-title="How Social Media Can Completely Destroy Your Life"
+                    data-content-url="http://www.mode.com/stories/7-easy-ways-social-media-can-completely-destroy-your-life/12042462?story=6579411%2Fbrash">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">85</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                    </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:01240954"
+            data-content-title="10 Ways to Destroy Your Reputation">
+            <a href="http://www.mode.com/tech-gadgets/advice/10-ways-to-destroy-your-reputation/01240954?story=12042462%2Fhow-social-media-can-completely-destroy-your-life">
+                <div class="bnd-item-image" style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/32/26/zc:1/f70ae912-90ad-474f-b2ef-7c81c4cf2632.jpg?size=132);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Lying or saying hypocritical things on social…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01240953"
+            data-content-title="10 Ways You Are Ruining Your Own Happiness">
+            <a href="http://www.mode.com/tech-gadgets/advice/10-ways-you-are-ruining-your-own-happiness/01240953?story=12042462%2Fhow-social-media-can-completely-destroy-your-life">
+                <div class="bnd-item-image" style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/cc/ff/zc:1/7884318b-d863-49af-838c-63b56b6fffcc.jpg?size=132);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Avoid getting too wrapped up in believing…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:11994193" data-collection-title="Sexual Fluidity: Celebrities Who Are Defying Definition" data-activity-id="6571683:ActivityEvent:12076730">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(65, 118, 48, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/bliss">Bliss</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOEuQeFXMG2ikPHOCKFHBcvEkdW5ALjAVVt-luJfTgAdafwg7WzC3xmAFacjVdUA0PEDCPIaXgGjd/cara_promo.jpg?width=810&height=250&crop=810%3A250);">
+        <a href="http://www.mode.com/stories/sexual-fluidity-celebrities-who-are-defying-definition/11994193?story=6579412%2Fbliss" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/sexual-fluidity-celebrities-who-are-defying-definition/11994193?story=6579412%2Fbliss" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/rene-syler/8657109">
+                    <img class="avt-image" src="http://api2.ning.com/files/ZAWmPnMuuln4eR4L3ORyu9d-Aw2H0UFHTpKzHNoC2a0nEjPrHdImNXZKGXxPhq0CAUzzwNhk0hOQCUSxr4vBik6v1xD6DUT1/VUgr4XY9.jpeg?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/rene-syler/8657109">Rene Syler</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/sexual-fluidity-celebrities-who-are-defying-definition/11994193?story=6579412%2Fbliss">
+                    <span>Sexual Fluidity: Celebrities Who Are Defying Definition</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:11994193" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/sexual-fluidity-celebrities-who-are-defying-definition/11994193?story=6579412%2Fbliss"
+                    data-content-title="Sexual Fluidity: Celebrities Who Are Defying Definition"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOEuQeFXMG2ikPHOCKFHBcvEkdW5ALjAVVt-luJfTgAdafwg7WzC3xmAFacjVdUA0PEDCPIaXgGjd/cara_promo.jpg"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/sexual-fluidity-celebrities-who-are-defying-definition/11994193?story=6579412%2Fbliss"
+                    data-content-title="Sexual Fluidity: Celebrities Who Are Defying Definition"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOEuQeFXMG2ikPHOCKFHBcvEkdW5ALjAVVt-luJfTgAdafwg7WzC3xmAFacjVdUA0PEDCPIaXgGjd/cara_promo.jpg"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/sexual-fluidity-celebrities-who-are-defying-definition/11994193?story=6579412%2Fbliss"
+                    data-content-title="Sexual Fluidity: Celebrities Who Are Defying Definition"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOEuQeFXMG2ikPHOCKFHBcvEkdW5ALjAVVt-luJfTgAdafwg7WzC3xmAFacjVdUA0PEDCPIaXgGjd/cara_promo.jpg"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/bliss-editor/910987"
+                    data-content-author-id="6571683:Yuser:910987"
+                    data-content-author-title="Bliss Editor"
+                    data-content-id="6571683:Collection:11994193"
+                    data-content-title="Sexual Fluidity: Celebrities Who Are Defying Definition"
+                    data-content-url="http://www.mode.com/stories/sexual-fluidity-celebrities-who-are-defying-definition/11994193?story=6579412%2Fbliss">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:11994193"
+                    data-content-type="Collection"
+                    data-content-title="Sexual Fluidity: Celebrities Who Are Defying Definition"
+                    data-content-url="http://www.mode.com/stories/sexual-fluidity-celebrities-who-are-defying-definition/11994193?story=6579412%2Fbliss">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">1.6</span><span class="unit">K</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">24</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:01237574"
+            data-content-title="Miley Cyrus Considers Her Gender, Sexuality…">
+            <a href="http://www.mode.com/people-society/roundups/miley-cyrus-considers-her-gender-sexuality-fluid/01237574?story=11994193%2Fsexual-fluidity-celebrities-who-are-defying-definition">
+                <div class="bnd-item-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOEizYB3L8YStbSCt7tCe-l0ljauSrdJQWOL4s7sGfdrB3EQDlT-jBbBSrm9k5AXlpYDpRQVr7Mv*/Miley_~ender_sexuality_fluid.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Hit-maker Miley Cyrus told her mother that…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01237557"
+            data-content-title="Keke Palmer Comes out as Sexually Fluid: &quot;I&#039;m…">
+            <a href="http://www.mode.com/people-society/roundups/keke-palmer-comes-out-as-sexually-fluid-im-gonna-follow-my-own-fe/01237557?story=11994193%2Fsexual-fluidity-celebrities-who-are-defying-definition">
+                <div class="bnd-item-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOEizYB3L8YStbSCt7tCe-l0aP8WfUJ3GPPs18zTJIIj5ER6*Aa-2IhH6Jvg1BmieZQWnPK0znC9S/tumblr~zgoetE6mG1twign1_1280.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Singer Keke Palmer is young, beautiful, and…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:12021437" data-collection-title="8 Power Bowls to Get You Through the Day" data-activity-id="6571683:ActivityEvent:12076541">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(237, 101, 53, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/foodie">Foodie</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOJ5M5zPaD8Z7rrPLqJe2Mu*H*3YAne*0xABNWKwYFSHzL8OjZe-3ZQHCQovYrit70eOcUjhMhH71/super_food_bowls_17.jpg?width=810&height=250&crop=810%3A250);">
+        <a href="http://www.mode.com/stories/8-power-bowls-to-get-you-through-the-day/12021437?story=6579409%2Ffoodie" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/8-power-bowls-to-get-you-through-the-day/12021437?story=6579409%2Ffoodie" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/valerie-fidan/3093602">
+                    <img class="avt-image" src="http://api.ning.com/files/iAT0B9wCR3DsGottYDZOqse8jHkSNLOiBeVVxoc2pUJveEWtobkce4oa9CYlHvrT5kbuUmDvWYara7-A8aBFzpBjpo-5N*0q/169619~34cbe062402aa54a1a0c.jpeg?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/valerie-fidan/3093602">valerie fidan</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/8-power-bowls-to-get-you-through-the-day/12021437?story=6579409%2Ffoodie">
+                    <span>8 Power Bowls to Get You Through the Day</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:12021437" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/8-power-bowls-to-get-you-through-the-day/12021437?story=6579409%2Ffoodie"
+                    data-content-title="8 Power Bowls to Get You Through the Day"
+                    data-user=""
+                    data-bg-url="http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOJ5M5zPaD8Z7rrPLqJe2Mu*H*3YAne*0xABNWKwYFSHzL8OjZe-3ZQHCQovYrit70eOcUjhMhH71/super_food_bowls_17.jpg"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/8-power-bowls-to-get-you-through-the-day/12021437?story=6579409%2Ffoodie"
+                    data-content-title="8 Power Bowls to Get You Through the Day"
+                    data-user=""
+                    data-bg-url="http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOJ5M5zPaD8Z7rrPLqJe2Mu*H*3YAne*0xABNWKwYFSHzL8OjZe-3ZQHCQovYrit70eOcUjhMhH71/super_food_bowls_17.jpg"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/8-power-bowls-to-get-you-through-the-day/12021437?story=6579409%2Ffoodie"
+                    data-content-title="8 Power Bowls to Get You Through the Day"
+                    data-user=""
+                    data-bg-url="http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOJ5M5zPaD8Z7rrPLqJe2Mu*H*3YAne*0xABNWKwYFSHzL8OjZe-3ZQHCQovYrit70eOcUjhMhH71/super_food_bowls_17.jpg"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/foodie-editor/889656"
+                    data-content-author-id="6571683:Yuser:889656"
+                    data-content-author-title="Foodie Editor"
+                    data-content-id="6571683:Collection:12021437"
+                    data-content-title="8 Power Bowls to Get You Through the Day"
+                    data-content-url="http://www.mode.com/stories/8-power-bowls-to-get-you-through-the-day/12021437?story=6579409%2Ffoodie">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:12021437"
+                    data-content-type="Collection"
+                    data-content-title="8 Power Bowls to Get You Through the Day"
+                    data-content-url="http://www.mode.com/stories/8-power-bowls-to-get-you-through-the-day/12021437?story=6579409%2Ffoodie">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">593</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">150</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:0180112"
+            data-content-title="Strawberry Oatmeal Breakfast Bowls">
+            <a href="http://www.mode.com/food-drink/roundups/strawberry-oatmeal-breakfast-bowls/0180112?story=12021437%2F8-power-bowls-to-get-you-through-the-day">
+                <div class="bnd-item-image" style="background-image: url(http://api.ning.com/files/YoqhN--8jZfbggZEv0G4cDJozjifyEZLx3QWinAJ5*mOR*vKYu9M*JUJg3C7SZZPg*srSTGMXh2dm2Wl04a-d9LY6byjbQTF/strawb~_breakfast_bowls_hero.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Power bowls also make for great breakfasts.…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01239375"
+            data-content-title="Garlic Ginger Kale Bowls With Cauliflower…">
+            <a href="http://www.mode.com/food-drink/recipes/garlic-ginger-kale-bowls-with-cauliflower-rice/01239375?story=12021437%2F8-power-bowls-to-get-you-through-the-day">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOJ5M5zPaD8Z7rrPLqJe2Mu*1E63D4TF94*rihL2lC61ePf6UcRqxDQL*BjDgcVQAjOS9t150Sjg8/garlic~al2_ourfourforks.com_.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">And who said you needed a grain? Cauliflower…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:12011389" data-collection-title="Does Eastern Europe Have the Best Fashion Bloggers?" data-activity-id="6571683:ActivityEvent:12075888">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(255, 51, 153, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/glam">Glam</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/05/67/w:810/h:250/zc:1/9e1983c4-fe01-45be-9d76-7b73da6f6705.png);">
+        <a href="http://www.mode.com/stories/does-eastern-europe-have-the-best-fashion-bloggers/12011389?story=6579410%2Fglam" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/does-eastern-europe-have-the-best-fashion-bloggers/12011389?story=6579410%2Fglam" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/fashionfiles/7213721">
+                    <img class="avt-image" src="http://api2.ning.com/files/SV3csQ*6q4e2pYDg39aDqArma4S90VMt15OC*oBUF8AYfHoFAWWhdfVdwGpq9RS5Pc-d6vIhIMQ2U4PNa0z9r7*Y3jKYTxJv/uYTEwjVy.jpeg?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/fashionfiles/7213721">FashionFiles</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/does-eastern-europe-have-the-best-fashion-bloggers/12011389?story=6579410%2Fglam">
+                    <span>Does Eastern Europe Have the Best Fashion Bloggers?</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:12011389" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/does-eastern-europe-have-the-best-fashion-bloggers/12011389?story=6579410%2Fglam"
+                    data-content-title="Does Eastern Europe Have the Best Fashion Bloggers?"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/05/67/9e1983c4-fe01-45be-9d76-7b73da6f6705.png"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/does-eastern-europe-have-the-best-fashion-bloggers/12011389?story=6579410%2Fglam"
+                    data-content-title="Does Eastern Europe Have the Best Fashion Bloggers?"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/05/67/9e1983c4-fe01-45be-9d76-7b73da6f6705.png"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/does-eastern-europe-have-the-best-fashion-bloggers/12011389?story=6579410%2Fglam"
+                    data-content-title="Does Eastern Europe Have the Best Fashion Bloggers?"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/05/67/9e1983c4-fe01-45be-9d76-7b73da6f6705.png"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/jill-manoff/9697376"
+                    data-content-author-id="6571683:Yuser:9697376"
+                    data-content-author-title="Jill Manoff"
+                    data-content-id="6571683:Collection:12011389"
+                    data-content-title="Does Eastern Europe Have the Best Fashion Bloggers?"
+                    data-content-url="http://www.mode.com/stories/does-eastern-europe-have-the-best-fashion-bloggers/12011389?story=6579410%2Fglam">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:12011389"
+                    data-content-type="Collection"
+                    data-content-title="Does Eastern Europe Have the Best Fashion Bloggers?"
+                    data-content-url="http://www.mode.com/stories/does-eastern-europe-have-the-best-fashion-bloggers/12011389?story=6579410%2Fglam">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">167</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">68</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:01238494"
+            data-content-title="Stylish Stockings | Venoma Fashion Freak">
+            <a href="http://www.mode.com/fashion-style/narratives/stylish-stockings-venoma-fashion-freak/01238494?story=12011389%2Fdoes-eastern-europe-have-the-best-fashion-bloggers">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mODNpvmfSnbV37XJvW2PtDN4r2wN8vjYJZ5FoT3KZ5ZqV8F23kmgQFsgwJ9JYt7oT6-TKpcdlTiB3/Venoma~k_Stylish_Stockings_1.JPG?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Venoma of Venoma Fashion Freak: Venoma is a…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01238492"
+            data-content-title="Malleable | Franche Meets Fashion">
+            <a href="http://www.mode.com/fashion-style/narratives/malleable-franche-meets-fashion/01238492?story=12011389%2Fdoes-eastern-europe-have-the-best-fashion-bloggers">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mODNpvmfSnbV37XJvW2PtDN4cG9BiJLRb5BYfRKIz1TQXkvz2Fn2zFvbtRsO0*JFjaJx7ACxwuUBp/PB110619.png?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Karolina Franche of Franche Meets Fashion:…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:11958042" data-collection-title="Totally Unnecessary Uses of Bluetooth" data-activity-id="6571683:ActivityEvent:12075598">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(64, 59, 98, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/brash">Brash</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/0c/e9/w:810/h:250/zc:1/295440c7-22cb-4147-8380-30d29583e90c.jpg);">
+        <a href="http://www.mode.com/stories/totally-unnecessary-uses-of-bluetooth/11958042?story=6579411%2Fbrash" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/totally-unnecessary-uses-of-bluetooth/11958042?story=6579411%2Fbrash" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/matt-schneiderman/11669077">
+                    <img class="avt-image" src="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mODpc7qMOBCeesb3Y1qTq1Ryg*HOUN8bb3w01z8TFQ7E7L1vsyj5SjhPPeLAzmc02dP*UC*BZK6b0/Screen__12_22_at_11.33.14_AM.png?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/matt-schneiderman/11669077">Matt Schneiderman</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/totally-unnecessary-uses-of-bluetooth/11958042?story=6579411%2Fbrash">
+                    <span>Totally Unnecessary Uses of Bluetooth</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:11958042" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/totally-unnecessary-uses-of-bluetooth/11958042?story=6579411%2Fbrash"
+                    data-content-title="Totally Unnecessary Uses of Bluetooth"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/0c/e9/295440c7-22cb-4147-8380-30d29583e90c.jpg"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/totally-unnecessary-uses-of-bluetooth/11958042?story=6579411%2Fbrash"
+                    data-content-title="Totally Unnecessary Uses of Bluetooth"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/0c/e9/295440c7-22cb-4147-8380-30d29583e90c.jpg"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/totally-unnecessary-uses-of-bluetooth/11958042?story=6579411%2Fbrash"
+                    data-content-title="Totally Unnecessary Uses of Bluetooth"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/0c/e9/295440c7-22cb-4147-8380-30d29583e90c.jpg"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/brash-editor/2107413"
+                    data-content-author-id="6571683:Yuser:2107413"
+                    data-content-author-title="Brash Editor"
+                    data-content-id="6571683:Collection:11958042"
+                    data-content-title="Totally Unnecessary Uses of Bluetooth"
+                    data-content-url="http://www.mode.com/stories/totally-unnecessary-uses-of-bluetooth/11958042?story=6579411%2Fbrash">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:11958042"
+                    data-content-type="Collection"
+                    data-content-title="Totally Unnecessary Uses of Bluetooth"
+                    data-content-url="http://www.mode.com/stories/totally-unnecessary-uses-of-bluetooth/11958042?story=6579411%2Fbrash">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">222</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">11</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:01239149"
+            data-content-title="Mark One&#039;s Pryme Vessyl Keeps You…">
+            <a href="http://www.mode.com/food-drink/products/mark-ones-pryme-vessyl-keeps-you-intelligently-hydrated/01239149?story=11958042%2Ftotally-unnecessary-uses-of-bluetooth">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mODF*gD1sYT*nfHBkcNbiz3HBZOSeUeHJrDdm6rSn6OZcfVzHAAUfYMu1uwOaoMV4pdB6cqksqG9u/Pryme_on_Desk.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Counting how many glasses of water you drink…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item bnd-video"
+            data-content-id="6571683:Cannes:01235521"
+            data-content-title="Looncup – The World&#039;s First Smart Menstrual…">
+            <a href="http://www.mode.com/tech-gadgets/roundups/looncup-the-worlds-first-smart-menstrual-cup/01235521?story=11958042%2Ftotally-unnecessary-uses-of-bluetooth">
+                <div class="bnd-item-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOCDdWe*cgK1wae4W7UEy41YiK7yXPLbrw1bPurhl8vSKC3RK85MQwk5t01Ge0VyxTjmeL0l-CHBX/photo_original.png?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Item one of three intended specifically for…</div>
+                                    <i class="icon icn-video-play bnd-icn-video-play"></i>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:12002325" data-collection-title="7 Makeup Artists With Their Own Beauty Brands" data-activity-id="6571683:ActivityEvent:12075578">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(255, 51, 153, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/glam">Glam</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/94/48/w:810/h:250/zc:1/d35cc96a-23c1-4d17-a36e-0327a1414894.png);">
+        <a href="http://www.mode.com/stories/7-makeup-artists-with-their-own-beauty-brands/12002325?story=6579410%2Fglam" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/7-makeup-artists-with-their-own-beauty-brands/12002325?story=6579410%2Fglam" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/evangeline-sarney/7830450">
+                    <img class="avt-image" src="http://api.ning.com/files/vu2giU6L5OdauO4*nmU4zIokAfebBfXY8e1aqw34xV61kVtk8vwsOr2zJRRv-qA-F3QXi5HBiX6h-fzUR9F0Ps7U*L7i647h/meeeeeeeeee.jpg?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/evangeline-sarney/7830450">Evangeline Sarney</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/7-makeup-artists-with-their-own-beauty-brands/12002325?story=6579410%2Fglam">
+                    <span>7 Makeup Artists With Their Own Beauty Brands</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:12002325" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/7-makeup-artists-with-their-own-beauty-brands/12002325?story=6579410%2Fglam"
+                    data-content-title="7 Makeup Artists With Their Own Beauty Brands"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/94/48/d35cc96a-23c1-4d17-a36e-0327a1414894.png"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/7-makeup-artists-with-their-own-beauty-brands/12002325?story=6579410%2Fglam"
+                    data-content-title="7 Makeup Artists With Their Own Beauty Brands"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/94/48/d35cc96a-23c1-4d17-a36e-0327a1414894.png"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/7-makeup-artists-with-their-own-beauty-brands/12002325?story=6579410%2Fglam"
+                    data-content-title="7 Makeup Artists With Their Own Beauty Brands"
+                    data-user=""
+                    data-bg-url="http://cdn.mode.com/files/15492f7092490ef482c3d4d1a5be2d0c/94/48/d35cc96a-23c1-4d17-a36e-0327a1414894.png"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/jill-manoff/9697376"
+                    data-content-author-id="6571683:Yuser:9697376"
+                    data-content-author-title="Jill Manoff"
+                    data-content-id="6571683:Collection:12002325"
+                    data-content-title="7 Makeup Artists With Their Own Beauty Brands"
+                    data-content-url="http://www.mode.com/stories/7-makeup-artists-with-their-own-beauty-brands/12002325?story=6579410%2Fglam">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:12002325"
+                    data-content-type="Collection"
+                    data-content-title="7 Makeup Artists With Their Own Beauty Brands"
+                    data-content-url="http://www.mode.com/stories/7-makeup-artists-with-their-own-beauty-brands/12002325?story=6579410%2Fglam">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">151</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">13</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:0179237"
+            data-content-title="Pat McGrath">
+            <a href="http://www.mode.com/beauty-hair/bios/pat-mcgrath/0179237?story=12002325%2F7-makeup-artists-with-their-own-beauty-brands">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/CgwvKmsfinpK2Ws*vB3n1IYmQx2G2zAXVCsWypFN3m48mftcGUvrdfaLlmL2JDc1KSjtoXQCBJIrRFWjvq-0bcwFEP3tgUT-/kjbl.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Makeup artist Pat McGrath is often regarded…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01238165"
+            data-content-title="François Nars">
+            <a href="http://www.mode.com/beauty-hair/bios/fran%C3%A7ois-nars/01238165?story=12002325%2F7-makeup-artists-with-their-own-beauty-brands">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLlNSuLctYPVgXjE*u4b3jeWDj4VwNEZNzgQgZvTZmfb3PwTDodslc*0qkq3GGXH678nKu48vkoo/Francois_Nars_About.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">MUA François Nars always loved playing with…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:12035973" data-collection-title="How to Be Happier on a Daily Basis" data-activity-id="6571683:ActivityEvent:12075214">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(65, 118, 48, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/bliss">Bliss</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOOGQrj6gu16uebxzf3fdQnuDAPTIkxxsxCp3kCcthF5YNJMkQpG5R3qerzecVMqVURD1-H3YTH1f/the_ha~_habits_for_happiness.jpg?width=810&height=250&crop=810%3A250);">
+        <a href="http://www.mode.com/stories/how-to-be-happier-on-a-daily-basis/12035973?story=6579412%2Fbliss" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/how-to-be-happier-on-a-daily-basis/12035973?story=6579412%2Fbliss" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/healthy-for-mommies/8677425">
+                    <img class="avt-image" src="http://api.ning.com/files/Iad4jOhX0Z37Pmxmc9IVrdtFuhr2beb*8knu*G*ZwInX*G06TgFOV8TabJwbQwy01hPNl7z7bBPkl-Jum*m0AceHJGRAJ-SU/556f6c~84099fe12ebac6492893.jpeg?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/healthy-for-mommies/8677425">Healthy For Mommies</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/how-to-be-happier-on-a-daily-basis/12035973?story=6579412%2Fbliss">
+                    <span>How to Be Happier on a Daily Basis</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:12035973" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/how-to-be-happier-on-a-daily-basis/12035973?story=6579412%2Fbliss"
+                    data-content-title="How to Be Happier on a Daily Basis"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOOGQrj6gu16uebxzf3fdQnuDAPTIkxxsxCp3kCcthF5YNJMkQpG5R3qerzecVMqVURD1-H3YTH1f/the_ha~_habits_for_happiness.jpg"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/how-to-be-happier-on-a-daily-basis/12035973?story=6579412%2Fbliss"
+                    data-content-title="How to Be Happier on a Daily Basis"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOOGQrj6gu16uebxzf3fdQnuDAPTIkxxsxCp3kCcthF5YNJMkQpG5R3qerzecVMqVURD1-H3YTH1f/the_ha~_habits_for_happiness.jpg"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/how-to-be-happier-on-a-daily-basis/12035973?story=6579412%2Fbliss"
+                    data-content-title="How to Be Happier on a Daily Basis"
+                    data-user=""
+                    data-bg-url="http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOOGQrj6gu16uebxzf3fdQnuDAPTIkxxsxCp3kCcthF5YNJMkQpG5R3qerzecVMqVURD1-H3YTH1f/the_ha~_habits_for_happiness.jpg"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/bliss-editor/910987"
+                    data-content-author-id="6571683:Yuser:910987"
+                    data-content-author-title="Bliss Editor"
+                    data-content-id="6571683:Collection:12035973"
+                    data-content-title="How to Be Happier on a Daily Basis"
+                    data-content-url="http://www.mode.com/stories/how-to-be-happier-on-a-daily-basis/12035973?story=6579412%2Fbliss">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:12035973"
+                    data-content-type="Collection"
+                    data-content-title="How to Be Happier on a Daily Basis"
+                    data-content-url="http://www.mode.com/stories/how-to-be-happier-on-a-daily-basis/12035973?story=6579412%2Fbliss">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">126</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">22</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:01240574"
+            data-content-title="4 Easy Ways to Obtain Happiness on a Daily…">
+            <a href="http://www.mode.com/health-wellness/advice/4-easy-ways-to-obtain-happiness-on-a-daily-basis-freedom-junkies/01240574?story=12035973%2Fhow-to-be-happier-on-a-daily-basis">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOOGQrj6gu16uebxzf3fdQnsQU4qUeMIcc7OqtadyGNAcW2C9k0K16jc4NANh-htSN-cmw8JoGRaA/4_EASY~NESS_ON_A_DAILY_BASIS.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Focus on yourself. It is easy to get sucked…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01240573"
+            data-content-title="5 Simple Ways To Feel Happier On A Daily…">
+            <a href="http://www.mode.com/health-wellness/advice/5-simple-ways-to-feel-happier-on-a-daily-basis/01240573?story=12035973%2Fhow-to-be-happier-on-a-daily-basis">
+                <div class="bnd-item-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOOGQrj6gu16uebxzf3fdQnukjeiFeFY0crwTT8wZBWwy55H1q6d2G-9lCWYpwhAFonBzCtbuuvt1/twenty~9d_8261_ce639e7bcedd1.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Practice gratitude every day. Even if you do…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+                                <li class="band content-parent bnd-collection" data-collection-id="6571683:Collection:12027616" data-collection-title="8 Cooking Secrets I Learned in Culinary School" data-activity-id="6571683:ActivityEvent:12075135">
+                     
+     
+     
+     
+     
+     
+
+    
+                        
+                                    
+                                
+     
+            
+    
+                    
+        
+    <div class="bnd-body">
+                                                    <div class="bnd-activity-line-featured" style="background-color: rgba(237, 101, 53, 0.8);">
+            <div class="r-skew">
+                Featured on <strong><a class="hub-title" href="http://www.mode.com/foodie">Foodie</a></strong>
+            </div>
+        </div>
+    
+                        <div class="bnd-content
+updated
+bnd-seamless
+    bnd-show-members
+">
+    <div class="bnd-cover l-hbox l-hbx-middle"
+            style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLLykeCvlghiXghE9yI0GBnGZ6EBKeEd*gVYLUv5NT1I7TGZ2yiNNpGNsm6IyFMgM6CICIvEVVeE/culina~g_schools_pro_con.0.0.jpg?width=810&height=250&crop=810%3A250);">
+        <a href="http://www.mode.com/stories/8-secrets-from-culinary-school/12027616?story=6579409%2Ffoodie" class="bnd-gradients"></a>
+
+    <div class="bnd-center-content">
+        <a href="http://www.mode.com/stories/8-secrets-from-culinary-school/12027616?story=6579409%2Ffoodie" class="bnd-cc-link"></a>
+                    <div class="bnd-cvr-featured-author">
+                <a class="avatar avt-small bnd-avatar" href="http://www.mode.com/profiles/jordan-hamons/9657351">
+                    <img class="avt-image" src="http://api.ning.com/files/Ja6gu*i0lR7s60Lxmchuvom5LEsH8AeXFA-0rYTXNjMRS286H-P156w59ut4g09pWdem57oyXGei7lk7lKEoEZ*Emw53fIyg/picture?width=100&amp;crop=1%3A1" />
+                </a>
+                <div class="author-title"><a href="http://www.mode.com/profiles/jordan-hamons/9657351">Jordan Hamons</a></div>
+
+                            </div>
+            
+            <div class="bnd-cvr-title">
+                <a href="http://www.mode.com/stories/8-secrets-from-culinary-school/12027616?story=6579409%2Ffoodie">
+                    <span>8 Cooking Secrets I Learned in Culinary School</span>
+                </a>
+            </div>
+        
+                
+                            
+                <div class="bnd-cvr-actions">
+                <ul class="toolbar l-hbox tlb-band">
+        
+        <li class="tlb-item">
+        <button class="tlb-subscribe" data-action="subscribe" data-content-id="6571683:Collection:12027616" title="Love" >
+            <i class="icon icn-love-l"></i>
+        </button>
+    </li>
+                    <li class="tlb-item tlb-item-share">
+            <button class="tlb-share" title="Share" >
+                <i class="icon icn-popout-l"></i>
+            </button>
+        </li>
+                                    
+                                                        <div class="tlb-social-share is-hidden">
+            <li class="tlb-item tlb-item-label is-hidden">Share</li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-facebook" title="Share on Facebook"
+                    data-provider="facebook"
+                    data-content-url="http://www.mode.com/stories/8-secrets-from-culinary-school/12027616?story=6579409%2Ffoodie"
+                    data-content-title="8 Cooking Secrets I Learned in Culinary School"
+                    data-user=""
+                    data-bg-url="http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLLykeCvlghiXghE9yI0GBnGZ6EBKeEd*gVYLUv5NT1I7TGZ2yiNNpGNsm6IyFMgM6CICIvEVVeE/culina~g_schools_pro_con.0.0.jpg"
+                    data-handle="">
+                    <i class="icon icn-facebook-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-twitter" title="Share on Twitter"
+                    data-provider="twitter"
+                    data-content-url="http://www.mode.com/stories/8-secrets-from-culinary-school/12027616?story=6579409%2Ffoodie"
+                    data-content-title="8 Cooking Secrets I Learned in Culinary School"
+                    data-user=""
+                    data-bg-url="http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLLykeCvlghiXghE9yI0GBnGZ6EBKeEd*gVYLUv5NT1I7TGZ2yiNNpGNsm6IyFMgM6CICIvEVVeE/culina~g_schools_pro_con.0.0.jpg"
+                    data-handle="modestories">
+                    <i class="icon icn-twitter-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item">
+                <button class="tlb-social tlb-pinterest" title="Share on Pinterest"
+                    data-provider="pinterest"
+                    data-content-url="http://www.mode.com/stories/8-secrets-from-culinary-school/12027616?story=6579409%2Ffoodie"
+                    data-content-title="8 Cooking Secrets I Learned in Culinary School"
+                    data-user=""
+                    data-bg-url="http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLLykeCvlghiXghE9yI0GBnGZ6EBKeEd*gVYLUv5NT1I7TGZ2yiNNpGNsm6IyFMgM6CICIvEVVeE/culina~g_schools_pro_con.0.0.jpg"
+                    data-handle="">
+                    <i class="icon icn-pinterest-l"></i>
+                </button>
+            </li>
+                                    <li class="tlb-item tlb-item-embed">
+                <button class="tlb-embed widget_embed embed_widget_modal logged_out_enabled" title="Embed"
+                    data-content-author-url="http://www.mode.com/profiles/foodie-editor/889656"
+                    data-content-author-id="6571683:Yuser:889656"
+                    data-content-author-title="Foodie Editor"
+                    data-content-id="6571683:Collection:12027616"
+                    data-content-title="8 Cooking Secrets I Learned in Culinary School"
+                    data-content-url="http://www.mode.com/stories/8-secrets-from-culinary-school/12027616?story=6579409%2Ffoodie">
+                    <i class="icon icn-embed-l"></i>
+                </button>
+            </li>
+                        <li class="tlb-item tlb-item-email">
+                <button class="tlb-email email_page logged_out_enabled" title="Email"
+                    data-content-id="6571683:Collection:12027616"
+                    data-content-type="Collection"
+                    data-content-title="8 Cooking Secrets I Learned in Culinary School"
+                    data-content-url="http://www.mode.com/stories/8-secrets-from-culinary-school/12027616?story=6579409%2Ffoodie">
+                    <i class="icon icn-email-l"></i>
+                </button>
+            </li>
+            <li class="tlb-item tlb-item-close">
+                <button class="tlb-close" title="Close">
+                    <i class="icon icn-close-s"></i>
+                </button>
+            </li>
+        </div>
+        </ul>
+
+        </div>
+                
+                                </div>
+    
+        <ul class="bnd-cvr-collection-size">
+                <li class="bnd-collection-count">
+            <span class="bnd-count-cta">
+                <span class="number">143</span>
+            </span>
+            <i class="icon icn-view-s"></i>
+        </li>
+                        <li class="bnd-collection-count">
+            <span class="bnd-count-cta social-energy">
+                <span class="number">23</span>
+            </span>
+            <i class="icon icn-lightning-s"></i>
+        </li>
+            </ul>
+    </div>
+
+            <ul class="bnd-items">
+                                                <li class="bnd-item"
+            data-content-id="6571683:Cannes:01239968"
+            data-content-title="Thinking About Culinary School? 4 Things You…">
+            <a href="http://www.mode.com/food-drink/recipes/thinking-about-culinary-school-4-things-you-should-know/01239968?story=12027616%2F8-cooking-secrets-i-learned-in-culinary-school">
+                <div class="bnd-item-image" style="background-image: url(http://api.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLLykeCvlghiXghE9yI0GBlWRa-HK7sPKCoU5OjWwgpzDYBuWUj22Jt3xKDGJlS83gc3avPQ3Zns/6569.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Kitchens are dangerous places with sharp…</div>
+                            </a>
+        </li>
+                                            <li class="bnd-item"
+            data-content-id="6571683:Cannes:01239960"
+            data-content-title="15 Things You&#039;d Learn in Culinary School">
+            <a href="http://www.mode.com/food-drink/recipes/15-things-youd-learn-in-culinary-school/01239960?story=12027616%2F8-cooking-secrets-i-learned-in-culinary-school">
+                <div class="bnd-item-image" style="background-image: url(http://api2.ning.com/files/GTT*uiEbDrqF65QG9Z2mOLLykeCvlghiXghE9yI0GBkIC60EWz9zLhaBSphdCCYxmqWlwSw9NzgDHQkiVC*XJJLapZTKWt2t/ada40e~413a5df39f6f7eb528a74.jpg?size=132&amp;crop=1%3A1);">
+                                    </div>
+                                                                                        <div class="bnd-item-title bnd-item-title-quotes">Most culinary schools, mine included, require…</div>
+                            </a>
+        </li>
+    </ul>
+
+            </div>
+    </div>
+</li>
+
+            </ul>
+
+        <div class="loading-indicator bnd-load fadeinout inf-forward-loading">
+    <div class="bnd-load-title"></div>
+    <div class="bnd-load-body"></div>
+</div>
+
+    </div>
+</div>
+
+            </div>
+        </section>
+                <div class="scroll-to-top pillow">
+    <div class="stt-cover">
+            <i class="icon icn-stt stt-action"></i>
+        </div>
+</div>
+
+        <script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "6035233" });
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+    
+    /* <![CDATA[ */
+    var google_conversion_id = 981068280;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    
+</script>
+
+<div style="display:none">
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+</div>
+
+<noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=6035233&cv=2.0&cj=1" />
+    
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/981068280/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+    
+</noscript>
+
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+    twttr.conversion.trackPid('l5s2d', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l5s2d&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+    <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l5s2d&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript>
+<script>
+
+document.write = document.writeln = function () {
+    if ((window.console) && (window.console.debug)) {
+        window.console.debug('caught document.write', arguments);
+    }
+};
+</script>
+
+                            <div id="footerCookie" style="display: none;"></div>
+<script src=//consent.truste.com/notice?domain=modemediacorp.com&c=teconsent&text=true&js=bb&noticeType=bb></script>
+<script>
+    
+    
+    var trusteBannerHeight, navHeight, reposition;
+
+    jQuery(function (w) {
+        var _oldFadeIn = w.fn.fadeIn;
+        w.fn.fadeIn = function(speed, oldCallback) {
+            return w(this).each(function() {
+                var obj = w(this),
+                    newCallback = function() {
+                        if (w.isFunction(oldCallback)) {
+                            oldCallback.apply(obj);
+                        }
+                        obj.trigger('afterShow');
+                    };
+                // you can trigger a before show if you want
+                obj.trigger('beforeShow');
+                // now use the old function to show the element passing the new callback
+                _oldFadeIn.apply(obj, [speed, newCallback]);
+            });
+        };
+
+        var _oldFadeOut = w.fn.fadeOut;
+        w.fn.fadeOut = function(speed, oldCallback) {
+            return w(this).each(function() {
+                var obj = w(this),
+                    newCallback = function() {
+                        if (w.isFunction(oldCallback)) {
+                            oldCallback.apply(obj);
+                        }
+                        obj.trigger('afterHide');
+                    };
+                // you can trigger a before show if you want
+                obj.trigger('beforeHide');
+                // now use the old function to show the element passing the new callback
+                _oldFadeOut.apply(obj, [speed, newCallback]);
+            });
+        };
+
+        // Hook into the truste js to make room for the banner just before it fades in.
+        w('#consent_blackbar').on('afterShow', function () {
+            trusteBannerHeight = w('#consent_blackbar').height();
+            w('header').css({"position": "relative", "padding-top": trusteBannerHeight + "px"});
+            w('header').next('.l-content,.next-bg').css({"border-top-width":"0"})
+            if (w('.l-dlg-collections').css('position') === 'fixed') {
+                w('.l-dlg-collections').css('top', trusteBannerHeight);
+            }
+            w('.mnu-mobile-bottom-cta').css('padding-bottom', '200px');
+        });
+
+
+        // Hook so that when the truste banner goes away so does the extra padding.
+        w('#consent_blackbar').on('afterHide', function () {
+            navHeight = w('.nav').height();
+            w('header').css({"position": "fixed", "padding-top": "0"});
+            w('header').next('.l-content,.next-bg').css({"border-top-width": navHeight + "px"});
+            if (w('.l-dlg-collections').css('position') === 'fixed') {
+                w('.l-dlg-collections').css('top', 0);
+            }
+            w('.mnu-mobile-bottom-cta').css('padding-bottom', '50px');
+        });
+    });
+
+    reposition = function() {
+        if (y$('#truste-consent-track').is(':visible')) {
+            var scrollTop = y$(document).scrollTop();
+            if (scrollTop >= y$('#consent_blackbar').height()) {
+                // Page has scrolled down past showing the top truste bar.
+                y$('header').css({"position": "fixed", "padding-top": "0"});
+                y$('header').next('.l-content,.next-bg').css({"border-top-width": navHeight + "px"});
+                if (y$('.l-dlg-collections').css('position') === 'fixed') {
+                    y$('.l-dlg-collections').css('top', 0);
+                }
+                y$('.mnu-mobile-bottom-cta').css('padding-bottom', '50px');
+            } else {
+                y$('header').css({"position": "relative", "padding-top": trusteBannerHeight + "px"});
+                y$('header').next('.l-content,.next-bg').css({"border-top-width": "0"});
+                if (y$('.l-dlg-collections').css('position') === 'fixed') {
+                    y$('.l-dlg-collections').css('top', trusteBannerHeight);
+                }
+                y$('.mnu-mobile-bottom-cta').css('padding-bottom', '200px');
+            }
+        }
+    };
+
+    y$(window).on('resize', function () {
+        trusteBannerHeight = y$('#consent_blackbar').height();
+        navHeight = y$('.nav').height();
+        reposition();
+    });
+
+    y$(document).on("scroll", function() {
+        reposition();
+    });
+
+    y$(function() {
+        // This is here to check and see if Truste Banner loads for particular user case.
+        var interval = setInterval(
+                function() {
+                    if (interval
+                            && typeof truste != 'undefined'
+                            && typeof truste.eu != 'undefined'
+                            && typeof truste.eu.clickListener != 'undefined'
+                    ) {
+                        interval = clearInterval(interval);
+                        y$('.truste-prefs-link').removeClass('truste-prefs-link');
+                        y$('.ad-choices-link').remove();
+                    }
+                }
+                , 750);
+        setTimeout(function() {
+            clearInterval(interval);
+        }, 10000); //waits 10 seconds before giving up
+    });
+
+    
+</script>
+
+                    </body>
+</html>

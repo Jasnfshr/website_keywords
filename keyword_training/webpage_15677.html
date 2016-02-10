@@ -1,0 +1,1266 @@
+<SCRIPT LANGUAGE="JavaScript">
+// BOI, followed by one or more digits, followed by EOI.
+var reInteger = /^\d+$/;
+
+// BOI, followed by one or more characters, followed by @,
+// followed by one or more characters, followed by ., 
+// followed by one or more characters, followed by EOI.
+var reEmail = /^.+\@.+\..+$/;
+
+
+// BOI, followed by one or more characters,
+// followed by ., 
+// followed by one or more characters, followed by EOI.
+var reWebAddress = /^.+\..+$/;
+
+// BOI, followed by an optional + or -, followed by one or more digits, 
+// followed by EOI.
+//var reSignedInteger = /^(+|-)?\d+$/
+var reSignedInteger = /^(\+|\-)?\d+$/;
+
+var defaultEmptyOK = false;
+
+var iHeight = "Height is a required field and should be a number.";
+var iWeight = "Weight is a required field and should be a number.";
+var iStats= "Vital Stats is a required field";
+var ia="All questions must be answered. No answer field can be left blank";
+var iimg="Image file is required. Please upload image file";
+var gym="Select the Gym name of which you are a member";
+
+var iAge = "Age is a required field and should be a number.";
+
+var iRHR = "RHR is a required field and should be a number.";
+
+var iEmail = "Email is a required field and cannot be blank";
+var iEmail1 = "Invalid Email Id";
+
+
+var iOldPassword = "Old Password is a required field and cannot be blank";
+var im_no="membership no is a required field and cannot be left blank"
+var iNewPassword = "Old Password is a required field and cannot be blank";
+var iNewPassword1 = "New Password is a required field and cannot be blank";
+var iNewPassword2 = "New Password is a required field and cannot be blank";
+
+var iCountryName = "Country is a required field and cannot be blank";
+var iStateName = "State is a required field and cannot be blank";
+var iCityName = "City is a required field and cannot be blank";
+
+var iUserType = "User Type is a required field and cannot be blank";
+
+var iGymTitle = "Gym Title is a required field and cannot be blank";
+var iFTitle = "Facility Title is a required field and cannot be blank";
+var iFDescription = "Facility Description is a required field and cannot be blank";
+
+var iPTitle = "Package Title is a required field and cannot be blank";
+var iPDescription = "Package Description is a required field and cannot be blank";
+
+var iADescription = "Article Description is a required field and cannot be blank";
+
+var iTDescription = "Tip Of the Day Description is a required field and cannot be blank";
+
+var iATitle = "Article Title is a required field and cannot be blank";
+var iAuthor = "Article Author is a required field and cannot be blank";
+var iADate = "Article Date is a required field and cannot be blank";
+var iArticle = "Article is a required field and cannot be blank";
+
+var iTMDescription = "Testimonial Description is a required field and cannot be blank";
+var iTName = "Testimonial Name is a required field and cannot be blank";
+
+var iPDate = "Press Release Date is a required field and cannot be blank";
+var iPublication = "Publication is a required field and cannot be blank";
+
+var iquestion = "Question is a required field and cannot be blank";
+var ichoice1 = "Choice 1 is a required field and cannot be blank";
+var ichoice2 = "Choice 2 is a required field and cannot be blank";
+var iNOC = "No. of Choices is a required field and cannot be blank";
+
+var iSDate = "Start Date is a required field and cannot be blank";
+var iEDate = "End Date is a required field and cannot be blank";
+
+var iLinkName = "Link Name is a required field and cannot be blank";
+var iSOrder = "Sort Order is a required field and cannot be blank";
+var iContent = "Content is a required field and cannot be blank";
+
+var iDesignation = "Designation is a required field and cannot be blank";
+var iDescription = "Description is a required field and cannot be blank";
+var iDuties = "Duties is a required field and cannot be blank";
+var iExperience = "Experience is a required field and cannot be blank";
+var iIndustryType = "Industry Type is a required field and cannot be blank";
+var iFunctionArea = "Function Area is a required field and cannot be blank";
+var iSalary = "Salary is a required field and cannot be blank";
+var iEmail = "Email is a required field and cannot be blank";
+var iTel = "Telephone is a required field and cannot be blank";
+
+var iPhDescription = "Description is a required field and cannot be blank";
+var iFilename = "File Name is a required field and cannot be blank";
+
+var iQuestion = "Question is a required field and cannot be blank";
+var iAnswer = "Answer is a required field and cannot be blank";
+
+var iEventTitle = "Event Title is a required field and cannot be blank";
+var iStart_dt = "Start Date is a required field and cannot be blank";
+var iEnd_dt = "End Date is a required field and cannot be blank";
+
+var iCName = "Name is a required field and cannot be blank";
+var iCTitle="Title is a required field and cannot be blank";
+
+var iScript="Script is a required field and cannot be blank";
+
+var iad1 = "ad1 is a required field and cannot be blank";
+var iad2 = "ad2 is a required field and cannot be blank";
+
+var ifirst_name = "First Name is a required field and cannot be blank";
+var ilast_name = "Last Name is a required field and cannot be blank";
+var iemail = "Email is a required field and cannot be blank";
+var iemailinvalid = "Invalid Email Id";
+var icomment = "Comment is a required field and cannot be blank";
+var iphone = "Phone should be a number";
+var ibirthdate = "Birth Date is a required field and cannot be blank";
+
+var iSemail = "Senders Email is a required field and cannot be blank";
+var iFemail = "Friends Email is a required field and cannot be blank";
+
+var ilocation = "Location is a required field and cannot be blank";
+var isource = "Source is a required field and cannot be blank";
+var iname = "Name is a required field and cannot be blank";
+var iaddress = "Address is a required field and cannot be blank";
+var iofftel = "Off. Tel. cannot be blank and should be a number";
+var iresitel = "Resi. Tel. cannot be blank and should be a number";
+var imobile = "Mobile cannot be blank and should be a number";
+var ifax = "Fax cannot be blank and should be a number";
+var iemail = "Email is a required field and cannot be blank";
+var iemailinvalid="Invalid Email Id!"
+var istate = "State is a required field and cannot be blank";
+var icity = "City is a required field and cannot be blank";
+var iarea = "Area is a required field and cannot be blank";
+var icompname = "Company Name is a required field and cannot be blank";
+var iindividual = "Individual is a required field and cannot be blank";
+var icorporate = "Corporate is a required field and cannot be blank";
+var ibuiltup = "Built up is a required field and cannot be blank";
+var icarpet = "Carpet is a required field and cannot be blank";
+var iworkout = "'Do you work out?' is a required field and cannot be blank";
+var ihearfrom = "'How did you hear about this?' is a required field and cannot be blank";
+
+var ifname = "First Name is a required field and cannot be blank";
+var ilname = "Last Name is a required field and cannot be blank";
+var itel = "Resi. Tel. cannot be blank and should be a number";
+var icity = "City is a required field and cannot be blank";
+var istate = "State is a required field and cannot be blank";
+var icountry = "Country is a required field and cannot be blank";
+var iadd1 = "Address is a required field and cannot be blank";
+
+var istd  = "STD is a required field and cannot be blank";
+
+var iWorkEmailInvalid = "Invalid Work Email Id.";
+var iRegistrationDate = "Registration Date is required field and cannot be blank";
+var iRegGymId = "Gym Name is required field and cannot be blank";
+var iContestantName = "Contestant Name is required field and cannot be blank";
+var iAge = "Age is required field and cannot be blank";
+var iHeight = "Height is required field and cannot be blank";
+var iWeight = "Weight is required field and cannot be blank";
+var iWaist = "Waist is required field and cannot be blank";
+var iHips = "Hips is required field and cannot be blank";
+var iChest = "chest is required field and cannot be blank";
+var iFullLengthPicture = "Full Length Picture is required field and please choose a picture";
+var iFrontPicture = "Front Picture  is required field and please choose a picture";
+
+// Attempting to make this library run on Navigator 2.0,
+// so I'm supplying this array creation routine as per
+// JavaScript 1.0 documentation.  If you're using 
+// Navigator 3.0 or later, you don't need to do this;
+// you can use the Array constructor instead.
+
+function makeArray(n) {
+//*** BUG: If I put this line in, I get two error messages:
+//(1) Window.length can't be set by assignment
+//(2) daysInMonth has no property indexed by 4
+//If I leave it out, the code works fine.
+//   this.length = n;
+   for (var i = 1; i <= n; i++) {
+      this[i] = 0
+   } 
+   return this
+}
+
+
+var daysInMonth = makeArray(12);
+daysInMonth[1] = 31;
+daysInMonth[2] = 29;   // must programmatically check this
+daysInMonth[3] = 31;
+daysInMonth[4] = 30;
+daysInMonth[5] = 31;
+daysInMonth[6] = 30;
+daysInMonth[7] = 31;
+daysInMonth[8] = 31;
+daysInMonth[9] = 30;
+daysInMonth[10] = 31;
+daysInMonth[11] = 30;
+daysInMonth[12] = 31;
+
+function isEmpty(s)
+{   return ((s == null) || (s.length == 0))
+}
+
+// isInteger (STRING s [, BOOLEAN emptyOK])
+// 
+// Returns true if all characters in string s are numbers.
+//
+// Accepts non-signed integers only. Does not accept floating 
+// point, exponential notation, etc.
+//
+// We don't use parseInt because that would accept a string
+// with trailing non-numeric characters.
+//
+// By default, returns defaultEmptyOK if s is empty.
+// There is an optional second argument called emptyOK.
+// emptyOK is used to override for a single function call
+//      the default behavior which is specified globally by
+//      defaultEmptyOK.
+// If emptyOK is false (or any value other than true), 
+//      the function will return false if s is empty.
+// If emptyOK is true, the function will return true if s is empty.
+//
+// EXAMPLE FUNCTION CALL:     RESULT:
+// isInteger ("5")            true 
+// isInteger ("")             defaultEmptyOK
+// isInteger ("-5")           false
+// isInteger ("", true)       true
+// isInteger ("", false)      false
+// isInteger ("5", false)     true
+
+function isInteger (s, emptyOK)
+{   var i;
+
+    if (isEmpty(s)) 
+       if (isInteger.arguments.length == 1) return defaultEmptyOK;
+       else return (isInteger.arguments[1] == true);
+
+    return reInteger.test(s)
+}
+
+// isSignedInteger (STRING s [, BOOLEAN emptyOK])
+// 
+// Returns true if all characters are numbers; 
+// first character is allowed to be + or - as well.
+//
+// Does not accept floating point, exponential notation, etc.
+//
+// We don't use parseInt because that would accept a string
+// with trailing non-numeric characters.
+//
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+//
+// EXAMPLE FUNCTION CALL:          RESULT:
+// isSignedInteger ("5")           true 
+// isSignedInteger ("")            defaultEmptyOK
+// isSignedInteger ("-5")          true
+// isSignedInteger ("+5")          true
+// isSignedInteger ("", false)     false
+// isSignedInteger ("", true)      true
+
+function isSignedInteger (s, emptyOK)
+
+{   if (isEmpty(s)) 
+       if (isSignedInteger.arguments.length == 1) return defaultEmptyOK;
+       else return (isSignedInteger.arguments[1] == true);
+    else {
+       return reSignedInteger.test(s)
+    }
+}
+
+// isNonnegativeInteger (STRING s [, BOOLEAN emptyOK])
+// 
+// Returns true if string s is an integer >= 0.
+//
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+
+function isNonnegativeInteger (s, emptyOK)
+{   var secondArg = defaultEmptyOK;
+
+    if (isNonnegativeInteger.arguments.length > 1)
+        secondArg = isNonnegativeInteger.arguments[1];
+
+    // The next line is a bit byzantine.  What it means is:
+    // a) s must be a signed integer, AND
+    // b) one of the following must be true:
+    //    i)  s is empty and we are supposed to return true for
+    //        empty strings
+    //    ii) this is a number >= 0
+
+    return (isSignedInteger(s, secondArg)
+         && ( (isEmpty(s) && secondArg)  || (parseInt (s, 10) >= 0) ) );
+}
+
+// isEmail (STRING s [, BOOLEAN emptyOK])
+// 
+// Email address must be of form a@b.c -- in other words:
+// * there must be at least one character before the @
+// * there must be at least one character before and after the .
+// * the characters @ and . are both required
+//
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+
+function isEmail (s, emptyOK)
+
+{   if (isEmpty(s)) 
+       if (isEmail.arguments.length == 1) return defaultEmptyOK;
+       else return (isEmail.arguments[1] == true);
+    
+    else {
+           return reEmail.test(s)
+    }
+    
+}
+
+
+function isWebAddress (s, emptyOK)
+
+{   if (isEmpty(s)) 
+       if (isWebAddress.arguments.length == 1) return defaultEmptyOK;
+       else return (isWebAddress.arguments[1] == true);
+    
+    else {
+           return reWebAddress.test(s)
+    }
+}
+
+// isIntegerInRange (STRING s, INTEGER a, INTEGER b [, BOOLEAN emptyOK])
+// 
+// isIntegerInRange returns true if string s is an integer 
+// within the range of integer arguments a and b, inclusive.
+// 
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+
+function isIntegerInRange (s, a, b, emptyOK)
+{   if (isEmpty(s)) 
+       if (isIntegerInRange.arguments.length == 1) return defaultEmptyOK;
+       else return (isIntegerInRange.arguments[1] == true);
+
+    // Catch non-integer strings to avoid creating a NaN below,
+    // which isn't available on JavaScript 1.0 for Windows.
+    if (!isInteger(s, false)) return false;
+
+    // Now, explicitly change the type to integer via parseInt
+    // so that the comparison code below will work both on 
+    // JavaScript 1.2 (which typechecks in equality comparisons)
+    // and JavaScript 1.1 and before (which doesn't).
+    var num = parseInt(s, 10);
+    return ((num >= a) && (num <= b));
+}
+
+
+// isYear (STRING s [, BOOLEAN emptyOK])
+// 
+// isYear returns true if string s is a valid 
+// Year number.  Must be 2 or 4 digits only.
+// 
+// For Year 2000 compliance, you are advised
+// to use 4-digit year numbers everywhere.
+//
+// And yes, this function is not Year 10000 compliant, but 
+// because I am giving you 8003 years of advance notice,
+// I don't feel very guilty about this ...
+//
+// For B.C. compliance, write your own function. ;->
+//
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+
+function isYear (s, emptyOK)
+{   if (isEmpty(s)) 
+       if (isYear.arguments.length == 1) return defaultEmptyOK;
+       else return (isYear.arguments[1] == true);
+		
+	   return isIntegerInRange (s, 1, 9999);
+    //if (!isNonnegativeInteger(s)) return false;
+    //return ((s.length == 2) || (s.length == 4));
+}
+
+
+// isMonth (STRING s [, BOOLEAN emptyOK])
+// 
+// isMonth returns true if string s is a valid 
+// month number between 1 and 12.
+//
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+
+function isMonth (s, emptyOK)
+{   if (isEmpty(s)) 
+       if (isMonth.arguments.length == 1) return defaultEmptyOK;
+       else return (isMonth.arguments[1] == true);
+    return isIntegerInRange (s, 1, 12);
+}
+
+
+
+// isDay (STRING s [, BOOLEAN emptyOK])
+// 
+// isDay returns true if string s is a valid 
+// day number between 1 and 31.
+// 
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+
+function isDay (s, emptyOK)
+{   if (isEmpty(s)) 
+       if (isDay.arguments.length == 1) return defaultEmptyOK;
+       else return (isDay.arguments[1] == true);   
+    return isIntegerInRange (s, 1, 31);
+}
+
+
+
+// daysInFebruary (INTEGER year)
+// 
+// Given integer argument year,
+// returns number of days in February of that year.
+
+function daysInFebruary (year)
+{   // February has 29 days in any year evenly divisible by four,
+    // EXCEPT for centurial years which are not also divisible by 400.
+    return (  ((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0) ) ) ? 29 : 28 );
+}
+
+// isDate (STRING year, STRING month, STRING day)
+//
+// isDate returns true if string arguments year, month, and day 
+// form a valid date.
+// 
+
+function isDate (year, month, day)
+{   // catch invalid years (not 2- or 4-digit) and invalid months and days.
+    if (! (isYear(year, false) && isMonth(month, false) && isDay(day, false))) return false;
+
+    // Explicitly change type to integer to make code work in both
+    // JavaScript 1.1 and JavaScript 1.2.
+    var intYear = parseInt(year, 10);
+    var intMonth = parseInt(month, 10);
+    var intDay = parseInt(day, 10);
+
+    // catch invalid days, except for February
+    if (intDay > daysInMonth[intMonth]) return false; 
+
+    if ((intMonth == 2) && (intDay > daysInFebruary(intYear))) return false;
+
+    return true;
+}
+
+// Notify user that contents of field theField are invalid.
+// String s describes expected contents of theField.value.
+// Put select theField, put focus in it, and return false.
+
+function warnInvalid (theField, s)
+{   theField.focus();
+    theField.select();
+    alert(s);
+    return false;
+}
+
+function warnInvalid1 (s)
+{   alert(s);
+    return false;
+}
+
+// checkInteger (TEXTFIELD theField [, BOOLEAN emptyOK])
+// 
+// Check that string theField.value is an integer.
+//
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+
+function checkInteger (theField, emptyOK)
+{   if (checkInteger.arguments.length == 1) emptyOK = defaultEmptyOK;
+    if ((emptyOK == true) && (isEmpty(theField.value))) return true;
+    if (!isInteger (theField.value, false))
+       return false
+    else return true;
+}
+    
+
+// checkEmail (FormField form [, BOOLEAN emptyOK==false])
+//
+// Check that string theField.value is a valid Email.
+//
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+function checkEmail (theField, emptyOK)
+{   if (checkEmail.arguments.length == 1) emptyOK = defaultEmptyOK;
+    if ((emptyOK == true) && (isEmpty(theField.value))) return true;
+    else if (!isEmail(theField.value, false)) 
+       return warnInvalid (theField, iEmail);
+       //return warnInvalid1 (iEmail);
+    else return true;
+}
+
+
+// checkWebAddress (FormField form [, BOOLEAN emptyOK==false])
+//
+// Check that string theField.value is a valid Email.
+//
+// For explanation of optional argument emptyOK,
+// see comments of function isInteger.
+function checkWebAddress (theField, emptyOK)
+{   
+	
+	if (checkWebAddress.arguments.length == 1) emptyOK = defaultEmptyOK;
+    if ((emptyOK == true) && (isEmpty(theField.value))) return true;
+    else if (!isWebAddress(theField.value, false)) 
+       return warnInvalid (theField, iWebAddress);
+       //return warnInvalid1 (iWebAddress);
+    else return true;
+
+}
+
+// checkDate (String year, String month, String day, STRING labelString [, OKtoOmitDay==false])
+//	
+// Check that year, month, and day 
+// form a valid date.
+//
+// If they don't, labelString (the name of the date, like "Birth Date")
+// is displayed to tell the user which date field is invalid.
+//
+// If it is OK for the day field to be empty, set optional argument
+// OKtoOmitDay to true.  It defaults to false.
+
+function checkJoinedDate (year, month, day, labelString, OKtoOmitDay) {
+
+    // Next line is needed on NN3 to avoid "undefined is not a number" error
+    // in equality comparison below.
+	    
+    if (checkJoinedDate.arguments.length == 4) {
+		OKtoOmitDay = false;
+	}
+    
+    if (!isYear(year.value)) {
+		return warnInvalid1 (iJoinedYear);
+	}    
+	
+    if (!isMonth(month.value)) return warnInvalid1 (iJoinedMonth);
+    if ( (OKtoOmitDay == true) && isEmpty(day.value) ) return true;
+    else if (!isDay(day.value)) 
+       return warnInvalid1 (iJoinedDay);
+    
+    if (isDate (year.value, month.value, day.value)) {
+       return true;
+    }      
+    
+    alert (labelString);
+    //alert (iDatePrefix + labelString + iDateSuffix)
+    return false;
+
+}
+function compDate(fromdt,todt)
+{
+			var day1,day2,month1,month2,year1,year2
+			var date1,date2
+			date1=fromdt
+			date2=todt
+			date1=date1.split("/")
+			date2=date2.split("/")
+						
+			var Startdt=new Date(date1[2],date1[1]-1,date1[0])
+			var Enddt=new Date(date2[2],date2[1]-1,date2[0])
+	
+			if(Startdt>Enddt)
+			{
+				
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+}
+</SCRIPT>
+
+
+<HTML>
+<HEAD>
+    <meta name="google-site-verification" content="TeCZ81WplL0cVZVs4J1Vn6UiZLj8KoTvfPJV6ibq2WA" />
+	
+	<TITLE>Gold's Gym</TITLE>
+
+	<script>
+		var HomeGalImgs = new Array();
+		var HomeGalCaptions = new Array();
+		
+		var HomeGalCaptionArr = new Array();	
+		var TotalGalImages = -1;
+		var curIndex = 0;
+		
+		var intval;
+		
+		var TotalDisplayImages = 4	
+		var startIndex = 0;
+		var endIndex = 0;
+		var offSet = 0;
+		var maxOffset = 0;
+		
+		var PausePhotoGallery = 0;
+		
+				
+	</script>
+	
+	
+	
+
+	<meta name="author" content="gold's gym">
+	<meta name="description" content="gold's gym">
+	<meta name="keywords" content="Gold's Gym,Fitness,Gyms in Mumbai,Gym,Health,Weight loss,Weight gain,Diet,Nutrition,Spinning,Power yoga,Aerobics,Yoga,Personal Training,Weight training,Body building,Exercise">
+	<meta name="title" content="Gold's Gym">
+
+	<link href="CalendarControl.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="CalendarControl.js"></script>
+
+	<script type="text/javascript" src="js/captcha.js"></script>
+	
+	<link href="styles_new.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/DupEmailId.js"></script>
+	
+	<script type="text/javascript" src="js/run_flash.js"></script>
+	
+
+    <script src="js/jquery-1.8.3.js"></script>
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+
+	<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-4479519-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	</script>
+
+<SCRIPT>
+
+        var xCoord;
+        var yCoord;
+
+		var bigImageCount=0;
+		imageObj = new Image();
+		images = new Array();	
+
+            function checkwhere(e) {
+                if (document.layers){
+                    xCoord = e.x;
+                    yCoord = e.y + 10;
+                }
+                else if (document.all){
+                    xCoord = event.clientX;
+                    yCoord = event.clientY + 10;
+                }
+                else if (document.getElementById){
+                    xCoord = e.clientX;
+                    yCoord = e.clientY;
+                }
+                //self.status = "X= "+ xCoord + "  Y= " + yCoord;                 
+            }
+            
+            document.onmousemove = checkwhere;
+            if(document.captureEvents) {document.captureEvents(Event.MOUSEMOVE);}
+
+</SCRIPT>
+
+	
+
+
+	<SCRIPT>
+		function showSubMenu(MenuId,moveFlag) {
+			//alert(MenuId)
+			hideSubMenus()
+			
+			document.getElementById("menu_" + MenuId).style.zIndex = 100;
+			document.getElementById("menu_" + MenuId).style.visibility ="visible";
+			if (moveFlag == '1') {
+				//document.getElementById("menu_" + MenuId).style.left =xCoord - 25 + f_scrollLeft();				
+				
+				document.getElementById("menu_1").style.left =265;
+				document.getElementById("menu_2").style.left =375;
+				document.getElementById("menu_3").style.left =490;
+				document.getElementById("menu_4").style.left =580;								
+				
+				//document.getElementById("menu_5").style.left =700;								
+				//document.getElementById("menu_6").style.left =820;																
+
+				document.getElementById("menu_5").style.left =880;								
+				document.getElementById("menu_6").style.left =700;																
+			
+				//document.getElementById("menu_" + MenuId).style.top =yCoord ;
+				
+				if (MenuId == '6' || MenuId == '5') {
+					document.getElementById("menu_" + MenuId).style.top =30 ;
+				}
+				else {
+					document.getElementById("menu_" + MenuId).style.top =150 ;
+				}
+				
+				//alert(document.getElementById("menu_" + MenuId).offsetLeft);
+				//alert(f_scrollLeft());
+				
+			}
+		}	
+
+		function hideSubMenu(MenuId) {
+			document.getElementById("menu_" + MenuId).style.visibility ="hidden";
+		}
+
+		function hideSubMenus() {
+			document.getElementById("menu_1").style.visibility ="hidden";
+			document.getElementById("menu_2").style.visibility ="hidden";
+			document.getElementById("menu_3").style.visibility ="hidden";
+			document.getElementById("menu_4").style.visibility ="hidden";
+			document.getElementById("menu_5").style.visibility ="hidden";
+			document.getElementById("menu_6").style.visibility ="hidden";
+		}
+		
+
+	var PCount;		
+	
+	</SCRIPT>
+
+
+
+<SCRIPT>
+
+function VerifyMobileNo(obj) {
+    
+    
+    var MobileNo = obj.value;
+    
+    
+	if (isEmpty(MobileNo)) {
+		alert("Mobile no. is a required field and should be a 10 digit no.");
+		return false;
+		//return warnInvalid(theForm.mobile, imobile);
+	}
+    if  (MobileNo.length != 10) {
+		alert("Mobile no. is a required field and should be a 10 digit no.");
+		return false;
+    }    
+    
+    var urlDomain;
+    var url;
+    urlDomain = "http://localhost/goldsgym/"
+    
+    url = "OTPCode.asp";
+    //url = urlDomain + url;
+    
+	$.post(
+	    url,
+	    { MobileNo: MobileNo },				  
+		function(data,status){
+		    $('#Code1').val(data);
+		    alert("Please Enter the Code sent to your mobile number.");
+        }
+    );
+    
+    //alert($("#mobile").val());
+}
+
+function signupvippass(formName)
+{
+	var theForm = document.forms[formName];
+	
+	
+	
+	if (isEmpty(theForm.FirstName.value)) {
+		alert("First Name is a required filed and cannot be blank");
+		return false;
+	}
+	if (isEmpty(theForm.LastName.value)) {
+		alert("Last Name is a required filed and cannot be blank");
+		return false;
+	}
+			
+	//if (isEmpty(theForm.name1.value)) {
+	//	alert("Name is a required filed and cannot be blank");
+	//	return false;
+	//}	
+	
+	if (isEmpty(theForm.email.value)) {
+		alert("Email is a required filed and cannot be blank");
+		return false;
+	}
+	else {
+		if (!isEmail(theForm.email.value)) {
+			alert("Invalid email format");
+			return false;
+			//return warnInvalid(theForm.email, iemailinvalid);				
+		}
+	}
+	
+	
+	if (isEmpty(theForm.mobile.value)) {
+		alert("Contact no. is a required filed and cannot be blank");
+		return false;
+		//return warnInvalid(theForm.mobile, imobile);
+	}
+
+	if (theForm.RegGymId.selectedIndex == 0) {
+		alert("Please select a gym");
+		return false;
+	}
+	
+	if (theForm.Code1.value == "0") {
+		alert("Invalid Code");
+		return false;
+	}
+	if (theForm.Code1.value != theForm.Code.value) {
+		alert("Invalid Code");
+		return false;
+	}
+
+
+	document.getElementById("btnSignUpVIPPass").disabled = true;
+	theForm.submit();
+	
+	//validateCaptcha(theForm);			
+	
+	return true;
+	
+}
+
+</SCRIPT>
+
+<SCRIPT>
+
+function signupvippasscouple(formName)
+{
+	//alert("AAA");
+	
+	var theForm = document.forms[formName];
+		
+	if (isEmpty(theForm.FirstName1.value)) {
+		alert("First Name1 is a required filed and cannot be blank");
+		return false;
+	}
+	if (isEmpty(theForm.LastName1.value)) {
+		alert("Last Name1 is a required filed and cannot be blank");
+		return false;
+	}
+	
+	if (isEmpty(theForm.FirstName2.value)) {
+		alert("First Name2 is a required filed and cannot be blank");
+		return false;
+	}
+	if (isEmpty(theForm.LastName2.value)) {
+		alert("Last Name2 is a required filed and cannot be blank");
+		return false;
+	}
+	
+	if (isEmpty(theForm.email.value)) {
+		alert("Email is a required filed and cannot be blank");
+		return false;
+	}
+	else {
+		if (!isEmail(theForm.email.value)) {
+			alert("Invalid email format");
+			return false;
+			//return warnInvalid(theForm.email, iemailinvalid);				
+		}
+	}
+	
+	
+	if (isEmpty(theForm.mobile.value)) {
+		alert("Contact no. is a required filed and cannot be blank");
+		return false;
+		//return warnInvalid(theForm.mobile, imobile);
+	}
+	
+	theForm.submit();
+	
+	//validateCaptcha(theForm);			
+	
+	return true;
+	
+	
+}
+
+</SCRIPT>
+
+
+
+
+<SCRIPT>
+
+	function goHome() {
+		document.location = "default.asp"
+	}	
+		
+</SCRIPT>
+
+
+
+	<link type="text/css" rel="stylesheet" href="themes/base.css"/>
+	<link type="text/css" rel="stylesheet" href="themes/default/theme.css"/>
+        
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.9.2.custom.css" />
+    <script src="js/jquery-ui-1.9.2.custom.js"></script>
+
+
+<style>
+        .ui-dialog .ui-state-error { padding: .3em; }
+        
+        #LeftBanners {width:300px;height:auto;background-color:#ffffff;float:left;}
+        
+        #CenterBanners {width:384px;height:600px;background-color:#ffffff;float:left;}
+        
+        #RightBanners {width:300px;height:auto;background-color:#ffffff;float:left;}
+        
+        
+</style>
+
+	
+	<script type="text/javascript" src="jquery.accessible-news-slider.js"></script>
+	<script type="text/javascript">
+	// when the DOM is ready, convert the feed anchors into feed content
+	jQuery(document).ready(function() {
+
+		//blink("#careers_link_blinking");
+		blink("#audio_link_blinking");
+		blink("#jingle_download");
+		blink("#lyrics");
+		
+		document.getElementById("newsslider").style.display = "block";
+		
+		jQuery('#newsslider').accessNews({
+
+		});
+
+		
+		// Start fireworks for 10th anniv celeb
+		//startFW();
+	});
+	
+	function blink(selector){
+		$(selector).fadeOut(1500, function(){
+			$(this).fadeIn('1500', function(){
+				blink(this);
+			});
+		});
+	}
+	
+	</script>
+
+<SCRIPT>
+
+	window.onload  = function() {getcookie();
+		
+		
+		var clientWidth;
+		
+		clientWidth = document.body.clientWidth
+		
+		////document.getElementById("mainContainer").style.left = (clientWidth - 1000)/2
+		
+		//
+		
+
+		if (document.getElementById("Ad-Pop-up")) {
+			document.getElementById("Ad-Pop-up").style.left =  parseInt(document.getElementById("Ad-Pop-up").style.left) + ((clientWidth - 1000)/2) + 120;		
+		}
+
+		
+		if (document.getElementById("map")) {
+		//	load();
+		}	
+		
+	}
+	
+	
+function gogym()
+{
+	if(document.getElementById("GymId").value!='0')
+	{
+		//alert("not submitting");
+		document.forms.gymLocatorform.submit();
+	}
+	else
+	{
+		alert("Please select a Gym");
+	}
+}
+
+
+
+</SCRIPT>
+
+<!-- Facebook Conversion Code for Gold&#039;s Gym India -->
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6023243945339', {'value':'0.01','currency':'INR'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6023243945339&amp;cd[value]=0.01&amp;cd[currency]=INR&amp;noscript=1" /></noscript>
+</HEAD>
+
+<BODY topmargin="0" leftmargin="0">
+
+
+<CENTER><div id="mainContainer" name="mainContainer" style="position:relative;left:0;top:0;width:1000;">
+	<div id="HomeDiv" style="position:absolute;top:12;left:12;background-color:transparent;z-index:9999;width:115;height:112" onmouseover="this.style.cursor='hand';" onclick="goHome();">
+	   
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+	</div>
+
+
+
+<div id="menu_1" style="position:absolute;left:0;top:0;background-color:#373737;z-index:10000;visibility:hidden" onmouseover="showSubMenu('1','0');" onmouseout="hideSubMenu('1');">
+	<table cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="5" class="c_left">&nbsp;</td>
+			<td class="c_middle">
+				<a href="aboutus.asp?GID=1&FID=22" class="white">About us</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="aboutus.asp?GID=1&FID=24" class="white">Our Corporate Team</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="facilities.asp" class="white">Facilities &amp; Programs</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<!--
+				<a href="careers.asp?GID=4" class="white">Careers</a>
+				-->
+				<a href="vacancies1_new.asp" class="white">Careers</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<!--
+				<a href="photogallery.asp" class="white">Photo Gallery</a>
+				-->
+				<a href="events_photogallery.asp" class="white">Photo Gallery</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="pressreleases.asp" class="white">Press Release</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		<!--
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="events.asp" class="white">Events</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		-->
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="testimonials.asp" class="white">Testimonials</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="celebs.asp" class="white">Celebrities Quotes</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="videos.asp?VC=1" class="white">Electronic Releases</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="videos.asp?VC=2" class="white">Videos</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+
+	</table>
+</div>
+
+<div id="menu_2" style="position:absolute;left:0;top:0;width:130;background-color:#373737;visibility:hidden" onmouseover="showSubMenu('2','0');" onmouseout="hideSubMenu('2');">
+	<table width="100%" cellpading="0" cellspacing="0"><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="pulse.asp" class="white">Pulse</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="articlesbycategory.asp?CID=2" class="white">Workout</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="articlesbycategory.asp?CID=3" class="white">Health</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="articlesbycategory.asp?CID=4" class="white">Nutrition</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="articlesbycategory.asp?CID=5" class="white">Lifestyle</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="articlesbycategory.asp?CID=6" class="white">WLP Articles</a></td><td class="c_right" width="5">&nbsp;</td></tr></table>
+</div>
+
+<div id="menu_3" style="position:absolute;left:0;top:0;background-color:#373737;visibility:hidden" onmouseover="showSubMenu('3','0');" onmouseout="hideSubMenu('3');">
+	<table cellpadding="0" cellspacing="0"><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="franchising.asp?GID=3&FID=10" class="white">Business with Gold''s Gym</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="franchising.asp?GID=3&FID=12" class="white">Management of Corporate Gyms</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="franchising.asp?GID=3&FID=13" class="white">Scope of work</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="franchising.asp?GID=3&FID=14" class="white">Our support</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="franchising.asp?GID=3&FID=15" class="white">Advertising</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="franchising.asp?GID=3&FID=16" class="white">Training</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="franchising.asp?GID=3&FID=33" class="white">Testimonial</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td  class="c_middle"><a href="franchisingform.asp?GID=3" class="white">Franchise Application Form</a></td><td class="c_right" width="5">&nbsp;</td></tr></table>
+</div>
+
+<div id="menu_4" style="position:absolute;left:0;top:0;background-color:#373737;visibility:hidden" onmouseover="showSubMenu('4','0');" onmouseout="hideSubMenu('4');">
+	<table cellpading="0" cellspacing="0"><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="ggu.asp?GID=7&FID=27" class="white">Gold''s Gym Fitness Institute</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="ggu.asp?GID=7&FID=29" class="white">Course Content</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="ggu.asp?GID=7&FID=30" class="white">Certified Personal Trainers</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="ggu_videos.asp" class="white">Videos</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="ggu_courses.asp" class="white">Register for a course online</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="ggu_contact_us.asp" class="white">Contact Gold's Gym Fitness Institute</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="ggfi_login.asp" class="white">GGFI Online Manual Login</a></td><td class="c_right" width="5">&nbsp;</td></tr><tr><td class="c_left" width="5">&nbsp;</td><td class="c_middle"><a href="ggu/default.asp" target="_blank" class="white">GGFI Staff Login</a></td><td class="c_right" width="5">&nbsp;</td></tr></table>
+</div>
+
+<!--
+<div id="menu_5" style="position:absolute;left:0;top:0;;background-color:#373737;visibility:hidden" onmouseover="showSubMenu('5','0');" onmouseout="hideSubMenu('5');">
+	<table cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle" >
+				<a href="contactus.asp?GID=2" class="white">Contact us</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="feedback.asp" class="white">Feedback Form</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="c_left" width="5">&nbsp;</td>
+			<td class="c_middle">
+				<a href="faqs.asp" class="white">FAQs</a>
+			</td>
+			<td class="c_right" width="5">&nbsp;</td>
+		</tr>
+
+	</table>
+</div>
+-->
+
+<div id="menu_5" style="position:absolute;left:0;top:0;;background-color:#373737;visibility:hidden" onmouseover="showSubMenu('5','0');" onmouseout="hideSubMenu('5');">
+	<table cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="5">&nbsp;</td>
+			<td>
+				<a href="contactus.asp?GID=2" class="white">Contact us</a>
+			</td>
+			<td width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5">&nbsp;</td>
+			<td>
+				<a href="feedback.asp" class="white">Feedback Form</a>
+			</td>
+			<td width="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5">&nbsp;</td>
+			<td>
+				<a href="faqs.asp" class="white">FAQs</a>
+			</td>
+			<td width="5">&nbsp;</td>
+		</tr>
+
+	</table>
+</div>
+
+<div id="menu_6" style="position:absolute;left:0;top:0;background-color:#373737;visibility:hidden" onmouseover="showSubMenu('6','0');" onmouseout="hideSubMenu('6');">
+	<table>
+		<!--
+		<tr>
+			<td width="5">&nbsp;</td>
+			<td>
+				<a href="contest_list.asp?GID=2" class="white">Contest</a>
+			</td>
+			<td width="5">&nbsp;</td>
+		</tr>
+		-->
+		
+		<!--
+		<tr>
+			<td width="5">&nbsp;</td>
+			<td>
+				<a href="refertoacustomerform.asp" class="white">Refer a customer</a>
+			</td>
+			<td width="5">&nbsp;</td>
+		</tr>
+		-->
+		
+		<tr>
+			<td width="5">&nbsp;</td>
+			<td>
+				<a href="packages.asp" class="white">Gift a Membership</a>
+			</td>
+			<td width="5">&nbsp;</td>
+		</tr>
+
+	</table>
+</div>
+
+
+
+<TABLE id="idMainTable" border="0" cellspacing="0" class="TableBody" width="1000" "><tr id="row1"><td id="col1" valign="top" height="186px" style="border-style:solid;border-width:5px;border-color:#FFFF00"><div id="Header" style="position:absolute;top:0;left:0;width:1000px;background: #000000;height:150px;"><img src="images/logo_50_years.png" height="145" style="position:relative;left:25px;" alt="Gold's Gym" border="0" usemap="#Logo"/><div id="HeaderUplinks" class="HeaderUpLinksWithHome"><a href="default.asp" class="yellow">HOME</a> | <a href="co_sc1.asp" class="yellow">CORPORATE MEMBERSHIP LOGIN</a> | <a href="promotions.asp?GID=6" class="yellow" onmouseover="javaScript:showSubMenu('6','1');">PROMOTIONS</a> | <a href="vacancies1_new.asp" class="yellow">CAREERS</a> |  <a href="contactus.asp?GID=2" class="yellow"  onmouseover="javaScript:showSubMenu('5','1');">CUSTOMER CARE</a>&nbsp;&nbsp;&nbsp;&nbsp;</div><div id="Headerflash" class="HeaderFlash" style="border-style:none;border-width:1px;border-color:#FFFFFF"><a href="gift_vouchers.asp"><img src="images/gift_voucher_360_60.jpg" border="0" alt="Click here to Gift Fitness" title="Click here to Gift Fitness"></a></div><div id="HeaderDownlinks" class="HeaderDownLinks"><a href="gymlocator.asp" class="white" onmouseover="javaScript:hideSubMenus();">GYM LOCATOR</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="aboutus.asp?GID=1" class="white" onmouseover="javaScript:showSubMenu('1','1');">ABOUT US</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="healtharticles_list.asp" class="white" onmouseover="javaScript:showSubMenu('2','1');">HEALTH &amp; FITNESS</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="franchising.asp?GID=3" class="white" onmouseover="javaScript:showSubMenu('3','1');">FRANCHISING</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="ggu.asp?GID=7" class="white" onmouseover="javaScript:showSubMenu('4','1');">FITNESS INSTITUTE</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="events.asp" class="white">EVENTS</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="articlesbycategory.asp?CID=6" class="white">WLP Articles</a>&nbsp;&nbsp; <a href="http://www.facebook.com/home.php?ref=home#/pages/Golds-Gym-India/145224884121" target="_blank"><img src="images/fb.jpg" border="0"  width="20" alt="Join Gold's Gym India on Facebook"/></a></div><div id="idLocatorBand" style="position:absolute;top:150;left:185;width:800;font-size:9pt;height:30;background-color:#FFFFFF;text-align:left;z-index:1;"><div id"gymLocator2" style="position:absolute;left:0;width:800;top:5px"><form name="gymLocatorform" action="gyms/home.asp" method=get><select name="GymId" id="GymId" style="color:black;letter-spacing:0.1em;font-size:9pt" onchange="javascript:setgofocus();"><option style="color:black;font-family:Arial" value="0">Select a Gym</option><option style="color:black;font-family:Arial" value=104>Agra - Lajpat Kunj</option><option style="color:black;font-family:Arial" value=158>Ahmednagar - Savedi Area</option><option style="color:black;font-family:Arial" value=144>Ajmer - Jaipur Road</option><option style="color:black;font-family:Arial" value=155>Aligarh - Ramghat Road</option><option style="color:black;font-family:Arial" value=142>Allahabad - Civil Lines</option><option style="color:black;font-family:Arial" value=67>Amritsar - The Mall</option><option style="color:black;font-family:Arial" value=157>Aurangabad - Adalat Road</option><option style="color:black;font-family:Arial" value=117>Bathinda- Barnala Road</option><option style="color:black;font-family:Arial" value=78>Belgaum - Tilakwadi</option><option style="color:black;font-family:Arial" value=131>Bengaluru - Banashankari</option><option style="color:black;font-family:Arial" value=64>Bengaluru - Basaveshwarnagar</option><option style="color:black;font-family:Arial" value=57>Bengaluru - HSR Layout</option><option style="color:black;font-family:Arial" value=82>Bengaluru - Indiranagar</option><option style="color:black;font-family:Arial" value=48>Bengaluru - JP Nagar</option><option style="color:black;font-family:Arial" value=97>Bengaluru - Kalyan Nagar</option><option style="color:black;font-family:Arial" value=83>Bengaluru - Koramangala</option><option style="color:black;font-family:Arial" value=137>Bengaluru - Malleshwaram</option><option style="color:black;font-family:Arial" value=27>Bengaluru - Richmond Town</option><option style="color:black;font-family:Arial" value=41>Bengaluru - RMZ Infinity Old Madras Rd</option><option style="color:black;font-family:Arial" value=127>Bengaluru - Whitefield</option><option style="color:black;font-family:Arial" value=123>Bhilai – Nehru Nagar</option><option style="color:black;font-family:Arial" value=150>Bilaspur - Vyapar Vihar</option><option style="color:black;font-family:Arial" value=105>Chennai-Adyar</option><option style="color:black;font-family:Arial" value=89>Cochin - Vyttila</option><option style="color:black;font-family:Arial" value=140>Dehradun - Ballupur</option><option style="color:black;font-family:Arial" value=87>Delhi - Dayanand Vihar</option><option style="color:black;font-family:Arial" value=80>Delhi - Dwarka</option><option style="color:black;font-family:Arial" value=56>Delhi - East of Kailash</option><option style="color:black;font-family:Arial" value=81>Delhi - Janakpuri</option><option style="color:black;font-family:Arial" value=136>Delhi - Paschim Vihar</option><option style="color:black;font-family:Arial" value=160>Delhi - Vasant Vihar</option><option style="color:black;font-family:Arial" value=108>Delhi – Rohini</option><option style="color:black;font-family:Arial" value=125>Dhanbad - Bank More</option><option style="color:black;font-family:Arial" value=45>Faridabad - Sector 16</option><option style="color:black;font-family:Arial" value=75>Ghaziabad - Indirapuram</option><option style="color:black;font-family:Arial" value=119>Ghaziabad - Raj Nagar</option><option style="color:black;font-family:Arial" value=159>Greater Noida</option><option style="color:black;font-family:Arial" value=135>Gurgaon - Gold souk, Sector 43</option><option style="color:black;font-family:Arial" value=72>Gurgaon - Palam Vihar</option><option style="color:black;font-family:Arial" value=109>Gurgaon- Sector 14</option><option style="color:black;font-family:Arial" value=53>Guwahati - Ganeshguri</option><option style="color:black;font-family:Arial" value=113>Guwahati - Ulubari</option><option style="color:black;font-family:Arial" value=143>Haldwani - Kathogodam</option><option style="color:black;font-family:Arial" value=139>Hyderabad - Himayat Nagar</option><option style="color:black;font-family:Arial" value=54>Indore - Vijay Nagar</option><option style="color:black;font-family:Arial" value=118>Jabalpur - Gorakhpur</option><option style="color:black;font-family:Arial" value=36>Jaipur - Malviya Nagar</option><option style="color:black;font-family:Arial" value=120>Jaipur- Vaishali Nagar</option><option style="color:black;font-family:Arial" value=31>Jalandhar - Model Town</option><option style="color:black;font-family:Arial" value=145>Jalgaon - Ramdas Colony</option><option style="color:black;font-family:Arial" value=128>Jammu – Bahu Plaza</option><option style="color:black;font-family:Arial" value=149>Jodhpur - Akhaliya Circle</option><option style="color:black;font-family:Arial" value=90>Kanpur - Swaroop Nagar</option><option style="color:black;font-family:Arial" value=61>Kolhapur - Tarabai Park</option><option style="color:black;font-family:Arial" value=32>Kolkata - Alipore</option><option style="color:black;font-family:Arial" value=111>Kolkata - Salt Lake</option><option style="color:black;font-family:Arial" value=153>Kolkata - Sodepur</option><option style="color:black;font-family:Arial" value=154>Lucknow - Aashiana</option><option style="color:black;font-family:Arial" value=63>Lucknow - Mahanagar</option><option style="color:black;font-family:Arial" value=91>Ludhiana - Canal Road</option><option style="color:black;font-family:Arial" value=86>Mangalore - Karangalpady</option><option style="color:black;font-family:Arial" value=84>Meerut - Garh Road</option><option style="color:black;font-family:Arial" value=42>Mohali - Phase 8</option><option style="color:black;font-family:Arial" value=74>Mumbai - Andheri East</option><option style="color:black;font-family:Arial" value=13>Mumbai - Bandra (W)</option><option style="color:black;font-family:Arial" value=52>Mumbai - Goregaon (E)</option><option style="color:black;font-family:Arial" value=40>Mumbai - Kandivali (W)</option><option style="color:black;font-family:Arial" value=76>Mumbai - Kandivali East</option><option style="color:black;font-family:Arial" value=11>Mumbai - Lokhandwala</option><option style="color:black;font-family:Arial" value=66>Mumbai - Lower Parel (W)</option><option style="color:black;font-family:Arial" value=100>Mumbai - Powai</option><option style="color:black;font-family:Arial" value=102>Mysore – Jayalakshmipuram</option><option style="color:black;font-family:Arial" value=44>Nashik - Cannada Corner</option><option style="color:black;font-family:Arial" value=38>Navi Mumbai  - Vashi</option><option style="color:black;font-family:Arial" value=65>Noida - IHDP Sector 127</option><option style="color:black;font-family:Arial" value=37>Noida - Sector 30</option><option style="color:black;font-family:Arial" value=114>Panchkula - Sector 16</option><option style="color:black;font-family:Arial" value=112>Patna - Boring Road</option><option style="color:black;font-family:Arial" value=95>Patna - Rajendra Nagar</option><option style="color:black;font-family:Arial" value=156>Phagwara - G.T road</option><option style="color:black;font-family:Arial" value=55>Pune - Aundh</option><option style="color:black;font-family:Arial" value=106>Pune - Hadapsar</option><option style="color:black;font-family:Arial" value=15>Pune - Kalyani Nagar</option><option style="color:black;font-family:Arial" value=94>Pune - Law College Road</option><option style="color:black;font-family:Arial" value=88>Pune - NIBM</option><option style="color:black;font-family:Arial" value=130>Pune - Pimple Saudagar</option><option style="color:black;font-family:Arial" value=148>Pune - Satara Road</option><option style="color:black;font-family:Arial" value=124>Pune - Sinhagad Road</option><option style="color:black;font-family:Arial" value=126>Pune - Viman Nagar</option><option style="color:black;font-family:Arial" value=85>Raipur - Shankar Nagar</option><option style="color:black;font-family:Arial" value=121>Ranchi- Doranda</option><option style="color:black;font-family:Arial" value=141>Rohtak - Model Town</option><option style="color:black;font-family:Arial" value=92>Sangli - M.G Road</option><option style="color:black;font-family:Arial" value=152>Siliguri - Sevoke Road</option><option style="color:black;font-family:Arial" value=30>Surat - Ghod Dod Road</option><option style="color:black;font-family:Arial" value=147>Surat - Vesu</option><option style="color:black;font-family:Arial" value=132>Thane - LBS Marg</option><option style="color:black;font-family:Arial" value=138>Trivandrum - Sasthamangalam</option><option style="color:black;font-family:Arial" value=60>Udaipur - Panchavati</option><option style="color:black;font-family:Arial" value=133>Varanasi - Bhelupur</option><option style="color:black;font-family:Arial" value=146>Vijayawada - Labbipet</option></select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="Go" onClick="javaScript:gogym();" name="Go" value="Go" style="font-size:7pt">&nbsp;&nbsp;&nbsp;&nbsp;<a style="color:#000000;font-family:Arial;font-size:9pt" href="http://www.goldsgym.com/locator/" target="_blank">Search gyms worldwide</a>&nbsp;&nbsp;&nbsp;&nbsp;<a style="color:#000000;font-family:Arial;font-size:9pt" href="opening_soon.asp" >Opening Soon</a>&nbsp;&nbsp;&nbsp;&nbsp;<a style="color:#000000;font-family:Arial;font-size:9pt" href="corp_well_program.asp" >CORPORATE WELLNESS PROGRAM</a></form></div></div><div id="Yellowband1" style="position:absolute;top:153;left:0;width:8;text-align:left"><img src="images/yellowband.jpg" width="8" border="0"></div><div id="Yellowband1" style="position:absolute;top:153;left:992;width:8;text-align:left"><img src="images/yellowband.jpg" width="8" border="0"></div></div></td></tr><tr><td align="center" style="text-align:center;border-style:solid;border-width:8px;border-color:#f7e331;border-top-style:solid;"><div id="container" class="MainBody" style="height:1460"><div id="Flash" class="HomeGallery"><ul id="newsslider" style="display:none"><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://goldsgymindia.com/promotion_cp_new.asp?PID=64'>Special Batches in Delhi - Become a Personal Trainer</a></td></tr></table></h3><p><a href='http://goldsgymindia.com/promotion_cp_new.asp?PID=64'><img src='home_flash/pid_64.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/promotion_cp_new.asp?PID=65'>Valentine's Day Offer</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/promotion_cp_new.asp?PID=65'><img src='home_flash/pid_65.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/promotion_cp_new.asp?PID=40'>Become a Personal Trainer</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/promotion_cp_new.asp?PID=40'><img src='home_flash/pid_40.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/event.asp?EID=1042'>Launch - Gold's Gym DB City - Bhopal</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/event.asp?EID=1042'><img src='home_flash/Ribbon_Cutting.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/event.asp?EID=1043'>Launch - Gold's Gym Sodepur - Kolkata</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/event.asp?EID=1043'><img src='home_flash/Trophy.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/event.asp?EID=1041'>Gold's Gym Phagwara - Punjab launched</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/event.asp?EID=1041'><img src='home_flash/phagwara_launch.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://goldsgymindia.com/promotion_cp_new.asp?PID=62'>How Well Do you know your DNA?</a></td></tr></table></h3><p><a href='http://goldsgymindia.com/promotion_cp_new.asp?PID=62'><img src='home_flash/pid_62_DNA-Teaser-web-banner-01.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://goldsgymindia.com/promotion_cp_new.asp?PID=61'>Shed those extra kilos and steal the show this Festive Season </a></td></tr></table></h3><p><a href='http://goldsgymindia.com/promotion_cp_new.asp?PID=61'><img src='home_flash/pid61.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/event.asp?EID=1040'>TNA WRESTLERS VISIT GOLD'S GYM at Lower Parel Oct 2015</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/event.asp?EID=1040'><img src='home_flash/TNA_home.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/event.asp?EID=1037'>Launch: Gold's Gym Bilaspur</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/event.asp?EID=1037'><img src='home_flash/bilaspur_launch.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/event.asp?EID=1036'>Launch: Gold’s Gym Vijayawada </a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/event.asp?EID=1036'><img src='home_flash/vijaywada_trophy.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/promotion_cp_new.asp?PID=56'>Your Weight Won't Disappoint You</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/promotion_cp_new.asp?PID=56'><img src='home_flash/pid56.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/promotion_ggfi_referral.asp'>Make your career in fitness & win a free smartphone*</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/promotion_ggfi_referral.asp'><img src='home_flash/ggfi_buddy_referral.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/franchising.asp?GID=3'>Gold's Gym Express</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/franchising.asp?GID=3'><img src='home_flash/Web-banner-Golds-Gym-Express.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/mobile_apps.asp'>My Daily Fitness Guide</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/mobile_apps.asp'><img src='home_flash/All-App-web-banner.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/special_programs.asp'>Corporate Wellness Program</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/special_programs.asp'><img src='home_flash/special_programs.jpg' border='0' width='700' height='415px'  /></a></p></li><li><h3><table style="width:100%;height:90px;" border="0"><tr><td align="center" valign="middle"><a href='http://www.goldsgymindia.com/opening_soon.asp'>Opening Soon</a></td></tr></table></h3><p><a href='http://www.goldsgymindia.com/opening_soon.asp'><img src='home_flash/OpeningSoon.jpg' border='0' width='700' height='415px'  /></a></p></li></ul></div><div id="HomeVIPPass" class="HomeVIPPass" style="background-color:#231f20;"><FORM name="vippassForm" id="vippassForm" method="post" action="vip_pass_1days_new_db.asp"><TABLE width="90%" border="0" cellpadding="0" cellspacing="0" align="center" style="font-family:verdana;font-style:italic;color:#FFFFFF;background-color:#231f20;"><tr valign=top><td colspan="2"></td></tr><tr valign=top><td colspan="2" style="font-size:10pt;background-color:#231f20;text-align:center"><img src="images/One_day_VIP_pass_2.jpg" border="0" align="center" width="280px"><BR><BR></td></tr><tr valign=top><td colspan="2" style="font-size:8pt">&nbsp;* All fields are required</td></tr><tr valign=top><td colspan="2" style="font-size:8pt">&nbsp;</td></tr><tr valign=top><td style="font-size:10pt">&nbsp;First Name:</td><td><input type="text" id="FirstName" name="FirstName" size=15 style="font-size:10pt"></td></tr><tr valign=top><td colspan="2" style="font-size:8pt">&nbsp;</td></tr><tr valign=top><td style="font-size:10pt">&nbsp;Last Name:</td><td><input type="text" id="LastName" name="LastName" size=15 style="font-size:10pt"></td></tr><tr valign=top><td colspan="2" style="font-size:8pt">&nbsp;</td></tr><tr valign=top><td style="font-size:10pt">&nbsp;Email:</td><td><input type="text" id="email" name="email" size=15 style="font-size:10pt"></td></tr><tr valign=top><td colspan="2" style="font-size:8pt">&nbsp;</td></tr><tr valign=top><td style="font-size:10pt">&nbsp;Contact No.:</td><td><input type="text" id="mobile" name="mobile" size=15 maxlength="10" style="font-size:10pt"></td></tr><tr valign=top><td colspan="2"  style="font-size:10pt">&nbsp;Gym Location:<br>&nbsp;<select name="RegGymId" id="RegGymId" style="width:170px;color:black;letter-spacing:0.1em;font-size:7pt;"><option style="color:black;font-family:Arial" value="0">-------Select gym location-------</option><option style="color:black;font-family:Arial" value=104>Agra - Lajpat Kunj</option><option style="color:black;font-family:Arial" value=144>Ajmer - Jaipur Road</option><option style="color:black;font-family:Arial" value=142>Allahabad - Civil Lines</option><option style="color:black;font-family:Arial" value=67>Amritsar - The Mall</option><option style="color:black;font-family:Arial" value=117>Bathinda- Barnala Road</option><option style="color:black;font-family:Arial" value=78>Belgaum - Tilakwadi</option><option style="color:black;font-family:Arial" value=131>Bengaluru - Banashankari</option><option style="color:black;font-family:Arial" value=64>Bengaluru - Basaveshwarnagar</option><option style="color:black;font-family:Arial" value=57>Bengaluru - HSR Layout</option><option style="color:black;font-family:Arial" value=82>Bengaluru - Indiranagar</option><option style="color:black;font-family:Arial" value=48>Bengaluru - JP Nagar</option><option style="color:black;font-family:Arial" value=97>Bengaluru - Kalyan Nagar</option><option style="color:black;font-family:Arial" value=83>Bengaluru - Koramangala</option><option style="color:black;font-family:Arial" value=137>Bengaluru - Malleshwaram</option><option style="color:black;font-family:Arial" value=27>Bengaluru - Richmond Town</option><option style="color:black;font-family:Arial" value=41>Bengaluru - RMZ Infinity Old Madras Rd</option><option style="color:black;font-family:Arial" value=127>Bengaluru - Whitefield</option><option style="color:black;font-family:Arial" value=123>Bhilai – Nehru Nagar</option><option style="color:black;font-family:Arial" value=150>Bilaspur - Vyapar Vihar</option><option style="color:black;font-family:Arial" value=89>Cochin - Vyttila</option><option style="color:black;font-family:Arial" value=140>Dehradun - Ballupur</option><option style="color:black;font-family:Arial" value=87>Delhi - Dayanand Vihar</option><option style="color:black;font-family:Arial" value=80>Delhi - Dwarka</option><option style="color:black;font-family:Arial" value=56>Delhi - East of Kailash</option><option style="color:black;font-family:Arial" value=81>Delhi - Janakpuri</option><option style="color:black;font-family:Arial" value=136>Delhi - Paschim Vihar</option><option style="color:black;font-family:Arial" value=108>Delhi – Rohini</option><option style="color:black;font-family:Arial" value=125>Dhanbad - Bank More</option><option style="color:black;font-family:Arial" value=45>Faridabad - Sector 16</option><option style="color:black;font-family:Arial" value=75>Ghaziabad - Indirapuram</option><option style="color:black;font-family:Arial" value=119>Ghaziabad - Raj Nagar</option><option style="color:black;font-family:Arial" value=135>Gurgaon - Gold souk, Sector 43</option><option style="color:black;font-family:Arial" value=72>Gurgaon - Palam Vihar</option><option style="color:black;font-family:Arial" value=109>Gurgaon- Sector 14</option><option style="color:black;font-family:Arial" value=113>Guwahati - Ulubari</option><option style="color:black;font-family:Arial" value=143>Haldwani - Kathogodam</option><option style="color:black;font-family:Arial" value=139>Hyderabad - Himayat Nagar</option><option style="color:black;font-family:Arial" value=54>Indore - Vijay Nagar</option><option style="color:black;font-family:Arial" value=118>Jabalpur - Gorakhpur</option><option style="color:black;font-family:Arial" value=36>Jaipur - Malviya Nagar</option><option style="color:black;font-family:Arial" value=120>Jaipur- Vaishali Nagar</option><option style="color:black;font-family:Arial" value=31>Jalandhar - Model Town</option><option style="color:black;font-family:Arial" value=145>Jalgaon - Ramdas Colony</option><option style="color:black;font-family:Arial" value=128>Jammu – Bahu Plaza</option><option style="color:black;font-family:Arial" value=149>Jodhpur - Akhaliya Circle</option><option style="color:black;font-family:Arial" value=90>Kanpur - Swaroop Nagar</option><option style="color:black;font-family:Arial" value=61>Kolhapur - Tarabai Park</option><option style="color:black;font-family:Arial" value=32>Kolkata - Alipore</option><option style="color:black;font-family:Arial" value=111>Kolkata - Salt Lake</option><option style="color:black;font-family:Arial" value=153>Kolkata - Sodepur</option><option style="color:black;font-family:Arial" value=154>Lucknow - Aashiana</option><option style="color:black;font-family:Arial" value=63>Lucknow - Mahanagar</option><option style="color:black;font-family:Arial" value=91>Ludhiana - Canal Road</option><option style="color:black;font-family:Arial" value=86>Mangalore - Karangalpady</option><option style="color:black;font-family:Arial" value=84>Meerut - Garh Road</option><option style="color:black;font-family:Arial" value=42>Mohali - Phase 8</option><option style="color:black;font-family:Arial" value=74>Mumbai - Andheri East</option><option style="color:black;font-family:Arial" value=13>Mumbai - Bandra (W)</option><option style="color:black;font-family:Arial" value=52>Mumbai - Goregaon (E)</option><option style="color:black;font-family:Arial" value=40>Mumbai - Kandivali (W)</option><option style="color:black;font-family:Arial" value=76>Mumbai - Kandivali East</option><option style="color:black;font-family:Arial" value=11>Mumbai - Lokhandwala</option><option style="color:black;font-family:Arial" value=66>Mumbai - Lower Parel (W)</option><option style="color:black;font-family:Arial" value=100>Mumbai - Powai</option><option style="color:black;font-family:Arial" value=102>Mysore – Jayalakshmipuram</option><option style="color:black;font-family:Arial" value=44>Nashik - Cannada Corner</option><option style="color:black;font-family:Arial" value=38>Navi Mumbai  - Vashi</option><option style="color:black;font-family:Arial" value=65>Noida - IHDP Sector 127</option><option style="color:black;font-family:Arial" value=37>Noida - Sector 30</option><option style="color:black;font-family:Arial" value=114>Panchkula - Sector 16</option><option style="color:black;font-family:Arial" value=112>Patna - Boring Road</option><option style="color:black;font-family:Arial" value=95>Patna - Rajendra Nagar</option><option style="color:black;font-family:Arial" value=156>Phagwara - G.T road</option><option style="color:black;font-family:Arial" value=55>Pune - Aundh</option><option style="color:black;font-family:Arial" value=106>Pune - Hadapsar</option><option style="color:black;font-family:Arial" value=15>Pune - Kalyani Nagar</option><option style="color:black;font-family:Arial" value=94>Pune - Law College Road</option><option style="color:black;font-family:Arial" value=88>Pune - NIBM</option><option style="color:black;font-family:Arial" value=130>Pune - Pimple Saudagar</option><option style="color:black;font-family:Arial" value=148>Pune - Satara Road</option><option style="color:black;font-family:Arial" value=124>Pune - Sinhagad Road</option><option style="color:black;font-family:Arial" value=126>Pune - Viman Nagar</option><option style="color:black;font-family:Arial" value=85>Raipur - Shankar Nagar</option><option style="color:black;font-family:Arial" value=121>Ranchi- Doranda</option><option style="color:black;font-family:Arial" value=141>Rohtak - Model Town</option><option style="color:black;font-family:Arial" value=92>Sangli - M.G Road</option><option style="color:black;font-family:Arial" value=152>Siliguri - Sevoke Road</option><option style="color:black;font-family:Arial" value=30>Surat - Ghod Dod Road</option><option style="color:black;font-family:Arial" value=147>Surat - Vesu</option><option style="color:black;font-family:Arial" value=132>Thane - LBS Marg</option><option style="color:black;font-family:Arial" value=138>Trivandrum - Sasthamangalam</option><option style="color:black;font-family:Arial" value=60>Udaipur - Panchavati</option><option style="color:black;font-family:Arial" value=133>Varanasi - Bhelupur</option><option style="color:black;font-family:Arial" value=146>Vijayawada - Labbipet</option></select></td></tr><tr valign=top><td colspan="2" align=center style="font-size:10pt";text-align:left><BR><input type="hidden" id="regdate" name="regdate" value="2/4/2016">&nbsp;<img id="btnSignUpVIPPass" name="btnSignUpVIPPass" align="left" src="images/button_signupNow.png" alt="Sign up" onClick="signupvippass('vippassForm');" style="cursor:pointer;" ></td></tr><tr valign=top><td colspan="2" style="height:20px;font-size:8pt">&nbsp;# Rights of admission reserved</td></tr></TABLE></FORM><div style="width:100%;text-align:center;margin-top:-20px;">
+<br />
+<div id="Div1" name="" style="color:#ffff00;">Golds Gym India 13th anniversary jingle</div>
+<div style="color:#ffffff;text-align:left;margin-left:40px;">
+    <span id="audio_link_blinking" name="audio_link_blinking">Play</span>
+    <a style="color:#ffffff;text-decoration:none" href="download2.asp?FN=audio/13AnnivJingleMaster.wav" target="_blank"> <span id="jingle_download" name="jingle_download" style="margin-left:30px;">Download</span></a>
+    <a style="color:#ffffff;text-decoration:none" href="song.asp" target="_blank"> <span id="lyrics" name="lyrics" style="margin-left:10px;">Lyrics</span></a>
+</div>
+<audio controls style="width:200px;">
+  <source src="audio/13AnnivJingleMaster.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>			
+<br />
+   
+</div></div><div id="HomeVIPPassBandLeft" class="HomeVIPPassBandLeft" style="background-color:#647896;"></div><div id="HomeVIPPassBandRight" class="HomeVIPPassBandRight" style="background-color:#647896;"></div><div id="BottomBanner1" style="position:absolute;left:0;top:550;width:100%;background-color:#ffffff;text-align:center;"><div id="LeftBanners"><div id="imgEvent10" style="float:left;padding-left:30px;padding-right:20px;padding-bottom:20px;"><a href="pulse_plus.asp"><img border="0" src="pulse_plus/pulse_plus_june_2015.jpg" title="Pulse Plus Newsletter"></a></div><div id="imgEvent6" style="float:left;padding-left:30px;padding-right:20px;padding-bottom:20px;"><a href="ggu.asp?GID=7&FID=27"><img border="0" src="images/GGFI_web_tab.jpg" title="Gold's Gym Fitness Institute"></a></div><div id="imgEvent2" style="float:left;padding-left:30px;padding-right:20px;padding-bottom:20px;padding-top:10px;"><a href="pps/AdvertisingatGoldsGym2014.pptx" target="_blank"><img border="0" src="images/advertising_opp.jpg" title="Gold's Gym Advertising Opportunities"></a></div></div><div id="CenterBanners"><iframe width="300" height="169" src="https://www.youtube.com/embed/je8Mj-DM6XA?rel=0" frameborder="0" allowfullscreen></iframe><br/><br/><div id="imgEvent2" style="float:left;padding-left:90px;padding-right:20px;padding-bottom:20px;"><a href="bmicalculator.asp"><img border="0" src="images/healthtools.jpg" title="BMI, BMR, IBW"></a></div><div id="imgEvent" style="float:left;padding-left:90px;padding-right:20px;padding-bottom:20px;padding-top:10px;border-color:#ffffff;"><a href="http://www.careworldtv.com/" target="_blank"><img border="0" src="images/Care-World-Logo-.jpg" title="Care World"></a></div></div><div id="RightBanners"><div id="imgEvent" style="float:left;padding-left:30px;padding-right:20px;padding-bottom:20px;border-color:#ffffff;"><a href="franchisingform.asp?GID=3"><img border="0" src="images/Franchising_Web_tab.jpg" title="Click here for Franchising Enquiry"></a></div>        
+            <!--
+                <script type="text/javascript">RunFlash2();</script>  
+            -->
+<div id="imgEvent5" style="float:left;padding-left:30px;padding-right:20px;padding-bottom:20px;"><div id="flash" style="width:220px;height:155px;float:left;background-image: url('images/oval.jpg');background-position:right;background-repeat:no-repeat;padding-left:5px;padding-top:10px;">              
+                    <img border="0" src="images/shoot.jpg" title="Gold's Gym Premises Available for Shoot" style="margin-left:0px;margin-top:5px">                    
+		            <!--
+                        <br />		            
+		                <script type="text/javascript">RunFlash();</script> 
+                    -->
+</div></div><div id="imgEvent8" style="float:left;padding-left:30px;padding-right:20px;padding-bottom:20px;border-style:none;">&nbsp;</div><div id="imgEvent" style="float:left;padding-left:30px;padding-right:20px;padding-bottom:20px;height:185px;"></div></div><div id="bannerContainer" style="float:none;padding-top:10px;margin-top:10px;width:100%;text-align:center"><div id="imgTri" style="padding-top:20px;"><a href="http://www.sunnsandhotel.com" target="_blank"><img width="728" border="0" src="images/footer_brown_sns.jpg" title="Sun-n-Sand Hotels"></a></div></div><br/><br/><br/></div></div></td></tr><tr><td align="center"><div id=idFooter class="idFooter"><div id=Footer class="Footer">** Disclaimer - Results may vary from person to person | <a style="color:#FFFFFF" href="sc.asp">Click here to Buy Membership Online</a> | <a style="color:#FFFFFF" href="terms_conditions.htm" target="_blank">Terms &amp; Conditions</a> | <a style="color:#FFFFFF" href="privacy_policy.htm" target="_blank">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;</div></div></td></tr></TABLE></DIV></CENTER></BODY></HTML>
+
+
+<SCRIPT>
+function changebutton(imageName,Cursor) {
+	
+	//document.images["btnCal"].src = "images/" +imageName;
+	//document.getElementById("BMICalc").style.cursor = Cursor;
+}
+</SCRIPT>
+
+
