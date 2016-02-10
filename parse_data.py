@@ -154,8 +154,8 @@ master_frame = pandas.concat(frame_list)
 
 
 column_dtypes = ['string','string','float','float','int','int','int','float','float','int']
-for i, name in enumerate(mf):
-	mf[name] = pandas.DataFrame(mf[name],dtype=column_dtypes[i])
+for i, name in enumerate(master_frame):
+	master_frame[name] = pandas.DataFrame(master_frame[name],dtype=column_dtypes[i])
 
 with open('training_data_pandas_frame','wb') as f:
 	pickle.dump(master_frame,f)
