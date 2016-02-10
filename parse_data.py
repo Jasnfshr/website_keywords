@@ -129,8 +129,6 @@ with open('training_data_final_with_response.pickle','rb') as f:
 	training_dictionary = pickle.load(f)
 	print 'training dictionary loaded'
 
-column_dtypes = ['string','string','float','float','int','int','int','float','float','int']
-
 master_frame = pandas.DataFrame(columns = ['file_id','gram','tf','df','in_url','in_title','in_hyperlink','pos','length','is_keyword']
 	)
 index = 0
@@ -154,10 +152,25 @@ for fil, training_samples in training_dictionary.iteritems():
 
 master_frame = pandas.concat(frame_list)
 
+
+column_dtypes = ['string','string','float','float','int','int','int','float','float','int']
+for i, name in enumerate(mf):
+	mf[name] = pandas.DataFrame(mf[name],dtype=column_dtypes[i])
+
 with open('training_data_pandas_frame','wb') as f:
 	pickle.dump(master_frame,f)
 
+lmf = copy.copy(master_frame)
 
+lmf['tf'] = numpy.log(1+lmf['tf'])
+lmf['df'] = numpy.log(1+lmf['df'])
+with open('keyword_data.csv','wb') as f:
+	lmf.to_csv(f)
+
+print 'saved log-transformed frame to csv'
+
+#for now I have delegated this to R since the task is easy enough once the data
+#frame is cleaned
 #3
 #use logistic regression to predict the probability that
 #a word/phrase would be considered a keyword for a page
