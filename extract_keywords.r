@@ -12,5 +12,5 @@ test_data = read.csv('webpages/keyword_data.csv')
 new_odds_ratios = predict(sm,test_data)
 keydata = test_data[new_odds_ratios >= selected_threshold,c('file_id','gram')]
 keydata$preds = new_odds_ratios[new_odds_ratios >= selected_threshold]
-write.csv(paste0('webpages/keyword_file_',bs,'.csv'),row.names = FALSE)
+write.csv(keydata,file=paste0('webpages/keyword_file_',bs,'.csv'),row.names = FALSE)
 print("wrote keywords to csv")
