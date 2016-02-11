@@ -19,7 +19,7 @@ word_validation_regex = r'[\w\-]{2,' + str(MAX_WORD_LENGTH) + r'}'
 
 print 'word validationr regex: ' + word_validation_regex
 
-stopwords = [word for word in stopwords if re.match(word_validation_regex,word) == None]
+stopwords = [word for word in stopwords if re.match(word_validation_regex,word) == True]
 
 #this allows keywords to be extracted from the title
 #in terms of modelling, the inclusion of a title indicator variable should avoid
@@ -111,7 +111,7 @@ def extract_ngrams_detailed(tokens,N,other_tokens,supplied_url):
 			#allowed for hyphen/period separation of ngrams
 			in_url = 1*(re.search(re.sub(' ',r'[\-.]?',w),supplied_url) <> None)
 			if w not in d:
-				d[w] = {'pos':counter/word_count,'tf':1,
+				d[w] = {'pos':counter/max(word_count,1),'tf':1,
 				'is_hyperlink':is_hyperlink,'is_title':is_title,'in_url':in_url}
 			else:
 				dcopy = d[w]
@@ -131,7 +131,7 @@ def extract_monograms_detailed(tokens,other_tokens,supplied_url):
 			is_title = 1*(w in title_grams)
 			in_url = 1*(re.search(w,supplied_url) <> None)
 			if w not in d:
-				d[w] = {'pos':counter/word_count,'tf':1,
+				d[w] = {'pos':counter/max(1,word_count),'tf':1,
 				'is_hyperlink':is_hyperlink,'is_title':is_title,'in_url':in_url}
 			else:
 				dcopy = d[w]
