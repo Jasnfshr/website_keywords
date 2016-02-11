@@ -10,7 +10,7 @@ from nltk.corpus import stopwords as sw
 import pickle
 
 stopwords = sw.words('english')
-stopwords = stopwords + ['the','of','for']
+stopwords = stopwords + ['the','of','for','at','do','or']
 
 
 MAX_WORD_LENGTH = 30
@@ -67,7 +67,8 @@ def append_periods_to_tags(soup,blacklist=['i','b','em','strong','small','mark',
 					last_nonempty = s
 				pass
 			if last_nonempty <> None:
-				last_nonempty.replace_with(removeNonAscii(last_nonempty) + '. ')
+				#modified to support all languages
+				last_nonempty.replace_with(last_nonempty + '. ')
 	return True
 
 def remove_unwanted(body):
@@ -193,9 +194,11 @@ def extract_info(filename,tf_only=True):
 		#this adds the title after the last child element of the body
 		if append_title_to_body:
 			new_tag = soup.new_tag('pt',string=str(soup.title))
+			has_child=False
 			for c in soup.body.children:
-				pass
-			c.insert_after(new_tag)
+				has_child=True
+			if has_child:
+				c.insert_after(new_tag)
 		remove_unwanted(soup.body)
 		append_periods_to_tags(soup.body)
 		if soup.body == None:

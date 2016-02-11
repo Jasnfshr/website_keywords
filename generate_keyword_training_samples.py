@@ -8,7 +8,7 @@ def main():
 	os.chdir('webpages')
 	print os.getcwd()
 	files = os.listdir(os.getcwd())
-	selected = random.sample(files,100)
+	selected = random.sample(files,15)
 	for filename in selected:
 		print filename
 		shutil.copy(filename,'../keyword_training/' + filename)

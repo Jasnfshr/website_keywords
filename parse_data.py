@@ -11,6 +11,10 @@ import csv
 import numpy
 import pandas
 import copy
+import argparse
+
+#command line arguments:
+#-nval
 
 os.chdir('/home/max/workspace/webclass/keyword_training')
 
@@ -61,7 +65,7 @@ for f in training_files:
 	for N,entry in information.iteritems():
 		for key in entry:
 			master_dict[N][key] = master_dict[N].get(key,0)+1
-		reduce_dict_size(master_dict)
+		reduce_dict_size(master_dict[N])
 
 with open('document_frequencies.pickle','wb') as f:
 	pickle.dump(master_dict,f)
@@ -143,13 +147,14 @@ for fil, training_samples in training_dictionary.iteritems():
 			values['in_url'],values['is_title'],values['is_hyperlink'],values['pos'],nval,values['is_keyword']]
 			index += 1
 			temp_index += 1
-			if index % 1000 == 0:
+			if index % 50000 == 0:
 				print index
-			if temp_index == 400:
+			if temp_index == 150:
 				temp_index = 0
 				frame_list.append(current_frame)
 				current_frame = copy.copy(master_frame)
-
+if temp_index <> 0:
+	frame_list.append(current_frame)
 master_frame = pandas.concat(frame_list)
 
 
@@ -168,6 +173,10 @@ with open('keyword_data.csv','wb') as f:
 	lmf.to_csv(f)
 
 print 'saved log-transformed frame to csv'
+
+if '--analyze' in sys.argv:
+	os.system('roc_analysis.r')
+
 
 #for now I have delegated this to R since the task is easy enough once the data
 #frame is cleaned
