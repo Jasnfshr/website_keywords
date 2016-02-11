@@ -9,7 +9,7 @@ training_directory = '/home/max/workspace/webclass/keyword_training/'
 #this is where the entire set of data should be
 testing_directory = '/home/max/workspace/webclass/webpages/'
 #classifications are done in blocks of 1000 in order to not use too much memory
-block_size = 1000
+block_size = 500
 #will reach out to extra elements if the next set of data would have too few entries (for DF calculation purposes)
 #note that later a universal DF should be calculated
 block_final_reach = 250

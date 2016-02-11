@@ -14,7 +14,7 @@ import copy
 
 
 def analyze_webpages(file_chunk,block_index):
-	os.chdir('/home/max/workspace/webclass/keyword_training')
+	os.chdir('/home/max/workspace/webclass/webpages')
 
 	#variables needed
 	#word in hypertext
