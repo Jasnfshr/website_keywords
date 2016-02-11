@@ -25,6 +25,7 @@ def chunks(l, n, r = block_final_reach):
 
 def main(args):
 	#first partition file names into groups of several different files
+	random.seed('default')
 	webpage_list = [testing_directory + x for x in os.listdir(testing_directory)]
 	webpage_list = [x for x in webpage_list if re.match('.*html$',x) <> None]
 	random.shuffle(webpage_list)
