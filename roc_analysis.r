@@ -2,7 +2,7 @@ require(pROC)
 
 setwd('/home/max/workspace/webclass/keyword_training')
 
-dat = read.csv('keyword_data.csv')
+dat = read.csv('keyword_data.csv',encoding='utf-8')
 
 model = glm(is_keyword ~ (tf + df + in_url + in_title + in_hyperlink + pos)*(tf + df + in_url + in_title + in_hyperlink + pos),data=dat)
 

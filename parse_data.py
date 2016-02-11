@@ -170,7 +170,7 @@ lmf = copy.copy(master_frame)
 lmf['tf'] = numpy.log(1+lmf['tf'])
 lmf['df'] = numpy.log(1+lmf['df'])
 with open('keyword_data.csv','wb') as f:
-	lmf.to_csv(f)
+	lmf.to_csv(f,encoding='utf-8')
 
 print 'saved log-transformed frame to csv'
 
