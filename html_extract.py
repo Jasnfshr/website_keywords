@@ -9,8 +9,17 @@ import re
 from nltk.corpus import stopwords as sw
 import pickle
 
-stopwords = sw.words('english')
-stopwords = stopwords + ['the','of','for','at','do','or']
+#uses all languages
+stopwords = sw.words()
+#adding internet-specific words
+stopwords = stopwords + ['com','net','org']
+
+#note in current release of NLTK regexp_tokenizer does  not use flags (bug)
+#this has been fixed on GitHub, however]
+def _check_regexp(self):
+        if self._regexp is None:
+            self._regexp = re.compile(self._pattern, self._flags)
+nltk.RegexpTokenizer._check_regexp = _check_regexp
 
 
 MAX_WORD_LENGTH = 30
@@ -19,9 +28,9 @@ word_validation_regex = r'[\w\-]{2,' + str(MAX_WORD_LENGTH) + r'}'
 
 print 'word validationr regex: ' + word_validation_regex
 
-stopwords = [word for word in stopwords if re.match(word_validation_regex,word) <> None]
+stopwords = [word for word in stopwords if re.match(word_validation_regex,word,flags=32) <> None]
 
-print 'stopwords working: ' + str(all([x in stopwords for x in ['the','of','by']]))
+print 'stopwords working: ' + str(all([x in stopwords for x in ['der','und','the','of','by','mellom','och','det','yani']]))
 
 #this allows keywords to be extracted from the title
 #in terms of modelling, the inclusion of a title indicator variable should avoid
@@ -148,7 +157,7 @@ def smart_tokenize(soup):
 	else:
 		raw_text = soup.text.lower()
 	sentence_tokens = nltk.sent_tokenize(raw_text)
-	word_tokens = [nltk.regexp_tokenize(sentence,word_validation_regex) for sentence in sentence_tokens]
+	word_tokens = [nltk.regexp_tokenize(sentence,word_validation_regex,flags=32) for sentence in sentence_tokens]
 	word_tokens = [[word for word in words if word not in stopwords] for words in word_tokens]
 	return word_tokens
 
