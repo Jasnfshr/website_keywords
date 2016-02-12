@@ -68,6 +68,10 @@ for f in training_files:
 			master_dict[N][key] = master_dict[N].get(key,0)+1
 		reduce_dict_size(master_dict[N])
 
+#thins size down tremendously
+for N in nvals:
+	reduce_dict_size(master_dict,100,cutoff=3)
+
 with open('document_frequencies.pickle','wb') as f:
 	pickle.dump(master_dict,f)
 
