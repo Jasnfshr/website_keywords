@@ -1,0 +1,3 @@
+python parse_data.py --analyze
+python classify_all.py
+python generate_edgelist.py
