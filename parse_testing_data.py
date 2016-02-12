@@ -150,7 +150,7 @@ def analyze_webpages(file_chunk,block_index):
 	master_frame = pandas.concat(frame_list)
 
 
-	column_dtypes = ['string','string','float','float','int','int','int','float','float','int']
+	column_dtypes = ['string','object','float','float','int','int','int','float','float','int']
 	for i, name in enumerate(master_frame):
 		master_frame[name] = pandas.DataFrame(master_frame[name],dtype=column_dtypes[i])
 

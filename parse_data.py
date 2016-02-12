@@ -12,6 +12,7 @@ import numpy
 import pandas
 import copy
 import argparse
+from pandas.compat import u
 
 #command line arguments:
 #-nval
@@ -158,7 +159,7 @@ if temp_index <> 0:
 master_frame = pandas.concat(frame_list)
 
 
-column_dtypes = ['string','string','float','float','int','int','int','float','float','int']
+column_dtypes = ['string','object','float','float','int','int','int','float','float','int']
 for i, name in enumerate(master_frame):
 	master_frame[name] = pandas.DataFrame(master_frame[name],dtype=column_dtypes[i])
 
