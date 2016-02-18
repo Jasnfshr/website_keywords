@@ -29,9 +29,11 @@ def main():
 	cf = csv.writer(f)
 	cf.writerows([[k, url] for k, url in enumerate(urls)])
 	f.close()
+	print 'wrote url id file'
+	print 'number of urls: ' + str(len(urls))
 	for k, url in enumerate(urls):
 		attempts = 0
-		if True:
+		if k < 21000:
 			continue
 		while attempts < 1:
 			if fname(k) in current_files:
